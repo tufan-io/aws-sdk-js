@@ -322,8 +322,8 @@ declare namespace ManagedBlockchain {
   export interface DeleteNodeOutput {
   }
   export type DescriptionString = string;
-  export type Edition = "STARTER"|"STANDARD"|string;
-  export type Framework = "HYPERLEDGER_FABRIC"|string;
+  export type Edition = "STARTER"|"STANDARD";
+  export type Framework = "HYPERLEDGER_FABRIC";
   export type FrameworkVersionString = string;
   export interface GetMemberInput {
     /**
@@ -410,7 +410,7 @@ declare namespace ManagedBlockchain {
     NetworkSummary?: NetworkSummary;
   }
   export type InvitationList = Invitation[];
-  export type InvitationStatus = "PENDING"|"ACCEPTED"|"ACCEPTING"|"REJECTED"|"EXPIRED"|string;
+  export type InvitationStatus = "PENDING"|"ACCEPTED"|"ACCEPTING"|"REJECTED"|"EXPIRED";
   export interface InviteAction {
     /**
      * The AWS account ID to invite.
@@ -668,7 +668,7 @@ declare namespace ManagedBlockchain {
     Fabric?: MemberFabricConfiguration;
   }
   export type MemberListMaxResults = number;
-  export type MemberStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED"|string;
+  export type MemberStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED";
   export interface MemberSummary {
     /**
      * The unique identifier of the member.
@@ -769,7 +769,7 @@ declare namespace ManagedBlockchain {
   }
   export type NetworkListMaxResults = number;
   export type NetworkMemberNameString = string;
-  export type NetworkStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED"|string;
+  export type NetworkStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED";
   export interface NetworkSummary {
     /**
      * The unique identifier of the network.
@@ -862,7 +862,7 @@ declare namespace ManagedBlockchain {
     Fabric?: NodeFabricAttributes;
   }
   export type NodeListMaxResults = number;
-  export type NodeStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED"|"FAILED"|string;
+  export type NodeStatus = "CREATING"|"AVAILABLE"|"CREATE_FAILED"|"DELETING"|"DELETED"|"FAILED";
   export interface NodeSummary {
     /**
      * The unique identifier of the node.
@@ -951,7 +951,7 @@ declare namespace ManagedBlockchain {
   }
   export type ProposalDurationInt = number;
   export type ProposalListMaxResults = number;
-  export type ProposalStatus = "IN_PROGRESS"|"APPROVED"|"REJECTED"|"EXPIRED"|"ACTION_FAILED"|string;
+  export type ProposalStatus = "IN_PROGRESS"|"APPROVED"|"REJECTED"|"EXPIRED"|"ACTION_FAILED";
   export interface ProposalSummary {
     /**
      *  The unique identifier of the proposal. 
@@ -1001,7 +1001,7 @@ declare namespace ManagedBlockchain {
   export type RemoveActionList = RemoveAction[];
   export type ResourceIdString = string;
   export type String = string;
-  export type ThresholdComparator = "GREATER_THAN"|"GREATER_THAN_OR_EQUAL_TO"|string;
+  export type ThresholdComparator = "GREATER_THAN"|"GREATER_THAN_OR_EQUAL_TO";
   export type ThresholdPercentageInt = number;
   export type Timestamp = Date;
   export type UsernameString = string;
@@ -1040,7 +1040,7 @@ declare namespace ManagedBlockchain {
      */
     MemberId?: ResourceIdString;
   }
-  export type VoteValue = "YES"|"NO"|string;
+  export type VoteValue = "YES"|"NO";
   export interface VotingPolicy {
     /**
      * Defines the rules for the network for voting on proposals, such as the percentage of YES votes required for the proposal to be approved and the duration of the proposal. The policy applies to all proposals and is specified when the network is created.

@@ -1328,7 +1328,7 @@ declare namespace Glue {
      */
     Status?: TaskStatusType;
   }
-  export type CatalogEncryptionMode = "DISABLED"|"SSE-KMS"|string;
+  export type CatalogEncryptionMode = "DISABLED"|"SSE-KMS";
   export type CatalogEntries = CatalogEntry[];
   export interface CatalogEntry {
     /**
@@ -1398,7 +1398,7 @@ declare namespace Glue {
      */
     KmsKeyArn?: KmsKeyArn;
   }
-  export type CloudWatchEncryptionMode = "DISABLED"|"SSE-KMS"|string;
+  export type CloudWatchEncryptionMode = "DISABLED"|"SSE-KMS";
   export type CodeGenArgName = string;
   export type CodeGenArgValue = string;
   export interface CodeGenEdge {
@@ -1474,7 +1474,7 @@ declare namespace Glue {
   export type ColumnValueStringList = ColumnValuesString[];
   export type ColumnValuesString = string;
   export type CommentString = string;
-  export type Comparator = "EQUALS"|"GREATER_THAN"|"LESS_THAN"|"GREATER_THAN_EQUALS"|"LESS_THAN_EQUALS"|string;
+  export type Comparator = "EQUALS"|"GREATER_THAN"|"LESS_THAN"|"GREATER_THAN_EQUALS"|"LESS_THAN_EQUALS";
   export interface Condition {
     /**
      * A logical operator.
@@ -1593,8 +1593,8 @@ declare namespace Glue {
     AwsKmsKeyId?: NameString;
   }
   export type ConnectionProperties = {[key: string]: ValueString};
-  export type ConnectionPropertyKey = "HOST"|"PORT"|"USERNAME"|"PASSWORD"|"ENCRYPTED_PASSWORD"|"JDBC_DRIVER_JAR_URI"|"JDBC_DRIVER_CLASS_NAME"|"JDBC_ENGINE"|"JDBC_ENGINE_VERSION"|"CONFIG_FILES"|"INSTANCE_ID"|"JDBC_CONNECTION_URL"|"JDBC_ENFORCE_SSL"|string;
-  export type ConnectionType = "JDBC"|"SFTP"|string;
+  export type ConnectionPropertyKey = "HOST"|"PORT"|"USERNAME"|"PASSWORD"|"ENCRYPTED_PASSWORD"|"JDBC_DRIVER_JAR_URI"|"JDBC_DRIVER_CLASS_NAME"|"JDBC_ENGINE"|"JDBC_ENGINE_VERSION"|"CONFIG_FILES"|"INSTANCE_ID"|"JDBC_CONNECTION_URL"|"JDBC_ENFORCE_SSL";
+  export type ConnectionType = "JDBC"|"SFTP";
   export interface ConnectionsList {
     /**
      * A list of connections used by the job.
@@ -1628,7 +1628,7 @@ declare namespace Glue {
     LogStream?: LogStream;
   }
   export type CrawlList = Crawl[];
-  export type CrawlState = "RUNNING"|"SUCCEEDED"|"CANCELLED"|"FAILED"|string;
+  export type CrawlState = "RUNNING"|"SUCCEEDED"|"CANCELLED"|"FAILED";
   export interface Crawler {
     /**
      * The name of the crawler.
@@ -1744,7 +1744,7 @@ declare namespace Glue {
     Crawls?: CrawlList;
   }
   export type CrawlerSecurityConfiguration = string;
-  export type CrawlerState = "READY"|"RUNNING"|"STOPPING"|string;
+  export type CrawlerState = "READY"|"RUNNING"|"STOPPING";
   export interface CrawlerTargets {
     /**
      * Specifies Amazon Simple Storage Service (Amazon S3) targets.
@@ -2400,7 +2400,7 @@ declare namespace Glue {
   }
   export type CsvColumnDelimiter = string;
   export type CsvHeader = NameString[];
-  export type CsvHeaderOption = "UNKNOWN"|"PRESENT"|"ABSENT"|string;
+  export type CsvHeaderOption = "UNKNOWN"|"PRESENT"|"ABSENT";
   export type CsvQuoteSymbol = string;
   export type CustomPatterns = string;
   export type DagEdges = CodeGenEdge[];
@@ -2472,7 +2472,7 @@ declare namespace Glue {
   }
   export type DatabaseList = Database[];
   export type DatabaseName = string;
-  export type DeleteBehavior = "LOG"|"DELETE_FROM_DATABASE"|"DEPRECATE_IN_DATABASE"|string;
+  export type DeleteBehavior = "LOG"|"DELETE_FROM_DATABASE"|"DEPRECATE_IN_DATABASE";
   export interface DeleteClassifierRequest {
     /**
      * Name of the classifier to remove.
@@ -2842,7 +2842,7 @@ declare namespace Glue {
     MaxConcurrentRuns?: MaxConcurrentRuns;
   }
   export type ExecutionTime = number;
-  export type ExistCondition = "MUST_EXIST"|"NOT_EXIST"|"NONE"|string;
+  export type ExistCondition = "MUST_EXIST"|"NOT_EXIST"|"NONE";
   export interface ExportLabelsTaskRunProperties {
     /**
      * The Amazon Simple Storage Service (Amazon S3) path where you will export the labels.
@@ -4116,7 +4116,7 @@ declare namespace Glue {
      */
     KmsKeyArn?: KmsKeyArn;
   }
-  export type JobBookmarksEncryptionMode = "DISABLED"|"CSE-KMS"|string;
+  export type JobBookmarksEncryptionMode = "DISABLED"|"CSE-KMS";
   export interface JobCommand {
     /**
      * The name of the job command. For an Apache Spark ETL job, this must be glueetl. For a Python shell job, it must be pythonshell.
@@ -4231,7 +4231,7 @@ declare namespace Glue {
     GlueVersion?: GlueVersionString;
   }
   export type JobRunList = JobRun[];
-  export type JobRunState = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED"|"SUCCEEDED"|"FAILED"|"TIMEOUT"|string;
+  export type JobRunState = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED"|"SUCCEEDED"|"FAILED"|"TIMEOUT";
   export interface JobUpdate {
     /**
      * Description of the job being defined.
@@ -4331,7 +4331,7 @@ declare namespace Glue {
      */
     OutputS3Path?: UriString;
   }
-  export type Language = "PYTHON"|"SCALA"|string;
+  export type Language = "PYTHON"|"SCALA";
   export interface LastCrawlInfo {
     /**
      * Status of the last crawl.
@@ -4358,7 +4358,7 @@ declare namespace Glue {
      */
     StartTime?: Timestamp;
   }
-  export type LastCrawlStatus = "SUCCEEDED"|"CANCELLED"|"FAILED"|string;
+  export type LastCrawlStatus = "SUCCEEDED"|"CANCELLED"|"FAILED";
   export interface ListCrawlersRequest {
     /**
      * The maximum size of a list to return.
@@ -4497,8 +4497,8 @@ declare namespace Glue {
   export type LocationString = string;
   export type LogGroup = string;
   export type LogStream = string;
-  export type Logical = "AND"|"ANY"|string;
-  export type LogicalOperator = "EQUALS"|string;
+  export type Logical = "AND"|"ANY";
+  export type LogicalOperator = "EQUALS";
   export interface MLTransform {
     /**
      * The unique transform ID that is generated for the machine learning transform. The ID is guaranteed to be unique and does not change.
@@ -4631,7 +4631,7 @@ declare namespace Glue {
     CrawlerDetails?: CrawlerNodeDetails;
   }
   export type NodeList = Node[];
-  export type NodeType = "CRAWLER"|"JOB"|"TRIGGER"|string;
+  export type NodeType = "CRAWLER"|"JOB"|"TRIGGER";
   export type NonNegativeDouble = number;
   export type NonNegativeInteger = number;
   export interface NotificationProperty {
@@ -4737,7 +4737,7 @@ declare namespace Glue {
   }
   export type Path = string;
   export type PathList = Path[];
-  export type Permission = "ALL"|"SELECT"|"ALTER"|"DROP"|"DELETE"|"INSERT"|"CREATE_DATABASE"|"CREATE_TABLE"|"DATA_LOCATION_ACCESS"|string;
+  export type Permission = "ALL"|"SELECT"|"ALTER"|"DROP"|"DELETE"|"INSERT"|"CREATE_DATABASE"|"CREATE_TABLE"|"DATA_LOCATION_ACCESS";
   export type PermissionList = Permission[];
   export interface PhysicalConnectionRequirements {
     /**
@@ -4787,7 +4787,7 @@ declare namespace Glue {
     Permissions?: PermissionList;
   }
   export type PrincipalPermissionsList = PrincipalPermissions[];
-  export type PrincipalType = "USER"|"ROLE"|"GROUP"|string;
+  export type PrincipalType = "USER"|"ROLE"|"GROUP";
   export interface PropertyPredicate {
     /**
      * The key of the property.
@@ -4871,7 +4871,7 @@ declare namespace Glue {
      */
     JobBookmarkEntry?: JobBookmarkEntry;
   }
-  export type ResourceType = "JAR"|"FILE"|"ARCHIVE"|string;
+  export type ResourceType = "JAR"|"FILE"|"ARCHIVE";
   export interface ResourceUri {
     /**
      * The type of the resource.
@@ -4899,7 +4899,7 @@ declare namespace Glue {
     KmsKeyArn?: KmsKeyArn;
   }
   export type S3EncryptionList = S3Encryption[];
-  export type S3EncryptionMode = "DISABLED"|"SSE-KMS"|"SSE-S3"|string;
+  export type S3EncryptionMode = "DISABLED"|"SSE-KMS"|"SSE-S3";
   export interface S3Target {
     /**
      * The path to the Amazon S3 target.
@@ -4922,7 +4922,7 @@ declare namespace Glue {
      */
     State?: ScheduleState;
   }
-  export type ScheduleState = "SCHEDULED"|"NOT_SCHEDULED"|"TRANSITIONING"|string;
+  export type ScheduleState = "SCHEDULED"|"NOT_SCHEDULED"|"TRANSITIONING";
   export interface SchemaChangePolicy {
     /**
      * The update behavior when the crawler finds a changed schema.
@@ -5036,13 +5036,13 @@ declare namespace Glue {
      */
     SkewedColumnValueLocationMaps?: LocationMap;
   }
-  export type Sort = "ASC"|"DESC"|string;
+  export type Sort = "ASC"|"DESC";
   export type SortCriteria = SortCriterion[];
   export interface SortCriterion {
     FieldName?: ValueString;
     Sort?: Sort;
   }
-  export type SortDirectionType = "DESCENDING"|"ASCENDING"|string;
+  export type SortDirectionType = "DESCENDING"|"ASCENDING";
   export interface StartCrawlerRequest {
     /**
      * Name of the crawler to start.
@@ -5533,7 +5533,7 @@ declare namespace Glue {
      */
     FindMatchesTaskRunProperties?: FindMatchesTaskRunProperties;
   }
-  export type TaskRunSortColumnType = "TASK_RUN_TYPE"|"STATUS"|"STARTED"|string;
+  export type TaskRunSortColumnType = "TASK_RUN_TYPE"|"STATUS"|"STARTED";
   export interface TaskRunSortCriteria {
     /**
      * The column to be used to sort the list of task runs for the machine learning transform.
@@ -5544,8 +5544,8 @@ declare namespace Glue {
      */
     SortDirection: SortDirectionType;
   }
-  export type TaskStatusType = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED"|"SUCCEEDED"|"FAILED"|"TIMEOUT"|string;
-  export type TaskType = "EVALUATION"|"LABELING_SET_GENERATION"|"IMPORT_LABELS"|"EXPORT_LABELS"|"FIND_MATCHES"|string;
+  export type TaskStatusType = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED"|"SUCCEEDED"|"FAILED"|"TIMEOUT";
+  export type TaskType = "EVALUATION"|"LABELING_SET_GENERATION"|"IMPORT_LABELS"|"EXPORT_LABELS"|"FIND_MATCHES";
   export type Timeout = number;
   export type Timestamp = Date;
   export type TimestampValue = Date;
@@ -5597,7 +5597,7 @@ declare namespace Glue {
     FindMatchesParameters?: FindMatchesParameters;
   }
   export type TransformSchema = SchemaColumn[];
-  export type TransformSortColumnType = "NAME"|"TRANSFORM_TYPE"|"STATUS"|"CREATED"|"LAST_MODIFIED"|string;
+  export type TransformSortColumnType = "NAME"|"TRANSFORM_TYPE"|"STATUS"|"CREATED"|"LAST_MODIFIED";
   export interface TransformSortCriteria {
     /**
      * The column to be used in the sorting criteria that are associated with the machine learning transform.
@@ -5608,8 +5608,8 @@ declare namespace Glue {
      */
     SortDirection: SortDirectionType;
   }
-  export type TransformStatusType = "NOT_READY"|"READY"|"DELETING"|string;
-  export type TransformType = "FIND_MATCHES"|string;
+  export type TransformStatusType = "NOT_READY"|"READY"|"DELETING";
+  export type TransformType = "FIND_MATCHES";
   export interface Trigger {
     /**
      * The name of the trigger.
@@ -5656,8 +5656,8 @@ declare namespace Glue {
      */
     Trigger?: Trigger;
   }
-  export type TriggerState = "CREATING"|"CREATED"|"ACTIVATING"|"ACTIVATED"|"DEACTIVATING"|"DEACTIVATED"|"DELETING"|"UPDATING"|string;
-  export type TriggerType = "SCHEDULED"|"CONDITIONAL"|"ON_DEMAND"|string;
+  export type TriggerState = "CREATING"|"CREATED"|"ACTIVATING"|"ACTIVATED"|"DEACTIVATING"|"DEACTIVATED"|"DELETING"|"UPDATING";
+  export type TriggerType = "SCHEDULED"|"CONDITIONAL"|"ON_DEMAND";
   export interface TriggerUpdate {
     /**
      * Reserved for future use.
@@ -5693,7 +5693,7 @@ declare namespace Glue {
   }
   export interface UntagResourceResponse {
   }
-  export type UpdateBehavior = "LOG"|"UPDATE_IN_DATABASE"|string;
+  export type UpdateBehavior = "LOG"|"UPDATE_IN_DATABASE";
   export interface UpdateClassifierRequest {
     /**
      * A GrokClassifier object with updated fields.
@@ -6133,7 +6133,7 @@ declare namespace Glue {
   export type VersionId = number;
   export type VersionString = string;
   export type ViewTextString = string;
-  export type WorkerType = "Standard"|"G.1X"|"G.2X"|string;
+  export type WorkerType = "Standard"|"G.1X"|"G.2X";
   export interface Workflow {
     /**
      * The name of the workflow representing the flow.
@@ -6236,7 +6236,7 @@ declare namespace Glue {
      */
     RunningActions?: IntegerValue;
   }
-  export type WorkflowRunStatus = "RUNNING"|"COMPLETED"|string;
+  export type WorkflowRunStatus = "RUNNING"|"COMPLETED";
   export type WorkflowRuns = WorkflowRun[];
   export type Workflows = Workflow[];
   export interface XMLClassifier {

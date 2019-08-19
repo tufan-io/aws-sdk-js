@@ -824,7 +824,7 @@ declare namespace Greengrass {
     GroupArn?: __string;
   }
   export type BulkDeploymentResults = BulkDeploymentResult[];
-  export type BulkDeploymentStatus = "Initializing"|"Running"|"Completed"|"Stopping"|"Stopped"|"Failed"|string;
+  export type BulkDeploymentStatus = "Initializing"|"Running"|"Completed"|"Stopping"|"Stopped"|"Failed";
   export type BulkDeployments = BulkDeployment[];
   export interface ConnectivityInfo {
     /**
@@ -1746,7 +1746,7 @@ declare namespace Greengrass {
      */
     GroupArn?: __string;
   }
-  export type DeploymentType = "NewDeployment"|"Redeployment"|"ResetDeployment"|"ForceResetDeployment"|string;
+  export type DeploymentType = "NewDeployment"|"Redeployment"|"ResetDeployment"|"ForceResetDeployment";
   export type Deployments = Deployment[];
   export interface Device {
     /**
@@ -1792,7 +1792,7 @@ declare namespace Greengrass {
      */
     DisassociatedAt?: __string;
   }
-  export type EncodingType = "binary"|"json"|string;
+  export type EncodingType = "binary"|"json";
   export interface ErrorDetail {
     /**
      * A detailed error code.
@@ -1887,7 +1887,7 @@ declare namespace Greengrass {
     IsolationMode?: FunctionIsolationMode;
     RunAs?: FunctionRunAsConfig;
   }
-  export type FunctionIsolationMode = "GreengrassContainer"|"NoContainer"|string;
+  export type FunctionIsolationMode = "GreengrassContainer"|"NoContainer";
   export interface FunctionRunAsConfig {
     /**
      * The group ID whose permissions are used to run a Lambda function.
@@ -3233,16 +3233,16 @@ declare namespace Greengrass {
      */
     Type: LoggerType;
   }
-  export type LoggerComponent = "GreengrassSystem"|"Lambda"|string;
+  export type LoggerComponent = "GreengrassSystem"|"Lambda";
   export interface LoggerDefinitionVersion {
     /**
      * A list of loggers.
      */
     Loggers?: __listOfLogger;
   }
-  export type LoggerLevel = "DEBUG"|"INFO"|"WARN"|"ERROR"|"FATAL"|string;
-  export type LoggerType = "FileSystem"|"AWSCloudWatch"|string;
-  export type Permission = "ro"|"rw"|string;
+  export type LoggerLevel = "DEBUG"|"INFO"|"WARN"|"ERROR"|"FATAL";
+  export type LoggerType = "FileSystem"|"AWSCloudWatch";
+  export type Permission = "ro"|"rw";
   export interface ResetDeploymentsRequest {
     /**
      * A client token used to correlate requests and responses.
@@ -3350,7 +3350,7 @@ declare namespace Greengrass {
      */
     AdditionalStagingLabelsToDownload?: __listOf__string;
   }
-  export type SoftwareToUpdate = "core"|"ota_agent"|string;
+  export type SoftwareToUpdate = "core"|"ota_agent";
   export interface StartBulkDeploymentRequest {
     /**
      * A client token used to correlate requests and responses.
@@ -3429,7 +3429,7 @@ declare namespace Greengrass {
      */
     TagKeys: __listOf__string;
   }
-  export type UpdateAgentLogLevel = "NONE"|"TRACE"|"DEBUG"|"VERBOSE"|"INFO"|"WARN"|"ERROR"|"FATAL"|string;
+  export type UpdateAgentLogLevel = "NONE"|"TRACE"|"DEBUG"|"VERBOSE"|"INFO"|"WARN"|"ERROR"|"FATAL";
   export interface UpdateConnectivityInfoRequest {
     /**
      * A list of connectivity info.
@@ -3571,8 +3571,8 @@ declare namespace Greengrass {
   export interface UpdateSubscriptionDefinitionResponse {
   }
   export type UpdateTargets = __string[];
-  export type UpdateTargetsArchitecture = "armv7l"|"x86_64"|"aarch64"|"openwrt"|string;
-  export type UpdateTargetsOperatingSystem = "ubuntu"|"raspbian"|"amazon_linux"|string;
+  export type UpdateTargetsArchitecture = "armv7l"|"x86_64"|"aarch64"|"openwrt";
+  export type UpdateTargetsOperatingSystem = "ubuntu"|"raspbian"|"amazon_linux";
   export interface VersionInformation {
     /**
      * The ARN of the version.

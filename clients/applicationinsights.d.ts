@@ -361,8 +361,8 @@ declare namespace ApplicationInsights {
   }
   export type EndTime = Date;
   export type Feedback = {[key: string]: FeedbackValue};
-  export type FeedbackKey = "INSIGHTS_FEEDBACK"|string;
-  export type FeedbackValue = "NOT_SPECIFIED"|"USEFUL"|"NOT_USEFUL"|string;
+  export type FeedbackKey = "INSIGHTS_FEEDBACK";
+  export type FeedbackValue = "NOT_SPECIFIED"|"USEFUL"|"NOT_USEFUL";
   export type Insights = string;
   export type LifeCycle = string;
   export type LineTime = Date;
@@ -442,7 +442,7 @@ declare namespace ApplicationInsights {
      */
     NextToken?: PaginationToken;
   }
-  export type LogFilter = "ERROR"|"WARN"|"INFO"|string;
+  export type LogFilter = "ERROR"|"WARN"|"INFO";
   export type LogGroup = string;
   export type LogText = string;
   export type MaxEntities = number;
@@ -565,11 +565,11 @@ declare namespace ApplicationInsights {
   export type ResourceGroupName = string;
   export type ResourceList = ResourceARN[];
   export type ResourceType = string;
-  export type SeverityLevel = "LOW"|"MEDIUM"|"HIGH"|string;
+  export type SeverityLevel = "LOW"|"MEDIUM"|"HIGH";
   export type SourceARN = string;
   export type SourceType = string;
   export type StartTime = Date;
-  export type Status = "IGNORE"|"RESOLVED"|"PENDING"|string;
+  export type Status = "IGNORE"|"RESOLVED"|"PENDING";
   export type Tier = string;
   export type Title = string;
   export type Unit = string;

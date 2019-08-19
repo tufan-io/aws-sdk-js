@@ -197,9 +197,9 @@ declare namespace GlobalAccelerator {
      */
     FlowLogsS3Prefix?: GenericString;
   }
-  export type AcceleratorStatus = "DEPLOYED"|"IN_PROGRESS"|string;
+  export type AcceleratorStatus = "DEPLOYED"|"IN_PROGRESS";
   export type Accelerators = Accelerator[];
-  export type ClientAffinity = "NONE"|"SOURCE_IP"|string;
+  export type ClientAffinity = "NONE"|"SOURCE_IP";
   export interface CreateAcceleratorRequest {
     /**
      * The name of an accelerator. The name can have a maximum of 32 characters, must contain only alphanumeric characters or hyphens (-), and must not begin or end with a hyphen.
@@ -440,11 +440,11 @@ declare namespace GlobalAccelerator {
   export type GenericString = string;
   export type HealthCheckIntervalSeconds = number;
   export type HealthCheckPort = number;
-  export type HealthCheckProtocol = "TCP"|"HTTP"|"HTTPS"|string;
-  export type HealthState = "INITIAL"|"HEALTHY"|"UNHEALTHY"|string;
+  export type HealthCheckProtocol = "TCP"|"HTTP"|"HTTPS";
+  export type HealthState = "INITIAL"|"HEALTHY"|"UNHEALTHY";
   export type IdempotencyToken = string;
   export type IpAddress = string;
-  export type IpAddressType = "IPV4"|string;
+  export type IpAddressType = "IPV4";
   export type IpAddresses = IpAddress[];
   export interface IpSet {
     /**
@@ -557,7 +557,7 @@ declare namespace GlobalAccelerator {
     ToPort?: PortNumber;
   }
   export type PortRanges = PortRange[];
-  export type Protocol = "TCP"|"UDP"|string;
+  export type Protocol = "TCP"|"UDP";
   export type ThresholdCount = number;
   export type Timestamp = Date;
   export type TrafficDialPercentage = number;

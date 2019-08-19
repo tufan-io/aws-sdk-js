@@ -186,7 +186,7 @@ declare namespace Budgets {
      */
     BudgetedAndActualAmountsList?: BudgetedAndActualAmountsList;
   }
-  export type BudgetType = "USAGE"|"COST"|"RI_UTILIZATION"|"RI_COVERAGE"|string;
+  export type BudgetType = "USAGE"|"COST"|"RI_UTILIZATION"|"RI_COVERAGE";
   export interface BudgetedAndActualAmounts {
     /**
      * The amount of cost or usage that you created the budget for.
@@ -213,7 +213,7 @@ declare namespace Budgets {
      */
     ForecastedSpend?: Spend;
   }
-  export type ComparisonOperator = "GREATER_THAN"|"LESS_THAN"|"EQUAL_TO"|string;
+  export type ComparisonOperator = "GREATER_THAN"|"LESS_THAN"|"EQUAL_TO";
   export type CostFilters = {[key: string]: DimensionValues};
   export interface CostTypes {
     /**
@@ -508,9 +508,9 @@ declare namespace Budgets {
      */
     NotificationState?: NotificationState;
   }
-  export type NotificationState = "OK"|"ALARM"|string;
+  export type NotificationState = "OK"|"ALARM";
   export type NotificationThreshold = number;
-  export type NotificationType = "ACTUAL"|"FORECASTED"|string;
+  export type NotificationType = "ACTUAL"|"FORECASTED";
   export interface NotificationWithSubscribers {
     /**
      * The notification that is associated with a budget.
@@ -548,8 +548,8 @@ declare namespace Budgets {
   }
   export type SubscriberAddress = string;
   export type Subscribers = Subscriber[];
-  export type SubscriptionType = "SNS"|"EMAIL"|string;
-  export type ThresholdType = "PERCENTAGE"|"ABSOLUTE_VALUE"|string;
+  export type SubscriptionType = "SNS"|"EMAIL";
+  export type ThresholdType = "PERCENTAGE"|"ABSOLUTE_VALUE";
   export interface TimePeriod {
     /**
      * The start date for a budget. If you created your budget and didn't specify a start date, AWS defaults to the start of your chosen time period (DAILY, MONTHLY, QUARTERLY, or ANNUALLY). For example, if you created your budget on January 24, 2018, chose DAILY, and didn't set a start date, AWS set your start date to 01/24/18 00:00 UTC. If you chose MONTHLY, AWS set your start date to 01/01/18 00:00 UTC. The defaults are the same for the AWS Billing and Cost Management console and the API. You can change your start date with the UpdateBudget operation.
@@ -560,7 +560,7 @@ declare namespace Budgets {
      */
     End?: GenericTimestamp;
   }
-  export type TimeUnit = "DAILY"|"MONTHLY"|"QUARTERLY"|"ANNUALLY"|string;
+  export type TimeUnit = "DAILY"|"MONTHLY"|"QUARTERLY"|"ANNUALLY";
   export type UnitValue = string;
   export interface UpdateBudgetRequest {
     /**

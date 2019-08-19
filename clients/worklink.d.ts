@@ -315,7 +315,7 @@ declare namespace WorkLink {
     WebsiteCaId?: Id;
   }
   export type AuditStreamArn = string;
-  export type AuthorizationProviderType = "SAML"|string;
+  export type AuthorizationProviderType = "SAML";
   export type Boolean = boolean;
   export type Certificate = string;
   export type CertificateChain = string;
@@ -558,7 +558,7 @@ declare namespace WorkLink {
   export type DeviceOperatingSystemName = string;
   export type DeviceOperatingSystemVersion = string;
   export type DevicePatchLevel = string;
-  export type DeviceStatus = "ACTIVE"|"SIGNED_OUT"|string;
+  export type DeviceStatus = "ACTIVE"|"SIGNED_OUT";
   export interface DeviceSummary {
     /**
      * The ID of the device.
@@ -608,7 +608,7 @@ declare namespace WorkLink {
   }
   export type DisplayName = string;
   export type DomainName = string;
-  export type DomainStatus = "PENDING_VALIDATION"|"ASSOCIATING"|"ACTIVE"|"INACTIVE"|"DISASSOCIATING"|"DISASSOCIATED"|"FAILED_TO_ASSOCIATE"|"FAILED_TO_DISASSOCIATE"|string;
+  export type DomainStatus = "PENDING_VALIDATION"|"ASSOCIATING"|"ACTIVE"|"INACTIVE"|"DISASSOCIATING"|"DISASSOCIATED"|"FAILED_TO_ASSOCIATE"|"FAILED_TO_DISASSOCIATE";
   export interface DomainSummary {
     /**
      * The name of the domain.
@@ -630,7 +630,7 @@ declare namespace WorkLink {
   export type DomainSummaryList = DomainSummary[];
   export type FleetArn = string;
   export type FleetName = string;
-  export type FleetStatus = "CREATING"|"ACTIVE"|"DELETING"|"DELETED"|"FAILED_TO_CREATE"|"FAILED_TO_DELETE"|string;
+  export type FleetStatus = "CREATING"|"ACTIVE"|"DELETING"|"DELETED"|"FAILED_TO_CREATE"|"FAILED_TO_DELETE";
   export interface FleetSummary {
     /**
      * The ARN of the fleet.
@@ -663,7 +663,7 @@ declare namespace WorkLink {
   }
   export type FleetSummaryList = FleetSummary[];
   export type Id = string;
-  export type IdentityProviderType = "SAML"|string;
+  export type IdentityProviderType = "SAML";
   export interface ListDevicesRequest {
     /**
      * The ARN of the fleet.

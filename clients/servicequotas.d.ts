@@ -168,7 +168,7 @@ declare namespace ServiceQuotas {
   }
   export interface DisassociateServiceQuotaTemplateResponse {
   }
-  export type ErrorCode = "DEPENDENCY_ACCESS_DENIED_ERROR"|"DEPENDENCY_THROTTLING_ERROR"|"DEPENDENCY_SERVICE_ERROR"|"SERVICE_QUOTA_NOT_AVAILABLE_ERROR"|string;
+  export type ErrorCode = "DEPENDENCY_ACCESS_DENIED_ERROR"|"DEPENDENCY_THROTTLING_ERROR"|"DEPENDENCY_SERVICE_ERROR"|"SERVICE_QUOTA_NOT_AVAILABLE_ERROR";
   export type ErrorMessage = string;
   export interface ErrorReason {
     /**
@@ -432,7 +432,7 @@ declare namespace ServiceQuotas {
     MetricStatisticRecommendation?: Statistic;
   }
   export type NextToken = string;
-  export type PeriodUnit = "MICROSECOND"|"MILLISECOND"|"SECOND"|"MINUTE"|"HOUR"|"DAY"|"WEEK"|string;
+  export type PeriodUnit = "MICROSECOND"|"MILLISECOND"|"SECOND"|"MINUTE"|"HOUR"|"DAY"|"WEEK";
   export type PeriodValue = number;
   export interface PutServiceQuotaIncreaseRequestIntoTemplateRequest {
     /**
@@ -497,7 +497,7 @@ declare namespace ServiceQuotas {
      */
     RequestedQuota?: RequestedServiceQuotaChange;
   }
-  export type RequestStatus = "PENDING"|"CASE_OPENED"|"APPROVED"|"DENIED"|"CASE_CLOSED"|string;
+  export type RequestStatus = "PENDING"|"CASE_OPENED"|"APPROVED"|"DENIED"|"CASE_CLOSED";
   export interface RequestedServiceQuotaChange {
     /**
      * The unique identifier of a requested service quota change.
@@ -657,7 +657,7 @@ declare namespace ServiceQuotas {
   }
   export type ServiceQuotaIncreaseRequestInTemplateList = ServiceQuotaIncreaseRequestInTemplate[];
   export type ServiceQuotaListDefinition = ServiceQuota[];
-  export type ServiceQuotaTemplateAssociationStatus = "ASSOCIATED"|"DISASSOCIATED"|string;
+  export type ServiceQuotaTemplateAssociationStatus = "ASSOCIATED"|"DISASSOCIATED";
   export type Statistic = string;
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.

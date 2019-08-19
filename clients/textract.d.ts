@@ -136,7 +136,7 @@ declare namespace Textract {
     Page?: UInteger;
   }
   export type BlockList = Block[];
-  export type BlockType = "KEY_VALUE_SET"|"PAGE"|"LINE"|"WORD"|"TABLE"|"CELL"|"SELECTION_ELEMENT"|string;
+  export type BlockType = "KEY_VALUE_SET"|"PAGE"|"LINE"|"WORD"|"TABLE"|"CELL"|"SELECTION_ELEMENT";
   export interface BoundingBox {
     /**
      * The width of the bounding box as a ratio of the overall document page width.
@@ -194,10 +194,10 @@ declare namespace Textract {
      */
     Pages?: UInteger;
   }
-  export type EntityType = "KEY"|"VALUE"|string;
+  export type EntityType = "KEY"|"VALUE";
   export type EntityTypes = EntityType[];
   export type ErrorCode = string;
-  export type FeatureType = "TABLES"|"FORMS"|string;
+  export type FeatureType = "TABLES"|"FORMS";
   export type FeatureTypes = FeatureType[];
   export type Float = number;
   export interface Geometry {
@@ -293,7 +293,7 @@ declare namespace Textract {
   export type IdList = NonEmptyString[];
   export type ImageBlob = Buffer|Uint8Array|Blob|string;
   export type JobId = string;
-  export type JobStatus = "IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"PARTIAL_SUCCESS"|string;
+  export type JobStatus = "IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"PARTIAL_SUCCESS";
   export type JobTag = string;
   export type MaxResults = number;
   export type NonEmptyString = string;
@@ -332,7 +332,7 @@ declare namespace Textract {
     Ids?: IdList;
   }
   export type RelationshipList = Relationship[];
-  export type RelationshipType = "VALUE"|"CHILD"|string;
+  export type RelationshipType = "VALUE"|"CHILD";
   export type RoleArn = string;
   export type S3Bucket = string;
   export interface S3Object {
@@ -352,7 +352,7 @@ declare namespace Textract {
   export type S3ObjectName = string;
   export type S3ObjectVersion = string;
   export type SNSTopicArn = string;
-  export type SelectionStatus = "SELECTED"|"NOT_SELECTED"|string;
+  export type SelectionStatus = "SELECTED"|"NOT_SELECTED";
   export interface StartDocumentAnalysisRequest {
     /**
      * The location of the document to be processed.

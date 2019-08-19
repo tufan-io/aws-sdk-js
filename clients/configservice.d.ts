@@ -629,9 +629,9 @@ declare namespace ConfigService {
     LastErrorMessage?: String;
   }
   export type AggregatedSourceStatusList = AggregatedSourceStatus[];
-  export type AggregatedSourceStatusType = "FAILED"|"SUCCEEDED"|"OUTDATED"|string;
+  export type AggregatedSourceStatusType = "FAILED"|"SUCCEEDED"|"OUTDATED";
   export type AggregatedSourceStatusTypeList = AggregatedSourceStatusType[];
-  export type AggregatedSourceType = "ACCOUNT"|"ORGANIZATION"|string;
+  export type AggregatedSourceType = "ACCOUNT"|"ORGANIZATION";
   export interface AggregationAuthorization {
     /**
      * The Amazon Resource Name (ARN) of the aggregation object.
@@ -754,7 +754,7 @@ declare namespace ConfigService {
   }
   export type Boolean = boolean;
   export type ChannelName = string;
-  export type ChronologicalOrder = "Reverse"|"Forward"|string;
+  export type ChronologicalOrder = "Reverse"|"Forward";
   export interface Compliance {
     /**
      * Indicates whether an AWS resource or AWS Config rule is compliant. A resource is compliant if it complies with all of the AWS Config rules that evaluate it. A resource is noncompliant if it does not comply with one or more of these rules. A rule is compliant if all of the resources that the rule evaluates comply with it. A rule is noncompliant if any of these resources do not comply. AWS Config returns the INSUFFICIENT_DATA value when no evaluation results are available for the AWS resource or AWS Config rule. For the Compliance data type, AWS Config supports only COMPLIANT, NON_COMPLIANT, and INSUFFICIENT_DATA values. AWS Config does not support the NOT_APPLICABLE value for the Compliance data type.
@@ -827,7 +827,7 @@ declare namespace ConfigService {
      */
     ComplianceSummary?: ComplianceSummary;
   }
-  export type ComplianceType = "COMPLIANT"|"NON_COMPLIANT"|"NOT_APPLICABLE"|"INSUFFICIENT_DATA"|string;
+  export type ComplianceType = "COMPLIANT"|"NON_COMPLIANT"|"NOT_APPLICABLE"|"INSUFFICIENT_DATA";
   export type ComplianceTypes = ComplianceType[];
   export interface ConfigExportDeliveryInfo {
     /**
@@ -925,7 +925,7 @@ declare namespace ConfigService {
      */
     AwsRegion?: AwsRegion;
   }
-  export type ConfigRuleComplianceSummaryGroupKey = "ACCOUNT_ID"|"AWS_REGION"|string;
+  export type ConfigRuleComplianceSummaryGroupKey = "ACCOUNT_ID"|"AWS_REGION";
   export interface ConfigRuleEvaluationStatus {
     /**
      * The name of the AWS Config rule.
@@ -975,7 +975,7 @@ declare namespace ConfigService {
   export type ConfigRuleEvaluationStatusList = ConfigRuleEvaluationStatus[];
   export type ConfigRuleName = string;
   export type ConfigRuleNames = StringWithCharLimit64[];
-  export type ConfigRuleState = "ACTIVE"|"DELETING"|"DELETING_RESULTS"|"EVALUATING"|string;
+  export type ConfigRuleState = "ACTIVE"|"DELETING"|"DELETING_RESULTS"|"EVALUATING";
   export type ConfigRules = ConfigRule[];
   export interface ConfigSnapshotDeliveryProperties {
     /**
@@ -1109,7 +1109,7 @@ declare namespace ConfigService {
   export type ConfigurationItemCaptureTime = Date;
   export type ConfigurationItemList = ConfigurationItem[];
   export type ConfigurationItemMD5Hash = string;
-  export type ConfigurationItemStatus = "OK"|"ResourceDiscovered"|"ResourceNotRecorded"|"ResourceDeleted"|"ResourceDeletedNotRecorded"|string;
+  export type ConfigurationItemStatus = "OK"|"ResourceDiscovered"|"ResourceNotRecorded"|"ResourceDeleted"|"ResourceDeletedNotRecorded";
   export interface ConfigurationRecorder {
     /**
      * The name of the recorder. By default, AWS Config automatically assigns the name "default" when creating the configuration recorder. You cannot change the assigned name.
@@ -1292,7 +1292,7 @@ declare namespace ConfigService {
     configStreamDeliveryInfo?: ConfigStreamDeliveryInfo;
   }
   export type DeliveryChannelStatusList = DeliveryChannelStatus[];
-  export type DeliveryStatus = "Success"|"Failure"|"Not_Applicable"|string;
+  export type DeliveryStatus = "Success"|"Failure"|"Not_Applicable";
   export interface DescribeAggregateComplianceByConfigRulesRequest {
     /**
      * The name of the configuration aggregator.
@@ -1717,7 +1717,7 @@ declare namespace ConfigService {
   }
   export type EvaluationResults = EvaluationResult[];
   export type Evaluations = Evaluation[];
-  export type EventSource = "aws.config"|string;
+  export type EventSource = "aws.config";
   export type ExcludedAccounts = AccountId[];
   export type Expression = string;
   export interface FailedRemediationBatch {
@@ -2132,8 +2132,8 @@ declare namespace ConfigService {
     NextToken?: NextToken;
   }
   export type Long = number;
-  export type MaximumExecutionFrequency = "One_Hour"|"Three_Hours"|"Six_Hours"|"Twelve_Hours"|"TwentyFour_Hours"|string;
-  export type MemberAccountRuleStatus = "CREATE_SUCCESSFUL"|"CREATE_IN_PROGRESS"|"CREATE_FAILED"|"UPDATE_SUCCESSFUL"|"UPDATE_FAILED"|"UPDATE_IN_PROGRESS"|"DELETE_SUCCESSFUL"|"DELETE_FAILED"|"DELETE_IN_PROGRESS"|string;
+  export type MaximumExecutionFrequency = "One_Hour"|"Three_Hours"|"Six_Hours"|"Twelve_Hours"|"TwentyFour_Hours";
+  export type MemberAccountRuleStatus = "CREATE_SUCCESSFUL"|"CREATE_IN_PROGRESS"|"CREATE_FAILED"|"UPDATE_SUCCESSFUL"|"UPDATE_FAILED"|"UPDATE_IN_PROGRESS"|"DELETE_SUCCESSFUL"|"DELETE_FAILED"|"DELETE_IN_PROGRESS";
   export interface MemberAccountStatus {
     AccountId: AccountId;
     ConfigRuleName: StringWithCharLimit64;
@@ -2142,7 +2142,7 @@ declare namespace ConfigService {
     ErrorMessage?: String;
     LastUpdateTime?: _Date;
   }
-  export type MessageType = "ConfigurationItemChangeNotification"|"ConfigurationSnapshotDeliveryCompleted"|"ScheduledNotification"|"OversizedConfigurationItemChangeNotification"|string;
+  export type MessageType = "ConfigurationItemChangeNotification"|"ConfigurationSnapshotDeliveryCompleted"|"ScheduledNotification"|"OversizedConfigurationItemChangeNotification";
   export type Name = string;
   export type NextToken = string;
   export type OrderingTimestamp = Date;
@@ -2178,7 +2178,7 @@ declare namespace ConfigService {
     LastUpdateTime?: _Date;
   }
   export type OrganizationConfigRuleStatuses = OrganizationConfigRuleStatus[];
-  export type OrganizationConfigRuleTriggerType = "ConfigurationItemChangeNotification"|"OversizedConfigurationItemChangeNotification"|"ScheduledNotification"|string;
+  export type OrganizationConfigRuleTriggerType = "ConfigurationItemChangeNotification"|"OversizedConfigurationItemChangeNotification"|"ScheduledNotification";
   export type OrganizationConfigRuleTriggerTypes = OrganizationConfigRuleTriggerType[];
   export type OrganizationConfigRules = OrganizationConfigRule[];
   export interface OrganizationCustomRuleMetadata {
@@ -2202,8 +2202,8 @@ declare namespace ConfigService {
     TagKeyScope?: StringWithCharLimit128;
     TagValueScope?: StringWithCharLimit256;
   }
-  export type OrganizationRuleStatus = "CREATE_SUCCESSFUL"|"CREATE_IN_PROGRESS"|"CREATE_FAILED"|"UPDATE_SUCCESSFUL"|"UPDATE_FAILED"|"UPDATE_IN_PROGRESS"|"DELETE_SUCCESSFUL"|"DELETE_FAILED"|"DELETE_IN_PROGRESS"|string;
-  export type Owner = "CUSTOM_LAMBDA"|"AWS"|string;
+  export type OrganizationRuleStatus = "CREATE_SUCCESSFUL"|"CREATE_IN_PROGRESS"|"CREATE_FAILED"|"UPDATE_SUCCESSFUL"|"UPDATE_FAILED"|"UPDATE_IN_PROGRESS"|"DELETE_SUCCESSFUL"|"DELETE_FAILED"|"DELETE_IN_PROGRESS";
+  export type Owner = "CUSTOM_LAMBDA"|"AWS";
   export interface PendingAggregationRequest {
     /**
      * The 12-digit account ID of the account requesting to aggregate data.
@@ -2332,7 +2332,7 @@ declare namespace ConfigService {
     SelectFields?: FieldInfoList;
   }
   export type RecorderName = string;
-  export type RecorderStatus = "Pending"|"Success"|"Failure"|string;
+  export type RecorderStatus = "Pending"|"Success"|"Failure";
   export interface RecordingGroup {
     /**
      * Specifies whether AWS Config records configuration changes for every supported type of regional resource. If you set this option to true, when AWS Config adds support for a new type of regional resource, it starts recording resources of that type automatically. If you set this option to true, you cannot enumerate a list of resourceTypes.
@@ -2397,7 +2397,7 @@ declare namespace ConfigService {
     ResourceType?: String;
   }
   export type RemediationConfigurations = RemediationConfiguration[];
-  export type RemediationExecutionState = "QUEUED"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED"|string;
+  export type RemediationExecutionState = "QUEUED"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED";
   export interface RemediationExecutionStatus {
     ResourceKey?: ResourceKey;
     /**
@@ -2440,7 +2440,7 @@ declare namespace ConfigService {
      */
     StopTime?: _Date;
   }
-  export type RemediationExecutionStepState = "SUCCEEDED"|"PENDING"|"FAILED"|string;
+  export type RemediationExecutionStepState = "SUCCEEDED"|"PENDING"|"FAILED";
   export type RemediationExecutionSteps = RemediationExecutionStep[];
   export interface RemediationParameterValue {
     /**
@@ -2453,7 +2453,7 @@ declare namespace ConfigService {
     StaticValue?: StaticValue;
   }
   export type RemediationParameters = {[key: string]: RemediationParameterValue};
-  export type RemediationTargetType = "SSM_DOCUMENT"|string;
+  export type RemediationTargetType = "SSM_DOCUMENT";
   export interface ResourceCount {
     /**
      * The resource type (for example, "AWS::EC2::Instance").
@@ -2478,7 +2478,7 @@ declare namespace ConfigService {
      */
     Region?: AwsRegion;
   }
-  export type ResourceCountGroupKey = "RESOURCE_TYPE"|"ACCOUNT_ID"|"AWS_REGION"|string;
+  export type ResourceCountGroupKey = "RESOURCE_TYPE"|"ACCOUNT_ID"|"AWS_REGION";
   export type ResourceCounts = ResourceCount[];
   export type ResourceCreationTime = Date;
   export type ResourceDeletionTime = Date;
@@ -2534,7 +2534,7 @@ declare namespace ConfigService {
   }
   export type ResourceKeys = ResourceKey[];
   export type ResourceName = string;
-  export type ResourceType = "AWS::EC2::CustomerGateway"|"AWS::EC2::EIP"|"AWS::EC2::Host"|"AWS::EC2::Instance"|"AWS::EC2::InternetGateway"|"AWS::EC2::NetworkAcl"|"AWS::EC2::NetworkInterface"|"AWS::EC2::RouteTable"|"AWS::EC2::SecurityGroup"|"AWS::EC2::Subnet"|"AWS::CloudTrail::Trail"|"AWS::EC2::Volume"|"AWS::EC2::VPC"|"AWS::EC2::VPNConnection"|"AWS::EC2::VPNGateway"|"AWS::IAM::Group"|"AWS::IAM::Policy"|"AWS::IAM::Role"|"AWS::IAM::User"|"AWS::ACM::Certificate"|"AWS::RDS::DBInstance"|"AWS::RDS::DBSubnetGroup"|"AWS::RDS::DBSecurityGroup"|"AWS::RDS::DBSnapshot"|"AWS::RDS::EventSubscription"|"AWS::ElasticLoadBalancingV2::LoadBalancer"|"AWS::S3::Bucket"|"AWS::SSM::ManagedInstanceInventory"|"AWS::Redshift::Cluster"|"AWS::Redshift::ClusterSnapshot"|"AWS::Redshift::ClusterParameterGroup"|"AWS::Redshift::ClusterSecurityGroup"|"AWS::Redshift::ClusterSubnetGroup"|"AWS::Redshift::EventSubscription"|"AWS::CloudWatch::Alarm"|"AWS::CloudFormation::Stack"|"AWS::DynamoDB::Table"|"AWS::AutoScaling::AutoScalingGroup"|"AWS::AutoScaling::LaunchConfiguration"|"AWS::AutoScaling::ScalingPolicy"|"AWS::AutoScaling::ScheduledAction"|"AWS::CodeBuild::Project"|"AWS::WAF::RateBasedRule"|"AWS::WAF::Rule"|"AWS::WAF::WebACL"|"AWS::WAFRegional::RateBasedRule"|"AWS::WAFRegional::Rule"|"AWS::WAFRegional::WebACL"|"AWS::CloudFront::Distribution"|"AWS::CloudFront::StreamingDistribution"|"AWS::WAF::RuleGroup"|"AWS::WAFRegional::RuleGroup"|"AWS::Lambda::Function"|"AWS::ElasticBeanstalk::Application"|"AWS::ElasticBeanstalk::ApplicationVersion"|"AWS::ElasticBeanstalk::Environment"|"AWS::ElasticLoadBalancing::LoadBalancer"|"AWS::XRay::EncryptionConfig"|"AWS::SSM::AssociationCompliance"|"AWS::SSM::PatchCompliance"|"AWS::Shield::Protection"|"AWS::ShieldRegional::Protection"|"AWS::Config::ResourceCompliance"|"AWS::CodePipeline::Pipeline"|string;
+  export type ResourceType = "AWS::EC2::CustomerGateway"|"AWS::EC2::EIP"|"AWS::EC2::Host"|"AWS::EC2::Instance"|"AWS::EC2::InternetGateway"|"AWS::EC2::NetworkAcl"|"AWS::EC2::NetworkInterface"|"AWS::EC2::RouteTable"|"AWS::EC2::SecurityGroup"|"AWS::EC2::Subnet"|"AWS::CloudTrail::Trail"|"AWS::EC2::Volume"|"AWS::EC2::VPC"|"AWS::EC2::VPNConnection"|"AWS::EC2::VPNGateway"|"AWS::IAM::Group"|"AWS::IAM::Policy"|"AWS::IAM::Role"|"AWS::IAM::User"|"AWS::ACM::Certificate"|"AWS::RDS::DBInstance"|"AWS::RDS::DBSubnetGroup"|"AWS::RDS::DBSecurityGroup"|"AWS::RDS::DBSnapshot"|"AWS::RDS::EventSubscription"|"AWS::ElasticLoadBalancingV2::LoadBalancer"|"AWS::S3::Bucket"|"AWS::SSM::ManagedInstanceInventory"|"AWS::Redshift::Cluster"|"AWS::Redshift::ClusterSnapshot"|"AWS::Redshift::ClusterParameterGroup"|"AWS::Redshift::ClusterSecurityGroup"|"AWS::Redshift::ClusterSubnetGroup"|"AWS::Redshift::EventSubscription"|"AWS::CloudWatch::Alarm"|"AWS::CloudFormation::Stack"|"AWS::DynamoDB::Table"|"AWS::AutoScaling::AutoScalingGroup"|"AWS::AutoScaling::LaunchConfiguration"|"AWS::AutoScaling::ScalingPolicy"|"AWS::AutoScaling::ScheduledAction"|"AWS::CodeBuild::Project"|"AWS::WAF::RateBasedRule"|"AWS::WAF::Rule"|"AWS::WAF::WebACL"|"AWS::WAFRegional::RateBasedRule"|"AWS::WAFRegional::Rule"|"AWS::WAFRegional::WebACL"|"AWS::CloudFront::Distribution"|"AWS::CloudFront::StreamingDistribution"|"AWS::WAF::RuleGroup"|"AWS::WAFRegional::RuleGroup"|"AWS::Lambda::Function"|"AWS::ElasticBeanstalk::Application"|"AWS::ElasticBeanstalk::ApplicationVersion"|"AWS::ElasticBeanstalk::Environment"|"AWS::ElasticLoadBalancing::LoadBalancer"|"AWS::XRay::EncryptionConfig"|"AWS::SSM::AssociationCompliance"|"AWS::SSM::PatchCompliance"|"AWS::Shield::Protection"|"AWS::ShieldRegional::Protection"|"AWS::Config::ResourceCompliance"|"AWS::CodePipeline::Pipeline";
   export type ResourceTypeList = ResourceType[];
   export type ResourceTypes = StringWithCharLimit256[];
   export type ResourceTypesScope = StringWithCharLimit256[];
@@ -2544,7 +2544,7 @@ declare namespace ConfigService {
      */
     Value?: ResourceValueType;
   }
-  export type ResourceValueType = "RESOURCE_ID"|string;
+  export type ResourceValueType = "RESOURCE_ID";
   export type Results = String[];
   export interface RetentionConfiguration {
     /**

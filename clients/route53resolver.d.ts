@@ -458,7 +458,7 @@ declare namespace Route53Resolver {
      */
     ModificationTime?: Rfc3339TimeString;
   }
-  export type IpAddressStatus = "CREATING"|"FAILED_CREATION"|"ATTACHING"|"ATTACHED"|"REMAP_DETACHING"|"REMAP_ATTACHING"|"DETACHING"|"FAILED_RESOURCE_GONE"|"DELETING"|"DELETE_FAILED_FAS_EXPIRED"|string;
+  export type IpAddressStatus = "CREATING"|"FAILED_CREATION"|"ATTACHING"|"ATTACHED"|"REMAP_DETACHING"|"REMAP_ATTACHING"|"DETACHING"|"FAILED_RESOURCE_GONE"|"DELETING"|"DELETE_FAILED_FAS_EXPIRED";
   export interface IpAddressUpdate {
     /**
      *  Only when removing an IP address from a resolver endpoint: The ID of the IP address that you want to remove. To get this ID, use GetResolverEndpoint.
@@ -681,8 +681,8 @@ declare namespace Route53Resolver {
      */
     ModificationTime?: Rfc3339TimeString;
   }
-  export type ResolverEndpointDirection = "INBOUND"|"OUTBOUND"|string;
-  export type ResolverEndpointStatus = "CREATING"|"OPERATIONAL"|"UPDATING"|"AUTO_RECOVERING"|"ACTION_NEEDED"|"DELETING"|string;
+  export type ResolverEndpointDirection = "INBOUND"|"OUTBOUND";
+  export type ResolverEndpointStatus = "CREATING"|"OPERATIONAL"|"UPDATING"|"AUTO_RECOVERING"|"ACTION_NEEDED"|"DELETING";
   export type ResolverEndpoints = ResolverEndpoint[];
   export interface ResolverRule {
     /**
@@ -760,7 +760,7 @@ declare namespace Route53Resolver {
      */
     StatusMessage?: StatusMessage;
   }
-  export type ResolverRuleAssociationStatus = "CREATING"|"COMPLETE"|"DELETING"|"FAILED"|"OVERRIDDEN"|string;
+  export type ResolverRuleAssociationStatus = "CREATING"|"COMPLETE"|"DELETING"|"FAILED"|"OVERRIDDEN";
   export type ResolverRuleAssociations = ResolverRuleAssociation[];
   export interface ResolverRuleConfig {
     /**
@@ -777,13 +777,13 @@ declare namespace Route53Resolver {
     ResolverEndpointId?: ResourceId;
   }
   export type ResolverRulePolicy = string;
-  export type ResolverRuleStatus = "COMPLETE"|"DELETING"|"UPDATING"|"FAILED"|string;
+  export type ResolverRuleStatus = "COMPLETE"|"DELETING"|"UPDATING"|"FAILED";
   export type ResolverRules = ResolverRule[];
   export type ResourceId = string;
   export type Rfc3339TimeString = string;
-  export type RuleTypeOption = "FORWARD"|"SYSTEM"|"RECURSIVE"|string;
+  export type RuleTypeOption = "FORWARD"|"SYSTEM"|"RECURSIVE";
   export type SecurityGroupIds = ResourceId[];
-  export type ShareStatus = "NOT_SHARED"|"SHARED_WITH_ME"|"SHARED_BY_ME"|string;
+  export type ShareStatus = "NOT_SHARED"|"SHARED_WITH_ME"|"SHARED_BY_ME";
   export type StatusMessage = string;
   export type SubnetId = string;
   export interface Tag {

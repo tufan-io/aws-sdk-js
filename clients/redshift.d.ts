@@ -3078,7 +3078,7 @@ declare namespace Redshift {
      */
     MinimumEngineVersion?: String;
   }
-  export type ParameterApplyType = "static"|"dynamic"|string;
+  export type ParameterApplyType = "static"|"dynamic";
   export type ParameterGroupList = ClusterParameterGroup[];
   export type ParametersList = Parameter[];
   export type PendingActionsList = String[];
@@ -3255,7 +3255,7 @@ declare namespace Redshift {
     ReservedNodeOfferingType?: ReservedNodeOfferingType;
   }
   export type ReservedNodeOfferingList = ReservedNodeOffering[];
-  export type ReservedNodeOfferingType = "Regular"|"Upgradable"|string;
+  export type ReservedNodeOfferingType = "Regular"|"Upgradable";
   export interface ReservedNodeOfferingsMessage {
     /**
      * A value that indicates the starting point for the next set of response records in a subsequent request. If a value is returned in a response, you can retrieve the next set of records by providing this returned marker value in the Marker parameter and retrying the command. If the Marker field is empty, all response records have been retrieved for the request. 
@@ -3623,7 +3623,7 @@ declare namespace Redshift {
     Cluster?: Cluster;
   }
   export type ScheduleDefinitionList = String[];
-  export type ScheduleState = "MODIFYING"|"ACTIVE"|"FAILED"|string;
+  export type ScheduleState = "MODIFYING"|"ACTIVE"|"FAILED";
   export type ScheduledSnapshotTimeList = TStamp[];
   export type SensitiveString = string;
   export interface Snapshot {
@@ -3760,7 +3760,7 @@ declare namespace Redshift {
      */
     SnapshotRetentionStartTime?: TStamp;
   }
-  export type SnapshotAttributeToSortBy = "SOURCE_TYPE"|"TOTAL_SIZE"|"CREATE_TIME"|string;
+  export type SnapshotAttributeToSortBy = "SOURCE_TYPE"|"TOTAL_SIZE"|"CREATE_TIME";
   export interface SnapshotCopyGrant {
     /**
      * The name of the snapshot copy grant.
@@ -3858,9 +3858,9 @@ declare namespace Redshift {
     SortOrder?: SortByOrder;
   }
   export type SnapshotSortingEntityList = SnapshotSortingEntity[];
-  export type SortByOrder = "ASC"|"DESC"|string;
+  export type SortByOrder = "ASC"|"DESC";
   export type SourceIdsList = String[];
-  export type SourceType = "cluster"|"cluster-parameter-group"|"cluster-security-group"|"cluster-snapshot"|string;
+  export type SourceType = "cluster"|"cluster-parameter-group"|"cluster-security-group"|"cluster-snapshot";
   export type String = string;
   export interface Subnet {
     /**
@@ -3962,7 +3962,7 @@ declare namespace Redshift {
      */
     Marker?: String;
   }
-  export type TableRestoreStatusType = "PENDING"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"CANCELED"|string;
+  export type TableRestoreStatusType = "PENDING"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"CANCELED";
   export interface Tag {
     /**
      * The key, or name, for the resource tag.

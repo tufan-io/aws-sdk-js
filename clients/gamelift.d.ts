@@ -613,7 +613,7 @@ declare namespace GameLift {
   }
   export interface AcceptMatchOutput {
   }
-  export type AcceptanceType = "ACCEPT"|"REJECT"|string;
+  export type AcceptanceType = "ACCEPT"|"REJECT";
   export interface Alias {
     /**
      * Unique identifier for an alias; alias IDs are unique within a region.
@@ -679,7 +679,7 @@ declare namespace GameLift {
      */
     SessionToken?: NonEmptyString;
   }
-  export type BackfillMode = "AUTOMATIC"|"MANUAL"|string;
+  export type BackfillMode = "AUTOMATIC"|"MANUAL";
   export type BooleanModel = boolean;
   export interface Build {
     /**
@@ -713,8 +713,8 @@ declare namespace GameLift {
   }
   export type BuildId = string;
   export type BuildList = Build[];
-  export type BuildStatus = "INITIALIZED"|"READY"|"FAILED"|string;
-  export type ComparisonOperatorType = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold"|string;
+  export type BuildStatus = "INITIALIZED"|"READY"|"FAILED";
+  export type ComparisonOperatorType = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold";
   export interface CreateAliasInput {
     /**
      * Descriptive label that is associated with an alias. Alias names do not need to be unique.
@@ -1684,7 +1684,7 @@ declare namespace GameLift {
     InstanceLimit?: WholeNumber;
   }
   export type EC2InstanceLimitList = EC2InstanceLimit[];
-  export type EC2InstanceType = "t2.micro"|"t2.small"|"t2.medium"|"t2.large"|"c3.large"|"c3.xlarge"|"c3.2xlarge"|"c3.4xlarge"|"c3.8xlarge"|"c4.large"|"c4.xlarge"|"c4.2xlarge"|"c4.4xlarge"|"c4.8xlarge"|"r3.large"|"r3.xlarge"|"r3.2xlarge"|"r3.4xlarge"|"r3.8xlarge"|"r4.large"|"r4.xlarge"|"r4.2xlarge"|"r4.4xlarge"|"r4.8xlarge"|"r4.16xlarge"|"m3.medium"|"m3.large"|"m3.xlarge"|"m3.2xlarge"|"m4.large"|"m4.xlarge"|"m4.2xlarge"|"m4.4xlarge"|"m4.10xlarge"|string;
+  export type EC2InstanceType = "t2.micro"|"t2.small"|"t2.medium"|"t2.large"|"c3.large"|"c3.xlarge"|"c3.2xlarge"|"c3.4xlarge"|"c3.8xlarge"|"c4.large"|"c4.xlarge"|"c4.2xlarge"|"c4.4xlarge"|"c4.8xlarge"|"r3.large"|"r3.xlarge"|"r3.2xlarge"|"r3.4xlarge"|"r3.8xlarge"|"r4.large"|"r4.xlarge"|"r4.2xlarge"|"r4.4xlarge"|"r4.8xlarge"|"r4.16xlarge"|"m3.medium"|"m3.large"|"m3.xlarge"|"m3.2xlarge"|"m4.large"|"m4.xlarge"|"m4.2xlarge"|"m4.4xlarge"|"m4.10xlarge";
   export interface Event {
     /**
      * Unique identifier for a fleet event.
@@ -1711,9 +1711,9 @@ declare namespace GameLift {
      */
     PreSignedLogUrl?: NonZeroAndMaxString;
   }
-  export type EventCode = "GENERIC_EVENT"|"FLEET_CREATED"|"FLEET_DELETED"|"FLEET_SCALING_EVENT"|"FLEET_STATE_DOWNLOADING"|"FLEET_STATE_VALIDATING"|"FLEET_STATE_BUILDING"|"FLEET_STATE_ACTIVATING"|"FLEET_STATE_ACTIVE"|"FLEET_STATE_ERROR"|"FLEET_INITIALIZATION_FAILED"|"FLEET_BINARY_DOWNLOAD_FAILED"|"FLEET_VALIDATION_LAUNCH_PATH_NOT_FOUND"|"FLEET_VALIDATION_EXECUTABLE_RUNTIME_FAILURE"|"FLEET_VALIDATION_TIMED_OUT"|"FLEET_ACTIVATION_FAILED"|"FLEET_ACTIVATION_FAILED_NO_INSTANCES"|"FLEET_NEW_GAME_SESSION_PROTECTION_POLICY_UPDATED"|"SERVER_PROCESS_INVALID_PATH"|"SERVER_PROCESS_SDK_INITIALIZATION_TIMEOUT"|"SERVER_PROCESS_PROCESS_READY_TIMEOUT"|"SERVER_PROCESS_CRASHED"|"SERVER_PROCESS_TERMINATED_UNHEALTHY"|"SERVER_PROCESS_FORCE_TERMINATED"|"SERVER_PROCESS_PROCESS_EXIT_TIMEOUT"|"GAME_SESSION_ACTIVATION_TIMEOUT"|"FLEET_CREATION_EXTRACTING_BUILD"|"FLEET_CREATION_RUNNING_INSTALLER"|"FLEET_CREATION_VALIDATING_RUNTIME_CONFIG"|"FLEET_VPC_PEERING_SUCCEEDED"|"FLEET_VPC_PEERING_FAILED"|"FLEET_VPC_PEERING_DELETED"|"INSTANCE_INTERRUPTED"|string;
+  export type EventCode = "GENERIC_EVENT"|"FLEET_CREATED"|"FLEET_DELETED"|"FLEET_SCALING_EVENT"|"FLEET_STATE_DOWNLOADING"|"FLEET_STATE_VALIDATING"|"FLEET_STATE_BUILDING"|"FLEET_STATE_ACTIVATING"|"FLEET_STATE_ACTIVE"|"FLEET_STATE_ERROR"|"FLEET_INITIALIZATION_FAILED"|"FLEET_BINARY_DOWNLOAD_FAILED"|"FLEET_VALIDATION_LAUNCH_PATH_NOT_FOUND"|"FLEET_VALIDATION_EXECUTABLE_RUNTIME_FAILURE"|"FLEET_VALIDATION_TIMED_OUT"|"FLEET_ACTIVATION_FAILED"|"FLEET_ACTIVATION_FAILED_NO_INSTANCES"|"FLEET_NEW_GAME_SESSION_PROTECTION_POLICY_UPDATED"|"SERVER_PROCESS_INVALID_PATH"|"SERVER_PROCESS_SDK_INITIALIZATION_TIMEOUT"|"SERVER_PROCESS_PROCESS_READY_TIMEOUT"|"SERVER_PROCESS_CRASHED"|"SERVER_PROCESS_TERMINATED_UNHEALTHY"|"SERVER_PROCESS_FORCE_TERMINATED"|"SERVER_PROCESS_PROCESS_EXIT_TIMEOUT"|"GAME_SESSION_ACTIVATION_TIMEOUT"|"FLEET_CREATION_EXTRACTING_BUILD"|"FLEET_CREATION_RUNNING_INSTALLER"|"FLEET_CREATION_VALIDATING_RUNTIME_CONFIG"|"FLEET_VPC_PEERING_SUCCEEDED"|"FLEET_VPC_PEERING_FAILED"|"FLEET_VPC_PEERING_DELETED"|"INSTANCE_INTERRUPTED";
   export type EventList = Event[];
-  export type FleetAction = "AUTO_SCALING"|string;
+  export type FleetAction = "AUTO_SCALING";
   export type FleetActionList = FleetAction[];
   export interface FleetAttributes {
     /**
@@ -1815,8 +1815,8 @@ declare namespace GameLift {
   export type FleetCapacityList = FleetCapacity[];
   export type FleetId = string;
   export type FleetIdList = FleetId[];
-  export type FleetStatus = "NEW"|"DOWNLOADING"|"VALIDATING"|"BUILDING"|"ACTIVATING"|"ACTIVE"|"DELETING"|"ERROR"|"TERMINATED"|string;
-  export type FleetType = "ON_DEMAND"|"SPOT"|string;
+  export type FleetStatus = "NEW"|"DOWNLOADING"|"VALIDATING"|"BUILDING"|"ACTIVATING"|"ACTIVE"|"DELETING"|"ERROR"|"TERMINATED";
+  export type FleetType = "ON_DEMAND"|"SPOT";
   export interface FleetUtilization {
     /**
      * Unique identifier for a fleet.
@@ -2023,7 +2023,7 @@ declare namespace GameLift {
      */
     MatchmakerData?: MatchmakerData;
   }
-  export type GameSessionPlacementState = "PENDING"|"FULFILLED"|"CANCELLED"|"TIMED_OUT"|string;
+  export type GameSessionPlacementState = "PENDING"|"FULFILLED"|"CANCELLED"|"TIMED_OUT";
   export interface GameSessionQueue {
     /**
      * Descriptive label that is associated with game session queue. Queue names must be unique within each region.
@@ -2056,8 +2056,8 @@ declare namespace GameLift {
   export type GameSessionQueueList = GameSessionQueue[];
   export type GameSessionQueueName = string;
   export type GameSessionQueueNameList = GameSessionQueueName[];
-  export type GameSessionStatus = "ACTIVE"|"ACTIVATING"|"TERMINATED"|"TERMINATING"|"ERROR"|string;
-  export type GameSessionStatusReason = "INTERRUPTED"|string;
+  export type GameSessionStatus = "ACTIVE"|"ACTIVATING"|"TERMINATED"|"TERMINATING"|"ERROR";
+  export type GameSessionStatusReason = "INTERRUPTED";
   export interface GetGameSessionLogUrlInput {
     /**
      * Unique identifier for the game session to get logs for.
@@ -2151,7 +2151,7 @@ declare namespace GameLift {
   }
   export type InstanceId = string;
   export type InstanceList = Instance[];
-  export type InstanceStatus = "PENDING"|"ACTIVE"|"TERMINATING"|string;
+  export type InstanceStatus = "PENDING"|"ACTIVE"|"TERMINATING";
   export type Integer = number;
   export type IpAddress = string;
   export interface IpPermission {
@@ -2173,7 +2173,7 @@ declare namespace GameLift {
     Protocol: IpProtocol;
   }
   export type IpPermissionsList = IpPermission[];
-  export type IpProtocol = "TCP"|"UDP"|string;
+  export type IpProtocol = "TCP"|"UDP";
   export type LatencyMap = {[key: string]: PositiveInteger};
   export interface ListAliasesInput {
     /**
@@ -2347,7 +2347,7 @@ declare namespace GameLift {
     BackfillMode?: BackfillMode;
   }
   export type MatchmakingConfigurationList = MatchmakingConfiguration[];
-  export type MatchmakingConfigurationStatus = "CANCELLED"|"COMPLETED"|"FAILED"|"PLACING"|"QUEUED"|"REQUIRES_ACCEPTANCE"|"SEARCHING"|"TIMED_OUT"|string;
+  export type MatchmakingConfigurationStatus = "CANCELLED"|"COMPLETED"|"FAILED"|"PLACING"|"QUEUED"|"REQUIRES_ACCEPTANCE"|"SEARCHING"|"TIMED_OUT";
   export type MatchmakingIdList = MatchmakingIdStringModel[];
   export type MatchmakingIdStringModel = string;
   export type MatchmakingRequestTimeoutInteger = number;
@@ -2413,12 +2413,12 @@ declare namespace GameLift {
   export type MaxConcurrentGameSessionActivations = number;
   export type MetricGroup = string;
   export type MetricGroupList = MetricGroup[];
-  export type MetricName = "ActivatingGameSessions"|"ActiveGameSessions"|"ActiveInstances"|"AvailableGameSessions"|"AvailablePlayerSessions"|"CurrentPlayerSessions"|"IdleInstances"|"PercentAvailableGameSessions"|"PercentIdleInstances"|"QueueDepth"|"WaitTime"|string;
+  export type MetricName = "ActivatingGameSessions"|"ActiveGameSessions"|"ActiveInstances"|"AvailableGameSessions"|"AvailablePlayerSessions"|"CurrentPlayerSessions"|"IdleInstances"|"PercentAvailableGameSessions"|"PercentIdleInstances"|"QueueDepth"|"WaitTime";
   export type NonBlankAndLengthConstraintString = string;
   export type NonBlankString = string;
   export type NonEmptyString = string;
   export type NonZeroAndMaxString = string;
-  export type OperatingSystem = "WINDOWS_2012"|"AMAZON_LINUX"|string;
+  export type OperatingSystem = "WINDOWS_2012"|"AMAZON_LINUX";
   export interface PlacedPlayerSession {
     /**
      * Unique identifier for a player that is associated with this player session.
@@ -2521,15 +2521,15 @@ declare namespace GameLift {
      */
     PlayerData?: PlayerData;
   }
-  export type PlayerSessionCreationPolicy = "ACCEPT_ALL"|"DENY_ALL"|string;
+  export type PlayerSessionCreationPolicy = "ACCEPT_ALL"|"DENY_ALL";
   export type PlayerSessionId = string;
   export type PlayerSessionList = PlayerSession[];
-  export type PlayerSessionStatus = "RESERVED"|"ACTIVE"|"COMPLETED"|"TIMEDOUT"|string;
-  export type PolicyType = "RuleBased"|"TargetBased"|string;
+  export type PlayerSessionStatus = "RESERVED"|"ACTIVE"|"COMPLETED"|"TIMEDOUT";
+  export type PolicyType = "RuleBased"|"TargetBased";
   export type PortNumber = number;
   export type PositiveInteger = number;
   export type PositiveLong = number;
-  export type ProtectionPolicy = "NoProtection"|"FullProtection"|string;
+  export type ProtectionPolicy = "NoProtection"|"FullProtection";
   export interface PutScalingPolicyInput {
     /**
      * Descriptive label that is associated with a scaling policy. Policy names do not need to be unique. A fleet can have only one scaling policy with the same name.
@@ -2631,7 +2631,7 @@ declare namespace GameLift {
      */
     Message?: FreeText;
   }
-  export type RoutingStrategyType = "SIMPLE"|"TERMINAL"|string;
+  export type RoutingStrategyType = "SIMPLE"|"TERMINAL";
   export type RuleSetBody = string;
   export type RuleSetLimit = number;
   export interface RuntimeConfiguration {
@@ -2666,7 +2666,7 @@ declare namespace GameLift {
      */
     ObjectVersion?: NonEmptyString;
   }
-  export type ScalingAdjustmentType = "ChangeInCapacity"|"ExactCapacity"|"PercentChangeInCapacity"|string;
+  export type ScalingAdjustmentType = "ChangeInCapacity"|"ExactCapacity"|"PercentChangeInCapacity";
   export interface ScalingPolicy {
     /**
      * Unique identifier for a fleet that is associated with this scaling policy.
@@ -2714,7 +2714,7 @@ declare namespace GameLift {
     TargetConfiguration?: TargetConfiguration;
   }
   export type ScalingPolicyList = ScalingPolicy[];
-  export type ScalingStatusType = "ACTIVE"|"UPDATE_REQUESTED"|"UPDATING"|"DELETE_REQUESTED"|"DELETING"|"DELETED"|"ERROR"|string;
+  export type ScalingStatusType = "ACTIVE"|"UPDATE_REQUESTED"|"UPDATING"|"DELETE_REQUESTED"|"DELETING"|"DELETED"|"ERROR";
   export interface Script {
     /**
      * Unique identifier for a Realtime script

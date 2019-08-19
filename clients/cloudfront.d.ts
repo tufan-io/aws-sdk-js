@@ -522,7 +522,7 @@ declare namespace CloudFront {
      */
     Items: MethodsList;
   }
-  export type CertificateSource = "cloudfront"|"iam"|"acm"|string;
+  export type CertificateSource = "cloudfront"|"iam"|"acm";
   export interface CloudFrontOriginAccessIdentity {
     /**
      * The ID for the origin access identity, for example, E74FTE3AJFJ256A. 
@@ -1249,7 +1249,7 @@ declare namespace CloudFront {
     FieldPatterns: FieldPatterns;
   }
   export type EncryptionEntityList = EncryptionEntity[];
-  export type EventType = "viewer-request"|"viewer-response"|"origin-request"|"origin-response"|string;
+  export type EventType = "viewer-request"|"viewer-response"|"origin-request"|"origin-response";
   export interface FieldLevelEncryption {
     /**
      * The configuration ID for a field-level encryption configuration which includes a set of profiles that specify certain selected data fields to be encrypted by specific public keys.
@@ -1407,7 +1407,7 @@ declare namespace CloudFront {
      */
     Items?: FieldPatternList;
   }
-  export type Format = "URLEncoded"|string;
+  export type Format = "URLEncoded";
   export interface ForwardedValues {
     /**
      * Indicates whether you want CloudFront to forward query strings to the origin that is associated with this cache behavior and cache based on the query string parameters. CloudFront behavior depends on the value of QueryString and on the values that you specify for QueryStringCacheKeys, if any: If you specify true for QueryString and you don't specify any values for QueryStringCacheKeys, CloudFront forwards all query string parameters to the origin and caches based on all query string parameters. Depending on how many query string parameters and values you have, this can adversely affect performance because CloudFront must forward more requests to the origin. If you specify true for QueryString and you specify one or more values for QueryStringCacheKeys, CloudFront forwards all query string parameters to the origin, but it only caches based on the query string parameters that you specify. If you specify false for QueryString, CloudFront doesn't forward any query string parameters to the origin, and doesn't cache based on query string parameters. For more information, see Configuring CloudFront to Cache Based on Query String Parameters in the Amazon CloudFront Developer Guide.
@@ -1440,7 +1440,7 @@ declare namespace CloudFront {
      */
     Items?: LocationList;
   }
-  export type GeoRestrictionType = "blacklist"|"whitelist"|"none"|string;
+  export type GeoRestrictionType = "blacklist"|"whitelist"|"none";
   export interface GetCloudFrontOriginAccessIdentityConfigRequest {
     /**
      * The identity's ID. 
@@ -1660,8 +1660,8 @@ declare namespace CloudFront {
      */
     Items?: HeaderList;
   }
-  export type HttpVersion = "http1.1"|"http2"|string;
-  export type ICPRecordalStatus = "APPROVED"|"SUSPENDED"|"PENDING"|string;
+  export type HttpVersion = "http1.1"|"http2";
+  export type ICPRecordalStatus = "APPROVED"|"SUSPENDED"|"PENDING";
   export interface Invalidation {
     /**
      * The identifier for the invalidation request. For example: IDFDVBD632BHDS5.
@@ -1731,7 +1731,7 @@ declare namespace CloudFront {
     Status: string;
   }
   export type InvalidationSummaryList = InvalidationSummary[];
-  export type ItemSelection = "none"|"whitelist"|"all"|string;
+  export type ItemSelection = "none"|"whitelist"|"all";
   export type KeyPairIdList = string[];
   export interface KeyPairIds {
     /**
@@ -1936,9 +1936,9 @@ declare namespace CloudFront {
      */
     Prefix: string;
   }
-  export type Method = "GET"|"HEAD"|"POST"|"PUT"|"PATCH"|"OPTIONS"|"DELETE"|string;
+  export type Method = "GET"|"HEAD"|"POST"|"PUT"|"PATCH"|"OPTIONS"|"DELETE";
   export type MethodsList = Method[];
-  export type MinimumProtocolVersion = "SSLv3"|"TLSv1"|"TLSv1_2016"|"TLSv1.1_2016"|"TLSv1.2_2018"|string;
+  export type MinimumProtocolVersion = "SSLv3"|"TLSv1"|"TLSv1_2016"|"TLSv1.1_2016"|"TLSv1.2_2018";
   export interface Origin {
     /**
      * A unique identifier for the origin or origin group. The value of Id must be unique within the distribution. When you specify the value of TargetOriginId for the default cache behavior or for another cache behavior, you indicate the origin to which you want the cache behavior to route requests by specifying the value of the Id element for that origin. When a request matches the path pattern for that cache behavior, CloudFront routes the request to the specified origin. For more information, see Cache Behavior Settings in the Amazon CloudFront Developer Guide.
@@ -2025,7 +2025,7 @@ declare namespace CloudFront {
     Items?: OriginGroupList;
   }
   export type OriginList = Origin[];
-  export type OriginProtocolPolicy = "http-only"|"match-viewer"|"https-only"|string;
+  export type OriginProtocolPolicy = "http-only"|"match-viewer"|"https-only";
   export interface OriginSslProtocols {
     /**
      * The number of SSL/TLS protocols that you want to allow CloudFront to use when establishing an HTTPS connection with this origin. 
@@ -2057,7 +2057,7 @@ declare namespace CloudFront {
      */
     Items?: PathList;
   }
-  export type PriceClass = "PriceClass_100"|"PriceClass_200"|"PriceClass_All"|string;
+  export type PriceClass = "PriceClass_100"|"PriceClass_200"|"PriceClass_All";
   export interface PublicKey {
     /**
      * A unique ID assigned to a public key you've added to CloudFront.
@@ -2196,7 +2196,7 @@ declare namespace CloudFront {
      */
     OriginAccessIdentity: string;
   }
-  export type SSLSupportMethod = "sni-only"|"vip"|string;
+  export type SSLSupportMethod = "sni-only"|"vip";
   export interface _Signer {
     /**
      * An AWS account that is included in the TrustedSigners complex type for this distribution. Valid values include:    self, which is the AWS account used to create the distribution.   An AWS account number.  
@@ -2208,7 +2208,7 @@ declare namespace CloudFront {
     KeyPairIds?: KeyPairIds;
   }
   export type SignerList = _Signer[];
-  export type SslProtocol = "SSLv3"|"TLSv1"|"TLSv1.1"|"TLSv1.2"|string;
+  export type SslProtocol = "SSLv3"|"TLSv1"|"TLSv1.1"|"TLSv1.2";
   export type SslProtocolsList = SslProtocol[];
   export type StatusCodeList = integer[];
   export interface StatusCodes {
@@ -2616,7 +2616,7 @@ declare namespace CloudFront {
      */
     CertificateSource?: CertificateSource;
   }
-  export type ViewerProtocolPolicy = "allow-all"|"https-only"|"redirect-to-https"|string;
+  export type ViewerProtocolPolicy = "allow-all"|"https-only"|"redirect-to-https";
   export type integer = number;
   export type long = number;
   export type timestamp = Date;

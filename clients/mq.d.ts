@@ -237,7 +237,7 @@ declare namespace MQ {
      */
     SupportedEngineVersions?: __listOf__string;
   }
-  export type BrokerState = "CREATION_IN_PROGRESS"|"CREATION_FAILED"|"DELETION_IN_PROGRESS"|"RUNNING"|"REBOOT_IN_PROGRESS"|string;
+  export type BrokerState = "CREATION_IN_PROGRESS"|"CREATION_FAILED"|"DELETION_IN_PROGRESS"|"RUNNING"|"REBOOT_IN_PROGRESS";
   export interface BrokerSummary {
     /**
      * The Amazon Resource Name (ARN) of the broker.
@@ -268,7 +268,7 @@ declare namespace MQ {
      */
     HostInstanceType?: __string;
   }
-  export type ChangeType = "CREATE"|"UPDATE"|"DELETE"|string;
+  export type ChangeType = "CREATE"|"UPDATE"|"DELETE";
   export interface Configuration {
     /**
      * Required. The ARN of the configuration.
@@ -495,7 +495,7 @@ declare namespace MQ {
   }
   export interface CreateUserResponse {
   }
-  export type DayOfWeek = "MONDAY"|"TUESDAY"|"WEDNESDAY"|"THURSDAY"|"FRIDAY"|"SATURDAY"|"SUNDAY"|string;
+  export type DayOfWeek = "MONDAY"|"TUESDAY"|"WEDNESDAY"|"THURSDAY"|"FRIDAY"|"SATURDAY"|"SUNDAY";
   export interface DeleteBrokerRequest {
     /**
      * The name of the broker. This value must be unique in your AWS account, 1-50 characters long, must contain only letters, numbers, dashes, and underscores, and must not contain whitespaces, brackets, wildcard characters, or special characters.
@@ -530,7 +530,7 @@ declare namespace MQ {
   }
   export interface DeleteUserResponse {
   }
-  export type DeploymentMode = "SINGLE_INSTANCE"|"ACTIVE_STANDBY_MULTI_AZ"|string;
+  export type DeploymentMode = "SINGLE_INSTANCE"|"ACTIVE_STANDBY_MULTI_AZ";
   export interface DescribeBrokerEngineTypesRequest {
     /**
      * Filter response by engine type.
@@ -797,7 +797,7 @@ declare namespace MQ {
      */
     UseAwsOwnedKey: __boolean;
   }
-  export type EngineType = "ACTIVEMQ"|string;
+  export type EngineType = "ACTIVEMQ";
   export interface EngineVersion {
     /**
      * Id for the version.
@@ -989,7 +989,7 @@ declare namespace MQ {
      */
     Reason?: SanitizationWarningReason;
   }
-  export type SanitizationWarningReason = "DISALLOWED_ELEMENT_REMOVED"|"DISALLOWED_ATTRIBUTE_REMOVED"|"INVALID_ATTRIBUTE_VALUE_REMOVED"|string;
+  export type SanitizationWarningReason = "DISALLOWED_ELEMENT_REMOVED"|"DISALLOWED_ATTRIBUTE_REMOVED"|"INVALID_ATTRIBUTE_VALUE_REMOVED";
   export interface UpdateBrokerRequest {
     /**
      * Enables automatic upgrades to new minor versions for brokers, as Apache releases the versions. The automatic upgrades occur during the maintenance window of the broker or after a manual broker reboot.

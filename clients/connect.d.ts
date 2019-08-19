@@ -190,10 +190,10 @@ declare namespace Connect {
   export type AttributeValue = string;
   export type Attributes = {[key: string]: AttributeValue};
   export type AutoAccept = boolean;
-  export type Channel = "VOICE"|string;
+  export type Channel = "VOICE";
   export type Channels = Channel[];
   export type ClientToken = string;
-  export type Comparison = "LT"|string;
+  export type Comparison = "LT";
   export type ContactFlowId = string;
   export type ContactId = string;
   export interface CreateUserRequest {
@@ -283,7 +283,7 @@ declare namespace Connect {
     Value?: Value;
   }
   export type CurrentMetricDataCollections = CurrentMetricData[];
-  export type CurrentMetricName = "AGENTS_ONLINE"|"AGENTS_AVAILABLE"|"AGENTS_ON_CALL"|"AGENTS_NON_PRODUCTIVE"|"AGENTS_AFTER_CONTACT_WORK"|"AGENTS_ERROR"|"AGENTS_STAFFED"|"CONTACTS_IN_QUEUE"|"OLDEST_CONTACT_AGE"|"CONTACTS_SCHEDULED"|string;
+  export type CurrentMetricName = "AGENTS_ONLINE"|"AGENTS_AVAILABLE"|"AGENTS_ON_CALL"|"AGENTS_NON_PRODUCTIVE"|"AGENTS_AFTER_CONTACT_WORK"|"AGENTS_ERROR"|"AGENTS_STAFFED"|"CONTACTS_IN_QUEUE"|"OLDEST_CONTACT_AGE"|"CONTACTS_SCHEDULED";
   export interface CurrentMetricResult {
     /**
      * The Dimensions for the CurrentMetricResult object.
@@ -484,7 +484,7 @@ declare namespace Connect {
      */
     MetricResults?: HistoricalMetricResults;
   }
-  export type Grouping = "QUEUE"|"CHANNEL"|string;
+  export type Grouping = "QUEUE"|"CHANNEL";
   export type Groupings = Grouping[];
   export interface HierarchyGroup {
     /**
@@ -614,7 +614,7 @@ declare namespace Connect {
     Value?: Value;
   }
   export type HistoricalMetricDataCollections = HistoricalMetricData[];
-  export type HistoricalMetricName = "CONTACTS_QUEUED"|"CONTACTS_HANDLED"|"CONTACTS_ABANDONED"|"CONTACTS_CONSULTED"|"CONTACTS_AGENT_HUNG_UP_FIRST"|"CONTACTS_HANDLED_INCOMING"|"CONTACTS_HANDLED_OUTBOUND"|"CONTACTS_HOLD_ABANDONS"|"CONTACTS_TRANSFERRED_IN"|"CONTACTS_TRANSFERRED_OUT"|"CONTACTS_TRANSFERRED_IN_FROM_QUEUE"|"CONTACTS_TRANSFERRED_OUT_FROM_QUEUE"|"CONTACTS_MISSED"|"CALLBACK_CONTACTS_HANDLED"|"API_CONTACTS_HANDLED"|"OCCUPANCY"|"HANDLE_TIME"|"AFTER_CONTACT_WORK_TIME"|"QUEUED_TIME"|"ABANDON_TIME"|"QUEUE_ANSWER_TIME"|"HOLD_TIME"|"INTERACTION_TIME"|"INTERACTION_AND_HOLD_TIME"|"SERVICE_LEVEL"|string;
+  export type HistoricalMetricName = "CONTACTS_QUEUED"|"CONTACTS_HANDLED"|"CONTACTS_ABANDONED"|"CONTACTS_CONSULTED"|"CONTACTS_AGENT_HUNG_UP_FIRST"|"CONTACTS_HANDLED_INCOMING"|"CONTACTS_HANDLED_OUTBOUND"|"CONTACTS_HOLD_ABANDONS"|"CONTACTS_TRANSFERRED_IN"|"CONTACTS_TRANSFERRED_OUT"|"CONTACTS_TRANSFERRED_IN_FROM_QUEUE"|"CONTACTS_TRANSFERRED_OUT_FROM_QUEUE"|"CONTACTS_MISSED"|"CALLBACK_CONTACTS_HANDLED"|"API_CONTACTS_HANDLED"|"OCCUPANCY"|"HANDLE_TIME"|"AFTER_CONTACT_WORK_TIME"|"QUEUED_TIME"|"ABANDON_TIME"|"QUEUE_ANSWER_TIME"|"HOLD_TIME"|"INTERACTION_TIME"|"INTERACTION_AND_HOLD_TIME"|"SERVICE_LEVEL";
   export interface HistoricalMetricResult {
     /**
      * The Dimensions for the metrics.
@@ -729,7 +729,7 @@ declare namespace Connect {
   export type NextToken = string;
   export type Password = string;
   export type PhoneNumber = string;
-  export type PhoneType = "SOFT_PHONE"|"DESK_PHONE"|string;
+  export type PhoneType = "SOFT_PHONE"|"DESK_PHONE";
   export type QueueId = string;
   export interface QueueReference {
     /**
@@ -814,7 +814,7 @@ declare namespace Connect {
      */
     ContactId?: ContactId;
   }
-  export type Statistic = "SUM"|"MAX"|"AVG"|string;
+  export type Statistic = "SUM"|"MAX"|"AVG";
   export interface StopContactRequest {
     /**
      * The unique identifier of the contact to end.
@@ -838,7 +838,7 @@ declare namespace Connect {
     ThresholdValue?: ThresholdValue;
   }
   export type ThresholdValue = number;
-  export type Unit = "SECONDS"|"COUNT"|"PERCENT"|string;
+  export type Unit = "SECONDS"|"COUNT"|"PERCENT";
   export interface UpdateContactAttributesRequest {
     /**
      * The unique identifier of the contact for which to update attributes. This is the identifier for the contact associated with the first interaction with the contact center.

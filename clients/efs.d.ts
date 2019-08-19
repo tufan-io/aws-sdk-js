@@ -400,7 +400,7 @@ declare namespace EFS {
   export type FileSystemSizeValue = number;
   export type IpAddress = string;
   export type KmsKeyId = string;
-  export type LifeCycleState = "creating"|"available"|"updating"|"deleting"|"deleted"|string;
+  export type LifeCycleState = "creating"|"available"|"updating"|"deleting"|"deleted";
   export interface LifecycleConfigurationDescription {
     /**
      * An array of lifecycle management policies. Currently, EFS supports a maximum of one policy per file system.
@@ -460,7 +460,7 @@ declare namespace EFS {
   export type MountTargetDescriptions = MountTargetDescription[];
   export type MountTargetId = string;
   export type NetworkInterfaceId = string;
-  export type PerformanceMode = "generalPurpose"|"maxIO"|string;
+  export type PerformanceMode = "generalPurpose"|"maxIO";
   export type ProvisionedThroughputInMibps = number;
   export interface PutLifecycleConfigurationRequest {
     /**
@@ -489,9 +489,9 @@ declare namespace EFS {
   export type TagKeys = TagKey[];
   export type TagValue = string;
   export type Tags = Tag[];
-  export type ThroughputMode = "bursting"|"provisioned"|string;
+  export type ThroughputMode = "bursting"|"provisioned";
   export type Timestamp = Date;
-  export type TransitionToIARules = "AFTER_14_DAYS"|"AFTER_30_DAYS"|"AFTER_60_DAYS"|"AFTER_90_DAYS"|string;
+  export type TransitionToIARules = "AFTER_14_DAYS"|"AFTER_30_DAYS"|"AFTER_60_DAYS"|"AFTER_90_DAYS";
   export interface UpdateFileSystemRequest {
     /**
      * The ID of the file system that you want to update.

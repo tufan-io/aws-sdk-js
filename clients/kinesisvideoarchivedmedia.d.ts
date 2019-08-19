@@ -46,10 +46,10 @@ declare class KinesisVideoArchivedMedia extends Service {
   listFragments(callback?: (err: AWSError, data: KinesisVideoArchivedMedia.Types.ListFragmentsOutput) => void): Request<KinesisVideoArchivedMedia.Types.ListFragmentsOutput, AWSError>;
 }
 declare namespace KinesisVideoArchivedMedia {
-  export type ContainerFormat = "FRAGMENTED_MP4"|"MPEG_TS"|string;
+  export type ContainerFormat = "FRAGMENTED_MP4"|"MPEG_TS";
   export type ContentType = string;
-  export type DASHDisplayFragmentNumber = "ALWAYS"|"NEVER"|string;
-  export type DASHDisplayFragmentTimestamp = "ALWAYS"|"NEVER"|string;
+  export type DASHDisplayFragmentNumber = "ALWAYS"|"NEVER";
+  export type DASHDisplayFragmentTimestamp = "ALWAYS"|"NEVER";
   export interface DASHFragmentSelector {
     /**
      * The source of the timestamps for the requested media. When FragmentSelectorType is set to PRODUCER_TIMESTAMP and GetDASHStreamingSessionURLInput$PlaybackMode is ON_DEMAND or LIVE_REPLAY, the first fragment ingested with a producer timestamp within the specified FragmentSelector$TimestampRange is included in the media playlist. In addition, the fragments with producer timestamps within the TimestampRange ingested immediately following the first fragment (up to the GetDASHStreamingSessionURLInput$MaxManifestFragmentResults value) are included.  Fragments that have duplicate producer timestamps are deduplicated. This means that if producers are producing a stream of fragments with producer timestamps that are approximately equal to the true clock time, the MPEG-DASH manifest will contain all of the fragments within the requested timestamp range. If some fragments are ingested within the same time range and very different points in time, only the oldest ingested collection of fragments are returned. When FragmentSelectorType is set to PRODUCER_TIMESTAMP and GetDASHStreamingSessionURLInput$PlaybackMode is LIVE, the producer timestamps are used in the MP4 fragments and for deduplication. But the most recently ingested fragments based on server timestamps are included in the MPEG-DASH manifest. This means that even if fragments ingested in the past have producer timestamps with values now, they are not included in the HLS media playlist. The default is SERVER_TIMESTAMP.
@@ -60,8 +60,8 @@ declare namespace KinesisVideoArchivedMedia {
      */
     TimestampRange?: DASHTimestampRange;
   }
-  export type DASHFragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP"|string;
-  export type DASHPlaybackMode = "LIVE"|"LIVE_REPLAY"|"ON_DEMAND"|string;
+  export type DASHFragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP";
+  export type DASHPlaybackMode = "LIVE"|"LIVE_REPLAY"|"ON_DEMAND";
   export type DASHStreamingSessionURL = string;
   export interface DASHTimestampRange {
     /**
@@ -109,7 +109,7 @@ declare namespace KinesisVideoArchivedMedia {
      */
     TimestampRange: TimestampRange;
   }
-  export type FragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP"|string;
+  export type FragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP";
   export interface GetDASHStreamingSessionURLInput {
     /**
      * The name of the stream for which to retrieve the MPEG-DASH manifest URL. You must specify either the StreamName or the StreamARN.
@@ -214,8 +214,8 @@ declare namespace KinesisVideoArchivedMedia {
      */
     Payload?: Payload;
   }
-  export type HLSDiscontinuityMode = "ALWAYS"|"NEVER"|string;
-  export type HLSDisplayFragmentTimestamp = "ALWAYS"|"NEVER"|string;
+  export type HLSDiscontinuityMode = "ALWAYS"|"NEVER";
+  export type HLSDisplayFragmentTimestamp = "ALWAYS"|"NEVER";
   export interface HLSFragmentSelector {
     /**
      * The source of the timestamps for the requested media. When FragmentSelectorType is set to PRODUCER_TIMESTAMP and GetHLSStreamingSessionURLInput$PlaybackMode is ON_DEMAND or LIVE_REPLAY, the first fragment ingested with a producer timestamp within the specified FragmentSelector$TimestampRange is included in the media playlist. In addition, the fragments with producer timestamps within the TimestampRange ingested immediately following the first fragment (up to the GetHLSStreamingSessionURLInput$MaxMediaPlaylistFragmentResults value) are included.  Fragments that have duplicate producer timestamps are deduplicated. This means that if producers are producing a stream of fragments with producer timestamps that are approximately equal to the true clock time, the HLS media playlists will contain all of the fragments within the requested timestamp range. If some fragments are ingested within the same time range and very different points in time, only the oldest ingested collection of fragments are returned. When FragmentSelectorType is set to PRODUCER_TIMESTAMP and GetHLSStreamingSessionURLInput$PlaybackMode is LIVE, the producer timestamps are used in the MP4 fragments and for deduplication. But the most recently ingested fragments based on server timestamps are included in the HLS media playlist. This means that even if fragments ingested in the past have producer timestamps with values now, they are not included in the HLS media playlist. The default is SERVER_TIMESTAMP.
@@ -226,8 +226,8 @@ declare namespace KinesisVideoArchivedMedia {
      */
     TimestampRange?: HLSTimestampRange;
   }
-  export type HLSFragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP"|string;
-  export type HLSPlaybackMode = "LIVE"|"LIVE_REPLAY"|"ON_DEMAND"|string;
+  export type HLSFragmentSelectorType = "PRODUCER_TIMESTAMP"|"SERVER_TIMESTAMP";
+  export type HLSPlaybackMode = "LIVE"|"LIVE_REPLAY"|"ON_DEMAND";
   export type HLSStreamingSessionURL = string;
   export interface HLSTimestampRange {
     /**

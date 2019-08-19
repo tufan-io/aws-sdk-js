@@ -1437,7 +1437,7 @@ declare class Iot extends Service {
   validateSecurityProfileBehaviors(callback?: (err: AWSError, data: Iot.Types.ValidateSecurityProfileBehaviorsResponse) => void): Request<Iot.Types.ValidateSecurityProfileBehaviorsResponse, AWSError>;
 }
 declare namespace Iot {
-  export type AbortAction = "CANCEL"|string;
+  export type AbortAction = "CANCEL";
   export interface AbortConfig {
     /**
      * The list of abort criteria to define rules to abort the job.
@@ -1541,7 +1541,7 @@ declare namespace Iot {
     stepFunctions?: StepFunctionsAction;
   }
   export type ActionList = Action[];
-  export type ActionType = "PUBLISH"|"SUBSCRIBE"|"RECEIVE"|"CONNECT"|string;
+  export type ActionType = "PUBLISH"|"SUBSCRIBE"|"RECEIVE"|"CONNECT";
   export interface ActiveViolation {
     /**
      * The ID of the active violation.
@@ -1642,7 +1642,7 @@ declare namespace Iot {
     roleArn: RoleArn;
   }
   export type AlertTargetArn = string;
-  export type AlertTargetType = "SNS"|string;
+  export type AlertTargetType = "SNS";
   export type AlertTargets = {[key: string]: AlertTarget};
   export type AllowAutoRegistration = boolean;
   export interface Allowed {
@@ -1774,7 +1774,7 @@ declare namespace Iot {
     message?: ErrorMessage;
   }
   export type AuditCheckName = string;
-  export type AuditCheckRunStatus = "IN_PROGRESS"|"WAITING_FOR_DATA_COLLECTION"|"CANCELED"|"COMPLETED_COMPLIANT"|"COMPLETED_NON_COMPLIANT"|"FAILED"|string;
+  export type AuditCheckRunStatus = "IN_PROGRESS"|"WAITING_FOR_DATA_COLLECTION"|"CANCELED"|"COMPLETED_COMPLIANT"|"COMPLETED_NON_COMPLIANT"|"FAILED";
   export type AuditCheckToActionsMapping = {[key: string]: MitigationActionNameList};
   export type AuditCheckToReasonCodeFilter = {[key: string]: ReasonForNonComplianceCodes};
   export type AuditDetails = {[key: string]: AuditCheckDetails};
@@ -1820,9 +1820,9 @@ declare namespace Iot {
      */
     reasonForNonComplianceCode?: ReasonForNonComplianceCode;
   }
-  export type AuditFindingSeverity = "CRITICAL"|"HIGH"|"MEDIUM"|"LOW"|string;
+  export type AuditFindingSeverity = "CRITICAL"|"HIGH"|"MEDIUM"|"LOW";
   export type AuditFindings = AuditFinding[];
-  export type AuditFrequency = "DAILY"|"WEEKLY"|"BIWEEKLY"|"MONTHLY"|string;
+  export type AuditFrequency = "DAILY"|"WEEKLY"|"BIWEEKLY"|"MONTHLY";
   export interface AuditMitigationActionExecutionMetadata {
     /**
      * The unique identifier for the task that applies the mitigation action.
@@ -1862,7 +1862,7 @@ declare namespace Iot {
     message?: ErrorMessage;
   }
   export type AuditMitigationActionExecutionMetadataList = AuditMitigationActionExecutionMetadata[];
-  export type AuditMitigationActionsExecutionStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED"|"SKIPPED"|"PENDING"|string;
+  export type AuditMitigationActionsExecutionStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED"|"SKIPPED"|"PENDING";
   export type AuditMitigationActionsTaskId = string;
   export interface AuditMitigationActionsTaskMetadata {
     /**
@@ -1880,7 +1880,7 @@ declare namespace Iot {
   }
   export type AuditMitigationActionsTaskMetadataList = AuditMitigationActionsTaskMetadata[];
   export type AuditMitigationActionsTaskStatistics = {[key: string]: TaskStatisticsForAuditCheck};
-  export type AuditMitigationActionsTaskStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED"|string;
+  export type AuditMitigationActionsTaskStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED";
   export interface AuditMitigationActionsTaskTarget {
     /**
      * If the task will apply a mitigation action to findings from a specific audit, this value uniquely identifies the audit.
@@ -1910,7 +1910,7 @@ declare namespace Iot {
     enabled?: Enabled;
   }
   export type AuditNotificationTargetConfigurations = {[key: string]: AuditNotificationTarget};
-  export type AuditNotificationType = "SNS"|string;
+  export type AuditNotificationType = "SNS";
   export type AuditTaskId = string;
   export interface AuditTaskMetadata {
     /**
@@ -1927,9 +1927,9 @@ declare namespace Iot {
     taskType?: AuditTaskType;
   }
   export type AuditTaskMetadataList = AuditTaskMetadata[];
-  export type AuditTaskStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED"|string;
-  export type AuditTaskType = "ON_DEMAND_AUDIT_TASK"|"SCHEDULED_AUDIT_TASK"|string;
-  export type AuthDecision = "ALLOWED"|"EXPLICIT_DENY"|"IMPLICIT_DENY"|string;
+  export type AuditTaskStatus = "IN_PROGRESS"|"COMPLETED"|"FAILED"|"CANCELED";
+  export type AuditTaskType = "ON_DEMAND_AUDIT_TASK"|"SCHEDULED_AUDIT_TASK";
+  export type AuthDecision = "ALLOWED"|"EXPLICIT_DENY"|"IMPLICIT_DENY";
   export interface AuthInfo {
     /**
      * The type of action for which the principal is being authorized.
@@ -2001,7 +2001,7 @@ declare namespace Iot {
   }
   export type AuthorizerFunctionArn = string;
   export type AuthorizerName = string;
-  export type AuthorizerStatus = "ACTIVE"|"INACTIVE"|string;
+  export type AuthorizerStatus = "ACTIVE"|"INACTIVE";
   export interface AuthorizerSummary {
     /**
      * The authorizer name.
@@ -2013,7 +2013,7 @@ declare namespace Iot {
     authorizerArn?: AuthorizerArn;
   }
   export type Authorizers = AuthorizerSummary[];
-  export type AutoRegistrationStatus = "ENABLE"|"DISABLE"|string;
+  export type AutoRegistrationStatus = "ENABLE"|"DISABLE";
   export type AwsAccountId = string;
   export type AwsArn = string;
   export type AwsIotJobArn = string;
@@ -2151,8 +2151,8 @@ declare namespace Iot {
      */
     validity?: CertificateValidity;
   }
-  export type CACertificateStatus = "ACTIVE"|"INACTIVE"|string;
-  export type CACertificateUpdateAction = "DEACTIVATE"|string;
+  export type CACertificateStatus = "ACTIVE"|"INACTIVE";
+  export type CACertificateUpdateAction = "DEACTIVATE";
   export type CACertificates = CACertificate[];
   export interface CancelAuditMitigationActionsTaskRequest {
     /**
@@ -2233,7 +2233,7 @@ declare namespace Iot {
   export type CanceledChecksCount = number;
   export type CanceledFindingsCount = number;
   export type CanceledThings = number;
-  export type CannedAccessControlList = "private"|"public-read"|"public-read-write"|"aws-exec-read"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control"|"log-delivery-write"|string;
+  export type CannedAccessControlList = "private"|"public-read"|"public-read-write"|"aws-exec-read"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control"|"log-delivery-write";
   export interface Certificate {
     /**
      * The ARN of the certificate.
@@ -2312,7 +2312,7 @@ declare namespace Iot {
   export type CertificatePathOnDevice = string;
   export type CertificatePem = string;
   export type CertificateSigningRequest = string;
-  export type CertificateStatus = "ACTIVE"|"INACTIVE"|"REVOKED"|"PENDING_TRANSFER"|"REGISTER_INACTIVE"|"PENDING_ACTIVATION"|string;
+  export type CertificateStatus = "ACTIVE"|"INACTIVE"|"REVOKED"|"PENDING_TRANSFER"|"REGISTER_INACTIVE"|"PENDING_ACTIVATION";
   export interface CertificateValidity {
     /**
      * The certificate is not valid before this date.
@@ -2411,7 +2411,7 @@ declare namespace Iot {
   }
   export type CognitoIdentityPoolId = string;
   export type Comment = string;
-  export type ComparisonOperator = "less-than"|"less-than-equals"|"greater-than"|"greater-than-equals"|"in-cidr-set"|"not-in-cidr-set"|"in-port-set"|"not-in-port-set"|string;
+  export type ComparisonOperator = "less-than"|"less-than-equals"|"greater-than"|"greater-than-equals"|"in-cidr-set"|"not-in-cidr-set"|"in-port-set"|"not-in-port-set";
   export type CompliantChecksCount = number;
   export interface Configuration {
     /**
@@ -3053,7 +3053,7 @@ declare namespace Iot {
   export type CustomerVersion = number;
   export type DateType = Date;
   export type DayOfMonth = string;
-  export type DayOfWeek = "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT"|string;
+  export type DayOfWeek = "SUN"|"MON"|"TUE"|"WED"|"THU"|"FRI"|"SAT";
   export interface DeleteAccountAuditConfigurationRequest {
     /**
      * If true, all scheduled audits are deleted.
@@ -3920,7 +3920,7 @@ declare namespace Iot {
   export type DetailsKey = string;
   export type DetailsMap = {[key: string]: DetailsValue};
   export type DetailsValue = string;
-  export type DeviceCertificateUpdateAction = "DEACTIVATE"|string;
+  export type DeviceCertificateUpdateAction = "DEACTIVATE";
   export type DeviceDefenderThingName = string;
   export type DisableAllLogs = boolean;
   export interface DisableTopicRuleRequest {
@@ -3930,7 +3930,7 @@ declare namespace Iot {
     ruleName: RuleName;
   }
   export type DurationSeconds = number;
-  export type DynamicGroupStatus = "ACTIVE"|"BUILDING"|"REBUILDING"|string;
+  export type DynamicGroupStatus = "ACTIVE"|"BUILDING"|"REBUILDING";
   export interface DynamoDBAction {
     /**
      * The name of the DynamoDB table.
@@ -3983,7 +3983,7 @@ declare namespace Iot {
      */
     putItem: PutItemInput;
   }
-  export type DynamoKeyType = "STRING"|"NUMBER"|string;
+  export type DynamoKeyType = "STRING"|"NUMBER";
   export type DynamoOperation = string;
   export type EffectivePolicies = EffectivePolicy[];
   export interface EffectivePolicy {
@@ -4059,7 +4059,7 @@ declare namespace Iot {
   export type ErrorMessage = string;
   export type EvaluationStatistic = string;
   export type EventConfigurations = {[key: string]: Configuration};
-  export type EventType = "THING"|"THING_GROUP"|"THING_TYPE"|"THING_GROUP_MEMBERSHIP"|"THING_GROUP_HIERARCHY"|"THING_TYPE_ASSOCIATION"|"JOB"|"JOB_EXECUTION"|"POLICY"|"CERTIFICATE"|"CA_CERTIFICATE"|string;
+  export type EventType = "THING"|"THING_GROUP"|"THING_TYPE"|"THING_GROUP_MEMBERSHIP"|"THING_GROUP_HIERARCHY"|"THING_TYPE_ASSOCIATION"|"JOB"|"JOB_EXECUTION"|"POLICY"|"CERTIFICATE"|"CA_CERTIFICATE";
   export type ExecutionNamePrefix = string;
   export type ExecutionNumber = number;
   export type ExpectedVersion = number;
@@ -4362,7 +4362,7 @@ declare namespace Iot {
   export type IndexName = string;
   export type IndexNamesList = IndexName[];
   export type IndexSchema = string;
-  export type IndexStatus = "ACTIVE"|"BUILDING"|"REBUILDING"|string;
+  export type IndexStatus = "ACTIVE"|"BUILDING"|"REBUILDING";
   export type InlineDocument = string;
   export type InputName = string;
   export interface IotAnalyticsAction {
@@ -4516,8 +4516,8 @@ declare namespace Iot {
      */
     approximateSecondsBeforeTimedOut?: ApproximateSecondsBeforeTimedOut;
   }
-  export type JobExecutionFailureType = "FAILED"|"REJECTED"|"TIMED_OUT"|"ALL"|string;
-  export type JobExecutionStatus = "QUEUED"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"TIMED_OUT"|"REJECTED"|"REMOVED"|"CANCELED"|string;
+  export type JobExecutionFailureType = "FAILED"|"REJECTED"|"TIMED_OUT"|"ALL";
+  export type JobExecutionStatus = "QUEUED"|"IN_PROGRESS"|"SUCCEEDED"|"FAILED"|"TIMED_OUT"|"REJECTED"|"REMOVED"|"CANCELED";
   export interface JobExecutionStatusDetails {
     /**
      * The job execution status.
@@ -4617,7 +4617,7 @@ declare namespace Iot {
      */
     numberOfTimedOutThings?: TimedOutThings;
   }
-  export type JobStatus = "IN_PROGRESS"|"CANCELED"|"COMPLETED"|"DELETION_IN_PROGRESS"|string;
+  export type JobStatus = "IN_PROGRESS"|"CANCELED"|"COMPLETED"|"DELETION_IN_PROGRESS";
   export interface JobSummary {
     /**
      * The job ARN.
@@ -5826,7 +5826,7 @@ declare namespace Iot {
      */
     nextToken?: NextToken;
   }
-  export type LogLevel = "DEBUG"|"INFO"|"ERROR"|"WARN"|"DISABLED"|string;
+  export type LogLevel = "DEBUG"|"INFO"|"ERROR"|"WARN"|"DISABLED";
   export interface LogTarget {
     /**
      * The target type.
@@ -5849,7 +5849,7 @@ declare namespace Iot {
   }
   export type LogTargetConfigurations = LogTargetConfiguration[];
   export type LogTargetName = string;
-  export type LogTargetType = "DEFAULT"|"THING_GROUP"|string;
+  export type LogTargetType = "DEFAULT"|"THING_GROUP";
   export interface LoggingOptionsPayload {
     /**
      * The ARN of the IAM role that grants access.
@@ -5865,7 +5865,7 @@ declare namespace Iot {
   export type MaxResults = number;
   export type MaximumPerMinute = number;
   export type Message = string;
-  export type MessageFormat = "RAW"|"JSON"|string;
+  export type MessageFormat = "RAW"|"JSON";
   export type MessageId = string;
   export interface MetricValue {
     /**
@@ -5948,7 +5948,7 @@ declare namespace Iot {
      */
     publishFindingToSnsParams?: PublishFindingToSnsParams;
   }
-  export type MitigationActionType = "UPDATE_DEVICE_CERTIFICATE"|"UPDATE_CA_CERTIFICATE"|"ADD_THINGS_TO_THING_GROUP"|"REPLACE_DEFAULT_POLICY_VERSION"|"ENABLE_IOT_LOGGING"|"PUBLISH_FINDING_TO_SNS"|string;
+  export type MitigationActionType = "UPDATE_DEVICE_CERTIFICATE"|"UPDATE_CA_CERTIFICATE"|"ADD_THINGS_TO_THING_GROUP"|"REPLACE_DEFAULT_POLICY_VERSION"|"ENABLE_IOT_LOGGING"|"PUBLISH_FINDING_TO_SNS";
   export type NextToken = string;
   export type NonCompliantChecksCount = number;
   export interface NonCompliantResource {
@@ -6053,7 +6053,7 @@ declare namespace Iot {
      */
     additionalParameters?: AdditionalParameterMap;
   }
-  export type OTAUpdateStatus = "CREATE_PENDING"|"CREATE_IN_PROGRESS"|"CREATE_COMPLETE"|"CREATE_FAILED"|string;
+  export type OTAUpdateStatus = "CREATE_PENDING"|"CREATE_IN_PROGRESS"|"CREATE_COMPLETE"|"CREATE_FAILED";
   export interface OTAUpdateSummary {
     /**
      * The OTA update ID.
@@ -6123,7 +6123,7 @@ declare namespace Iot {
   export type PolicyNames = PolicyName[];
   export type PolicyTarget = string;
   export type PolicyTargets = PolicyTarget[];
-  export type PolicyTemplateName = "BLANK_POLICY"|string;
+  export type PolicyTemplateName = "BLANK_POLICY";
   export interface PolicyVersion {
     /**
      * The policy version ID.
@@ -6387,7 +6387,7 @@ declare namespace Iot {
      */
     topicRulePayload: TopicRulePayload;
   }
-  export type ReportType = "ERRORS"|"RESULTS"|string;
+  export type ReportType = "ERRORS"|"RESULTS";
   export interface RepublishAction {
     /**
      * The ARN of the IAM role that grants access.
@@ -6432,7 +6432,7 @@ declare namespace Iot {
     account?: AwsAccountId;
   }
   export type ResourceLogicalId = string;
-  export type ResourceType = "DEVICE_CERTIFICATE"|"CA_CERTIFICATE"|"IOT_POLICY"|"COGNITO_IDENTITY_POOL"|"CLIENT_ID"|"ACCOUNT_SETTINGS"|string;
+  export type ResourceType = "DEVICE_CERTIFICATE"|"CA_CERTIFICATE"|"IOT_POLICY"|"COGNITO_IDENTITY_POOL"|"CLIENT_ID"|"ACCOUNT_SETTINGS";
   export type Resources = Resource[];
   export type RoleAlias = string;
   export type RoleAliasArn = string;
@@ -6824,7 +6824,7 @@ declare namespace Iot {
      */
     count?: Count;
   }
-  export type Status = "InProgress"|"Completed"|"Failed"|"Cancelled"|"Cancelling"|string;
+  export type Status = "InProgress"|"Completed"|"Failed"|"Cancelled"|"Cancelling";
   export interface StepFunctionsAction {
     /**
      * (Optional) A name will be given to the state machine execution consisting of this prefix followed by a UUID. Step Functions automatically creates a unique name for each state machine execution if one is not provided.
@@ -6960,7 +6960,7 @@ declare namespace Iot {
   export type Target = string;
   export type TargetArn = string;
   export type TargetAuditCheckNames = AuditCheckName[];
-  export type TargetSelection = "CONTINUOUS"|"SNAPSHOT"|string;
+  export type TargetSelection = "CONTINUOUS"|"SNAPSHOT";
   export type Targets = Target[];
   export type TaskId = string;
   export type TaskIdList = TaskId[];
@@ -7119,7 +7119,7 @@ declare namespace Iot {
      */
     timestamp?: ConnectivityTimestamp;
   }
-  export type ThingConnectivityIndexingMode = "OFF"|"STATUS"|string;
+  export type ThingConnectivityIndexingMode = "OFF"|"STATUS";
   export interface ThingDocument {
     /**
      * The thing name.
@@ -7183,7 +7183,7 @@ declare namespace Iot {
      */
     thingGroupIndexingMode: ThingGroupIndexingMode;
   }
-  export type ThingGroupIndexingMode = "OFF"|"ON"|string;
+  export type ThingGroupIndexingMode = "OFF"|"ON";
   export type ThingGroupList = ThingGroupName[];
   export interface ThingGroupMetadata {
     /**
@@ -7224,7 +7224,7 @@ declare namespace Iot {
      */
     thingConnectivityIndexingMode?: ThingConnectivityIndexingMode;
   }
-  export type ThingIndexingMode = "OFF"|"REGISTRY"|"REGISTRY_AND_SHADOW"|string;
+  export type ThingIndexingMode = "OFF"|"REGISTRY"|"REGISTRY_AND_SHADOW";
   export type ThingName = string;
   export type ThingNameList = ThingName[];
   export type ThingTypeArn = string;
@@ -7929,7 +7929,7 @@ declare namespace Iot {
      */
     violationEventTime?: Timestamp;
   }
-  export type ViolationEventType = "in-alarm"|"alarm-cleared"|"alarm-invalidated"|string;
+  export type ViolationEventType = "in-alarm"|"alarm-cleared"|"alarm-invalidated";
   export type ViolationEvents = ViolationEvent[];
   export type ViolationId = string;
   export type WaitingForDataCollectionChecksCount = number;

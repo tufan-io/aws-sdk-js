@@ -515,7 +515,7 @@ declare namespace Chime {
      */
     EnableDialOut?: Boolean;
   }
-  export type AccountType = "Team"|"EnterpriseDirectory"|"EnterpriseLWA"|"EnterpriseOIDC"|string;
+  export type AccountType = "Team"|"EnterpriseDirectory"|"EnterpriseLWA"|"EnterpriseOIDC";
   export interface AssociatePhoneNumberWithUserRequest {
     /**
      * The Amazon Chime account ID.
@@ -660,7 +660,7 @@ declare namespace Chime {
     SecurityToken?: SensitiveString;
   }
   export type BotList = Bot[];
-  export type BotType = "ChatBot"|string;
+  export type BotType = "ChatBot";
   export interface BusinessCallingSettings {
     /**
      * The Amazon S3 bucket designated for call detail record storage.
@@ -828,8 +828,8 @@ declare namespace Chime {
   export type E164PhoneNumber = string;
   export type E164PhoneNumberList = E164PhoneNumber[];
   export type EmailAddress = string;
-  export type EmailStatus = "NotSent"|"Sent"|"Failed"|string;
-  export type ErrorCode = "Unauthorized"|"Forbidden"|"NotFound"|"BadRequest"|"Conflict"|"ServiceFailure"|"ServiceUnavailable"|"Unprocessable"|"Throttled"|"PreconditionFailed"|string;
+  export type EmailStatus = "NotSent"|"Sent"|"Failed";
+  export type ErrorCode = "Unauthorized"|"Forbidden"|"NotFound"|"BadRequest"|"Conflict"|"ServiceFailure"|"ServiceUnavailable"|"Unprocessable"|"Throttled"|"PreconditionFailed";
   export interface EventsConfiguration {
     /**
      * The bot ID.
@@ -1034,7 +1034,7 @@ declare namespace Chime {
     EmailStatus?: EmailStatus;
   }
   export type InviteList = Invite[];
-  export type InviteStatus = "Pending"|"Accepted"|"Failed"|string;
+  export type InviteStatus = "Pending"|"Accepted"|"Failed";
   export interface InviteUsersRequest {
     /**
      * The Amazon Chime account ID.
@@ -1052,7 +1052,7 @@ declare namespace Chime {
     Invites?: InviteList;
   }
   export type Iso8601Timestamp = Date;
-  export type License = "Basic"|"Plus"|"Pro"|"ProTrial"|string;
+  export type License = "Basic"|"Plus"|"Pro"|"ProTrial";
   export type LicenseList = License[];
   export interface ListAccountsRequest {
     /**
@@ -1248,7 +1248,7 @@ declare namespace Chime {
     Status?: OrderedPhoneNumberStatus;
   }
   export type OrderedPhoneNumberList = OrderedPhoneNumber[];
-  export type OrderedPhoneNumberStatus = "Processing"|"Acquired"|"Failed"|string;
+  export type OrderedPhoneNumberStatus = "Processing"|"Acquired"|"Failed";
   export interface Origination {
     /**
      * The call distribution properties defined for your SIP hosts. Valid range: Minimum value of 1. Maximum value of 20.
@@ -1283,7 +1283,7 @@ declare namespace Chime {
   }
   export type OriginationRouteList = OriginationRoute[];
   export type OriginationRoutePriority = number;
-  export type OriginationRouteProtocol = "TCP"|"UDP"|string;
+  export type OriginationRouteProtocol = "TCP"|"UDP";
   export type OriginationRouteWeight = number;
   export interface PhoneNumber {
     /**
@@ -1342,7 +1342,7 @@ declare namespace Chime {
     AssociatedTimestamp?: Iso8601Timestamp;
   }
   export type PhoneNumberAssociationList = PhoneNumberAssociation[];
-  export type PhoneNumberAssociationName = "AccountId"|"UserId"|"VoiceConnectorId"|string;
+  export type PhoneNumberAssociationName = "AccountId"|"UserId"|"VoiceConnectorId";
   export interface PhoneNumberCapabilities {
     /**
      * Allows or denies inbound calling for the specified phone number.
@@ -1413,10 +1413,10 @@ declare namespace Chime {
     UpdatedTimestamp?: Iso8601Timestamp;
   }
   export type PhoneNumberOrderList = PhoneNumberOrder[];
-  export type PhoneNumberOrderStatus = "Processing"|"Successful"|"Failed"|"Partial"|string;
-  export type PhoneNumberProductType = "BusinessCalling"|"VoiceConnector"|string;
-  export type PhoneNumberStatus = "AcquireInProgress"|"AcquireFailed"|"Unassigned"|"Assigned"|"ReleaseInProgress"|"DeleteInProgress"|"ReleaseFailed"|"DeleteFailed"|string;
-  export type PhoneNumberType = "Local"|"TollFree"|string;
+  export type PhoneNumberOrderStatus = "Processing"|"Successful"|"Failed"|"Partial";
+  export type PhoneNumberProductType = "BusinessCalling"|"VoiceConnector";
+  export type PhoneNumberStatus = "AcquireInProgress"|"AcquireFailed"|"Unassigned"|"Assigned"|"ReleaseInProgress"|"DeleteInProgress"|"ReleaseFailed"|"DeleteFailed";
+  export type PhoneNumberType = "Local"|"TollFree";
   export type Port = number;
   export type ProfileServiceMaxResults = number;
   export interface PutEventsConfigurationRequest {
@@ -1495,7 +1495,7 @@ declare namespace Chime {
   export interface RegenerateSecurityTokenResponse {
     Bot?: Bot;
   }
-  export type RegistrationStatus = "Unregistered"|"Registered"|"Suspended"|string;
+  export type RegistrationStatus = "Unregistered"|"Registered"|"Suspended";
   export interface ResetPersonalPINRequest {
     /**
      * The Amazon Chime account ID.

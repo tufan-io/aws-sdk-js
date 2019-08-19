@@ -301,7 +301,7 @@ declare class RoboMaker extends Service {
   updateSimulationApplication(callback?: (err: AWSError, data: RoboMaker.Types.UpdateSimulationApplicationResponse) => void): Request<RoboMaker.Types.UpdateSimulationApplicationResponse, AWSError>;
 }
 declare namespace RoboMaker {
-  export type Architecture = "X86_64"|"ARM64"|"ARMHF"|string;
+  export type Architecture = "X86_64"|"ARM64"|"ARMHF";
   export type Arn = string;
   export type Arns = Arn[];
   export interface BatchDescribeSimulationJobRequest {
@@ -931,7 +931,7 @@ declare namespace RoboMaker {
      */
     createdAt?: CreatedAt;
   }
-  export type DeploymentJobErrorCode = "ResourceNotFound"|"EnvironmentSetupError"|"EtagMismatch"|"FailureThresholdBreached"|"RobotDeploymentAborted"|"RobotDeploymentNoResponse"|"RobotAgentConnectionTimeout"|"GreengrassDeploymentFailed"|"MissingRobotArchitecture"|"MissingRobotApplicationArchitecture"|"MissingRobotDeploymentResource"|"GreengrassGroupVersionDoesNotExist"|"ExtractingBundleFailure"|"PreLaunchFileFailure"|"PostLaunchFileFailure"|"BadPermissionError"|"InternalServerError"|string;
+  export type DeploymentJobErrorCode = "ResourceNotFound"|"EnvironmentSetupError"|"EtagMismatch"|"FailureThresholdBreached"|"RobotDeploymentAborted"|"RobotDeploymentNoResponse"|"RobotAgentConnectionTimeout"|"GreengrassDeploymentFailed"|"MissingRobotArchitecture"|"MissingRobotApplicationArchitecture"|"MissingRobotDeploymentResource"|"GreengrassGroupVersionDoesNotExist"|"ExtractingBundleFailure"|"PreLaunchFileFailure"|"PostLaunchFileFailure"|"BadPermissionError"|"InternalServerError";
   export type DeploymentJobs = DeploymentJob[];
   export interface DeploymentLaunchConfig {
     /**
@@ -955,7 +955,7 @@ declare namespace RoboMaker {
      */
     environmentVariables?: EnvironmentVariableMap;
   }
-  export type DeploymentStatus = "Pending"|"Preparing"|"InProgress"|"Failed"|"Succeeded"|"Canceled"|string;
+  export type DeploymentStatus = "Pending"|"Preparing"|"InProgress"|"Failed"|"Succeeded"|"Canceled";
   export type DeploymentTimeout = number;
   export type DeploymentVersion = string;
   export interface DeregisterRobotRequest {
@@ -1297,7 +1297,7 @@ declare namespace RoboMaker {
   export type EnvironmentVariableKey = string;
   export type EnvironmentVariableMap = {[key: string]: EnvironmentVariableValue};
   export type EnvironmentVariableValue = string;
-  export type FailureBehavior = "Fail"|"Continue"|string;
+  export type FailureBehavior = "Fail"|"Continue";
   export interface Filter {
     /**
      * The name of the filter.
@@ -1593,7 +1593,7 @@ declare namespace RoboMaker {
      */
     version?: RenderingEngineVersionType;
   }
-  export type RenderingEngineType = "OGRE"|string;
+  export type RenderingEngineType = "OGRE";
   export type RenderingEngineVersionType = string;
   export interface RestartSimulationJobRequest {
     /**
@@ -1711,7 +1711,7 @@ declare namespace RoboMaker {
      */
     failureCode?: DeploymentJobErrorCode;
   }
-  export type RobotDeploymentStep = "Validating"|"DownloadingExtracting"|"ExecutingPreLaunch"|"Launching"|"ExecutingPostLaunch"|"Finished"|string;
+  export type RobotDeploymentStep = "Validating"|"DownloadingExtracting"|"ExecutingPreLaunch"|"Launching"|"ExecutingPostLaunch"|"Finished";
   export type RobotDeploymentSummary = RobotDeployment[];
   export interface RobotSoftwareSuite {
     /**
@@ -1723,9 +1723,9 @@ declare namespace RoboMaker {
      */
     version?: RobotSoftwareSuiteVersionType;
   }
-  export type RobotSoftwareSuiteType = "ROS"|string;
-  export type RobotSoftwareSuiteVersionType = "Kinetic"|"Melodic"|string;
-  export type RobotStatus = "Available"|"Registered"|"PendingNewDeployment"|"Deploying"|"Failed"|"InSync"|"NoResponse"|string;
+  export type RobotSoftwareSuiteType = "ROS";
+  export type RobotSoftwareSuiteVersionType = "Kinetic"|"Melodic";
+  export type RobotStatus = "Available"|"Registered"|"PendingNewDeployment"|"Deploying"|"Failed"|"InSync"|"NoResponse";
   export type Robots = Robot[];
   export type S3Bucket = string;
   export type S3Etag = string;
@@ -1864,8 +1864,8 @@ declare namespace RoboMaker {
      */
     vpcConfig?: VPCConfigResponse;
   }
-  export type SimulationJobErrorCode = "InternalServiceError"|"RobotApplicationCrash"|"SimulationApplicationCrash"|"BadPermissionsRobotApplication"|"BadPermissionsSimulationApplication"|"BadPermissionsS3Object"|"BadPermissionsS3Output"|"BadPermissionsCloudwatchLogs"|"SubnetIpLimitExceeded"|"ENILimitExceeded"|"BadPermissionsUserCredentials"|"InvalidBundleRobotApplication"|"InvalidBundleSimulationApplication"|"InvalidS3Resource"|"MismatchedEtag"|"RobotApplicationVersionMismatchedEtag"|"SimulationApplicationVersionMismatchedEtag"|"ResourceNotFound"|"InvalidInput"|"WrongRegionS3Bucket"|"WrongRegionS3Output"|"WrongRegionRobotApplication"|"WrongRegionSimulationApplication"|string;
-  export type SimulationJobStatus = "Pending"|"Preparing"|"Running"|"Restarting"|"Completed"|"Failed"|"RunningFailed"|"Terminating"|"Terminated"|"Canceled"|string;
+  export type SimulationJobErrorCode = "InternalServiceError"|"RobotApplicationCrash"|"SimulationApplicationCrash"|"BadPermissionsRobotApplication"|"BadPermissionsSimulationApplication"|"BadPermissionsS3Object"|"BadPermissionsS3Output"|"BadPermissionsCloudwatchLogs"|"SubnetIpLimitExceeded"|"ENILimitExceeded"|"BadPermissionsUserCredentials"|"InvalidBundleRobotApplication"|"InvalidBundleSimulationApplication"|"InvalidS3Resource"|"MismatchedEtag"|"RobotApplicationVersionMismatchedEtag"|"SimulationApplicationVersionMismatchedEtag"|"ResourceNotFound"|"InvalidInput"|"WrongRegionS3Bucket"|"WrongRegionS3Output"|"WrongRegionRobotApplication"|"WrongRegionSimulationApplication";
+  export type SimulationJobStatus = "Pending"|"Preparing"|"Running"|"Restarting"|"Completed"|"Failed"|"RunningFailed"|"Terminating"|"Terminated"|"Canceled";
   export type SimulationJobSummaries = SimulationJobSummary[];
   export interface SimulationJobSummary {
     /**
@@ -1908,7 +1908,7 @@ declare namespace RoboMaker {
      */
     version?: SimulationSoftwareSuiteVersionType;
   }
-  export type SimulationSoftwareSuiteType = "Gazebo"|"RosbagPlay"|string;
+  export type SimulationSoftwareSuiteType = "Gazebo"|"RosbagPlay";
   export type SimulationSoftwareSuiteVersionType = string;
   export type SimulationTimeMillis = number;
   export interface Source {

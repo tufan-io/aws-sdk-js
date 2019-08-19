@@ -1337,7 +1337,7 @@ declare namespace Comprehend {
     VpcConfig?: VpcConfig;
   }
   export type EntityRecognizerPropertiesList = EntityRecognizerProperties[];
-  export type EntityType = "PERSON"|"LOCATION"|"ORGANIZATION"|"COMMERCIAL_ITEM"|"EVENT"|"DATE"|"QUANTITY"|"TITLE"|"OTHER"|string;
+  export type EntityType = "PERSON"|"LOCATION"|"ORGANIZATION"|"COMMERCIAL_ITEM"|"EVENT"|"DATE"|"QUANTITY"|"TITLE"|"OTHER";
   export type EntityTypeName = string;
   export interface EntityTypesEvaluationMetrics {
     /**
@@ -1372,11 +1372,11 @@ declare namespace Comprehend {
      */
     InputFormat?: InputFormat;
   }
-  export type InputFormat = "ONE_DOC_PER_FILE"|"ONE_DOC_PER_LINE"|string;
+  export type InputFormat = "ONE_DOC_PER_FILE"|"ONE_DOC_PER_LINE";
   export type Integer = number;
   export type JobId = string;
   export type JobName = string;
-  export type JobStatus = "SUBMITTED"|"IN_PROGRESS"|"COMPLETED"|"FAILED"|"STOP_REQUESTED"|"STOPPED"|string;
+  export type JobStatus = "SUBMITTED"|"IN_PROGRESS"|"COMPLETED"|"FAILED"|"STOP_REQUESTED"|"STOPPED";
   export interface KeyPhrase {
     /**
      * The level of confidence that Amazon Comprehend has in the accuracy of the detection.
@@ -1465,7 +1465,7 @@ declare namespace Comprehend {
   }
   export type KeyPhrasesDetectionJobPropertiesList = KeyPhrasesDetectionJobProperties[];
   export type KmsKeyId = string;
-  export type LanguageCode = "en"|"es"|"fr"|"de"|"it"|"pt"|string;
+  export type LanguageCode = "en"|"es"|"fr"|"de"|"it"|"pt";
   export interface ListDocumentClassificationJobsRequest {
     /**
      * Filters the jobs that are returned. You can filter jobs on their names, status, or the date and time that they were submitted. You can only set one filter at a time.
@@ -1684,7 +1684,7 @@ declare namespace Comprehend {
     NextToken?: String;
   }
   export type MaxResultsInteger = number;
-  export type ModelStatus = "SUBMITTED"|"TRAINING"|"DELETING"|"STOP_REQUESTED"|"STOPPED"|"IN_ERROR"|"TRAINED"|string;
+  export type ModelStatus = "SUBMITTED"|"TRAINING"|"DELETING"|"STOP_REQUESTED"|"STOPPED"|"IN_ERROR"|"TRAINED";
   export type NumberOfTopicsInteger = number;
   export interface OutputDataConfig {
     /**
@@ -1706,7 +1706,7 @@ declare namespace Comprehend {
      */
     Score?: Float;
   }
-  export type PartOfSpeechTagType = "ADJ"|"ADP"|"ADV"|"AUX"|"CONJ"|"CCONJ"|"DET"|"INTJ"|"NOUN"|"NUM"|"O"|"PART"|"PRON"|"PROPN"|"PUNCT"|"SCONJ"|"SYM"|"VERB"|string;
+  export type PartOfSpeechTagType = "ADJ"|"ADP"|"ADV"|"AUX"|"CONJ"|"CCONJ"|"DET"|"INTJ"|"NOUN"|"NUM"|"O"|"PART"|"PRON"|"PROPN"|"PUNCT"|"SCONJ"|"SYM"|"VERB";
   export type S3Uri = string;
   export type SecurityGroupId = string;
   export type SecurityGroupIds = SecurityGroupId[];
@@ -1797,7 +1797,7 @@ declare namespace Comprehend {
      */
     Mixed?: Float;
   }
-  export type SentimentType = "POSITIVE"|"NEGATIVE"|"NEUTRAL"|"MIXED"|string;
+  export type SentimentType = "POSITIVE"|"NEGATIVE"|"NEUTRAL"|"MIXED";
   export interface StartDocumentClassificationJobRequest {
     /**
      * The identifier of the job.
@@ -2146,7 +2146,7 @@ declare namespace Comprehend {
   export type StringList = String[];
   export type SubnetId = string;
   export type Subnets = SubnetId[];
-  export type SyntaxLanguageCode = "en"|"es"|"fr"|"de"|"it"|"pt"|string;
+  export type SyntaxLanguageCode = "en"|"es"|"fr"|"de"|"it"|"pt";
   export interface SyntaxToken {
     /**
      * A unique identifier for a token.

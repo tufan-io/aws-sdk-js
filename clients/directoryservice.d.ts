@@ -1145,7 +1145,7 @@ declare namespace DirectoryService {
     OwnerDirectoryDescription?: OwnerDirectoryDescription;
   }
   export type DirectoryDescriptions = DirectoryDescription[];
-  export type DirectoryEdition = "Enterprise"|"Standard"|string;
+  export type DirectoryEdition = "Enterprise"|"Standard";
   export type DirectoryId = string;
   export type DirectoryIds = DirectoryId[];
   export interface DirectoryLimits {
@@ -1188,9 +1188,9 @@ declare namespace DirectoryService {
   }
   export type DirectoryName = string;
   export type DirectoryShortName = string;
-  export type DirectorySize = "Small"|"Large"|string;
-  export type DirectoryStage = "Requested"|"Creating"|"Created"|"Active"|"Inoperable"|"Impaired"|"Restoring"|"RestoreFailed"|"Deleting"|"Deleted"|"Failed"|string;
-  export type DirectoryType = "SimpleAD"|"ADConnector"|"MicrosoftAD"|"SharedMicrosoftAD"|string;
+  export type DirectorySize = "Small"|"Large";
+  export type DirectoryStage = "Requested"|"Creating"|"Created"|"Active"|"Inoperable"|"Impaired"|"Restoring"|"RestoreFailed"|"Deleting"|"Deleted"|"Failed";
+  export type DirectoryType = "SimpleAD"|"ADConnector"|"MicrosoftAD"|"SharedMicrosoftAD";
   export interface DirectoryVpcSettings {
     /**
      * The identifier of the VPC in which to create the directory.
@@ -1288,7 +1288,7 @@ declare namespace DirectoryService {
   }
   export type DomainControllerId = string;
   export type DomainControllerIds = DomainControllerId[];
-  export type DomainControllerStatus = "Creating"|"Active"|"Impaired"|"Restoring"|"Deleting"|"Deleted"|"Failed"|string;
+  export type DomainControllerStatus = "Creating"|"Active"|"Impaired"|"Restoring"|"Deleting"|"Deleted"|"Failed";
   export type DomainControllerStatusReason = string;
   export type DomainControllers = DomainController[];
   export interface EnableRadiusRequest {
@@ -1401,7 +1401,7 @@ declare namespace DirectoryService {
      */
     Description?: Description;
   }
-  export type IpRouteStatusMsg = "Adding"|"Added"|"Removing"|"Removed"|"AddFailed"|"RemoveFailed"|string;
+  export type IpRouteStatusMsg = "Adding"|"Added"|"Removing"|"Removed"|"AddFailed"|"RemoveFailed";
   export type IpRouteStatusReason = string;
   export type IpRoutes = IpRoute[];
   export type IpRoutesInfo = IpRouteInfo[];
@@ -1553,7 +1553,7 @@ declare namespace DirectoryService {
   }
   export type Password = string;
   export type PortNumber = number;
-  export type RadiusAuthenticationProtocol = "PAP"|"CHAP"|"MS-CHAPv1"|"MS-CHAPv2"|string;
+  export type RadiusAuthenticationProtocol = "PAP"|"CHAP"|"MS-CHAPv1"|"MS-CHAPv2";
   export type RadiusDisplayLabel = string;
   export type RadiusRetries = number;
   export interface RadiusSettings {
@@ -1591,7 +1591,7 @@ declare namespace DirectoryService {
     UseSameUsername?: UseSameUsername;
   }
   export type RadiusSharedSecret = string;
-  export type RadiusStatus = "Creating"|"Completed"|"Failed"|string;
+  export type RadiusStatus = "Creating"|"Completed"|"Failed";
   export type RadiusTimeout = number;
   export interface RegisterEventTopicRequest {
     /**
@@ -1643,7 +1643,7 @@ declare namespace DirectoryService {
   }
   export interface RemoveTagsFromResourceResult {
   }
-  export type ReplicationScope = "Domain"|string;
+  export type ReplicationScope = "Domain";
   export type RequestId = string;
   export interface ResetUserPasswordRequest {
     /**
@@ -1702,11 +1702,11 @@ declare namespace DirectoryService {
      */
     EndDateTime?: EndDateTime;
   }
-  export type SchemaExtensionStatus = "Initializing"|"CreatingSnapshot"|"UpdatingSchema"|"Replicating"|"CancelInProgress"|"RollbackInProgress"|"Cancelled"|"Failed"|"Completed"|string;
+  export type SchemaExtensionStatus = "Initializing"|"CreatingSnapshot"|"UpdatingSchema"|"Replicating"|"CancelInProgress"|"RollbackInProgress"|"Cancelled"|"Failed"|"Completed";
   export type SchemaExtensionStatusReason = string;
   export type SchemaExtensionsInfo = SchemaExtensionInfo[];
   export type SecurityGroupId = string;
-  export type SelectiveAuth = "Enabled"|"Disabled"|string;
+  export type SelectiveAuth = "Enabled"|"Disabled";
   export type Server = string;
   export type Servers = Server[];
   export interface ShareDirectoryRequest {
@@ -1733,8 +1733,8 @@ declare namespace DirectoryService {
      */
     SharedDirectoryId?: DirectoryId;
   }
-  export type ShareMethod = "ORGANIZATIONS"|"HANDSHAKE"|string;
-  export type ShareStatus = "Shared"|"PendingAcceptance"|"Rejected"|"Rejecting"|"RejectFailed"|"Sharing"|"ShareFailed"|"Deleted"|"Deleting"|string;
+  export type ShareMethod = "ORGANIZATIONS"|"HANDSHAKE";
+  export type ShareStatus = "Shared"|"PendingAcceptance"|"Rejected"|"Rejecting"|"RejectFailed"|"Sharing"|"ShareFailed"|"Deleted"|"Deleting";
   export interface ShareTarget {
     /**
      * Identifier of the directory consumer account.
@@ -1827,8 +1827,8 @@ declare namespace DirectoryService {
     ManualSnapshotsLimitReached?: ManualSnapshotsLimitReached;
   }
   export type SnapshotName = string;
-  export type SnapshotStatus = "Creating"|"Completed"|"Failed"|string;
-  export type SnapshotType = "Auto"|"Manual"|string;
+  export type SnapshotStatus = "Creating"|"Completed"|"Failed";
+  export type SnapshotType = "Auto"|"Manual";
   export type Snapshots = Snapshot[];
   export type SsoEnabled = boolean;
   export type StageReason = string;
@@ -1877,11 +1877,11 @@ declare namespace DirectoryService {
   export type TagValue = string;
   export type Tags = Tag[];
   export type TargetId = string;
-  export type TargetType = "ACCOUNT"|string;
+  export type TargetType = "ACCOUNT";
   export type TopicArn = string;
   export type TopicName = string;
   export type TopicNames = TopicName[];
-  export type TopicStatus = "Registered"|"Topic not found"|"Failed"|"Deleted"|string;
+  export type TopicStatus = "Registered"|"Topic not found"|"Failed"|"Deleted";
   export interface Trust {
     /**
      * The Directory ID of the AWS directory involved in the trust relationship.
@@ -1928,13 +1928,13 @@ declare namespace DirectoryService {
      */
     SelectiveAuth?: SelectiveAuth;
   }
-  export type TrustDirection = "One-Way: Outgoing"|"One-Way: Incoming"|"Two-Way"|string;
+  export type TrustDirection = "One-Way: Outgoing"|"One-Way: Incoming"|"Two-Way";
   export type TrustId = string;
   export type TrustIds = TrustId[];
   export type TrustPassword = string;
-  export type TrustState = "Creating"|"Created"|"Verifying"|"VerifyFailed"|"Verified"|"Updating"|"UpdateFailed"|"Updated"|"Deleting"|"Deleted"|"Failed"|string;
+  export type TrustState = "Creating"|"Created"|"Verifying"|"VerifyFailed"|"Verified"|"Updating"|"UpdateFailed"|"Updated"|"Deleting"|"Deleted"|"Failed";
   export type TrustStateReason = string;
-  export type TrustType = "Forest"|"External"|string;
+  export type TrustType = "Forest"|"External";
   export type Trusts = Trust[];
   export interface UnshareDirectoryRequest {
     /**

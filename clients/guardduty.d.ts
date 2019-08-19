@@ -796,7 +796,7 @@ declare namespace GuardDuty {
   }
   export type DetectorId = string;
   export type DetectorIds = DetectorId[];
-  export type DetectorStatus = "ENABLED"|"DISABLED"|string;
+  export type DetectorStatus = "ENABLED"|"DISABLED";
   export interface DisassociateFromMasterAccountRequest {
     /**
      * The unique ID of the detector of the GuardDuty member account.
@@ -843,8 +843,8 @@ declare namespace GuardDuty {
      */
     ThreatIntelligenceDetails?: ThreatIntelligenceDetails;
   }
-  export type Feedback = "USEFUL"|"NOT_USEFUL"|string;
-  export type FilterAction = "NOOP"|"ARCHIVE"|string;
+  export type Feedback = "USEFUL"|"NOT_USEFUL";
+  export type FilterAction = "NOOP"|"ARCHIVE";
   export type FilterDescription = string;
   export type FilterName = string;
   export type FilterNames = FilterName[];
@@ -913,8 +913,8 @@ declare namespace GuardDuty {
   }
   export type FindingId = string;
   export type FindingIds = FindingId[];
-  export type FindingPublishingFrequency = "FIFTEEN_MINUTES"|"ONE_HOUR"|"SIX_HOURS"|string;
-  export type FindingStatisticType = "COUNT_BY_SEVERITY"|string;
+  export type FindingPublishingFrequency = "FIFTEEN_MINUTES"|"ONE_HOUR"|"SIX_HOURS";
+  export type FindingStatisticType = "COUNT_BY_SEVERITY";
   export type FindingStatisticTypes = FindingStatisticType[];
   export interface FindingStatistics {
     /**
@@ -1252,9 +1252,9 @@ declare namespace GuardDuty {
      */
     UnprocessedAccounts: UnprocessedAccounts;
   }
-  export type IpSetFormat = "TXT"|"STIX"|"OTX_CSV"|"ALIEN_VAULT"|"PROOF_POINT"|"FIRE_EYE"|string;
+  export type IpSetFormat = "TXT"|"STIX"|"OTX_CSV"|"ALIEN_VAULT"|"PROOF_POINT"|"FIRE_EYE";
   export type IpSetIds = String[];
-  export type IpSetStatus = "INACTIVE"|"ACTIVATING"|"ACTIVE"|"DEACTIVATING"|"ERROR"|"DELETE_PENDING"|"DELETED"|string;
+  export type IpSetStatus = "INACTIVE"|"ACTIVATING"|"ACTIVE"|"DEACTIVATING"|"ERROR"|"DELETE_PENDING"|"DELETED";
   export type Ipv6Addresses = String[];
   export interface ListDetectorsRequest {
     /**
@@ -1574,7 +1574,7 @@ declare namespace GuardDuty {
   }
   export type NetworkInterfaces = NetworkInterface[];
   export type NotEquals = String[];
-  export type OrderBy = "ASC"|"DESC"|string;
+  export type OrderBy = "ASC"|"DESC";
   export interface Organization {
     /**
      * Autonomous system number of the internet provider of the remote IP address.
@@ -1805,9 +1805,9 @@ declare namespace GuardDuty {
   }
   export type TagValue = string;
   export type Tags = Tag[];
-  export type ThreatIntelSetFormat = "TXT"|"STIX"|"OTX_CSV"|"ALIEN_VAULT"|"PROOF_POINT"|"FIRE_EYE"|string;
+  export type ThreatIntelSetFormat = "TXT"|"STIX"|"OTX_CSV"|"ALIEN_VAULT"|"PROOF_POINT"|"FIRE_EYE";
   export type ThreatIntelSetIds = String[];
-  export type ThreatIntelSetStatus = "INACTIVE"|"ACTIVATING"|"ACTIVE"|"DEACTIVATING"|"ERROR"|"DELETE_PENDING"|"DELETED"|string;
+  export type ThreatIntelSetStatus = "INACTIVE"|"ACTIVATING"|"ACTIVE"|"DEACTIVATING"|"ERROR"|"DELETE_PENDING"|"DELETED";
   export interface ThreatIntelligenceDetail {
     /**
      * The name of the threat intelligence list that triggered the finding.

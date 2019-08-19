@@ -292,8 +292,8 @@ declare namespace S3Control {
     Location: JobManifestLocation;
   }
   export type JobManifestFieldList = JobManifestFieldName[];
-  export type JobManifestFieldName = "Ignore"|"Bucket"|"Key"|"VersionId"|string;
-  export type JobManifestFormat = "S3BatchOperations_CSV_20180820"|"S3InventoryReport_CSV_20161130"|string;
+  export type JobManifestFieldName = "Ignore"|"Bucket"|"Key"|"VersionId";
+  export type JobManifestFormat = "S3BatchOperations_CSV_20180820"|"S3InventoryReport_CSV_20161130";
   export interface JobManifestLocation {
     /**
      * The Amazon Resource Name (ARN) for a manifest object.
@@ -379,9 +379,9 @@ declare namespace S3Control {
      */
     ReportScope?: JobReportScope;
   }
-  export type JobReportFormat = "Report_CSV_20180820"|string;
-  export type JobReportScope = "AllTasks"|"FailedTasksOnly"|string;
-  export type JobStatus = "Active"|"Cancelled"|"Cancelling"|"Complete"|"Completing"|"Failed"|"Failing"|"New"|"Paused"|"Pausing"|"Preparing"|"Ready"|"Suspended"|string;
+  export type JobReportFormat = "Report_CSV_20180820";
+  export type JobReportScope = "AllTasks"|"FailedTasksOnly";
+  export type JobStatus = "Active"|"Cancelled"|"Cancelling"|"Complete"|"Completing"|"Failed"|"Failing"|"New"|"Paused"|"Pausing"|"Preparing"|"Ready"|"Suspended";
   export type JobStatusList = JobStatus[];
   export type JobStatusUpdateReason = string;
   export type JobTerminationDate = Date;
@@ -427,7 +427,7 @@ declare namespace S3Control {
   export type NonEmptyMaxLength2048String = string;
   export type NonEmptyMaxLength256String = string;
   export type NonEmptyMaxLength64String = string;
-  export type OperationName = "LambdaInvoke"|"S3PutObjectCopy"|"S3PutObjectAcl"|"S3PutObjectTagging"|"S3InitiateRestoreObject"|string;
+  export type OperationName = "LambdaInvoke"|"S3PutObjectCopy"|"S3PutObjectAcl"|"S3PutObjectTagging"|"S3InitiateRestoreObject";
   export interface PublicAccessBlockConfiguration {
     /**
      * 
@@ -457,7 +457,7 @@ declare namespace S3Control {
     AccountId: AccountId;
   }
   export type ReportPrefixString = string;
-  export type RequestedJobStatus = "Cancelled"|"Ready"|string;
+  export type RequestedJobStatus = "Cancelled"|"Ready";
   export interface S3AccessControlList {
     /**
      * 
@@ -479,7 +479,7 @@ declare namespace S3Control {
     CannedAccessControlList?: S3CannedAccessControlList;
   }
   export type S3BucketArnString = string;
-  export type S3CannedAccessControlList = "private"|"public-read"|"public-read-write"|"aws-exec-read"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control"|string;
+  export type S3CannedAccessControlList = "private"|"public-read"|"public-read-write"|"aws-exec-read"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control";
   export type S3ContentLength = number;
   export interface S3CopyObjectOperation {
     /**
@@ -536,7 +536,7 @@ declare namespace S3Control {
     ObjectLockRetainUntilDate?: TimeStamp;
   }
   export type S3ExpirationInDays = number;
-  export type S3GlacierJobTier = "BULK"|"STANDARD"|string;
+  export type S3GlacierJobTier = "BULK"|"STANDARD";
   export interface S3Grant {
     /**
      * 
@@ -562,7 +562,7 @@ declare namespace S3Control {
      */
     DisplayName?: NonEmptyMaxLength1024String;
   }
-  export type S3GranteeTypeIdentifier = "id"|"emailAddress"|"uri"|string;
+  export type S3GranteeTypeIdentifier = "id"|"emailAddress"|"uri";
   export interface S3InitiateRestoreObjectOperation {
     /**
      * 
@@ -574,9 +574,9 @@ declare namespace S3Control {
     GlacierJobTier?: S3GlacierJobTier;
   }
   export type S3KeyArnString = string;
-  export type S3MetadataDirective = "COPY"|"REPLACE"|string;
-  export type S3ObjectLockLegalHoldStatus = "OFF"|"ON"|string;
-  export type S3ObjectLockMode = "COMPLIANCE"|"GOVERNANCE"|string;
+  export type S3MetadataDirective = "COPY"|"REPLACE";
+  export type S3ObjectLockLegalHoldStatus = "OFF"|"ON";
+  export type S3ObjectLockMode = "COMPLIANCE"|"GOVERNANCE";
   export interface S3ObjectMetadata {
     /**
      * 
@@ -634,8 +634,8 @@ declare namespace S3Control {
     DisplayName?: NonEmptyMaxLength1024String;
   }
   export type S3ObjectVersionId = string;
-  export type S3Permission = "FULL_CONTROL"|"READ"|"WRITE"|"READ_ACP"|"WRITE_ACP"|string;
-  export type S3SSEAlgorithm = "AES256"|"KMS"|string;
+  export type S3Permission = "FULL_CONTROL"|"READ"|"WRITE"|"READ_ACP"|"WRITE_ACP";
+  export type S3SSEAlgorithm = "AES256"|"KMS";
   export interface S3SetObjectAclOperation {
     /**
      * 
@@ -648,7 +648,7 @@ declare namespace S3Control {
      */
     TagSet?: S3TagSet;
   }
-  export type S3StorageClass = "STANDARD"|"STANDARD_IA"|"ONEZONE_IA"|"GLACIER"|"INTELLIGENT_TIERING"|"DEEP_ARCHIVE"|string;
+  export type S3StorageClass = "STANDARD"|"STANDARD_IA"|"ONEZONE_IA"|"GLACIER"|"INTELLIGENT_TIERING"|"DEEP_ARCHIVE";
   export interface S3Tag {
     /**
      * 

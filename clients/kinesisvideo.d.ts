@@ -93,8 +93,8 @@ declare class KinesisVideo extends Service {
   updateStream(callback?: (err: AWSError, data: KinesisVideo.Types.UpdateStreamOutput) => void): Request<KinesisVideo.Types.UpdateStreamOutput, AWSError>;
 }
 declare namespace KinesisVideo {
-  export type APIName = "PUT_MEDIA"|"GET_MEDIA"|"LIST_FRAGMENTS"|"GET_MEDIA_FOR_FRAGMENT_LIST"|"GET_HLS_STREAMING_SESSION_URL"|"GET_DASH_STREAMING_SESSION_URL"|string;
-  export type ComparisonOperator = "BEGINS_WITH"|string;
+  export type APIName = "PUT_MEDIA"|"GET_MEDIA"|"LIST_FRAGMENTS"|"GET_MEDIA_FOR_FRAGMENT_LIST"|"GET_HLS_STREAMING_SESSION_URL"|"GET_DASH_STREAMING_SESSION_URL";
+  export type ComparisonOperator = "BEGINS_WITH";
   export interface CreateStreamInput {
     /**
      * The name of the device that is writing to the stream.   In the current implementation, Kinesis Video Streams does not use this name. 
@@ -233,7 +233,7 @@ declare namespace KinesisVideo {
   export type NextToken = string;
   export type ResourceARN = string;
   export type ResourceTags = {[key: string]: TagValue};
-  export type Status = "CREATING"|"ACTIVE"|"UPDATING"|"DELETING"|string;
+  export type Status = "CREATING"|"ACTIVE"|"UPDATING"|"DELETING";
   export interface StreamInfo {
     /**
      * The name of the device that is associated with the stream.
@@ -342,7 +342,7 @@ declare namespace KinesisVideo {
      */
     DataRetentionChangeInHours: DataRetentionChangeInHours;
   }
-  export type UpdateDataRetentionOperation = "INCREASE_DATA_RETENTION"|"DECREASE_DATA_RETENTION"|string;
+  export type UpdateDataRetentionOperation = "INCREASE_DATA_RETENTION"|"DECREASE_DATA_RETENTION";
   export interface UpdateDataRetentionOutput {
   }
   export interface UpdateStreamInput {

@@ -729,7 +729,7 @@ declare namespace Lambda {
     StateTransitionReason?: String;
   }
   export type EventSourceMappingsList = EventSourceMappingConfiguration[];
-  export type EventSourcePosition = "TRIM_HORIZON"|"LATEST"|"AT_TIMESTAMP"|string;
+  export type EventSourcePosition = "TRIM_HORIZON"|"LATEST"|"AT_TIMESTAMP";
   export type EventSourceToken = string;
   export type FunctionArn = string;
   export interface FunctionCode {
@@ -844,7 +844,7 @@ declare namespace Lambda {
   }
   export type FunctionList = FunctionConfiguration[];
   export type FunctionName = string;
-  export type FunctionVersion = "ALL"|string;
+  export type FunctionVersion = "ALL";
   export interface GetAccountSettingsRequest {
   }
   export interface GetAccountSettingsResponse {
@@ -1052,7 +1052,7 @@ declare namespace Lambda {
      */
     ExecutedVersion?: Version;
   }
-  export type InvocationType = "Event"|"RequestResponse"|"DryRun"|string;
+  export type InvocationType = "Event"|"RequestResponse"|"DryRun";
   export interface InvokeAsyncRequest {
     /**
      * The name of the Lambda function.  Name formats     Function name - my-function.    Function ARN - arn:aws:lambda:us-west-2:123456789012:function:my-function.    Partial ARN - 123456789012:function:my-function.   The length constraint applies only to the full ARN. If you specify only the function name, it is limited to 64 characters in length.
@@ -1335,7 +1335,7 @@ declare namespace Lambda {
      */
     Versions?: FunctionList;
   }
-  export type LogType = "None"|"Tail"|string;
+  export type LogType = "None"|"Tail";
   export type Long = number;
   export type MasterRegion = string;
   export type MaxLayerListItems = number;
@@ -1470,7 +1470,7 @@ declare namespace Lambda {
   export type ReservedConcurrentExecutions = number;
   export type ResourceArn = string;
   export type RoleArn = string;
-  export type Runtime = "nodejs"|"nodejs4.3"|"nodejs6.10"|"nodejs8.10"|"nodejs10.x"|"java8"|"python2.7"|"python3.6"|"python3.7"|"dotnetcore1.0"|"dotnetcore2.0"|"dotnetcore2.1"|"nodejs4.3-edge"|"go1.x"|"ruby2.5"|"provided"|string;
+  export type Runtime = "nodejs"|"nodejs4.3"|"nodejs6.10"|"nodejs8.10"|"nodejs10.x"|"java8"|"python2.7"|"python3.6"|"python3.7"|"dotnetcore1.0"|"dotnetcore2.0"|"dotnetcore2.1"|"nodejs4.3-edge"|"go1.x"|"ruby2.5"|"provided";
   export type S3Bucket = string;
   export type S3Key = string;
   export type S3ObjectVersion = string;
@@ -1510,7 +1510,7 @@ declare namespace Lambda {
      */
     Mode?: TracingMode;
   }
-  export type TracingMode = "Active"|"PassThrough"|string;
+  export type TracingMode = "Active"|"PassThrough";
   export type UnreservedConcurrentExecutions = number;
   export interface UntagResourceRequest {
     /**

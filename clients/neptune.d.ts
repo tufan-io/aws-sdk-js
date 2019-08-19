@@ -519,7 +519,7 @@ declare namespace Neptune {
      */
     Tags: TagList;
   }
-  export type ApplyMethod = "immediate"|"pending-reboot"|string;
+  export type ApplyMethod = "immediate"|"pending-reboot";
   export interface ApplyPendingMaintenanceActionMessage {
     /**
      * The Amazon Resource Name (ARN) of the resource that the pending maintenance action applies to. For information about creating an ARN, see  Constructing an Amazon Resource Name (ARN).
@@ -3230,7 +3230,7 @@ declare namespace Neptune {
     DBCluster?: DBCluster;
   }
   export type SourceIdsList = String[];
-  export type SourceType = "db-instance"|"db-parameter-group"|"db-security-group"|"db-snapshot"|"db-cluster"|"db-cluster-snapshot"|string;
+  export type SourceType = "db-instance"|"db-parameter-group"|"db-security-group"|"db-snapshot"|"db-cluster"|"db-cluster-snapshot";
   export type String = string;
   export interface Subnet {
     /**

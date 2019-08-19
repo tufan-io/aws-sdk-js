@@ -109,7 +109,7 @@ declare class MediaPackageVod extends Service {
   listPackagingGroups(callback?: (err: AWSError, data: MediaPackageVod.Types.ListPackagingGroupsResponse) => void): Request<MediaPackageVod.Types.ListPackagingGroupsResponse, AWSError>;
 }
 declare namespace MediaPackageVod {
-  export type AdMarkers = "NONE"|"SCTE35_ENHANCED"|"PASSTHROUGH"|string;
+  export type AdMarkers = "NONE"|"SCTE35_ENHANCED"|"PASSTHROUGH";
   export interface AssetShallow {
     /**
      * The ARN of the Asset.
@@ -393,7 +393,7 @@ rounded to the nearest multiple of the source segment duration.
      */
     Url?: __string;
   }
-  export type EncryptionMethod = "AES_128"|"SAMPLE_AES"|string;
+  export type EncryptionMethod = "AES_128"|"SAMPLE_AES";
   export interface HlsEncryption {
     /**
      * The encryption method to use.
@@ -574,7 +574,7 @@ rounded to the nearest multiple of the source fragment duration.
      */
     Id?: __string;
   }
-  export type Profile = "NONE"|"HBBTV_1_5"|string;
+  export type Profile = "NONE"|"HBBTV_1_5";
   export interface SpekeKeyProvider {
     /**
      * An Amazon Resource Name (ARN) of an IAM role that AWS Elemental
@@ -591,7 +591,7 @@ MediaPackage will assume when accessing the key provider service.
      */
     Url: __string;
   }
-  export type StreamOrder = "ORIGINAL"|"VIDEO_BITRATE_ASCENDING"|"VIDEO_BITRATE_DESCENDING"|string;
+  export type StreamOrder = "ORIGINAL"|"VIDEO_BITRATE_ASCENDING"|"VIDEO_BITRATE_DESCENDING";
   export interface StreamSelection {
     /**
      * The maximum video bitrate (bps) to include in output.

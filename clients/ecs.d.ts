@@ -398,8 +398,8 @@ declare class ECS extends Service {
   waitFor(state: "servicesInactive", callback?: (err: AWSError, data: ECS.Types.DescribeServicesResponse) => void): Request<ECS.Types.DescribeServicesResponse, AWSError>;
 }
 declare namespace ECS {
-  export type AgentUpdateStatus = "PENDING"|"STAGING"|"STAGED"|"UPDATING"|"UPDATED"|"FAILED"|string;
-  export type AssignPublicIp = "ENABLED"|"DISABLED"|string;
+  export type AgentUpdateStatus = "PENDING"|"STAGING"|"STAGED"|"UPDATING"|"UPDATED"|"FAILED";
+  export type AssignPublicIp = "ENABLED"|"DISABLED";
   export interface Attachment {
     /**
      * The unique identifier for the attachment.
@@ -509,7 +509,7 @@ declare namespace ECS {
      */
     settings?: ClusterSettings;
   }
-  export type ClusterField = "STATISTICS"|"TAGS"|string;
+  export type ClusterField = "STATISTICS"|"TAGS";
   export type ClusterFieldList = ClusterField[];
   export interface ClusterSetting {
     /**
@@ -521,12 +521,12 @@ declare namespace ECS {
      */
     value?: String;
   }
-  export type ClusterSettingName = "containerInsights"|string;
+  export type ClusterSettingName = "containerInsights";
   export type ClusterSettings = ClusterSetting[];
   export type Clusters = Cluster[];
-  export type Compatibility = "EC2"|"FARGATE"|string;
+  export type Compatibility = "EC2"|"FARGATE";
   export type CompatibilityList = Compatibility[];
-  export type Connectivity = "CONNECTED"|"DISCONNECTED"|string;
+  export type Connectivity = "CONNECTED"|"DISCONNECTED";
   export interface Container {
     /**
      * The Amazon Resource Name (ARN) of the container.
@@ -581,7 +581,7 @@ declare namespace ECS {
      */
     gpuIds?: GpuIds;
   }
-  export type ContainerCondition = "START"|"COMPLETE"|"SUCCESS"|"HEALTHY"|string;
+  export type ContainerCondition = "START"|"COMPLETE"|"SUCCESS"|"HEALTHY";
   export interface ContainerDefinition {
     /**
      * The name of a container. If you are linking multiple containers together in a task definition, the name of one container can be entered in the links of another container to connect the containers. Up to 255 letters (uppercase and lowercase), numbers, and hyphens are allowed. This parameter maps to name in the Create a container section of the Docker Remote API and the --name option to docker run. 
@@ -810,9 +810,9 @@ declare namespace ECS {
      */
     tags?: Tags;
   }
-  export type ContainerInstanceField = "TAGS"|string;
+  export type ContainerInstanceField = "TAGS";
   export type ContainerInstanceFieldList = ContainerInstanceField[];
-  export type ContainerInstanceStatus = "ACTIVE"|"DRAINING"|"REGISTERING"|"DEREGISTERING"|"REGISTRATION_FAILED"|string;
+  export type ContainerInstanceStatus = "ACTIVE"|"DRAINING"|"REGISTERING"|"DEREGISTERING"|"REGISTRATION_FAILED";
   export type ContainerInstances = ContainerInstance[];
   export interface ContainerOverride {
     /**
@@ -1167,7 +1167,7 @@ declare namespace ECS {
      */
     type: DeploymentControllerType;
   }
-  export type DeploymentControllerType = "ECS"|"CODE_DEPLOY"|"EXTERNAL"|string;
+  export type DeploymentControllerType = "ECS"|"CODE_DEPLOY"|"EXTERNAL";
   export type Deployments = Deployment[];
   export interface DeregisterContainerInstanceRequest {
     /**
@@ -1337,7 +1337,7 @@ declare namespace ECS {
      */
     failures?: Failures;
   }
-  export type DesiredStatus = "RUNNING"|"PENDING"|"STOPPED"|string;
+  export type DesiredStatus = "RUNNING"|"PENDING"|"STOPPED";
   export interface Device {
     /**
      * The path for the device on the host container instance.
@@ -1352,7 +1352,7 @@ declare namespace ECS {
      */
     permissions?: DeviceCgroupPermissions;
   }
-  export type DeviceCgroupPermission = "read"|"write"|"mknod"|string;
+  export type DeviceCgroupPermission = "read"|"write"|"mknod";
   export type DeviceCgroupPermissions = DeviceCgroupPermission[];
   export type DevicesList = Device[];
   export interface DiscoverPollEndpointRequest {
@@ -1434,7 +1434,7 @@ declare namespace ECS {
      */
     startPeriod?: BoxedInteger;
   }
-  export type HealthStatus = "HEALTHY"|"UNHEALTHY"|"UNKNOWN"|string;
+  export type HealthStatus = "HEALTHY"|"UNHEALTHY"|"UNKNOWN";
   export interface HostEntry {
     /**
      * The hostname to use in the /etc/hosts entry.
@@ -1453,7 +1453,7 @@ declare namespace ECS {
     sourcePath?: String;
   }
   export type Integer = number;
-  export type IpcMode = "host"|"task"|"none"|string;
+  export type IpcMode = "host"|"task"|"none";
   export interface KernelCapabilities {
     /**
      * The Linux capabilities for the container that have been added to the default configuration provided by Docker. This parameter maps to CapAdd in the Create a container section of the Docker Remote API and the --cap-add option to docker run.  If you are using tasks that use the Fargate launch type, the add parameter is not supported.  Valid values: "ALL" | "AUDIT_CONTROL" | "AUDIT_WRITE" | "BLOCK_SUSPEND" | "CHOWN" | "DAC_OVERRIDE" | "DAC_READ_SEARCH" | "FOWNER" | "FSETID" | "IPC_LOCK" | "IPC_OWNER" | "KILL" | "LEASE" | "LINUX_IMMUTABLE" | "MAC_ADMIN" | "MAC_OVERRIDE" | "MKNOD" | "NET_ADMIN" | "NET_BIND_SERVICE" | "NET_BROADCAST" | "NET_RAW" | "SETFCAP" | "SETGID" | "SETPCAP" | "SETUID" | "SYS_ADMIN" | "SYS_BOOT" | "SYS_CHROOT" | "SYS_MODULE" | "SYS_NICE" | "SYS_PACCT" | "SYS_PTRACE" | "SYS_RAWIO" | "SYS_RESOURCE" | "SYS_TIME" | "SYS_TTY_CONFIG" | "SYSLOG" | "WAKE_ALARM" 
@@ -1474,7 +1474,7 @@ declare namespace ECS {
      */
     value?: String;
   }
-  export type LaunchType = "EC2"|"FARGATE"|string;
+  export type LaunchType = "EC2"|"FARGATE";
   export interface LinuxParameters {
     /**
      * The Linux capabilities for the container that are added to or dropped from the default configuration provided by Docker.  If you are using tasks that use the Fargate launch type, capabilities is supported but the add parameter is not supported. 
@@ -1815,7 +1815,7 @@ declare namespace ECS {
     secretOptions?: SecretList;
   }
   export type LogConfigurationOptionsMap = {[key: string]: String};
-  export type LogDriver = "json-file"|"syslog"|"journald"|"gelf"|"fluentd"|"awslogs"|"splunk"|string;
+  export type LogDriver = "json-file"|"syslog"|"journald"|"gelf"|"fluentd"|"awslogs"|"splunk";
   export type Long = number;
   export interface MountPoint {
     /**
@@ -1872,8 +1872,8 @@ declare namespace ECS {
     ipv6Address?: String;
   }
   export type NetworkInterfaces = NetworkInterface[];
-  export type NetworkMode = "bridge"|"host"|"awsvpc"|"none"|string;
-  export type PidMode = "host"|"task"|string;
+  export type NetworkMode = "bridge"|"host"|"awsvpc"|"none";
+  export type PidMode = "host"|"task";
   export interface PlacementConstraint {
     /**
      * The type of constraint. Use distinctInstance to ensure that each task in a particular group is running on a different container instance. Use memberOf to restrict the selection to a group of valid candidates. The value distinctInstance is not supported in task definitions.
@@ -1884,7 +1884,7 @@ declare namespace ECS {
      */
     expression?: String;
   }
-  export type PlacementConstraintType = "distinctInstance"|"memberOf"|string;
+  export type PlacementConstraintType = "distinctInstance"|"memberOf";
   export type PlacementConstraints = PlacementConstraint[];
   export type PlacementStrategies = PlacementStrategy[];
   export interface PlacementStrategy {
@@ -1897,7 +1897,7 @@ declare namespace ECS {
      */
     field?: String;
   }
-  export type PlacementStrategyType = "random"|"spread"|"binpack"|string;
+  export type PlacementStrategyType = "random"|"spread"|"binpack";
   export interface PlatformDevice {
     /**
      * The ID for the GPU(s) on the container instance. The available GPU IDs can also be obtained on the container instance in the /var/lib/ecs/gpu/nvidia_gpu_info.json file.
@@ -1908,7 +1908,7 @@ declare namespace ECS {
      */
     type: PlatformDeviceType;
   }
-  export type PlatformDeviceType = "GPU"|string;
+  export type PlatformDeviceType = "GPU";
   export type PlatformDevices = PlatformDevice[];
   export interface PortMapping {
     /**
@@ -1925,7 +1925,7 @@ declare namespace ECS {
     protocol?: TransportProtocol;
   }
   export type PortMappingList = PortMapping[];
-  export type PropagateTags = "TASK_DEFINITION"|"SERVICE"|string;
+  export type PropagateTags = "TASK_DEFINITION"|"SERVICE";
   export interface ProxyConfiguration {
     /**
      * The proxy type. The only supported value is APPMESH.
@@ -1941,7 +1941,7 @@ declare namespace ECS {
     properties?: ProxyConfigurationProperties;
   }
   export type ProxyConfigurationProperties = KeyValuePair[];
-  export type ProxyConfigurationType = "APPMESH"|string;
+  export type ProxyConfigurationType = "APPMESH";
   export interface PutAccountSettingDefaultRequest {
     /**
      * The resource name for which to modify the account setting. If serviceLongArnFormat is specified, the ARN for your Amazon ECS services is affected. If taskLongArnFormat is specified, the ARN and resource ID for your Amazon ECS tasks is affected. If containerInstanceLongArnFormat is specified, the ARN and resource ID for your Amazon ECS container instances is affected. If awsvpcTrunking is specified, the ENI limit for your Amazon ECS container instances is affected. If containerInsights is specified, the default setting for CloudWatch Container Insights for your clusters is affected.
@@ -2144,7 +2144,7 @@ declare namespace ECS {
     type: ResourceType;
   }
   export type ResourceRequirements = ResourceRequirement[];
-  export type ResourceType = "GPU"|string;
+  export type ResourceType = "GPU";
   export type Resources = Resource[];
   export interface RunTaskRequest {
     /**
@@ -2224,9 +2224,9 @@ declare namespace ECS {
      */
     unit?: ScaleUnit;
   }
-  export type ScaleUnit = "PERCENT"|string;
-  export type SchedulingStrategy = "REPLICA"|"DAEMON"|string;
-  export type Scope = "task"|"shared"|string;
+  export type ScaleUnit = "PERCENT";
+  export type SchedulingStrategy = "REPLICA"|"DAEMON";
+  export type Scope = "task"|"shared";
   export interface Secret {
     /**
      * The name of the secret.
@@ -2367,7 +2367,7 @@ declare namespace ECS {
     message?: String;
   }
   export type ServiceEvents = ServiceEvent[];
-  export type ServiceField = "TAGS"|string;
+  export type ServiceField = "TAGS";
   export type ServiceFieldList = ServiceField[];
   export type ServiceRegistries = ServiceRegistry[];
   export interface ServiceRegistry {
@@ -2403,10 +2403,10 @@ declare namespace ECS {
      */
     principalArn?: String;
   }
-  export type SettingName = "serviceLongArnFormat"|"taskLongArnFormat"|"containerInstanceLongArnFormat"|"awsvpcTrunking"|"containerInsights"|string;
+  export type SettingName = "serviceLongArnFormat"|"taskLongArnFormat"|"containerInstanceLongArnFormat"|"awsvpcTrunking"|"containerInsights";
   export type Settings = Setting[];
-  export type SortOrder = "ASC"|"DESC"|string;
-  export type StabilityStatus = "STEADY_STATE"|"STABILIZING"|string;
+  export type SortOrder = "ASC"|"DESC";
+  export type StabilityStatus = "STEADY_STATE"|"STABILIZING";
   export interface StartTaskRequest {
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster on which to start your task. If you do not specify a cluster, the default cluster is assumed.
@@ -2616,7 +2616,7 @@ declare namespace ECS {
   }
   export type TagValue = string;
   export type Tags = Tag[];
-  export type TargetType = "container-instance"|string;
+  export type TargetType = "container-instance";
   export interface Task {
     /**
      * The Amazon Resource Name (ARN) of the task.
@@ -2809,8 +2809,8 @@ declare namespace ECS {
      */
     proxyConfiguration?: ProxyConfiguration;
   }
-  export type TaskDefinitionFamilyStatus = "ACTIVE"|"INACTIVE"|"ALL"|string;
-  export type TaskDefinitionField = "TAGS"|string;
+  export type TaskDefinitionFamilyStatus = "ACTIVE"|"INACTIVE"|"ALL";
+  export type TaskDefinitionField = "TAGS";
   export type TaskDefinitionFieldList = TaskDefinitionField[];
   export interface TaskDefinitionPlacementConstraint {
     /**
@@ -2822,10 +2822,10 @@ declare namespace ECS {
      */
     expression?: String;
   }
-  export type TaskDefinitionPlacementConstraintType = "memberOf"|string;
+  export type TaskDefinitionPlacementConstraintType = "memberOf";
   export type TaskDefinitionPlacementConstraints = TaskDefinitionPlacementConstraint[];
-  export type TaskDefinitionStatus = "ACTIVE"|"INACTIVE"|string;
-  export type TaskField = "TAGS"|string;
+  export type TaskDefinitionStatus = "ACTIVE"|"INACTIVE";
+  export type TaskField = "TAGS";
   export type TaskFieldList = TaskField[];
   export interface TaskOverride {
     /**
@@ -2928,7 +2928,7 @@ declare namespace ECS {
     stabilityStatusAt?: Timestamp;
   }
   export type TaskSets = TaskSet[];
-  export type TaskStopCode = "TaskFailedToStart"|"EssentialContainerExited"|"UserInitiated"|string;
+  export type TaskStopCode = "TaskFailedToStart"|"EssentialContainerExited"|"UserInitiated";
   export type Tasks = Task[];
   export type Timestamp = Date;
   export interface Tmpfs {
@@ -2946,7 +2946,7 @@ declare namespace ECS {
     mountOptions?: StringList;
   }
   export type TmpfsList = Tmpfs[];
-  export type TransportProtocol = "tcp"|"udp"|string;
+  export type TransportProtocol = "tcp"|"udp";
   export interface Ulimit {
     /**
      * The type of the ulimit.
@@ -2962,7 +2962,7 @@ declare namespace ECS {
     hardLimit: Integer;
   }
   export type UlimitList = Ulimit[];
-  export type UlimitName = "core"|"cpu"|"data"|"fsize"|"locks"|"memlock"|"msgqueue"|"nice"|"nofile"|"nproc"|"rss"|"rtprio"|"rttime"|"sigpending"|"stack"|string;
+  export type UlimitName = "core"|"cpu"|"data"|"fsize"|"locks"|"memlock"|"msgqueue"|"nice"|"nofile"|"nproc"|"rss"|"rtprio"|"rttime"|"sigpending"|"stack";
   export interface UntagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the resource from which to delete tags. Currently, the supported resources are Amazon ECS tasks, services, task definitions, clusters, and container instances.

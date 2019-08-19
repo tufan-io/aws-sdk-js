@@ -231,8 +231,8 @@ declare namespace DataSync {
      */
     Status?: AgentStatus;
   }
-  export type AgentStatus = "ONLINE"|"OFFLINE"|string;
-  export type Atime = "NONE"|"BEST_EFFORT"|string;
+  export type AgentStatus = "ONLINE"|"OFFLINE";
+  export type Atime = "NONE"|"BEST_EFFORT";
   export type BytesPerSecond = number;
   export interface CancelTaskExecutionRequest {
     /**
@@ -644,7 +644,7 @@ declare namespace DataSync {
   export type Ec2SubnetArn = string;
   export type EfsFilesystemArn = string;
   export type Endpoint = string;
-  export type EndpointType = "PUBLIC"|"PRIVATE_LINK"|string;
+  export type EndpointType = "PUBLIC"|"PRIVATE_LINK";
   export type FilterList = FilterRule[];
   export interface FilterRule {
     /**
@@ -656,9 +656,9 @@ declare namespace DataSync {
      */
     Value?: FilterValue;
   }
-  export type FilterType = "SIMPLE_PATTERN"|string;
+  export type FilterType = "SIMPLE_PATTERN";
   export type FilterValue = string;
-  export type Gid = "NONE"|"INT_VALUE"|"NAME"|"BOTH"|string;
+  export type Gid = "NONE"|"INT_VALUE"|"NAME"|"BOTH";
   export type IamRoleArn = string;
   export interface ListAgentsRequest {
     /**
@@ -783,7 +783,7 @@ declare namespace DataSync {
   export type LocationUri = string;
   export type LogGroupArn = string;
   export type MaxResults = number;
-  export type Mtime = "NONE"|"PRESERVE"|string;
+  export type Mtime = "NONE"|"PRESERVE";
   export type NetworkInterfaceArn = string;
   export type NextToken = string;
   export interface NfsMountOptions {
@@ -792,7 +792,7 @@ declare namespace DataSync {
      */
     Version?: NfsVersion;
   }
-  export type NfsVersion = "AUTOMATIC"|"NFS3"|"NFS4_0"|"NFS4_1"|string;
+  export type NfsVersion = "AUTOMATIC"|"NFS3"|"NFS4_0"|"NFS4_1";
   export type NonEmptySubdirectory = string;
   export interface OnPremConfig {
     /**
@@ -840,10 +840,10 @@ declare namespace DataSync {
   }
   export type PLSecurityGroupArnList = Ec2SecurityGroupArn[];
   export type PLSubnetArnList = Ec2SubnetArn[];
-  export type PhaseStatus = "PENDING"|"SUCCESS"|"ERROR"|string;
-  export type PosixPermissions = "NONE"|"BEST_EFFORT"|"PRESERVE"|string;
-  export type PreserveDeletedFiles = "PRESERVE"|"REMOVE"|string;
-  export type PreserveDevices = "NONE"|"PRESERVE"|string;
+  export type PhaseStatus = "PENDING"|"SUCCESS"|"ERROR";
+  export type PosixPermissions = "NONE"|"BEST_EFFORT"|"PRESERVE";
+  export type PreserveDeletedFiles = "PRESERVE"|"REMOVE";
+  export type PreserveDevices = "NONE"|"PRESERVE";
   export interface PrivateLinkConfig {
     /**
      * The ID of the VPC endpoint that is configured for an agent. An agent that is configured with a VPC endpoint will not be accessible over the public Internet.
@@ -963,7 +963,7 @@ declare namespace DataSync {
      */
     ErrorDetail?: string;
   }
-  export type TaskExecutionStatus = "LAUNCHING"|"PREPARING"|"TRANSFERRING"|"VERIFYING"|"SUCCESS"|"ERROR"|string;
+  export type TaskExecutionStatus = "LAUNCHING"|"PREPARING"|"TRANSFERRING"|"VERIFYING"|"SUCCESS"|"ERROR";
   export type TaskList = TaskListEntry[];
   export interface TaskListEntry {
     /**
@@ -979,9 +979,9 @@ declare namespace DataSync {
      */
     Name?: TagValue;
   }
-  export type TaskStatus = "AVAILABLE"|"CREATING"|"RUNNING"|"UNAVAILABLE"|string;
+  export type TaskStatus = "AVAILABLE"|"CREATING"|"RUNNING"|"UNAVAILABLE";
   export type Time = Date;
-  export type Uid = "NONE"|"INT_VALUE"|"NAME"|"BOTH"|string;
+  export type Uid = "NONE"|"INT_VALUE"|"NAME"|"BOTH";
   export interface UntagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the resource to remove the tag from.
@@ -1027,7 +1027,7 @@ declare namespace DataSync {
   }
   export interface UpdateTaskResponse {
   }
-  export type VerifyMode = "POINT_IN_TIME_CONSISTENT"|"NONE"|string;
+  export type VerifyMode = "POINT_IN_TIME_CONSISTENT"|"NONE";
   export type VpcEndpointId = string;
   export type long = number;
   /**

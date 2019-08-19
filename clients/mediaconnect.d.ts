@@ -215,7 +215,7 @@ declare namespace MediaConnect {
      */
     StreamId?: __string;
   }
-  export type Algorithm = "aes128"|"aes192"|"aes256"|string;
+  export type Algorithm = "aes128"|"aes192"|"aes256";
   export interface CreateFlowRequest {
     /**
      * The Availability Zone that you want to create the flow in. These options are limited to the Availability Zones within the current AWS Region.
@@ -397,7 +397,7 @@ declare namespace MediaConnect {
      */
     FlowArn?: __string;
   }
-  export type KeyType = "speke"|"static-key"|string;
+  export type KeyType = "speke"|"static-key";
   export interface ListEntitlementsRequest {
     /**
      * The maximum number of results to return per API request. For example, you submit a ListEntitlements request with MaxResults set at 5. Although 20 items match your request, the service returns no more than the first 5 items. (The service also returns a NextToken value that you can use to fetch the next batch of results.) The service might return fewer results than the MaxResults value. If MaxResults is not included in the request, the service defaults to pagination with a maximum of 20 results per page.
@@ -531,7 +531,7 @@ declare namespace MediaConnect {
      */
     Transport?: Transport;
   }
-  export type Protocol = "zixi-push"|"rtp-fec"|"rtp"|"zixi-pull"|string;
+  export type Protocol = "zixi-push"|"rtp-fec"|"rtp"|"zixi-pull";
   export interface RemoveFlowOutputRequest {
     /**
      * The flow that you want to remove an output from.
@@ -652,7 +652,7 @@ declare namespace MediaConnect {
      */
     WhitelistCidr?: __string;
   }
-  export type SourceType = "OWNED"|"ENTITLED"|string;
+  export type SourceType = "OWNED"|"ENTITLED";
   export interface StartFlowRequest {
     /**
      * The ARN of the flow that you want to start.
@@ -669,7 +669,7 @@ declare namespace MediaConnect {
      */
     Status?: Status;
   }
-  export type Status = "STANDBY"|"ACTIVE"|"UPDATING"|"DELETING"|"STARTING"|"STOPPING"|"ERROR"|string;
+  export type Status = "STANDBY"|"ACTIVE"|"UPDATING"|"DELETING"|"STARTING"|"STOPPING"|"ERROR";
   export interface StopFlowRequest {
     /**
      * The ARN of the flow that you want to stop.

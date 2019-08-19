@@ -342,7 +342,7 @@ declare class KMS extends Service {
 }
 declare namespace KMS {
   export type AWSAccountIdType = string;
-  export type AlgorithmSpec = "RSAES_PKCS1_V1_5"|"RSAES_OAEP_SHA_1"|"RSAES_OAEP_SHA_256"|string;
+  export type AlgorithmSpec = "RSAES_PKCS1_V1_5"|"RSAES_OAEP_SHA_1"|"RSAES_OAEP_SHA_256";
   export type AliasList = AliasListEntry[];
   export interface AliasListEntry {
     /**
@@ -383,8 +383,8 @@ declare namespace KMS {
   }
   export interface ConnectCustomKeyStoreResponse {
   }
-  export type ConnectionErrorCodeType = "INVALID_CREDENTIALS"|"CLUSTER_NOT_FOUND"|"NETWORK_ERRORS"|"INTERNAL_ERROR"|"INSUFFICIENT_CLOUDHSM_HSMS"|"USER_LOCKED_OUT"|string;
-  export type ConnectionStateType = "CONNECTED"|"CONNECTING"|"FAILED"|"DISCONNECTED"|"DISCONNECTING"|string;
+  export type ConnectionErrorCodeType = "INVALID_CREDENTIALS"|"CLUSTER_NOT_FOUND"|"NETWORK_ERRORS"|"INTERNAL_ERROR"|"INSUFFICIENT_CLOUDHSM_HSMS"|"USER_LOCKED_OUT";
+  export type ConnectionStateType = "CONNECTED"|"CONNECTING"|"FAILED"|"DISCONNECTED"|"DISCONNECTING";
   export interface CreateAliasRequest {
     /**
      * Specifies the alias name. This value must begin with alias/ followed by a name, such as alias/ExampleAlias. The alias name cannot begin with alias/aws/. The alias/aws/ prefix is reserved for AWS managed CMKs.
@@ -528,7 +528,7 @@ declare namespace KMS {
      */
     CreationDate?: DateType;
   }
-  export type DataKeySpec = "AES_256"|"AES_128"|string;
+  export type DataKeySpec = "AES_256"|"AES_128";
   export type DateType = Date;
   export interface DecryptRequest {
     /**
@@ -686,7 +686,7 @@ declare namespace KMS {
   export type EncryptionContextKey = string;
   export type EncryptionContextType = {[key: string]: EncryptionContextValue};
   export type EncryptionContextValue = string;
-  export type ExpirationModelType = "KEY_MATERIAL_EXPIRES"|"KEY_MATERIAL_DOES_NOT_EXPIRE"|string;
+  export type ExpirationModelType = "KEY_MATERIAL_EXPIRES"|"KEY_MATERIAL_DOES_NOT_EXPIRE";
   export interface GenerateDataKeyRequest {
     /**
      * An identifier for the CMK that encrypts the data key. To specify a CMK, use its key ID, Amazon Resource Name (ARN), alias name, or alias ARN. When using an alias name, prefix it with "alias/". To specify a CMK in a different AWS account, you must use the key ARN or alias ARN. For example:   Key ID: 1234abcd-12ab-34cd-56ef-1234567890ab    Key ARN: arn:aws:kms:us-east-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab    Alias name: alias/ExampleAlias    Alias ARN: arn:aws:kms:us-east-2:111122223333:alias/ExampleAlias    To get the key ID and key ARN for a CMK, use ListKeys or DescribeKey. To get the alias name and alias ARN, use ListAliases.
@@ -882,7 +882,7 @@ declare namespace KMS {
     Constraints?: GrantConstraints;
   }
   export type GrantNameType = string;
-  export type GrantOperation = "Decrypt"|"Encrypt"|"GenerateDataKey"|"GenerateDataKeyWithoutPlaintext"|"ReEncryptFrom"|"ReEncryptTo"|"CreateGrant"|"RetireGrant"|"DescribeKey"|string;
+  export type GrantOperation = "Decrypt"|"Encrypt"|"GenerateDataKey"|"GenerateDataKeyWithoutPlaintext"|"ReEncryptFrom"|"ReEncryptTo"|"CreateGrant"|"RetireGrant"|"DescribeKey";
   export type GrantOperationList = GrantOperation[];
   export type GrantTokenList = GrantTokenType[];
   export type GrantTokenType = string;
@@ -922,7 +922,7 @@ declare namespace KMS {
      */
     KeyArn?: ArnType;
   }
-  export type KeyManagerType = "AWS"|"CUSTOMER"|string;
+  export type KeyManagerType = "AWS"|"CUSTOMER";
   export interface KeyMetadata {
     /**
      * The twelve-digit account ID of the AWS account that owns the CMK.
@@ -985,9 +985,9 @@ declare namespace KMS {
      */
     KeyManager?: KeyManagerType;
   }
-  export type KeyState = "Enabled"|"Disabled"|"PendingDeletion"|"PendingImport"|"Unavailable"|string;
+  export type KeyState = "Enabled"|"Disabled"|"PendingDeletion"|"PendingImport"|"Unavailable";
   export type KeyStorePasswordType = string;
-  export type KeyUsageType = "ENCRYPT_DECRYPT"|string;
+  export type KeyUsageType = "ENCRYPT_DECRYPT";
   export type LimitType = number;
   export interface ListAliasesRequest {
     /**
@@ -1141,7 +1141,7 @@ declare namespace KMS {
   }
   export type MarkerType = string;
   export type NumberOfBytesType = number;
-  export type OriginType = "AWS_KMS"|"EXTERNAL"|"AWS_CLOUDHSM"|string;
+  export type OriginType = "AWS_KMS"|"EXTERNAL"|"AWS_CLOUDHSM";
   export type PendingWindowInDaysType = number;
   export type PlaintextType = Buffer|Uint8Array|Blob|string;
   export type PolicyNameList = PolicyNameType[];
@@ -1321,7 +1321,7 @@ declare namespace KMS {
      */
     Description: DescriptionType;
   }
-  export type WrappingKeySpec = "RSA_2048"|string;
+  export type WrappingKeySpec = "RSA_2048";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

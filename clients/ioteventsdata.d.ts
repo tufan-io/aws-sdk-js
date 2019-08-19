@@ -204,7 +204,7 @@ declare namespace IoTEventsData {
      */
     lastUpdateTime?: Timestamp;
   }
-  export type ErrorCode = "ResourceNotFoundException"|"InvalidRequestException"|"InternalFailureException"|"ServiceUnavailableException"|"ThrottlingException"|string;
+  export type ErrorCode = "ResourceNotFoundException"|"InvalidRequestException"|"InternalFailureException"|"ServiceUnavailableException"|"ThrottlingException";
   export type ErrorMessage = string;
   export type InputName = string;
   export type KeyValue = string;

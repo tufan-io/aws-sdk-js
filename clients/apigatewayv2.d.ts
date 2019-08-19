@@ -569,7 +569,7 @@ declare namespace ApiGatewayV2 {
   }
   export type Arn = string;
   export type AuthorizationScopes = StringWithLengthBetween1And64[];
-  export type AuthorizationType = "NONE"|"AWS_IAM"|"CUSTOM"|string;
+  export type AuthorizationType = "NONE"|"AWS_IAM"|"CUSTOM";
   export interface Authorizer {
     /**
      * Specifies the required credentials as an IAM role for API Gateway to invoke the
@@ -641,9 +641,9 @@ declare namespace ApiGatewayV2 {
      */
     ProviderArns?: ProviderArnList;
   }
-  export type AuthorizerType = "REQUEST"|string;
-  export type ConnectionType = "INTERNET"|"VPC_LINK"|string;
-  export type ContentHandlingStrategy = "CONVERT_TO_BINARY"|"CONVERT_TO_TEXT"|string;
+  export type AuthorizerType = "REQUEST";
+  export type ConnectionType = "INTERNET"|"VPC_LINK";
+  export type ContentHandlingStrategy = "CONVERT_TO_BINARY"|"CONVERT_TO_TEXT";
   export interface CreateApiMappingRequest {
     /**
      * The API identifier.
@@ -1743,7 +1743,7 @@ declare namespace ApiGatewayV2 {
      */
     Description?: StringWithLengthBetween0And1024;
   }
-  export type DeploymentStatus = "PENDING"|"FAILED"|"DEPLOYED"|string;
+  export type DeploymentStatus = "PENDING"|"FAILED"|"DEPLOYED";
   export interface DomainName {
     /**
      * The API mapping selection expression.
@@ -1804,9 +1804,9 @@ declare namespace ApiGatewayV2 {
     DomainNameStatusMessage?: __string;
   }
   export type DomainNameConfigurations = DomainNameConfiguration[];
-  export type EndpointType = "REGIONAL"|"EDGE"|string;
-  export type SecurityPolicy = "TLS_1_0"|"TLS_1_2"|string;
-  export type DomainNameStatus = "AVAILABLE"|"UPDATING"|string;
+  export type EndpointType = "REGIONAL"|"EDGE";
+  export type SecurityPolicy = "TLS_1_0"|"TLS_1_2";
+  export type DomainNameStatus = "AVAILABLE"|"UPDATING";
   export interface GetApiMappingRequest {
     /**
      * The API mapping identifier.
@@ -2889,14 +2889,14 @@ declare namespace ApiGatewayV2 {
      */
     TemplateSelectionExpression?: SelectionExpression;
   }
-  export type IntegrationType = "AWS"|"HTTP"|"MOCK"|"HTTP_PROXY"|"AWS_PROXY"|string;
+  export type IntegrationType = "AWS"|"HTTP"|"MOCK"|"HTTP_PROXY"|"AWS_PROXY";
   export interface GetTagsRequest {
     ResourceArn: __string;
   }
   export interface GetTagsResponse {
     Tags?: __mapOf__string;
   }
-  export type LoggingLevel = "ERROR"|"INFO"|"false"|string;
+  export type LoggingLevel = "ERROR"|"INFO"|"false";
   export interface Model {
     /**
      * The content-type for the model, for example, "application/json".
@@ -2927,8 +2927,8 @@ declare namespace ApiGatewayV2 {
      */
     Required?: __boolean;
   }
-  export type PassthroughBehavior = "WHEN_NO_MATCH"|"NEVER"|"WHEN_NO_TEMPLATES"|string;
-  export type ProtocolType = "WEBSOCKET"|string;
+  export type PassthroughBehavior = "WHEN_NO_MATCH"|"NEVER"|"WHEN_NO_TEMPLATES";
+  export type ProtocolType = "WEBSOCKET";
   export type ProviderArnList = Arn[];
   export interface Route {
     /**

@@ -424,7 +424,7 @@ declare namespace Backup {
      */
     BytesTransferred?: Long;
   }
-  export type BackupJobState = "CREATED"|"PENDING"|"RUNNING"|"ABORTING"|"ABORTED"|"COMPLETED"|"FAILED"|"EXPIRED"|string;
+  export type BackupJobState = "CREATED"|"PENDING"|"RUNNING"|"ABORTING"|"ABORTED"|"COMPLETED"|"FAILED"|"EXPIRED";
   export type BackupJobsList = BackupJob[];
   export interface BackupPlan {
     /**
@@ -607,7 +607,7 @@ declare namespace Backup {
      */
     IamRoleArn?: IAMRoleArn;
   }
-  export type BackupVaultEvent = "BACKUP_JOB_STARTED"|"BACKUP_JOB_COMPLETED"|"RESTORE_JOB_STARTED"|"RESTORE_JOB_COMPLETED"|"RECOVERY_POINT_MODIFIED"|"BACKUP_PLAN_CREATED"|"BACKUP_PLAN_MODIFIED"|string;
+  export type BackupVaultEvent = "BACKUP_JOB_STARTED"|"BACKUP_JOB_COMPLETED"|"RESTORE_JOB_STARTED"|"RESTORE_JOB_COMPLETED"|"RECOVERY_POINT_MODIFIED"|"BACKUP_PLAN_CREATED"|"BACKUP_PLAN_MODIFIED";
   export type BackupVaultEvents = BackupVaultEvent[];
   export type BackupVaultList = BackupVaultListMember[];
   export interface BackupVaultListMember {
@@ -663,7 +663,7 @@ declare namespace Backup {
     ConditionValue: ConditionValue;
   }
   export type ConditionKey = string;
-  export type ConditionType = "STRINGEQUALS"|string;
+  export type ConditionType = "STRINGEQUALS";
   export type ConditionValue = string;
   export interface CreateBackupPlanInput {
     /**
@@ -1723,12 +1723,12 @@ declare namespace Backup {
      */
     BackupRuleId?: string;
   }
-  export type RecoveryPointStatus = "COMPLETED"|"PARTIAL"|"DELETING"|"EXPIRED"|string;
+  export type RecoveryPointStatus = "COMPLETED"|"PARTIAL"|"DELETING"|"EXPIRED";
   export type ResourceArns = ARN[];
   export type ResourceType = string;
   export type ResourceTypes = ResourceType[];
   export type RestoreJobId = string;
-  export type RestoreJobStatus = "PENDING"|"RUNNING"|"COMPLETED"|"ABORTED"|"FAILED"|string;
+  export type RestoreJobStatus = "PENDING"|"RUNNING"|"COMPLETED"|"ABORTED"|"FAILED";
   export type RestoreJobsList = RestoreJobsListMember[];
   export interface RestoreJobsListMember {
     /**
@@ -1858,7 +1858,7 @@ declare namespace Backup {
      */
     BackupJobId: string;
   }
-  export type StorageClass = "WARM"|"COLD"|"DELETED"|string;
+  export type StorageClass = "WARM"|"COLD"|"DELETED";
   export type TagKey = string;
   export type TagKeyList = string[];
   export interface TagResourceInput {

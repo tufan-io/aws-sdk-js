@@ -133,9 +133,9 @@ declare class MediaPackage extends Service {
   updateOriginEndpoint(callback?: (err: AWSError, data: MediaPackage.Types.UpdateOriginEndpointResponse) => void): Request<MediaPackage.Types.UpdateOriginEndpointResponse, AWSError>;
 }
 declare namespace MediaPackage {
-  export type AdMarkers = "NONE"|"SCTE35_ENHANCED"|"PASSTHROUGH"|string;
+  export type AdMarkers = "NONE"|"SCTE35_ENHANCED"|"PASSTHROUGH";
   export type AdTriggers = __AdTriggersElement[];
-  export type AdsOnDeliveryRestrictions = "NONE"|"RESTRICTED"|"UNRESTRICTED"|"BOTH"|string;
+  export type AdsOnDeliveryRestrictions = "NONE"|"RESTRICTED"|"UNRESTRICTED"|"BOTH";
   export interface Channel {
     /**
      * The Amazon Resource Name (ARN) assigned to the Channel.
@@ -460,7 +460,7 @@ If not specified, there will be no time delay in effect for the OriginEndpoint.
      */
     Whitelist?: __listOf__string;
   }
-  export type EncryptionMethod = "AES_128"|"SAMPLE_AES"|string;
+  export type EncryptionMethod = "AES_128"|"SAMPLE_AES";
   export interface HlsEncryption {
     /**
      * A constant initialization vector for encryption (optional).
@@ -712,7 +712,7 @@ rounded to the nearest multiple of the source fragment duration.
   export interface ListTagsForResourceResponse {
     Tags?: __mapOf__string;
   }
-  export type ManifestLayout = "FULL"|"COMPACT"|string;
+  export type ManifestLayout = "FULL"|"COMPACT";
   export type MaxResults = number;
   export interface MssEncryption {
     SpekeKeyProvider: SpekeKeyProvider;
@@ -776,8 +776,8 @@ If not specified, there will be no time delay in effect for the OriginEndpoint.
      */
     Whitelist?: __listOf__string;
   }
-  export type PlaylistType = "NONE"|"EVENT"|"VOD"|string;
-  export type Profile = "NONE"|"HBBTV_1_5"|string;
+  export type PlaylistType = "NONE"|"EVENT"|"VOD";
+  export type Profile = "NONE"|"HBBTV_1_5";
   export interface RotateChannelCredentialsRequest {
     /**
      * The ID of the channel to update.
@@ -826,7 +826,7 @@ If not specified, there will be no time delay in effect for the OriginEndpoint.
     Id?: __string;
     Tags?: Tags;
   }
-  export type SegmentTemplateFormat = "NUMBER_WITH_TIMELINE"|"TIME_WITH_TIMELINE"|"NUMBER_WITH_DURATION"|string;
+  export type SegmentTemplateFormat = "NUMBER_WITH_TIMELINE"|"TIME_WITH_TIMELINE"|"NUMBER_WITH_DURATION";
   export interface SpekeKeyProvider {
     /**
      * An Amazon Resource Name (ARN) of a Certificate Manager certificate
@@ -854,7 +854,7 @@ MediaPackage will assume when accessing the key provider service.
      */
     Url: __string;
   }
-  export type StreamOrder = "ORIGINAL"|"VIDEO_BITRATE_ASCENDING"|"VIDEO_BITRATE_DESCENDING"|string;
+  export type StreamOrder = "ORIGINAL"|"VIDEO_BITRATE_ASCENDING"|"VIDEO_BITRATE_DESCENDING";
   export interface StreamSelection {
     /**
      * The maximum video bitrate (bps) to include in output.
@@ -988,8 +988,8 @@ If not specified, there will be no time delay in effect for the OriginEndpoint.
      */
     Whitelist?: __listOf__string;
   }
-  export type __AdTriggersElement = "SPLICE_INSERT"|"BREAK"|"PROVIDER_ADVERTISEMENT"|"DISTRIBUTOR_ADVERTISEMENT"|"PROVIDER_PLACEMENT_OPPORTUNITY"|"DISTRIBUTOR_PLACEMENT_OPPORTUNITY"|"PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY"|"DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY"|string;
-  export type __PeriodTriggersElement = "ADS"|string;
+  export type __AdTriggersElement = "SPLICE_INSERT"|"BREAK"|"PROVIDER_ADVERTISEMENT"|"DISTRIBUTOR_ADVERTISEMENT"|"PROVIDER_PLACEMENT_OPPORTUNITY"|"DISTRIBUTOR_PLACEMENT_OPPORTUNITY"|"PROVIDER_OVERLAY_PLACEMENT_OPPORTUNITY"|"DISTRIBUTOR_OVERLAY_PLACEMENT_OPPORTUNITY";
+  export type __PeriodTriggersElement = "ADS";
   export type __boolean = boolean;
   export type __integer = number;
   export type __listOfChannel = Channel[];

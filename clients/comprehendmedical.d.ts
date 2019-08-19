@@ -64,7 +64,7 @@ declare namespace ComprehendMedical {
     Traits?: TraitList;
   }
   export type AttributeList = Attribute[];
-  export type AttributeName = "SIGN"|"SYMPTOM"|"DIAGNOSIS"|"NEGATION"|string;
+  export type AttributeName = "SIGN"|"SYMPTOM"|"DIAGNOSIS"|"NEGATION";
   export type BoundedLengthString = string;
   export interface DetectEntitiesRequest {
     /**
@@ -141,8 +141,8 @@ declare namespace ComprehendMedical {
     Attributes?: AttributeList;
   }
   export type EntityList = Entity[];
-  export type EntitySubType = "NAME"|"DOSAGE"|"ROUTE_OR_MODE"|"FORM"|"FREQUENCY"|"DURATION"|"GENERIC_NAME"|"BRAND_NAME"|"STRENGTH"|"RATE"|"ACUITY"|"TEST_NAME"|"TEST_VALUE"|"TEST_UNITS"|"PROCEDURE_NAME"|"TREATMENT_NAME"|"DATE"|"AGE"|"CONTACT_POINT"|"EMAIL"|"IDENTIFIER"|"URL"|"ADDRESS"|"PROFESSION"|"SYSTEM_ORGAN_SITE"|"DIRECTION"|"QUALITY"|"QUANTITY"|string;
-  export type EntityType = "MEDICATION"|"MEDICAL_CONDITION"|"PROTECTED_HEALTH_INFORMATION"|"TEST_TREATMENT_PROCEDURE"|"ANATOMY"|string;
+  export type EntitySubType = "NAME"|"DOSAGE"|"ROUTE_OR_MODE"|"FORM"|"FREQUENCY"|"DURATION"|"GENERIC_NAME"|"BRAND_NAME"|"STRENGTH"|"RATE"|"ACUITY"|"TEST_NAME"|"TEST_VALUE"|"TEST_UNITS"|"PROCEDURE_NAME"|"TREATMENT_NAME"|"DATE"|"AGE"|"CONTACT_POINT"|"EMAIL"|"IDENTIFIER"|"URL"|"ADDRESS"|"PROFESSION"|"SYSTEM_ORGAN_SITE"|"DIRECTION"|"QUALITY"|"QUANTITY";
+  export type EntityType = "MEDICATION"|"MEDICAL_CONDITION"|"PROTECTED_HEALTH_INFORMATION"|"TEST_TREATMENT_PROCEDURE"|"ANATOMY";
   export type Float = number;
   export type Integer = number;
   export type String = string;

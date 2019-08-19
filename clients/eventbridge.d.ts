@@ -270,7 +270,7 @@ declare namespace EventBridge {
     Name: EventSourceName;
   }
   export type Arn = string;
-  export type AssignPublicIp = "ENABLED"|"DISABLED"|string;
+  export type AssignPublicIp = "ENABLED"|"DISABLED";
   export interface AwsVpcConfiguration {
     /**
      * Specifies the subnets associated with the task. These subnets must all be in the same VPC. You can specify as many as 16 subnets.
@@ -611,7 +611,7 @@ declare namespace EventBridge {
   export type EventSourceList = EventSource[];
   export type EventSourceName = string;
   export type EventSourceNamePrefix = string;
-  export type EventSourceState = "PENDING"|"ACTIVE"|"DELETED"|string;
+  export type EventSourceState = "PENDING"|"ACTIVE"|"DELETED";
   export type EventTime = Date;
   export interface InputTransformer {
     /**
@@ -631,7 +631,7 @@ declare namespace EventBridge {
      */
     PartitionKeyPath: TargetPartitionKeyPath;
   }
-  export type LaunchType = "EC2"|"FARGATE"|string;
+  export type LaunchType = "EC2"|"FARGATE";
   export type LimitMax100 = number;
   export type LimitMin1 = number;
   export interface ListEventBusesRequest {
@@ -1178,7 +1178,7 @@ declare namespace EventBridge {
   export type RuleName = string;
   export type RuleNameList = RuleName[];
   export type RuleResponseList = Rule[];
-  export type RuleState = "ENABLED"|"DISABLED"|string;
+  export type RuleState = "ENABLED"|"DISABLED";
   export interface RunCommandParameters {
     /**
      * Currently, we support including only one RunCommandTarget block, which specifies either an array of InstanceIds or a tag.

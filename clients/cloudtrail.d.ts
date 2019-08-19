@@ -476,7 +476,7 @@ declare namespace CloudTrail {
      */
     AttributeValue: String;
   }
-  export type LookupAttributeKey = "EventId"|"EventName"|"ReadOnly"|"Username"|"ResourceType"|"ResourceName"|"EventSource"|"AccessKeyId"|string;
+  export type LookupAttributeKey = "EventId"|"EventName"|"ReadOnly"|"Username"|"ResourceType"|"ResourceName"|"EventSource"|"AccessKeyId";
   export type LookupAttributesList = LookupAttribute[];
   export interface LookupEventsRequest {
     /**
@@ -551,7 +551,7 @@ declare namespace CloudTrail {
      */
     EventSelectors?: EventSelectors;
   }
-  export type ReadWriteType = "ReadOnly"|"WriteOnly"|"All"|string;
+  export type ReadWriteType = "ReadOnly"|"WriteOnly"|"All";
   export interface RemoveTagsRequest {
     /**
      * Specifies the ARN of the trail from which tags should be removed. The format of a trail ARN is:  arn:aws:cloudtrail:us-east-2:123456789012:trail/MyTrail 

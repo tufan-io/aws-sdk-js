@@ -442,7 +442,7 @@ declare namespace QuickSight {
   export type GroupMemberList = GroupMember[];
   export type GroupMemberName = string;
   export type GroupName = string;
-  export type IdentityType = "IAM"|"QUICKSIGHT"|string;
+  export type IdentityType = "IAM"|"QUICKSIGHT";
   export interface ListGroupMembershipsRequest {
     /**
      * The name of the group that you want to see a membership list of.
@@ -753,7 +753,7 @@ declare namespace QuickSight {
   }
   export type UserList = User[];
   export type UserName = string;
-  export type UserRole = "ADMIN"|"AUTHOR"|"READER"|"RESTRICTED_AUTHOR"|"RESTRICTED_READER"|string;
+  export type UserRole = "ADMIN"|"AUTHOR"|"READER"|"RESTRICTED_AUTHOR"|"RESTRICTED_READER";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

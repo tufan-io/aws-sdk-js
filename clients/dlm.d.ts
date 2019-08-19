@@ -143,9 +143,9 @@ declare namespace DLM {
      */
     Policy?: LifecyclePolicy;
   }
-  export type GettablePolicyStateValues = "ENABLED"|"DISABLED"|"ERROR"|string;
+  export type GettablePolicyStateValues = "ENABLED"|"DISABLED"|"ERROR";
   export type Interval = number;
-  export type IntervalUnitValues = "HOURS"|string;
+  export type IntervalUnitValues = "HOURS";
   export interface LifecyclePolicy {
     /**
      * The identifier of the lifecycle policy.
@@ -222,8 +222,8 @@ declare namespace DLM {
   }
   export type PolicyId = string;
   export type PolicyIdList = PolicyId[];
-  export type PolicyTypeValues = "EBS_SNAPSHOT_MANAGEMENT"|string;
-  export type ResourceTypeValues = "VOLUME"|"INSTANCE"|string;
+  export type PolicyTypeValues = "EBS_SNAPSHOT_MANAGEMENT";
+  export type ResourceTypeValues = "VOLUME"|"INSTANCE";
   export type ResourceTypeValuesList = ResourceTypeValues[];
   export interface RetainRule {
     /**
@@ -259,7 +259,7 @@ declare namespace DLM {
   }
   export type ScheduleList = Schedule[];
   export type ScheduleName = string;
-  export type SettablePolicyStateValues = "ENABLED"|"DISABLED"|string;
+  export type SettablePolicyStateValues = "ENABLED"|"DISABLED";
   export type String = string;
   export interface Tag {
     /**

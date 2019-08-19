@@ -139,7 +139,7 @@ declare namespace Firehose {
   }
   export type ClusterJDBCURL = string;
   export type ColumnToJsonKeyMappings = {[key: string]: NonEmptyString};
-  export type CompressionFormat = "UNCOMPRESSED"|"GZIP"|"ZIP"|"Snappy"|string;
+  export type CompressionFormat = "UNCOMPRESSED"|"GZIP"|"ZIP"|"Snappy";
   export interface CopyCommand {
     /**
      * The name of the target table. The table must already exist in the database.
@@ -282,11 +282,11 @@ declare namespace Firehose {
      */
     Status?: DeliveryStreamEncryptionStatus;
   }
-  export type DeliveryStreamEncryptionStatus = "ENABLED"|"ENABLING"|"DISABLED"|"DISABLING"|string;
+  export type DeliveryStreamEncryptionStatus = "ENABLED"|"ENABLING"|"DISABLED"|"DISABLING";
   export type DeliveryStreamName = string;
   export type DeliveryStreamNameList = DeliveryStreamName[];
-  export type DeliveryStreamStatus = "CREATING"|"DELETING"|"ACTIVE"|string;
-  export type DeliveryStreamType = "DirectPut"|"KinesisStreamAsSource"|string;
+  export type DeliveryStreamStatus = "CREATING"|"DELETING"|"ACTIVE";
+  export type DeliveryStreamType = "DirectPut"|"KinesisStreamAsSource";
   export type DeliveryStreamVersionId = string;
   export interface DescribeDeliveryStreamInput {
     /**
@@ -495,7 +495,7 @@ declare namespace Firehose {
   }
   export type ElasticsearchDomainARN = string;
   export type ElasticsearchIndexName = string;
-  export type ElasticsearchIndexRotationPeriod = "NoRotation"|"OneHour"|"OneDay"|"OneWeek"|"OneMonth"|string;
+  export type ElasticsearchIndexRotationPeriod = "NoRotation"|"OneHour"|"OneDay"|"OneWeek"|"OneMonth";
   export type ElasticsearchRetryDurationInSeconds = number;
   export interface ElasticsearchRetryOptions {
     /**
@@ -503,7 +503,7 @@ declare namespace Firehose {
      */
     DurationInSeconds?: ElasticsearchRetryDurationInSeconds;
   }
-  export type ElasticsearchS3BackupMode = "FailedDocumentsOnly"|"AllDocuments"|string;
+  export type ElasticsearchS3BackupMode = "FailedDocumentsOnly"|"AllDocuments";
   export type ElasticsearchTypeName = string;
   export interface EncryptionConfiguration {
     /**
@@ -670,7 +670,7 @@ declare namespace Firehose {
   }
   export type HECAcknowledgmentTimeoutInSeconds = number;
   export type HECEndpoint = string;
-  export type HECEndpointType = "Raw"|"Event"|string;
+  export type HECEndpointType = "Raw"|"Event";
   export type HECToken = string;
   export interface HiveJsonSerDe {
     /**
@@ -771,7 +771,7 @@ declare namespace Firehose {
   export type ListTagsForDeliveryStreamOutputTagList = Tag[];
   export type LogGroupName = string;
   export type LogStreamName = string;
-  export type NoEncryptionConfig = "NoEncryption"|string;
+  export type NoEncryptionConfig = "NoEncryption";
   export type NonEmptyString = string;
   export type NonEmptyStringWithoutWhitespace = string;
   export type NonNegativeIntegerObject = number;
@@ -789,8 +789,8 @@ declare namespace Firehose {
      */
     ColumnToJsonKeyMappings?: ColumnToJsonKeyMappings;
   }
-  export type OrcCompression = "NONE"|"ZLIB"|"SNAPPY"|string;
-  export type OrcFormatVersion = "V0_11"|"V0_12"|string;
+  export type OrcCompression = "NONE"|"ZLIB"|"SNAPPY";
+  export type OrcFormatVersion = "V0_11"|"V0_12";
   export type OrcRowIndexStride = number;
   export interface OrcSerDe {
     /**
@@ -841,7 +841,7 @@ declare namespace Firehose {
      */
     Serializer?: Serializer;
   }
-  export type ParquetCompression = "UNCOMPRESSED"|"GZIP"|"SNAPPY"|string;
+  export type ParquetCompression = "UNCOMPRESSED"|"GZIP"|"SNAPPY";
   export type ParquetPageSizeBytes = number;
   export interface ParquetSerDe {
     /**
@@ -869,7 +869,7 @@ declare namespace Firehose {
      */
     WriterVersion?: ParquetWriterVersion;
   }
-  export type ParquetWriterVersion = "V1"|"V2"|string;
+  export type ParquetWriterVersion = "V1"|"V2";
   export type Password = string;
   export type Prefix = string;
   export interface ProcessingConfiguration {
@@ -904,9 +904,9 @@ declare namespace Firehose {
     ParameterValue: ProcessorParameterValue;
   }
   export type ProcessorParameterList = ProcessorParameter[];
-  export type ProcessorParameterName = "LambdaArn"|"NumberOfRetries"|"RoleArn"|"BufferSizeInMBs"|"BufferIntervalInSeconds"|string;
+  export type ProcessorParameterName = "LambdaArn"|"NumberOfRetries"|"RoleArn"|"BufferSizeInMBs"|"BufferIntervalInSeconds";
   export type ProcessorParameterValue = string;
-  export type ProcessorType = "Lambda"|string;
+  export type ProcessorType = "Lambda";
   export type Proportion = number;
   export interface PutRecordBatchInput {
     /**
@@ -1116,9 +1116,9 @@ declare namespace Firehose {
      */
     DurationInSeconds?: RedshiftRetryDurationInSeconds;
   }
-  export type RedshiftS3BackupMode = "Disabled"|"Enabled"|string;
+  export type RedshiftS3BackupMode = "Disabled"|"Enabled";
   export type RoleARN = string;
-  export type S3BackupMode = "Disabled"|"Enabled"|string;
+  export type S3BackupMode = "Disabled"|"Enabled";
   export interface S3DestinationConfiguration {
     /**
      * The Amazon Resource Name (ARN) of the AWS credentials. For more information, see Amazon Resource Names (ARNs) and AWS Service Namespaces.
@@ -1385,7 +1385,7 @@ declare namespace Firehose {
      */
     DurationInSeconds?: SplunkRetryDurationInSeconds;
   }
-  export type SplunkS3BackupMode = "FailedEventsOnly"|"AllEvents"|string;
+  export type SplunkS3BackupMode = "FailedEventsOnly"|"AllEvents";
   export interface StartDeliveryStreamEncryptionInput {
     /**
      * The name of the delivery stream for which you want to enable server-side encryption (SSE).

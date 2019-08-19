@@ -153,7 +153,7 @@ declare namespace EKS {
     platformVersion?: String;
   }
   export type ClusterName = string;
-  export type ClusterStatus = "CREATING"|"ACTIVE"|"DELETING"|"FAILED"|string;
+  export type ClusterStatus = "CREATING"|"ACTIVE"|"DELETING"|"FAILED";
   export interface CreateClusterRequest {
     /**
      * The unique name to give to your cluster.
@@ -226,7 +226,7 @@ declare namespace EKS {
      */
     update?: Update;
   }
-  export type ErrorCode = "SubnetNotFound"|"SecurityGroupNotFound"|"EniLimitReached"|"IpNotAvailable"|"AccessDenied"|"OperationNotPermitted"|"VpcIdNotFound"|"Unknown"|string;
+  export type ErrorCode = "SubnetNotFound"|"SecurityGroupNotFound"|"EniLimitReached"|"IpNotAvailable"|"AccessDenied"|"OperationNotPermitted"|"VpcIdNotFound"|"Unknown";
   export interface ErrorDetail {
     /**
      * A brief description of the error.     SubnetNotFound: We couldn't find one of the subnets associated with the cluster.    SecurityGroupNotFound: We couldn't find one of the security groups associated with the cluster.    EniLimitReached: You have reached the elastic network interface limit for your account.    IpNotAvailable: A subnet associated with the cluster doesn't have any free IP addresses.    AccessDenied: You don't have permissions to perform the specified operation.    OperationNotPermitted: The service role associated with the cluster doesn't have the required access permissions for Amazon EKS.    VpcIdNotFound: We couldn't find the VPC associated with the cluster.  
@@ -299,7 +299,7 @@ declare namespace EKS {
     enabled?: BoxedBoolean;
   }
   export type LogSetups = LogSetup[];
-  export type LogType = "api"|"audit"|"authenticator"|"controllerManager"|"scheduler"|string;
+  export type LogType = "api"|"audit"|"authenticator"|"controllerManager"|"scheduler";
   export type LogTypes = LogType[];
   export interface Logging {
     /**
@@ -384,10 +384,10 @@ declare namespace EKS {
      */
     value?: String;
   }
-  export type UpdateParamType = "Version"|"PlatformVersion"|"EndpointPrivateAccess"|"EndpointPublicAccess"|"ClusterLogging"|string;
+  export type UpdateParamType = "Version"|"PlatformVersion"|"EndpointPrivateAccess"|"EndpointPublicAccess"|"ClusterLogging";
   export type UpdateParams = UpdateParam[];
-  export type UpdateStatus = "InProgress"|"Failed"|"Cancelled"|"Successful"|string;
-  export type UpdateType = "VersionUpdate"|"EndpointAccessUpdate"|"LoggingUpdate"|string;
+  export type UpdateStatus = "InProgress"|"Failed"|"Cancelled"|"Successful";
+  export type UpdateType = "VersionUpdate"|"EndpointAccessUpdate"|"LoggingUpdate";
   export interface VpcConfigRequest {
     /**
      * Specify subnets for your Amazon EKS worker nodes. Amazon EKS creates cross-account elastic network interfaces in these subnets to allow communication between your worker nodes and the Kubernetes control plane.

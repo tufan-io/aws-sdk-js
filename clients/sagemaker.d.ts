@@ -691,7 +691,7 @@ declare namespace SageMaker {
   export type AdditionalCodeRepositoryNamesOrUrls = CodeRepositoryNameOrUrl[];
   export type AlgorithmArn = string;
   export type AlgorithmImage = string;
-  export type AlgorithmSortBy = "Name"|"CreationTime"|string;
+  export type AlgorithmSortBy = "Name"|"CreationTime";
   export interface AlgorithmSpecification {
     /**
      * The registry path of the Docker image that contains the training algorithm. For information about docker registry paths for built-in algorithms, see Algorithms Provided by Amazon SageMaker: Common Parameters. Amazon SageMaker supports both registry/repository[:tag] and registry/repository[@digest] image path formats. For more information, see Using Your Own Algorithms with Amazon SageMaker.
@@ -710,7 +710,7 @@ declare namespace SageMaker {
      */
     MetricDefinitions?: MetricDefinitionList;
   }
-  export type AlgorithmStatus = "Pending"|"InProgress"|"Completed"|"Failed"|"Deleting"|string;
+  export type AlgorithmStatus = "Pending"|"InProgress"|"Completed"|"Failed"|"Deleting";
   export interface AlgorithmStatusDetails {
     /**
      * The status of algorithm validation.
@@ -791,12 +791,12 @@ declare namespace SageMaker {
     AnnotationConsolidationLambdaArn: LambdaFunctionArn;
   }
   export type ArnOrName = string;
-  export type AssemblyType = "None"|"Line"|string;
+  export type AssemblyType = "None"|"Line";
   export type AttributeName = string;
   export type AttributeNames = AttributeName[];
-  export type BatchStrategy = "MultiRecord"|"SingleRecord"|string;
+  export type BatchStrategy = "MultiRecord"|"SingleRecord";
   export type Boolean = boolean;
-  export type BooleanOperator = "And"|"Or"|string;
+  export type BooleanOperator = "And"|"Or";
   export type Branch = string;
   export interface CategoricalParameterRange {
     /**
@@ -879,8 +879,8 @@ declare namespace SageMaker {
   export type CodeRepositoryContains = string;
   export type CodeRepositoryNameContains = string;
   export type CodeRepositoryNameOrUrl = string;
-  export type CodeRepositorySortBy = "Name"|"CreationTime"|"LastModifiedTime"|string;
-  export type CodeRepositorySortOrder = "Ascending"|"Descending"|string;
+  export type CodeRepositorySortBy = "Name"|"CreationTime"|"LastModifiedTime";
+  export type CodeRepositorySortOrder = "Ascending"|"Descending";
   export interface CodeRepositorySummary {
     /**
      * The name of the Git repository.
@@ -922,7 +922,7 @@ declare namespace SageMaker {
   export type CognitoUserGroup = string;
   export type CognitoUserPool = string;
   export type CompilationJobArn = string;
-  export type CompilationJobStatus = "INPROGRESS"|"COMPLETED"|"FAILED"|"STARTING"|"STOPPING"|"STOPPED"|string;
+  export type CompilationJobStatus = "INPROGRESS"|"COMPLETED"|"FAILED"|"STARTING"|"STOPPING"|"STOPPED";
   export type CompilationJobSummaries = CompilationJobSummary[];
   export interface CompilationJobSummary {
     /**
@@ -958,7 +958,7 @@ declare namespace SageMaker {
      */
     CompilationJobStatus: CompilationJobStatus;
   }
-  export type CompressionType = "None"|"Gzip"|string;
+  export type CompressionType = "None"|"Gzip";
   export type CompressionTypes = CompressionType[];
   export interface ContainerDefinition {
     /**
@@ -984,7 +984,7 @@ declare namespace SageMaker {
   }
   export type ContainerDefinitionList = ContainerDefinition[];
   export type ContainerHostname = string;
-  export type ContentClassifier = "FreeOfPersonallyIdentifiableInformation"|"FreeOfAdultContent"|string;
+  export type ContentClassifier = "FreeOfPersonallyIdentifiableInformation"|"FreeOfAdultContent";
   export type ContentClassifiers = ContentClassifier[];
   export type ContentType = string;
   export type ContentTypes = ContentType[];
@@ -2402,9 +2402,9 @@ declare namespace SageMaker {
     DesiredInstanceCount?: TaskCount;
   }
   export type DesiredWeightAndCapacityList = DesiredWeightAndCapacity[];
-  export type DetailedAlgorithmStatus = "NotStarted"|"InProgress"|"Completed"|"Failed"|string;
-  export type DetailedModelPackageStatus = "NotStarted"|"InProgress"|"Completed"|"Failed"|string;
-  export type DirectInternetAccess = "Enabled"|"Disabled"|string;
+  export type DetailedAlgorithmStatus = "NotStarted"|"InProgress"|"Completed"|"Failed";
+  export type DetailedModelPackageStatus = "NotStarted"|"InProgress"|"Completed"|"Failed";
+  export type DirectInternetAccess = "Enabled"|"Disabled";
   export type DisassociateAdditionalCodeRepositories = boolean;
   export type DisassociateDefaultCodeRepository = boolean;
   export type DisassociateNotebookInstanceAcceleratorTypes = boolean;
@@ -2414,7 +2414,7 @@ declare namespace SageMaker {
   export type EndpointConfigArn = string;
   export type EndpointConfigName = string;
   export type EndpointConfigNameContains = string;
-  export type EndpointConfigSortKey = "Name"|"CreationTime"|string;
+  export type EndpointConfigSortKey = "Name"|"CreationTime";
   export interface EndpointConfigSummary {
     /**
      * The name of the endpoint configuration.
@@ -2432,8 +2432,8 @@ declare namespace SageMaker {
   export type EndpointConfigSummaryList = EndpointConfigSummary[];
   export type EndpointName = string;
   export type EndpointNameContains = string;
-  export type EndpointSortKey = "Name"|"CreationTime"|"Status"|string;
-  export type EndpointStatus = "OutOfService"|"Creating"|"Updating"|"SystemUpdating"|"RollingBack"|"InService"|"Deleting"|"Failed"|string;
+  export type EndpointSortKey = "Name"|"CreationTime"|"Status";
+  export type EndpointStatus = "OutOfService"|"Creating"|"Updating"|"SystemUpdating"|"RollingBack"|"InService"|"Deleting"|"Failed";
   export interface EndpointSummary {
     /**
      * The name of the endpoint.
@@ -2495,7 +2495,7 @@ declare namespace SageMaker {
   }
   export type FinalMetricDataList = MetricData[];
   export type Float = number;
-  export type Framework = "TENSORFLOW"|"MXNET"|"ONNX"|"PYTORCH"|"XGBOOST"|string;
+  export type Framework = "TENSORFLOW"|"MXNET"|"ONNX"|"PYTORCH"|"XGBOOST";
   export interface GetSearchSuggestionsRequest {
     /**
      * The name of the Amazon SageMaker resource to Search for. The only valid Resource value is TrainingJob.
@@ -2601,7 +2601,7 @@ declare namespace SageMaker {
      */
     MetricDefinitions?: MetricDefinitionList;
   }
-  export type HyperParameterScalingType = "Auto"|"Linear"|"Logarithmic"|"ReverseLogarithmic"|string;
+  export type HyperParameterScalingType = "Auto"|"Linear"|"Logarithmic"|"ReverseLogarithmic";
   export interface HyperParameterSpecification {
     /**
      * The name of this hyperparameter. The name must be unique.
@@ -2756,11 +2756,11 @@ declare namespace SageMaker {
      */
     MetricName: MetricName;
   }
-  export type HyperParameterTuningJobObjectiveType = "Maximize"|"Minimize"|string;
+  export type HyperParameterTuningJobObjectiveType = "Maximize"|"Minimize";
   export type HyperParameterTuningJobObjectives = HyperParameterTuningJobObjective[];
-  export type HyperParameterTuningJobSortByOptions = "Name"|"Status"|"CreationTime"|string;
-  export type HyperParameterTuningJobStatus = "Completed"|"InProgress"|"Failed"|"Stopped"|"Stopping"|string;
-  export type HyperParameterTuningJobStrategyType = "Bayesian"|"Random"|string;
+  export type HyperParameterTuningJobSortByOptions = "Name"|"Status"|"CreationTime";
+  export type HyperParameterTuningJobStatus = "Completed"|"InProgress"|"Failed"|"Stopped"|"Stopping";
+  export type HyperParameterTuningJobStrategyType = "Bayesian"|"Random";
   export type HyperParameterTuningJobSummaries = HyperParameterTuningJobSummary[];
   export interface HyperParameterTuningJobSummary {
     /**
@@ -2814,7 +2814,7 @@ declare namespace SageMaker {
      */
     WarmStartType: HyperParameterTuningJobWarmStartType;
   }
-  export type HyperParameterTuningJobWarmStartType = "IdenticalDataAndAlgorithm"|"TransferLearning"|string;
+  export type HyperParameterTuningJobWarmStartType = "IdenticalDataAndAlgorithm"|"TransferLearning";
   export type HyperParameters = {[key: string]: ParameterValue};
   export type Image = string;
   export type ImageDigest = string;
@@ -2856,7 +2856,7 @@ declare namespace SageMaker {
   }
   export type InputDataConfig = Channel[];
   export type InputModes = TrainingInputMode[];
-  export type InstanceType = "ml.t2.medium"|"ml.t2.large"|"ml.t2.xlarge"|"ml.t2.2xlarge"|"ml.t3.medium"|"ml.t3.large"|"ml.t3.xlarge"|"ml.t3.2xlarge"|"ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|"ml.c5d.xlarge"|"ml.c5d.2xlarge"|"ml.c5d.4xlarge"|"ml.c5d.9xlarge"|"ml.c5d.18xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|string;
+  export type InstanceType = "ml.t2.medium"|"ml.t2.large"|"ml.t2.xlarge"|"ml.t2.2xlarge"|"ml.t3.medium"|"ml.t3.large"|"ml.t3.xlarge"|"ml.t3.2xlarge"|"ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|"ml.c5d.xlarge"|"ml.c5d.2xlarge"|"ml.c5d.4xlarge"|"ml.c5d.9xlarge"|"ml.c5d.18xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge";
   export interface IntegerParameterRange {
     /**
      * The name of the hyperparameter to search.
@@ -2888,7 +2888,7 @@ declare namespace SageMaker {
   export type IntegerParameterRanges = IntegerParameterRange[];
   export type JobReferenceCode = string;
   export type JobReferenceCodeContains = string;
-  export type JoinSource = "Input"|"None"|string;
+  export type JoinSource = "Input"|"None";
   export type JsonPath = string;
   export type KmsKeyId = string;
   export type LabelAttributeName = string;
@@ -3027,7 +3027,7 @@ declare namespace SageMaker {
      */
     ManifestS3Uri: S3Uri;
   }
-  export type LabelingJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped"|string;
+  export type LabelingJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped";
   export interface LabelingJobStoppingConditions {
     /**
      * The maximum number of objects that can be labeled by human workers.
@@ -3231,7 +3231,7 @@ declare namespace SageMaker {
      */
     NextToken?: NextToken;
   }
-  export type ListCompilationJobsSortBy = "Name"|"CreationTime"|"Status"|string;
+  export type ListCompilationJobsSortBy = "Name"|"CreationTime"|"Status";
   export interface ListEndpointConfigsInput {
     /**
      * The field to sort results by. The default is CreationTime.
@@ -3420,7 +3420,7 @@ declare namespace SageMaker {
      */
     NextToken?: NextToken;
   }
-  export type ListLabelingJobsForWorkteamSortByOptions = "CreationTime"|string;
+  export type ListLabelingJobsForWorkteamSortByOptions = "CreationTime";
   export interface ListLabelingJobsRequest {
     /**
      * A filter that returns only labeling jobs created after the specified time (timestamp).
@@ -3886,7 +3886,7 @@ declare namespace SageMaker {
      */
     NextToken?: NextToken;
   }
-  export type ListWorkteamsSortByOptions = "Name"|"CreateDate"|string;
+  export type ListWorkteamsSortByOptions = "Name"|"CreateDate";
   export type MaxConcurrentTaskCount = number;
   export type MaxConcurrentTransforms = number;
   export type MaxHumanLabeledObjectCount = number;
@@ -3964,8 +3964,8 @@ declare namespace SageMaker {
     ProductId?: ProductId;
   }
   export type ModelPackageContainerDefinitionList = ModelPackageContainerDefinition[];
-  export type ModelPackageSortBy = "Name"|"CreationTime"|string;
-  export type ModelPackageStatus = "Pending"|"InProgress"|"Completed"|"Failed"|"Deleting"|string;
+  export type ModelPackageSortBy = "Name"|"CreationTime";
+  export type ModelPackageStatus = "Pending"|"InProgress"|"Completed"|"Failed"|"Deleting";
   export interface ModelPackageStatusDetails {
     /**
      * The validation status of the model package.
@@ -4035,7 +4035,7 @@ declare namespace SageMaker {
      */
     ValidationProfiles: ModelPackageValidationProfiles;
   }
-  export type ModelSortKey = "Name"|"CreationTime"|string;
+  export type ModelSortKey = "Name"|"CreationTime";
   export interface ModelSummary {
     /**
      * The name of the model that you want a summary for.
@@ -4065,7 +4065,7 @@ declare namespace SageMaker {
   export type NestedFiltersList = NestedFilters[];
   export type NetworkInterfaceId = string;
   export type NextToken = string;
-  export type NotebookInstanceAcceleratorType = "ml.eia1.medium"|"ml.eia1.large"|"ml.eia1.xlarge"|string;
+  export type NotebookInstanceAcceleratorType = "ml.eia1.medium"|"ml.eia1.large"|"ml.eia1.xlarge";
   export type NotebookInstanceAcceleratorTypes = NotebookInstanceAcceleratorType[];
   export type NotebookInstanceArn = string;
   export type NotebookInstanceLifecycleConfigArn = string;
@@ -4073,8 +4073,8 @@ declare namespace SageMaker {
   export type NotebookInstanceLifecycleConfigList = NotebookInstanceLifecycleHook[];
   export type NotebookInstanceLifecycleConfigName = string;
   export type NotebookInstanceLifecycleConfigNameContains = string;
-  export type NotebookInstanceLifecycleConfigSortKey = "Name"|"CreationTime"|"LastModifiedTime"|string;
-  export type NotebookInstanceLifecycleConfigSortOrder = "Ascending"|"Descending"|string;
+  export type NotebookInstanceLifecycleConfigSortKey = "Name"|"CreationTime"|"LastModifiedTime";
+  export type NotebookInstanceLifecycleConfigSortOrder = "Ascending"|"Descending";
   export interface NotebookInstanceLifecycleConfigSummary {
     /**
      * The name of the lifecycle configuration.
@@ -4102,9 +4102,9 @@ declare namespace SageMaker {
   }
   export type NotebookInstanceName = string;
   export type NotebookInstanceNameContains = string;
-  export type NotebookInstanceSortKey = "Name"|"CreationTime"|"Status"|string;
-  export type NotebookInstanceSortOrder = "Ascending"|"Descending"|string;
-  export type NotebookInstanceStatus = "Pending"|"InService"|"Stopping"|"Stopped"|"Failed"|"Deleting"|"Updating"|string;
+  export type NotebookInstanceSortKey = "Name"|"CreationTime"|"Status";
+  export type NotebookInstanceSortOrder = "Ascending"|"Descending";
+  export type NotebookInstanceStatus = "Pending"|"InService"|"Stopping"|"Stopped"|"Failed"|"Deleting"|"Updating";
   export interface NotebookInstanceSummary {
     /**
      * The name of the notebook instance that you want a summary for.
@@ -4158,7 +4158,7 @@ declare namespace SageMaker {
   }
   export type NotificationTopicArn = string;
   export type NumberOfHumanWorkersPerDataObject = number;
-  export type ObjectiveStatus = "Succeeded"|"Pending"|"Failed"|string;
+  export type ObjectiveStatus = "Succeeded"|"Pending"|"Failed";
   export type ObjectiveStatusCounter = number;
   export interface ObjectiveStatusCounters {
     /**
@@ -4174,8 +4174,8 @@ declare namespace SageMaker {
      */
     Failed?: ObjectiveStatusCounter;
   }
-  export type Operator = "Equals"|"NotEquals"|"GreaterThan"|"GreaterThanOrEqualTo"|"LessThan"|"LessThanOrEqualTo"|"Contains"|string;
-  export type OrderKey = "Ascending"|"Descending"|string;
+  export type Operator = "Equals"|"NotEquals"|"GreaterThan"|"GreaterThanOrEqualTo"|"LessThan"|"LessThanOrEqualTo"|"Contains";
+  export type OrderKey = "Ascending"|"Descending";
   export interface OutputConfig {
     /**
      * Identifies the S3 path where you want Amazon SageMaker to store the model artifacts. For example, s3://bucket-name/key-name-prefix.
@@ -4227,7 +4227,7 @@ declare namespace SageMaker {
      */
     CategoricalParameterRanges?: CategoricalParameterRanges;
   }
-  export type ParameterType = "Integer"|"Continuous"|"Categorical"|"FreeText"|string;
+  export type ParameterType = "Integer"|"Continuous"|"Categorical"|"FreeText";
   export type ParameterValue = string;
   export type ParameterValues = ParameterValue[];
   export interface ParentHyperParameterTuningJob {
@@ -4265,8 +4265,8 @@ declare namespace SageMaker {
      */
     AcceleratorType?: ProductionVariantAcceleratorType;
   }
-  export type ProductionVariantAcceleratorType = "ml.eia1.medium"|"ml.eia1.large"|"ml.eia1.xlarge"|string;
-  export type ProductionVariantInstanceType = "ml.t2.medium"|"ml.t2.large"|"ml.t2.xlarge"|"ml.t2.2xlarge"|"ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.large"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.large"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|string;
+  export type ProductionVariantAcceleratorType = "ml.eia1.medium"|"ml.eia1.large"|"ml.eia1.xlarge";
+  export type ProductionVariantInstanceType = "ml.t2.medium"|"ml.t2.large"|"ml.t2.xlarge"|"ml.t2.2xlarge"|"ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.large"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.large"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge";
   export type ProductionVariantList = ProductionVariant[];
   export interface ProductionVariantSummary {
     /**
@@ -4316,7 +4316,7 @@ declare namespace SageMaker {
     AmountInUsd?: USD;
   }
   export type RealtimeInferenceInstanceTypes = ProductionVariantInstanceType[];
-  export type RecordWrapper = "None"|"RecordIO"|string;
+  export type RecordWrapper = "None"|"RecordIO";
   export interface RenderUiTemplateRequest {
     /**
      * A Template object containing the worker UI template to render.
@@ -4388,12 +4388,12 @@ declare namespace SageMaker {
     MaxParallelTrainingJobs: MaxParallelTrainingJobs;
   }
   export type ResourcePropertyName = string;
-  export type ResourceType = "TrainingJob"|string;
+  export type ResourceType = "TrainingJob";
   export type ResponseMIMEType = string;
   export type ResponseMIMETypes = ResponseMIMEType[];
   export type RoleArn = string;
-  export type RootAccess = "Enabled"|"Disabled"|string;
-  export type S3DataDistribution = "FullyReplicated"|"ShardedByS3Key"|string;
+  export type RootAccess = "Enabled"|"Disabled";
+  export type S3DataDistribution = "FullyReplicated"|"ShardedByS3Key";
   export interface S3DataSource {
     /**
      * If you choose S3Prefix, S3Uri identifies a key name prefix. Amazon SageMaker uses all objects that match the specified key name prefix for model training.  If you choose ManifestFile, S3Uri identifies an object that is a manifest file containing a list of object keys that you want Amazon SageMaker to use for model training.  If you choose AugmentedManifestFile, S3Uri identifies an object that is an augmented manifest file in JSON lines format. This file contains the data you want to use for model training. AugmentedManifestFile can only be used if the Channel's input mode is Pipe.
@@ -4412,7 +4412,7 @@ declare namespace SageMaker {
      */
     AttributeNames?: AttributeNames;
   }
-  export type S3DataType = "ManifestFile"|"S3Prefix"|"AugmentedManifestFile"|string;
+  export type S3DataType = "ManifestFile"|"S3Prefix"|"AugmentedManifestFile";
   export type S3Uri = string;
   export interface SearchExpression {
     /**
@@ -4476,8 +4476,8 @@ declare namespace SageMaker {
     NextToken?: NextToken;
   }
   export type SearchResultsList = SearchRecord[];
-  export type SearchSortOrder = "Ascending"|"Descending"|string;
-  export type SecondaryStatus = "Starting"|"LaunchingMLInstances"|"PreparingTrainingStack"|"Downloading"|"DownloadingTrainingImage"|"Training"|"Uploading"|"Stopping"|"Stopped"|"MaxRuntimeExceeded"|"Completed"|"Failed"|string;
+  export type SearchSortOrder = "Ascending"|"Descending";
+  export type SecondaryStatus = "Starting"|"LaunchingMLInstances"|"PreparingTrainingStack"|"Downloading"|"DownloadingTrainingImage"|"Training"|"Uploading"|"Stopping"|"Stopped"|"MaxRuntimeExceeded"|"Completed"|"Failed";
   export interface SecondaryStatusTransition {
     /**
      * Contains a secondary status information from a training job. Status might be one of the following secondary statuses:  InProgress     Starting - Starting the training job.    Downloading - An optional stage for algorithms that support File training input mode. It indicates that data is being downloaded to the ML storage volumes.    Training - Training is in progress.    Uploading - Training is complete and the model artifacts are being uploaded to the S3 location.    Completed     Completed - The training job has completed.    Failed     Failed - The training job has failed. The reason for the failure is returned in the FailureReason field of DescribeTrainingJobResponse.    Stopped     MaxRuntimeExceeded - The job stopped because it exceeded the maximum allowed runtime.    Stopped - The training job has stopped.    Stopping     Stopping - Stopping the training job.     We no longer support the following secondary statuses:    LaunchingMLInstances     PreparingTrainingStack     DownloadingTrainingImage   
@@ -4508,8 +4508,8 @@ declare namespace SageMaker {
      */
     Seed: Seed;
   }
-  export type SortBy = "Name"|"CreationTime"|"Status"|string;
-  export type SortOrder = "Ascending"|"Descending"|string;
+  export type SortBy = "Name"|"CreationTime"|"Status";
+  export type SortOrder = "Ascending"|"Descending";
   export interface SourceAlgorithm {
     /**
      * The Amazon S3 path where the model artifacts, which result from model training, are stored. This path must point to a single gzip compressed tar archive (.tar.gz suffix).
@@ -4527,7 +4527,7 @@ declare namespace SageMaker {
      */
     SourceAlgorithms: SourceAlgorithmList;
   }
-  export type SplitType = "None"|"Line"|"RecordIO"|"TFRecord"|string;
+  export type SplitType = "None"|"Line"|"RecordIO"|"TFRecord";
   export interface StartNotebookInstanceInput {
     /**
      * The name of the notebook instance to start.
@@ -4625,7 +4625,7 @@ declare namespace SageMaker {
   export type TagKeyList = TagKey[];
   export type TagList = Tag[];
   export type TagValue = string;
-  export type TargetDevice = "lambda"|"ml_m4"|"ml_m5"|"ml_c4"|"ml_c5"|"ml_p2"|"ml_p3"|"jetson_tx1"|"jetson_tx2"|"jetson_nano"|"rasp3b"|"deeplens"|"rk3399"|"rk3288"|"sbe_c"|string;
+  export type TargetDevice = "lambda"|"ml_m4"|"ml_m5"|"ml_c4"|"ml_c5"|"ml_p2"|"ml_p3"|"jetson_tx1"|"jetson_tx2"|"jetson_nano"|"rasp3b"|"deeplens"|"rk3399"|"rk3288"|"sbe_c";
   export type TaskAvailabilityLifetimeInSeconds = number;
   export type TaskCount = number;
   export type TaskDescription = string;
@@ -4637,9 +4637,9 @@ declare namespace SageMaker {
   export type TemplateContent = string;
   export type TenthFractionsOfACent = number;
   export type Timestamp = Date;
-  export type TrainingInputMode = "Pipe"|"File"|string;
+  export type TrainingInputMode = "Pipe"|"File";
   export type TrainingInstanceCount = number;
-  export type TrainingInstanceType = "ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|string;
+  export type TrainingInstanceType = "ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge";
   export type TrainingInstanceTypes = TrainingInstanceType[];
   export interface TrainingJob {
     /**
@@ -4770,10 +4770,10 @@ declare namespace SageMaker {
      */
     StoppingCondition: StoppingCondition;
   }
-  export type TrainingJobEarlyStoppingType = "Off"|"Auto"|string;
+  export type TrainingJobEarlyStoppingType = "Off"|"Auto";
   export type TrainingJobName = string;
-  export type TrainingJobSortByOptions = "Name"|"CreationTime"|"Status"|"FinalObjectiveMetricValue"|string;
-  export type TrainingJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped"|string;
+  export type TrainingJobSortByOptions = "Name"|"CreationTime"|"Status"|"FinalObjectiveMetricValue";
+  export type TrainingJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped";
   export type TrainingJobStatusCounter = number;
   export interface TrainingJobStatusCounters {
     /**
@@ -4886,7 +4886,7 @@ declare namespace SageMaker {
     SplitType?: SplitType;
   }
   export type TransformInstanceCount = number;
-  export type TransformInstanceType = "ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge"|string;
+  export type TransformInstanceType = "ml.m4.xlarge"|"ml.m4.2xlarge"|"ml.m4.4xlarge"|"ml.m4.10xlarge"|"ml.m4.16xlarge"|"ml.c4.xlarge"|"ml.c4.2xlarge"|"ml.c4.4xlarge"|"ml.c4.8xlarge"|"ml.p2.xlarge"|"ml.p2.8xlarge"|"ml.p2.16xlarge"|"ml.p3.2xlarge"|"ml.p3.8xlarge"|"ml.p3.16xlarge"|"ml.c5.xlarge"|"ml.c5.2xlarge"|"ml.c5.4xlarge"|"ml.c5.9xlarge"|"ml.c5.18xlarge"|"ml.m5.large"|"ml.m5.xlarge"|"ml.m5.2xlarge"|"ml.m5.4xlarge"|"ml.m5.12xlarge"|"ml.m5.24xlarge";
   export type TransformInstanceTypes = TransformInstanceType[];
   export type TransformJobArn = string;
   export interface TransformJobDefinition {
@@ -4920,7 +4920,7 @@ declare namespace SageMaker {
     TransformResources: TransformResources;
   }
   export type TransformJobName = string;
-  export type TransformJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped"|string;
+  export type TransformJobStatus = "InProgress"|"Completed"|"Failed"|"Stopping"|"Stopped";
   export type TransformJobSummaries = TransformJobSummary[];
   export interface TransformJobSummary {
     /**

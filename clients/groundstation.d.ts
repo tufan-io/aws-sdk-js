@@ -400,7 +400,7 @@ declare namespace GroundStation {
     missionProfileId?: String;
   }
   export type SubnetList = String[];
-  export type Polarization = "LEFT_HAND"|"NONE"|"RIGHT_HAND"|string;
+  export type Polarization = "LEFT_HAND"|"NONE"|"RIGHT_HAND";
   export type ConfigList = ConfigListItem[];
   export interface AntennaUplinkConfig {
     /**
@@ -420,7 +420,7 @@ declare namespace GroundStation {
     spectrumConfig: SpectrumConfig;
   }
   export type Boolean = boolean;
-  export type EndpointStatus = "created"|"creating"|"deleted"|"deleting"|"failed"|string;
+  export type EndpointStatus = "created"|"creating"|"deleted"|"deleting"|"failed";
   export interface UplinkEchoConfig {
     /**
      * ARN of an uplink Config.
@@ -443,7 +443,7 @@ declare namespace GroundStation {
      */
     dataflowEndpointGroupId: String;
   }
-  export type ContactStatus = "AVAILABLE"|"AWS_CANCELLED"|"CANCELLED"|"COMPLETED"|"FAILED"|"FAILED_TO_SCHEDULE"|"PASS"|"POSTPASS"|"PREPASS"|"SCHEDULED"|"SCHEDULING"|string;
+  export type ContactStatus = "AVAILABLE"|"AWS_CANCELLED"|"CANCELLED"|"COMPLETED"|"FAILED"|"FAILED_TO_SCHEDULE"|"PASS"|"POSTPASS"|"PREPASS"|"SCHEDULED"|"SCHEDULING";
   export type MissionProfileList = MissionProfileListItem[];
   export interface CreateConfigRequest {
     /**
@@ -636,7 +636,7 @@ declare namespace GroundStation {
      */
     configType: ConfigCapabilityType;
   }
-  export type BandwidthUnits = "GHz"|"MHz"|"kHz"|string;
+  export type BandwidthUnits = "GHz"|"MHz"|"kHz";
   export interface SpectrumConfig {
     /**
      * Bandwidth of a spectral Config.
@@ -1143,7 +1143,7 @@ declare namespace GroundStation {
      */
     trackingConfigArn?: ConfigArn;
   }
-  export type FrequencyUnits = "GHz"|"MHz"|"kHz"|string;
+  export type FrequencyUnits = "GHz"|"MHz"|"kHz";
   export interface TagResourceRequest {
     /**
      * ARN of a resource tag.
@@ -1154,10 +1154,10 @@ declare namespace GroundStation {
      */
     tags?: TagsMap;
   }
-  export type Criticality = "PREFERRED"|"REMOVED"|"REQUIRED"|string;
-  export type ConfigCapabilityType = "antenna-downlink"|"antenna-downlink-demod-decode"|"antenna-uplink"|"dataflow-endpoint"|"tracking"|"uplink-echo"|string;
+  export type Criticality = "PREFERRED"|"REMOVED"|"REQUIRED";
+  export type ConfigCapabilityType = "antenna-downlink"|"antenna-downlink-demod-decode"|"antenna-uplink"|"dataflow-endpoint"|"tracking"|"uplink-echo";
   export type TagKeys = String[];
-  export type AngleUnits = "DEGREE_ANGLE"|"RADIAN"|string;
+  export type AngleUnits = "DEGREE_ANGLE"|"RADIAN";
   export interface DataflowEndpointListItem {
     /**
      * ARN of a dataflow endpoint group.
@@ -1209,7 +1209,7 @@ declare namespace GroundStation {
      */
     dataflowEndpointGroupId?: String;
   }
-  export type EirpUnits = "dBW"|string;
+  export type EirpUnits = "dBW";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

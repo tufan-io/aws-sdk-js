@@ -1336,7 +1336,7 @@ declare namespace IAM {
   export type ContextEntryListType = ContextEntry[];
   export type ContextKeyNameType = string;
   export type ContextKeyNamesResultListType = ContextKeyNameType[];
-  export type ContextKeyTypeEnum = "string"|"stringList"|"numeric"|"numericList"|"boolean"|"booleanList"|"ip"|"ipList"|"binary"|"binaryList"|"date"|"dateList"|string;
+  export type ContextKeyTypeEnum = "string"|"stringList"|"numeric"|"numericList"|"boolean"|"booleanList"|"ip"|"ipList"|"binary"|"binaryList"|"date"|"dateList";
   export type ContextKeyValueListType = ContextKeyValueType[];
   export type ContextKeyValueType = string;
   export interface CreateAccessKeyRequest {
@@ -1792,7 +1792,7 @@ declare namespace IAM {
     RoleUsageList?: RoleUsageListType;
   }
   export type DeletionTaskIdType = string;
-  export type DeletionTaskStatusType = "SUCCEEDED"|"IN_PROGRESS"|"FAILED"|"NOT_STARTED"|string;
+  export type DeletionTaskStatusType = "SUCCEEDED"|"IN_PROGRESS"|"FAILED"|"NOT_STARTED";
   export interface DetachGroupPolicyRequest {
     /**
      * The name (friendly name, not ARN) of the IAM group to detach the policy from. This parameter allows (through its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-
@@ -1870,7 +1870,7 @@ declare namespace IAM {
      */
     Path?: pathType;
   }
-  export type EntityType = "User"|"Role"|"Group"|"LocalManagedPolicy"|"AWSManagedPolicy"|string;
+  export type EntityType = "User"|"Role"|"Group"|"LocalManagedPolicy"|"AWSManagedPolicy";
   export interface ErrorDetails {
     /**
      * Detailed information about the reason that the operation failed.
@@ -3464,7 +3464,7 @@ declare namespace IAM {
      */
     HardExpiry?: booleanObjectType;
   }
-  export type PermissionsBoundaryAttachmentType = "PermissionsBoundaryPolicy"|string;
+  export type PermissionsBoundaryAttachmentType = "PermissionsBoundaryPolicy";
   export interface Policy {
     /**
      * The friendly name (not ARN) identifying the policy.
@@ -3518,7 +3518,7 @@ declare namespace IAM {
      */
     PolicyDocument?: policyDocumentType;
   }
-  export type PolicyEvaluationDecisionType = "allowed"|"explicitDeny"|"implicitDeny"|string;
+  export type PolicyEvaluationDecisionType = "allowed"|"explicitDeny"|"implicitDeny";
   export interface PolicyGrantingServiceAccess {
     /**
      * The policy name.
@@ -3561,8 +3561,8 @@ declare namespace IAM {
     RoleId?: idType;
   }
   export type PolicyRoleListType = PolicyRole[];
-  export type PolicySourceType = "user"|"group"|"role"|"aws-managed"|"user-managed"|"resource"|"none"|string;
-  export type PolicyUsageType = "PermissionsPolicy"|"PermissionsBoundary"|string;
+  export type PolicySourceType = "user"|"group"|"role"|"aws-managed"|"user-managed"|"resource"|"none";
+  export type PolicyUsageType = "PermissionsPolicy"|"PermissionsBoundary";
   export interface PolicyUser {
     /**
      * The name (friendly name, not ARN) identifying the user.
@@ -3697,9 +3697,9 @@ declare namespace IAM {
     UserName: existingUserNameType;
   }
   export type ReportContentType = Buffer|Uint8Array|Blob|string;
-  export type ReportFormatType = "text/csv"|string;
+  export type ReportFormatType = "text/csv";
   export type ReportStateDescriptionType = string;
-  export type ReportStateType = "STARTED"|"INPROGRESS"|"COMPLETE"|string;
+  export type ReportStateType = "STARTED"|"INPROGRESS"|"COMPLETE";
   export interface ResetServiceSpecificCredentialRequest {
     /**
      * The name of the IAM user associated with the service-specific credential. If this value is not specified, then the operation assumes the user whose credentials are used to call the operation. This parameter allows (through its regex pattern) a string of characters consisting of upper and lowercase alphanumeric characters with no spaces. You can also include any of the following characters: _+=,.@-
@@ -4627,7 +4627,7 @@ declare namespace IAM {
   export type accountAliasListType = accountAliasType[];
   export type accountAliasType = string;
   export type arnType = string;
-  export type assignmentStatusType = "Assigned"|"Unassigned"|"Any"|string;
+  export type assignmentStatusType = "Assigned"|"Unassigned"|"Any";
   export type attachedPoliciesListType = AttachedPolicy[];
   export type attachmentCountType = number;
   export type authenticationCodeType = string;
@@ -4641,12 +4641,12 @@ declare namespace IAM {
   export type clientIDType = string;
   export type customSuffixType = string;
   export type dateType = Date;
-  export type encodingType = "SSH"|"PEM"|string;
+  export type encodingType = "SSH"|"PEM";
   export type entityDetailsListType = EntityDetails[];
   export type entityListType = EntityType[];
   export type entityNameType = string;
   export type existingUserNameType = string;
-  export type globalEndpointTokenVersion = "v1Token"|"v2Token"|string;
+  export type globalEndpointTokenVersion = "v1Token"|"v2Token";
   export type groupDetailListType = GroupDetail[];
   export type groupListType = Group[];
   export type groupNameListType = groupNameType[];
@@ -4656,7 +4656,7 @@ declare namespace IAM {
   export type instanceProfileNameType = string;
   export type integerType = number;
   export type jobIDType = string;
-  export type jobStatusType = "IN_PROGRESS"|"COMPLETED"|"FAILED"|string;
+  export type jobStatusType = "IN_PROGRESS"|"COMPLETED"|"FAILED";
   export type listPolicyGrantingServiceAccessResponseListType = ListPoliciesGrantingServiceAccessEntry[];
   export type markerType = string;
   export type maxItemsType = number;
@@ -4677,10 +4677,10 @@ declare namespace IAM {
   export type policyListType = Policy[];
   export type policyNameListType = policyNameType[];
   export type policyNameType = string;
-  export type policyOwnerEntityType = "USER"|"ROLE"|"GROUP"|string;
+  export type policyOwnerEntityType = "USER"|"ROLE"|"GROUP";
   export type policyPathType = string;
-  export type policyScopeType = "All"|"AWS"|"Local"|string;
-  export type policyType = "INLINE"|"MANAGED"|string;
+  export type policyScopeType = "All"|"AWS"|"Local";
+  export type policyType = "INLINE"|"MANAGED";
   export type policyVersionIdType = string;
   export type privateKeyType = string;
   export type publicKeyFingerprintType = string;
@@ -4702,10 +4702,10 @@ declare namespace IAM {
   export type servicePassword = string;
   export type serviceSpecificCredentialId = string;
   export type serviceUserName = string;
-  export type sortKeyType = "SERVICE_NAMESPACE_ASCENDING"|"SERVICE_NAMESPACE_DESCENDING"|"LAST_AUTHENTICATED_TIME_ASCENDING"|"LAST_AUTHENTICATED_TIME_DESCENDING"|string;
-  export type statusType = "Active"|"Inactive"|string;
+  export type sortKeyType = "SERVICE_NAMESPACE_ASCENDING"|"SERVICE_NAMESPACE_DESCENDING"|"LAST_AUTHENTICATED_TIME_ASCENDING"|"LAST_AUTHENTICATED_TIME_DESCENDING";
+  export type statusType = "Active"|"Inactive";
   export type stringType = string;
-  export type summaryKeyType = "Users"|"UsersQuota"|"Groups"|"GroupsQuota"|"ServerCertificates"|"ServerCertificatesQuota"|"UserPolicySizeQuota"|"GroupPolicySizeQuota"|"GroupsPerUserQuota"|"SigningCertificatesPerUserQuota"|"AccessKeysPerUserQuota"|"MFADevices"|"MFADevicesInUse"|"AccountMFAEnabled"|"AccountAccessKeysPresent"|"AccountSigningCertificatesPresent"|"AttachedPoliciesPerGroupQuota"|"AttachedPoliciesPerRoleQuota"|"AttachedPoliciesPerUserQuota"|"Policies"|"PoliciesQuota"|"PolicySizeQuota"|"PolicyVersionsInUse"|"PolicyVersionsInUseQuota"|"VersionsPerPolicyQuota"|"GlobalEndpointTokenVersion"|string;
+  export type summaryKeyType = "Users"|"UsersQuota"|"Groups"|"GroupsQuota"|"ServerCertificates"|"ServerCertificatesQuota"|"UserPolicySizeQuota"|"GroupPolicySizeQuota"|"GroupsPerUserQuota"|"SigningCertificatesPerUserQuota"|"AccessKeysPerUserQuota"|"MFADevices"|"MFADevicesInUse"|"AccountMFAEnabled"|"AccountAccessKeysPresent"|"AccountSigningCertificatesPresent"|"AttachedPoliciesPerGroupQuota"|"AttachedPoliciesPerRoleQuota"|"AttachedPoliciesPerUserQuota"|"Policies"|"PoliciesQuota"|"PolicySizeQuota"|"PolicyVersionsInUse"|"PolicyVersionsInUseQuota"|"VersionsPerPolicyQuota"|"GlobalEndpointTokenVersion";
   export type summaryMapType = {[key: string]: summaryValueType};
   export type summaryValueType = number;
   export type tagKeyListType = tagKeyType[];

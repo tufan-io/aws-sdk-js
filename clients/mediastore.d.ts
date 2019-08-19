@@ -192,7 +192,7 @@ declare namespace MediaStore {
   export type ContainerListLimit = number;
   export type ContainerName = string;
   export type ContainerPolicy = string;
-  export type ContainerStatus = "ACTIVE"|"CREATING"|"DELETING"|string;
+  export type ContainerStatus = "ACTIVE"|"CREATING"|"DELETING";
   export type CorsPolicy = CorsRule[];
   export interface CorsRule {
     /**
@@ -349,7 +349,7 @@ declare namespace MediaStore {
     Tags?: TagList;
   }
   export type MaxAgeSeconds = number;
-  export type MethodName = "PUT"|"GET"|"DELETE"|"HEAD"|string;
+  export type MethodName = "PUT"|"GET"|"DELETE"|"HEAD";
   export type Origin = string;
   export type PaginationToken = string;
   export interface PutContainerPolicyInput {

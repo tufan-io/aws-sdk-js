@@ -357,7 +357,7 @@ declare namespace ELBv2 {
     FixedResponseConfig?: FixedResponseActionConfig;
   }
   export type ActionOrder = number;
-  export type ActionTypeEnum = "forward"|"authenticate-oidc"|"authenticate-cognito"|"redirect"|"fixed-response"|string;
+  export type ActionTypeEnum = "forward"|"authenticate-oidc"|"authenticate-cognito"|"redirect"|"fixed-response";
   export type Actions = Action[];
   export interface AddListenerCertificatesInput {
     /**
@@ -391,7 +391,7 @@ declare namespace ELBv2 {
   export type AuthenticateCognitoActionAuthenticationRequestExtraParams = {[key: string]: AuthenticateCognitoActionAuthenticationRequestParamValue};
   export type AuthenticateCognitoActionAuthenticationRequestParamName = string;
   export type AuthenticateCognitoActionAuthenticationRequestParamValue = string;
-  export type AuthenticateCognitoActionConditionalBehaviorEnum = "deny"|"allow"|"authenticate"|string;
+  export type AuthenticateCognitoActionConditionalBehaviorEnum = "deny"|"allow"|"authenticate";
   export interface AuthenticateCognitoActionConfig {
     /**
      * The Amazon Resource Name (ARN) of the Amazon Cognito user pool.
@@ -438,7 +438,7 @@ declare namespace ELBv2 {
   export type AuthenticateOidcActionAuthorizationEndpoint = string;
   export type AuthenticateOidcActionClientId = string;
   export type AuthenticateOidcActionClientSecret = string;
-  export type AuthenticateOidcActionConditionalBehaviorEnum = "deny"|"allow"|"authenticate"|string;
+  export type AuthenticateOidcActionConditionalBehaviorEnum = "deny"|"allow"|"authenticate";
   export interface AuthenticateOidcActionConfig {
     /**
      * The OIDC issuer identifier of the IdP. This must be a full URL, including the HTTPS protocol, the domain, and the path.
@@ -1029,7 +1029,7 @@ declare namespace ELBv2 {
     Values?: ListOfString;
   }
   export type IpAddress = string;
-  export type IpAddressType = "ipv4"|"dualstack"|string;
+  export type IpAddressType = "ipv4"|"dualstack";
   export type IsDefault = boolean;
   export interface Limit {
     /**
@@ -1154,7 +1154,7 @@ declare namespace ELBv2 {
   export type LoadBalancerAttributes = LoadBalancerAttribute[];
   export type LoadBalancerName = string;
   export type LoadBalancerNames = LoadBalancerName[];
-  export type LoadBalancerSchemeEnum = "internet-facing"|"internal"|string;
+  export type LoadBalancerSchemeEnum = "internet-facing"|"internal";
   export interface LoadBalancerState {
     /**
      * The state code. The initial state of the load balancer is provisioning. After the load balancer is fully set up and ready to route traffic, its state is active. If the load balancer could not be set up, its state is failed.
@@ -1165,8 +1165,8 @@ declare namespace ELBv2 {
      */
     Reason?: StateReason;
   }
-  export type LoadBalancerStateEnum = "active"|"provisioning"|"active_impaired"|"failed"|string;
-  export type LoadBalancerTypeEnum = "application"|"network"|string;
+  export type LoadBalancerStateEnum = "active"|"provisioning"|"active_impaired"|"failed";
+  export type LoadBalancerTypeEnum = "application"|"network";
   export type LoadBalancers = LoadBalancer[];
   export type Marker = string;
   export interface Matcher {
@@ -1318,7 +1318,7 @@ declare namespace ELBv2 {
     Values?: ListOfString;
   }
   export type Port = number;
-  export type ProtocolEnum = "HTTP"|"HTTPS"|"TCP"|"TLS"|"UDP"|"TCP_UDP"|string;
+  export type ProtocolEnum = "HTTP"|"HTTPS"|"TCP"|"TLS"|"UDP"|"TCP_UDP";
   export interface QueryStringConditionConfig {
     /**
      * One or more key/value pairs or values to find in the query string. The maximum size of each string is 128 characters. The comparison is case insensitive. The following wildcard characters are supported: * (matches 0 or more characters) and ? (matches exactly 1 character). To search for a literal '*' or '?' character in a query string, you must escape these characters in Values using a '\' character. If you specify multiple key/value pairs or values, the condition is satisfied if one of them is found in the query string.
@@ -1367,7 +1367,7 @@ declare namespace ELBv2 {
   export type RedirectActionPort = string;
   export type RedirectActionProtocol = string;
   export type RedirectActionQuery = string;
-  export type RedirectActionStatusCodeEnum = "HTTP_301"|"HTTP_302"|string;
+  export type RedirectActionStatusCodeEnum = "HTTP_301"|"HTTP_302";
   export interface RegisterTargetsInput {
     /**
      * The Amazon Resource Name (ARN) of the target group.
@@ -1738,10 +1738,10 @@ declare namespace ELBv2 {
     TargetHealth?: TargetHealth;
   }
   export type TargetHealthDescriptions = TargetHealthDescription[];
-  export type TargetHealthReasonEnum = "Elb.RegistrationInProgress"|"Elb.InitialHealthChecking"|"Target.ResponseCodeMismatch"|"Target.Timeout"|"Target.FailedHealthChecks"|"Target.NotRegistered"|"Target.NotInUse"|"Target.DeregistrationInProgress"|"Target.InvalidState"|"Target.IpUnusable"|"Target.HealthCheckDisabled"|"Elb.InternalError"|string;
-  export type TargetHealthStateEnum = "initial"|"healthy"|"unhealthy"|"unused"|"draining"|"unavailable"|string;
+  export type TargetHealthReasonEnum = "Elb.RegistrationInProgress"|"Elb.InitialHealthChecking"|"Target.ResponseCodeMismatch"|"Target.Timeout"|"Target.FailedHealthChecks"|"Target.NotRegistered"|"Target.NotInUse"|"Target.DeregistrationInProgress"|"Target.InvalidState"|"Target.IpUnusable"|"Target.HealthCheckDisabled"|"Elb.InternalError";
+  export type TargetHealthStateEnum = "initial"|"healthy"|"unhealthy"|"unused"|"draining"|"unavailable";
   export type TargetId = string;
-  export type TargetTypeEnum = "instance"|"ip"|"lambda"|string;
+  export type TargetTypeEnum = "instance"|"ip"|"lambda";
   export type VpcId = string;
   export type ZoneName = string;
   /**

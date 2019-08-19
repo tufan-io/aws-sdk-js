@@ -85,13 +85,13 @@ declare class CostExplorer extends Service {
   getUsageForecast(callback?: (err: AWSError, data: CostExplorer.Types.GetUsageForecastResponse) => void): Request<CostExplorer.Types.GetUsageForecastResponse, AWSError>;
 }
 declare namespace CostExplorer {
-  export type AccountScope = "PAYER"|"LINKED"|string;
+  export type AccountScope = "PAYER"|"LINKED";
   export type AmortizedRecurringFee = string;
   export type AmortizedUpfrontFee = string;
   export type AttributeType = string;
   export type AttributeValue = string;
   export type Attributes = {[key: string]: AttributeValue};
-  export type Context = "COST_AND_USAGE"|"RESERVATIONS"|string;
+  export type Context = "COST_AND_USAGE"|"RESERVATIONS";
   export interface Coverage {
     /**
      * The amount of instance usage that the reservation covered, in hours.
@@ -213,7 +213,7 @@ declare namespace CostExplorer {
      */
     End: YearMonthDay;
   }
-  export type Dimension = "AZ"|"INSTANCE_TYPE"|"LINKED_ACCOUNT"|"OPERATION"|"PURCHASE_TYPE"|"REGION"|"SERVICE"|"USAGE_TYPE"|"USAGE_TYPE_GROUP"|"RECORD_TYPE"|"OPERATING_SYSTEM"|"TENANCY"|"SCOPE"|"PLATFORM"|"SUBSCRIPTION_ID"|"LEGAL_ENTITY_NAME"|"DEPLOYMENT_OPTION"|"DATABASE_ENGINE"|"CACHE_ENGINE"|"INSTANCE_TYPE_FAMILY"|"BILLING_ENTITY"|"RESERVATION_ID"|"RIGHTSIZING_TYPE"|string;
+  export type Dimension = "AZ"|"INSTANCE_TYPE"|"LINKED_ACCOUNT"|"OPERATION"|"PURCHASE_TYPE"|"REGION"|"SERVICE"|"USAGE_TYPE"|"USAGE_TYPE_GROUP"|"RECORD_TYPE"|"OPERATING_SYSTEM"|"TENANCY"|"SCOPE"|"PLATFORM"|"SUBSCRIPTION_ID"|"LEGAL_ENTITY_NAME"|"DEPLOYMENT_OPTION"|"DATABASE_ENGINE"|"CACHE_ENGINE"|"INSTANCE_TYPE_FAMILY"|"BILLING_ENTITY"|"RESERVATION_ID"|"RIGHTSIZING_TYPE";
   export interface DimensionValues {
     /**
      * The names of the metadata types that you can use to filter and group your results. For example, AZ returns a list of Availability Zones.
@@ -762,7 +762,7 @@ declare namespace CostExplorer {
      */
     ForecastResultsByTime?: ForecastResultsByTime;
   }
-  export type Granularity = "DAILY"|"MONTHLY"|"HOURLY"|string;
+  export type Granularity = "DAILY"|"MONTHLY"|"HOURLY";
   export interface Group {
     /**
      * The keys that are included in this group.
@@ -784,7 +784,7 @@ declare namespace CostExplorer {
     Key?: GroupDefinitionKey;
   }
   export type GroupDefinitionKey = string;
-  export type GroupDefinitionType = "DIMENSION"|"TAG"|string;
+  export type GroupDefinitionType = "DIMENSION"|"TAG";
   export type GroupDefinitions = GroupDefinition[];
   export type Groups = Group[];
   export interface InstanceDetails {
@@ -811,8 +811,8 @@ declare namespace CostExplorer {
   }
   export type Key = string;
   export type Keys = Key[];
-  export type LookbackPeriodInDays = "SEVEN_DAYS"|"THIRTY_DAYS"|"SIXTY_DAYS"|string;
-  export type Metric = "BLENDED_COST"|"UNBLENDED_COST"|"AMORTIZED_COST"|"NET_UNBLENDED_COST"|"NET_AMORTIZED_COST"|"USAGE_QUANTITY"|"NORMALIZED_USAGE_AMOUNT"|string;
+  export type LookbackPeriodInDays = "SEVEN_DAYS"|"THIRTY_DAYS"|"SIXTY_DAYS";
+  export type Metric = "BLENDED_COST"|"UNBLENDED_COST"|"AMORTIZED_COST"|"NET_UNBLENDED_COST"|"NET_AMORTIZED_COST"|"USAGE_QUANTITY"|"NORMALIZED_USAGE_AMOUNT";
   export type MetricAmount = string;
   export type MetricName = string;
   export type MetricNames = MetricName[];
@@ -837,13 +837,13 @@ declare namespace CostExplorer {
   export type NetRISavings = string;
   export type NextPageToken = string;
   export type NonNegativeInteger = number;
-  export type OfferingClass = "STANDARD"|"CONVERTIBLE"|string;
+  export type OfferingClass = "STANDARD"|"CONVERTIBLE";
   export type OnDemandCost = string;
   export type OnDemandCostOfRIHoursUsed = string;
   export type OnDemandHours = string;
   export type OnDemandNormalizedUnits = string;
   export type PageSize = number;
-  export type PaymentOption = "NO_UPFRONT"|"PARTIAL_UPFRONT"|"ALL_UPFRONT"|"LIGHT_UTILIZATION"|"MEDIUM_UTILIZATION"|"HEAVY_UTILIZATION"|string;
+  export type PaymentOption = "NO_UPFRONT"|"PARTIAL_UPFRONT"|"ALL_UPFRONT"|"LIGHT_UTILIZATION"|"MEDIUM_UTILIZATION"|"HEAVY_UTILIZATION";
   export type PredictionIntervalLevel = number;
   export type PurchasedHours = string;
   export type PurchasedUnits = string;
@@ -1219,7 +1219,7 @@ declare namespace CostExplorer {
      */
     SavingsPercentage?: GenericString;
   }
-  export type RightsizingType = "TERMINATE"|"MODIFY"|string;
+  export type RightsizingType = "TERMINATE"|"MODIFY";
   export type SearchString = string;
   export interface ServiceSpecification {
     /**
@@ -1267,7 +1267,7 @@ declare namespace CostExplorer {
     ExpectedResourceUtilization?: ResourceUtilization;
   }
   export type TargetInstancesList = TargetInstance[];
-  export type TermInYears = "ONE_YEAR"|"THREE_YEARS"|string;
+  export type TermInYears = "ONE_YEAR"|"THREE_YEARS";
   export interface TerminateRecommendationDetail {
     /**
      *  Estimated savings resulting from modification, on a monthly basis.

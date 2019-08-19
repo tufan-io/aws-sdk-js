@@ -305,7 +305,7 @@ declare namespace LicenseManager {
      */
     Value?: String;
   }
-  export type InventoryFilterCondition = "EQUALS"|"NOT_EQUALS"|"BEGINS_WITH"|"CONTAINS"|string;
+  export type InventoryFilterCondition = "EQUALS"|"NOT_EQUALS"|"BEGINS_WITH"|"CONTAINS";
   export type InventoryFilterList = InventoryFilter[];
   export interface LicenseConfiguration {
     /**
@@ -380,7 +380,7 @@ declare namespace LicenseManager {
     AssociationTime?: DateTime;
   }
   export type LicenseConfigurationAssociations = LicenseConfigurationAssociation[];
-  export type LicenseConfigurationStatus = "AVAILABLE"|"DISABLED"|string;
+  export type LicenseConfigurationStatus = "AVAILABLE"|"DISABLED";
   export interface LicenseConfigurationUsage {
     /**
      * ARN of the resource associated with a license configuration.
@@ -409,7 +409,7 @@ declare namespace LicenseManager {
   }
   export type LicenseConfigurationUsageList = LicenseConfigurationUsage[];
   export type LicenseConfigurations = LicenseConfiguration[];
-  export type LicenseCountingType = "vCPU"|"Instance"|"Core"|"Socket"|string;
+  export type LicenseCountingType = "vCPU"|"Instance"|"Core"|"Socket";
   export interface LicenseSpecification {
     /**
      * ARN of the LicenseConfiguration object.
@@ -601,7 +601,7 @@ declare namespace LicenseManager {
     ResourceOwningAccountId?: String;
   }
   export type ResourceInventoryList = ResourceInventory[];
-  export type ResourceType = "EC2_INSTANCE"|"EC2_HOST"|"EC2_AMI"|string;
+  export type ResourceType = "EC2_INSTANCE"|"EC2_HOST"|"EC2_AMI";
   export type String = string;
   export type StringList = String[];
   export interface Tag {

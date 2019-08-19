@@ -309,7 +309,7 @@ declare namespace Snowball {
      */
     ForwardingAddressId?: AddressId;
   }
-  export type ClusterState = "AwaitingQuorum"|"Pending"|"InUse"|"Complete"|"Cancelled"|string;
+  export type ClusterState = "AwaitingQuorum"|"Pending"|"InUse"|"Complete"|"Cancelled";
   export interface CompatibleImage {
     /**
      * The unique identifier for an individual Snowball Edge AMI.
@@ -701,9 +701,9 @@ declare namespace Snowball {
      */
     Ec2AmiResources?: Ec2AmiResourceList;
   }
-  export type JobState = "New"|"PreparingAppliance"|"PreparingShipment"|"InTransitToCustomer"|"WithCustomer"|"InTransitToAWS"|"WithAWSSortingFacility"|"WithAWS"|"InProgress"|"Complete"|"Cancelled"|"Listing"|"Pending"|string;
+  export type JobState = "New"|"PreparingAppliance"|"PreparingShipment"|"InTransitToCustomer"|"WithCustomer"|"InTransitToAWS"|"WithAWSSortingFacility"|"WithAWS"|"InProgress"|"Complete"|"Cancelled"|"Listing"|"Pending";
   export type JobStateList = JobState[];
-  export type JobType = "IMPORT"|"EXPORT"|"LOCAL_USE"|string;
+  export type JobType = "IMPORT"|"EXPORT"|"LOCAL_USE";
   export interface KeyRange {
     /**
      * The key that starts an optional key range for an export job. Ranges are inclusive and UTF-8 binary sorted.
@@ -863,9 +863,9 @@ declare namespace Snowball {
      */
     OutboundShipment?: Shipment;
   }
-  export type ShippingOption = "SECOND_DAY"|"NEXT_DAY"|"EXPRESS"|"STANDARD"|string;
-  export type SnowballCapacity = "T50"|"T80"|"T100"|"T42"|"NoPreference"|string;
-  export type SnowballType = "STANDARD"|"EDGE"|"EDGE_C"|"EDGE_CG"|string;
+  export type ShippingOption = "SECOND_DAY"|"NEXT_DAY"|"EXPRESS"|"STANDARD";
+  export type SnowballCapacity = "T50"|"T80"|"T100"|"T42"|"NoPreference";
+  export type SnowballType = "STANDARD"|"EDGE"|"EDGE_C"|"EDGE_CG";
   export type SnsTopicARN = string;
   export type String = string;
   export type Timestamp = Date;

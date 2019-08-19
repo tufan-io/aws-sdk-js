@@ -408,7 +408,7 @@ declare class AppStream extends Service {
 declare namespace AppStream {
   export type AccountName = string;
   export type AccountPassword = string;
-  export type Action = "CLIPBOARD_COPY_FROM_LOCAL_DEVICE"|"CLIPBOARD_COPY_TO_LOCAL_DEVICE"|"FILE_UPLOAD"|"FILE_DOWNLOAD"|"PRINTING_TO_LOCAL_DEVICE"|string;
+  export type Action = "CLIPBOARD_COPY_FROM_LOCAL_DEVICE"|"CLIPBOARD_COPY_TO_LOCAL_DEVICE"|"FILE_UPLOAD"|"FILE_DOWNLOAD"|"PRINTING_TO_LOCAL_DEVICE";
   export interface Application {
     /**
      * The name of the application.
@@ -479,7 +479,7 @@ declare namespace AppStream {
   }
   export interface AssociateFleetResult {
   }
-  export type AuthenticationType = "API"|"SAML"|"USERPOOL"|string;
+  export type AuthenticationType = "API"|"SAML"|"USERPOOL";
   export type AwsAccountId = string;
   export type AwsAccountIdList = AwsAccountId[];
   export interface BatchAssociateUserStackRequest {
@@ -1327,7 +1327,7 @@ declare namespace AppStream {
      */
     IdleDisconnectTimeoutInSeconds?: Integer;
   }
-  export type FleetAttribute = "VPC_CONFIGURATION"|"VPC_CONFIGURATION_SECURITY_GROUP_IDS"|"DOMAIN_JOIN_INFO"|string;
+  export type FleetAttribute = "VPC_CONFIGURATION"|"VPC_CONFIGURATION_SECURITY_GROUP_IDS"|"DOMAIN_JOIN_INFO";
   export type FleetAttributes = FleetAttribute[];
   export interface FleetError {
     /**
@@ -1339,11 +1339,11 @@ declare namespace AppStream {
      */
     ErrorMessage?: String;
   }
-  export type FleetErrorCode = "IAM_SERVICE_ROLE_MISSING_ENI_DESCRIBE_ACTION"|"IAM_SERVICE_ROLE_MISSING_ENI_CREATE_ACTION"|"IAM_SERVICE_ROLE_MISSING_ENI_DELETE_ACTION"|"NETWORK_INTERFACE_LIMIT_EXCEEDED"|"INTERNAL_SERVICE_ERROR"|"IAM_SERVICE_ROLE_IS_MISSING"|"SUBNET_HAS_INSUFFICIENT_IP_ADDRESSES"|"IAM_SERVICE_ROLE_MISSING_DESCRIBE_SUBNET_ACTION"|"SUBNET_NOT_FOUND"|"IMAGE_NOT_FOUND"|"INVALID_SUBNET_CONFIGURATION"|"SECURITY_GROUPS_NOT_FOUND"|"IGW_NOT_ATTACHED"|"IAM_SERVICE_ROLE_MISSING_DESCRIBE_SECURITY_GROUPS_ACTION"|"DOMAIN_JOIN_ERROR_FILE_NOT_FOUND"|"DOMAIN_JOIN_ERROR_ACCESS_DENIED"|"DOMAIN_JOIN_ERROR_LOGON_FAILURE"|"DOMAIN_JOIN_ERROR_INVALID_PARAMETER"|"DOMAIN_JOIN_ERROR_MORE_DATA"|"DOMAIN_JOIN_ERROR_NO_SUCH_DOMAIN"|"DOMAIN_JOIN_ERROR_NOT_SUPPORTED"|"DOMAIN_JOIN_NERR_INVALID_WORKGROUP_NAME"|"DOMAIN_JOIN_NERR_WORKSTATION_NOT_STARTED"|"DOMAIN_JOIN_ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED"|"DOMAIN_JOIN_NERR_PASSWORD_EXPIRED"|"DOMAIN_JOIN_INTERNAL_SERVICE_ERROR"|string;
+  export type FleetErrorCode = "IAM_SERVICE_ROLE_MISSING_ENI_DESCRIBE_ACTION"|"IAM_SERVICE_ROLE_MISSING_ENI_CREATE_ACTION"|"IAM_SERVICE_ROLE_MISSING_ENI_DELETE_ACTION"|"NETWORK_INTERFACE_LIMIT_EXCEEDED"|"INTERNAL_SERVICE_ERROR"|"IAM_SERVICE_ROLE_IS_MISSING"|"SUBNET_HAS_INSUFFICIENT_IP_ADDRESSES"|"IAM_SERVICE_ROLE_MISSING_DESCRIBE_SUBNET_ACTION"|"SUBNET_NOT_FOUND"|"IMAGE_NOT_FOUND"|"INVALID_SUBNET_CONFIGURATION"|"SECURITY_GROUPS_NOT_FOUND"|"IGW_NOT_ATTACHED"|"IAM_SERVICE_ROLE_MISSING_DESCRIBE_SECURITY_GROUPS_ACTION"|"DOMAIN_JOIN_ERROR_FILE_NOT_FOUND"|"DOMAIN_JOIN_ERROR_ACCESS_DENIED"|"DOMAIN_JOIN_ERROR_LOGON_FAILURE"|"DOMAIN_JOIN_ERROR_INVALID_PARAMETER"|"DOMAIN_JOIN_ERROR_MORE_DATA"|"DOMAIN_JOIN_ERROR_NO_SUCH_DOMAIN"|"DOMAIN_JOIN_ERROR_NOT_SUPPORTED"|"DOMAIN_JOIN_NERR_INVALID_WORKGROUP_NAME"|"DOMAIN_JOIN_NERR_WORKSTATION_NOT_STARTED"|"DOMAIN_JOIN_ERROR_DS_MACHINE_ACCOUNT_QUOTA_EXCEEDED"|"DOMAIN_JOIN_NERR_PASSWORD_EXPIRED"|"DOMAIN_JOIN_INTERNAL_SERVICE_ERROR";
   export type FleetErrors = FleetError[];
   export type FleetList = Fleet[];
-  export type FleetState = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED"|string;
-  export type FleetType = "ALWAYS_ON"|"ON_DEMAND"|string;
+  export type FleetState = "STARTING"|"RUNNING"|"STOPPING"|"STOPPED";
+  export type FleetType = "ALWAYS_ON"|"ON_DEMAND";
   export interface Image {
     /**
      * The name of the image.
@@ -1474,7 +1474,7 @@ declare namespace AppStream {
     AppstreamAgentVersion?: AppstreamAgentVersion;
   }
   export type ImageBuilderList = ImageBuilder[];
-  export type ImageBuilderState = "PENDING"|"UPDATING_AGENT"|"RUNNING"|"STOPPING"|"STOPPED"|"REBOOTING"|"SNAPSHOTTING"|"DELETING"|"FAILED"|string;
+  export type ImageBuilderState = "PENDING"|"UPDATING_AGENT"|"RUNNING"|"STOPPING"|"STOPPED"|"REBOOTING"|"SNAPSHOTTING"|"DELETING"|"FAILED";
   export interface ImageBuilderStateChangeReason {
     /**
      * The state change reason code.
@@ -1485,7 +1485,7 @@ declare namespace AppStream {
      */
     Message?: String;
   }
-  export type ImageBuilderStateChangeReasonCode = "INTERNAL_ERROR"|"IMAGE_UNAVAILABLE"|string;
+  export type ImageBuilderStateChangeReasonCode = "INTERNAL_ERROR"|"IMAGE_UNAVAILABLE";
   export type ImageList = Image[];
   export interface ImagePermissions {
     /**
@@ -1497,7 +1497,7 @@ declare namespace AppStream {
      */
     allowImageBuilder?: BooleanObject;
   }
-  export type ImageState = "PENDING"|"AVAILABLE"|"FAILED"|"COPYING"|"DELETING"|string;
+  export type ImageState = "PENDING"|"AVAILABLE"|"FAILED"|"COPYING"|"DELETING";
   export interface ImageStateChangeReason {
     /**
      * The state change reason code.
@@ -1508,7 +1508,7 @@ declare namespace AppStream {
      */
     Message?: String;
   }
-  export type ImageStateChangeReasonCode = "INTERNAL_ERROR"|"IMAGE_BUILDER_NOT_AVAILABLE"|"IMAGE_COPY_FAILURE"|string;
+  export type ImageStateChangeReasonCode = "INTERNAL_ERROR"|"IMAGE_BUILDER_NOT_AVAILABLE"|"IMAGE_COPY_FAILURE";
   export type Integer = number;
   export interface LastReportGenerationExecutionError {
     /**
@@ -1575,7 +1575,7 @@ declare namespace AppStream {
   }
   export type Long = number;
   export type MaxResults = number;
-  export type MessageAction = "SUPPRESS"|"RESEND"|string;
+  export type MessageAction = "SUPPRESS"|"RESEND";
   export type Metadata = {[key: string]: String};
   export type Name = string;
   export interface NetworkAccessConfiguration {
@@ -1590,8 +1590,8 @@ declare namespace AppStream {
   }
   export type OrganizationalUnitDistinguishedName = string;
   export type OrganizationalUnitDistinguishedNamesList = OrganizationalUnitDistinguishedName[];
-  export type Permission = "ENABLED"|"DISABLED"|string;
-  export type PlatformType = "WINDOWS"|"WINDOWS_SERVER_2016"|"WINDOWS_SERVER_2019"|string;
+  export type Permission = "ENABLED"|"DISABLED";
+  export type PlatformType = "WINDOWS"|"WINDOWS_SERVER_2016"|"WINDOWS_SERVER_2019";
   export type RedirectURL = string;
   export type RegionName = string;
   export interface ResourceError {
@@ -1663,9 +1663,9 @@ declare namespace AppStream {
      */
     NetworkAccessConfiguration?: NetworkAccessConfiguration;
   }
-  export type SessionConnectionState = "CONNECTED"|"NOT_CONNECTED"|string;
+  export type SessionConnectionState = "CONNECTED"|"NOT_CONNECTED";
   export type SessionList = Session[];
-  export type SessionState = "ACTIVE"|"PENDING"|"EXPIRED"|string;
+  export type SessionState = "ACTIVE"|"PENDING"|"EXPIRED";
   export type SettingsGroup = string;
   export interface SharedImagePermissions {
     /**
@@ -1724,7 +1724,7 @@ declare namespace AppStream {
      */
     ApplicationSettings?: ApplicationSettingsResponse;
   }
-  export type StackAttribute = "STORAGE_CONNECTORS"|"STORAGE_CONNECTOR_HOMEFOLDERS"|"STORAGE_CONNECTOR_GOOGLE_DRIVE"|"STORAGE_CONNECTOR_ONE_DRIVE"|"REDIRECT_URL"|"FEEDBACK_URL"|"THEME_NAME"|"USER_SETTINGS"|string;
+  export type StackAttribute = "STORAGE_CONNECTORS"|"STORAGE_CONNECTOR_HOMEFOLDERS"|"STORAGE_CONNECTOR_GOOGLE_DRIVE"|"STORAGE_CONNECTOR_ONE_DRIVE"|"REDIRECT_URL"|"FEEDBACK_URL"|"THEME_NAME"|"USER_SETTINGS";
   export type StackAttributes = StackAttribute[];
   export interface StackError {
     /**
@@ -1736,7 +1736,7 @@ declare namespace AppStream {
      */
     ErrorMessage?: String;
   }
-  export type StackErrorCode = "STORAGE_CONNECTOR_ERROR"|"INTERNAL_SERVICE_ERROR"|string;
+  export type StackErrorCode = "STORAGE_CONNECTOR_ERROR"|"INTERNAL_SERVICE_ERROR";
   export type StackErrors = StackError[];
   export type StackList = Stack[];
   export interface StartFleetRequest {
@@ -1798,7 +1798,7 @@ declare namespace AppStream {
     Domains?: DomainList;
   }
   export type StorageConnectorList = StorageConnector[];
-  export type StorageConnectorType = "HOMEFOLDERS"|"GOOGLE_DRIVE"|"ONE_DRIVE"|string;
+  export type StorageConnectorType = "HOMEFOLDERS"|"GOOGLE_DRIVE"|"ONE_DRIVE";
   export type StreamingUrlUserId = string;
   export type String = string;
   export type StringList = String[];
@@ -1984,8 +1984,8 @@ declare namespace AppStream {
      */
     Stack?: Stack;
   }
-  export type UsageReportExecutionErrorCode = "RESOURCE_NOT_FOUND"|"ACCESS_DENIED"|"INTERNAL_SERVICE_ERROR"|string;
-  export type UsageReportSchedule = "DAILY"|string;
+  export type UsageReportExecutionErrorCode = "RESOURCE_NOT_FOUND"|"ACCESS_DENIED"|"INTERNAL_SERVICE_ERROR";
+  export type UsageReportSchedule = "DAILY";
   export interface UsageReportSubscription {
     /**
      * The Amazon S3 bucket where generated reports are stored. If you enabled on-instance session scripts and Amazon S3 logging for your session script configuration, AppStream 2.0 created an S3 bucket to store the script output. The bucket is unique to your account and Region. When you enable usage reporting in this case, AppStream 2.0 uses the same bucket to store your usage reports. If you haven't already enabled on-instance session scripts, when you enable usage reports, AppStream 2.0 creates a new S3 bucket.
@@ -2085,11 +2085,11 @@ declare namespace AppStream {
      */
     ErrorMessage?: String;
   }
-  export type UserStackAssociationErrorCode = "STACK_NOT_FOUND"|"USER_NAME_NOT_FOUND"|"INTERNAL_ERROR"|string;
+  export type UserStackAssociationErrorCode = "STACK_NOT_FOUND"|"USER_NAME_NOT_FOUND"|"INTERNAL_ERROR";
   export type UserStackAssociationErrorList = UserStackAssociationError[];
   export type UserStackAssociationList = UserStackAssociation[];
   export type Username = string;
-  export type VisibilityType = "PUBLIC"|"PRIVATE"|"SHARED"|string;
+  export type VisibilityType = "PUBLIC"|"PRIVATE"|"SHARED";
   export interface VpcConfig {
     /**
      * The identifiers of the subnets to which a network interface is attached from the fleet instance or image builder instance. Fleet instances use one or more subnets. Image builder instances use one subnet.

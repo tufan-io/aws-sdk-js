@@ -681,7 +681,7 @@ declare namespace ECR {
      */
     imageManifest?: ImageManifest;
   }
-  export type ImageActionType = "EXPIRE"|string;
+  export type ImageActionType = "EXPIRE";
   export type ImageCount = number;
   export interface ImageDetail {
     /**
@@ -725,7 +725,7 @@ declare namespace ECR {
      */
     failureReason?: ImageFailureReason;
   }
-  export type ImageFailureCode = "InvalidImageDigest"|"InvalidImageTag"|"ImageTagDoesNotMatchDigest"|"ImageNotFound"|"MissingDigestAndTag"|string;
+  export type ImageFailureCode = "InvalidImageDigest"|"InvalidImageTag"|"ImageTagDoesNotMatchDigest"|"ImageNotFound"|"MissingDigestAndTag";
   export type ImageFailureList = ImageFailure[];
   export type ImageFailureReason = string;
   export interface ImageIdentifier {
@@ -744,7 +744,7 @@ declare namespace ECR {
   export type ImageSizeInBytes = number;
   export type ImageTag = string;
   export type ImageTagList = ImageTag[];
-  export type ImageTagMutability = "MUTABLE"|"IMMUTABLE"|string;
+  export type ImageTagMutability = "MUTABLE"|"IMMUTABLE";
   export interface InitiateLayerUploadRequest {
     /**
      * The AWS account ID associated with the registry to which you intend to upload layers. If you do not specify a registry, the default registry is assumed.
@@ -783,7 +783,7 @@ declare namespace ECR {
      */
     mediaType?: MediaType;
   }
-  export type LayerAvailability = "AVAILABLE"|"UNAVAILABLE"|string;
+  export type LayerAvailability = "AVAILABLE"|"UNAVAILABLE";
   export type LayerDigest = string;
   export type LayerDigestList = LayerDigest[];
   export interface LayerFailure {
@@ -800,7 +800,7 @@ declare namespace ECR {
      */
     failureReason?: LayerFailureReason;
   }
-  export type LayerFailureCode = "InvalidLayerDigest"|"MissingLayerDigest"|string;
+  export type LayerFailureCode = "InvalidLayerDigest"|"MissingLayerDigest";
   export type LayerFailureList = LayerFailure[];
   export type LayerFailureReason = string;
   export type LayerList = Layer[];
@@ -835,7 +835,7 @@ declare namespace ECR {
     appliedRulePriority?: LifecyclePolicyRulePriority;
   }
   export type LifecyclePolicyPreviewResultList = LifecyclePolicyPreviewResult[];
-  export type LifecyclePolicyPreviewStatus = "IN_PROGRESS"|"COMPLETE"|"EXPIRED"|"FAILED"|string;
+  export type LifecyclePolicyPreviewStatus = "IN_PROGRESS"|"COMPLETE"|"EXPIRED"|"FAILED";
   export interface LifecyclePolicyPreviewSummary {
     /**
      * The number of expiring images.
@@ -1108,7 +1108,7 @@ declare namespace ECR {
   }
   export interface TagResourceResponse {
   }
-  export type TagStatus = "TAGGED"|"UNTAGGED"|"ANY"|string;
+  export type TagStatus = "TAGGED"|"UNTAGGED"|"ANY";
   export type TagValue = string;
   export interface UntagResourceRequest {
     /**

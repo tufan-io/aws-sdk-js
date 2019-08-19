@@ -3185,7 +3185,7 @@ declare namespace EC2 {
     AttributeValues?: AccountAttributeValueList;
   }
   export type AccountAttributeList = AccountAttribute[];
-  export type AccountAttributeName = "supported-platforms"|"default-vpc"|string;
+  export type AccountAttributeName = "supported-platforms"|"default-vpc";
   export type AccountAttributeNameStringList = AccountAttributeName[];
   export interface AccountAttributeValue {
     /**
@@ -3213,7 +3213,7 @@ declare namespace EC2 {
     InstanceHealth?: InstanceHealthStatus;
   }
   export type ActiveInstanceSet = ActiveInstance[];
-  export type ActivityStatus = "error"|"pending_fulfillment"|"pending_termination"|"fulfilled"|string;
+  export type ActivityStatus = "error"|"pending_fulfillment"|"pending_termination"|"fulfilled";
   export interface Address {
     /**
      * The ID of the instance that the address is associated with (if any).
@@ -3273,7 +3273,7 @@ declare namespace EC2 {
      */
     ByoipCidr?: ByoipCidr;
   }
-  export type Affinity = "default"|"host"|string;
+  export type Affinity = "default"|"host";
   export interface AllocateAddressRequest {
     /**
      * Set to vpc to allocate the address for use with instances in a VPC. Default: The address is for use with instances in EC2-Classic.
@@ -3347,8 +3347,8 @@ declare namespace EC2 {
     HostIds?: ResponseHostIdList;
   }
   export type AllocationIdList = String[];
-  export type AllocationState = "available"|"under-assessment"|"permanent-failure"|"released"|"released-permanent-failure"|"pending"|string;
-  export type AllocationStrategy = "lowestPrice"|"diversified"|"capacityOptimized"|string;
+  export type AllocationState = "available"|"under-assessment"|"permanent-failure"|"released"|"released-permanent-failure"|"pending";
+  export type AllocationStrategy = "lowestPrice"|"diversified"|"capacityOptimized";
   export interface AllowedPrincipal {
     /**
      * The type of principal.
@@ -3384,7 +3384,7 @@ declare namespace EC2 {
      */
     SecurityGroupIds?: ClientVpnSecurityGroupIdSet;
   }
-  export type ArchitectureValues = "i386"|"x86_64"|"arm64"|string;
+  export type ArchitectureValues = "i386"|"x86_64"|"arm64";
   export interface AssignIpv6AddressesRequest {
     /**
      * The number of IPv6 addresses to assign to the network interface. Amazon EC2 automatically selects the IPv6 addresses from the subnet range. You can't use this option if specifying specific IPv6 addresses.
@@ -3626,7 +3626,7 @@ declare namespace EC2 {
      */
     VpcId?: String;
   }
-  export type AssociatedNetworkType = "vpc"|string;
+  export type AssociatedNetworkType = "vpc";
   export interface AssociatedTargetNetwork {
     /**
      * The ID of the subnet.
@@ -3649,7 +3649,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type AssociationStatusCode = "associating"|"associated"|"association-failed"|"disassociating"|"disassociated"|string;
+  export type AssociationStatusCode = "associating"|"associated"|"association-failed"|"disassociating"|"disassociated";
   export interface AttachClassicLinkVpcRequest {
     /**
      * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
@@ -3750,7 +3750,7 @@ declare namespace EC2 {
      */
     VpcAttachment?: VpcAttachment;
   }
-  export type AttachmentStatus = "attaching"|"attached"|"detaching"|"detached"|string;
+  export type AttachmentStatus = "attaching"|"attached"|"detaching"|"detached";
   export interface AttributeBooleanValue {
     /**
      * The attribute value. The valid values are true or false.
@@ -3906,8 +3906,8 @@ declare namespace EC2 {
      */
     DryRun?: Boolean;
   }
-  export type AutoAcceptSharedAttachmentsValue = "enable"|"disable"|string;
-  export type AutoPlacement = "on"|"off"|string;
+  export type AutoAcceptSharedAttachmentsValue = "enable"|"disable";
+  export type AutoPlacement = "on"|"off";
   export interface AvailabilityZone {
     /**
      * The state of the Availability Zone.
@@ -3938,7 +3938,7 @@ declare namespace EC2 {
     Message?: String;
   }
   export type AvailabilityZoneMessageList = AvailabilityZoneMessage[];
-  export type AvailabilityZoneState = "available"|"information"|"impaired"|"unavailable"|string;
+  export type AvailabilityZoneState = "available"|"information"|"impaired"|"unavailable";
   export interface AvailableCapacity {
     /**
      * The total number of instances supported by the Dedicated Host.
@@ -3950,7 +3950,7 @@ declare namespace EC2 {
     AvailableVCpus?: Integer;
   }
   export type AvailableInstanceCapacityList = InstanceCapacity[];
-  export type BatchState = "submitted"|"active"|"cancelled"|"failed"|"cancelled_running"|"cancelled_terminating"|"modifying"|string;
+  export type BatchState = "submitted"|"active"|"cancelled"|"failed"|"cancelled_running"|"cancelled_terminating"|"modifying";
   export type BillingProductList = String[];
   export type _Blob = Buffer|Uint8Array|Blob|string;
   export interface BlobAttributeValue {
@@ -4043,7 +4043,7 @@ declare namespace EC2 {
     Message?: String;
   }
   export type BundleTaskList = BundleTask[];
-  export type BundleTaskState = "pending"|"waiting-for-shutdown"|"bundling"|"storing"|"cancelling"|"complete"|"failed"|string;
+  export type BundleTaskState = "pending"|"waiting-for-shutdown"|"bundling"|"storing"|"cancelling"|"complete"|"failed";
   export interface ByoipCidr {
     /**
      * The public IPv4 address range, in CIDR notation.
@@ -4063,8 +4063,8 @@ declare namespace EC2 {
     State?: ByoipCidrState;
   }
   export type ByoipCidrSet = ByoipCidr[];
-  export type ByoipCidrState = "advertised"|"deprovisioned"|"failed-deprovision"|"failed-provision"|"pending-deprovision"|"pending-provision"|"provisioned"|string;
-  export type CancelBatchErrorCode = "fleetRequestIdDoesNotExist"|"fleetRequestIdMalformed"|"fleetRequestNotInCancellableState"|"unexpectedError"|string;
+  export type ByoipCidrState = "advertised"|"deprovisioned"|"failed-deprovision"|"failed-provision"|"pending-deprovision"|"pending-provision"|"provisioned";
+  export type CancelBatchErrorCode = "fleetRequestIdDoesNotExist"|"fleetRequestIdMalformed"|"fleetRequestNotInCancellableState"|"unexpectedError";
   export interface CancelBundleTaskRequest {
     /**
      * The ID of the bundle task.
@@ -4217,7 +4217,7 @@ declare namespace EC2 {
     SpotFleetRequestId?: String;
   }
   export type CancelSpotFleetRequestsSuccessSet = CancelSpotFleetRequestsSuccessItem[];
-  export type CancelSpotInstanceRequestState = "active"|"open"|"closed"|"cancelled"|"completed"|string;
+  export type CancelSpotInstanceRequestState = "active"|"open"|"closed"|"cancelled"|"completed";
   export interface CancelSpotInstanceRequestsRequest {
     /**
      * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
@@ -4320,8 +4320,8 @@ declare namespace EC2 {
     Tags?: TagList;
   }
   export type CapacityReservationIdSet = String[];
-  export type CapacityReservationInstancePlatform = "Linux/UNIX"|"Red Hat Enterprise Linux"|"SUSE Linux"|"Windows"|"Windows with SQL Server"|"Windows with SQL Server Enterprise"|"Windows with SQL Server Standard"|"Windows with SQL Server Web"|"Linux with SQL Server Standard"|"Linux with SQL Server Web"|"Linux with SQL Server Enterprise"|string;
-  export type CapacityReservationPreference = "open"|"none"|string;
+  export type CapacityReservationInstancePlatform = "Linux/UNIX"|"Red Hat Enterprise Linux"|"SUSE Linux"|"Windows"|"Windows with SQL Server"|"Windows with SQL Server Enterprise"|"Windows with SQL Server Standard"|"Windows with SQL Server Web"|"Linux with SQL Server Standard"|"Linux with SQL Server Web"|"Linux with SQL Server Enterprise";
+  export type CapacityReservationPreference = "open"|"none";
   export type CapacityReservationSet = CapacityReservation[];
   export interface CapacityReservationSpecification {
     /**
@@ -4343,7 +4343,7 @@ declare namespace EC2 {
      */
     CapacityReservationTarget?: CapacityReservationTargetResponse;
   }
-  export type CapacityReservationState = "active"|"expired"|"cancelled"|"pending"|"failed"|string;
+  export type CapacityReservationState = "active"|"expired"|"cancelled"|"pending"|"failed";
   export interface CapacityReservationTarget {
     /**
      * The ID of the Capacity Reservation.
@@ -4356,7 +4356,7 @@ declare namespace EC2 {
      */
     CapacityReservationId?: String;
   }
-  export type CapacityReservationTenancy = "default"|"dedicated"|string;
+  export type CapacityReservationTenancy = "default"|"dedicated";
   export interface CertificateAuthentication {
     /**
      * The ARN of the client certificate. 
@@ -4439,7 +4439,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type ClientCertificateRevocationListStatusCode = "pending"|"active"|string;
+  export type ClientCertificateRevocationListStatusCode = "pending"|"active";
   export interface ClientData {
     /**
      * A user-defined comment about the disk upload.
@@ -4488,7 +4488,7 @@ declare namespace EC2 {
     MutualAuthentication?: CertificateAuthenticationRequest;
   }
   export type ClientVpnAuthenticationRequestList = ClientVpnAuthenticationRequest[];
-  export type ClientVpnAuthenticationType = "certificate-authentication"|"directory-service-authentication"|string;
+  export type ClientVpnAuthenticationType = "certificate-authentication"|"directory-service-authentication";
   export interface ClientVpnAuthorizationRuleStatus {
     /**
      * The state of the authorization rule.
@@ -4499,7 +4499,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type ClientVpnAuthorizationRuleStatusCode = "authorizing"|"active"|"failed"|"revoking"|string;
+  export type ClientVpnAuthorizationRuleStatusCode = "authorizing"|"active"|"failed"|"revoking";
   export interface ClientVpnConnection {
     /**
      * The ID of the Client VPN endpoint to which the client is connected.
@@ -4565,7 +4565,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type ClientVpnConnectionStatusCode = "active"|"failed-to-terminate"|"terminating"|"terminated"|string;
+  export type ClientVpnConnectionStatusCode = "active"|"failed-to-terminate"|"terminating"|"terminated";
   export interface ClientVpnEndpoint {
     /**
      * The ID of the Client VPN endpoint.
@@ -4642,7 +4642,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type ClientVpnEndpointStatusCode = "pending-associate"|"available"|"deleting"|"deleted"|string;
+  export type ClientVpnEndpointStatusCode = "pending-associate"|"available"|"deleting"|"deleted";
   export interface ClientVpnRoute {
     /**
      * The ID of the Client VPN endpoint with which the route is associated.
@@ -4684,7 +4684,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type ClientVpnRouteStatusCode = "creating"|"active"|"failed"|"deleting"|string;
+  export type ClientVpnRouteStatusCode = "creating"|"active"|"failed"|"deleting";
   export type ClientVpnSecurityGroupIdSet = String[];
   export interface ConfirmProductInstanceRequest {
     /**
@@ -4769,9 +4769,9 @@ declare namespace EC2 {
     ConnectionNotificationState?: ConnectionNotificationState;
   }
   export type ConnectionNotificationSet = ConnectionNotification[];
-  export type ConnectionNotificationState = "Enabled"|"Disabled"|string;
-  export type ConnectionNotificationType = "Topic"|string;
-  export type ContainerFormat = "ova"|string;
+  export type ConnectionNotificationState = "Enabled"|"Disabled";
+  export type ConnectionNotificationType = "Topic";
+  export type ContainerFormat = "ova";
   export type ConversionIdStringList = String[];
   export interface ConversionTask {
     /**
@@ -4803,7 +4803,7 @@ declare namespace EC2 {
      */
     Tags?: TagList;
   }
-  export type ConversionTaskState = "active"|"cancelling"|"cancelled"|"completed"|string;
+  export type ConversionTaskState = "active"|"cancelling"|"cancelled"|"completed";
   export interface CopyFpgaImageRequest {
     /**
      * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
@@ -4916,7 +4916,7 @@ declare namespace EC2 {
      */
     SnapshotId?: String;
   }
-  export type CopyTagsFromSource = "volume"|string;
+  export type CopyTagsFromSource = "volume";
   export interface CpuOptions {
     /**
      * The number of CPU cores for the instance.
@@ -6532,7 +6532,7 @@ declare namespace EC2 {
      */
     CpuCredits: String;
   }
-  export type CurrencyCodeValues = "USD"|string;
+  export type CurrencyCodeValues = "USD";
   export interface CustomerGateway {
     /**
      * The customer gateway's Border Gateway Protocol (BGP) Autonomous System Number (ASN).
@@ -6565,11 +6565,11 @@ declare namespace EC2 {
   }
   export type CustomerGatewayIdStringList = String[];
   export type CustomerGatewayList = CustomerGateway[];
-  export type DatafeedSubscriptionState = "Active"|"Inactive"|string;
+  export type DatafeedSubscriptionState = "Active"|"Inactive";
   export type DateTime = Date;
-  export type DefaultRouteTableAssociationValue = "enable"|"disable"|string;
-  export type DefaultRouteTablePropagationValue = "enable"|"disable"|string;
-  export type DefaultTargetCapacityType = "spot"|"on-demand"|string;
+  export type DefaultRouteTableAssociationValue = "enable"|"disable";
+  export type DefaultRouteTablePropagationValue = "enable"|"disable";
+  export type DefaultTargetCapacityType = "spot"|"on-demand";
   export interface DeleteClientVpnEndpointRequest {
     /**
      * The ID of the Client VPN to be deleted.
@@ -6656,7 +6656,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type DeleteFleetErrorCode = "fleetIdDoesNotExist"|"fleetIdMalformed"|"fleetNotInDeletableState"|"unexpectedError"|string;
+  export type DeleteFleetErrorCode = "fleetIdDoesNotExist"|"fleetIdMalformed"|"fleetNotInDeletableState"|"unexpectedError";
   export interface DeleteFleetErrorItem {
     /**
      * The error.
@@ -10337,7 +10337,7 @@ declare namespace EC2 {
      */
     DryRun?: Boolean;
   }
-  export type DeviceType = "ebs"|"instance-store"|string;
+  export type DeviceType = "ebs"|"instance-store";
   export interface DhcpConfiguration {
     /**
      * The name of a DHCP option.
@@ -10614,7 +10614,7 @@ declare namespace EC2 {
      */
     ImportManifestUrl: String;
   }
-  export type DiskImageFormat = "VMDK"|"RAW"|"VHD"|string;
+  export type DiskImageFormat = "VMDK"|"RAW"|"VHD";
   export type DiskImageList = DiskImage[];
   export interface DiskImageVolumeDescription {
     /**
@@ -10647,8 +10647,8 @@ declare namespace EC2 {
      */
     Enabled?: Boolean;
   }
-  export type DnsSupportValue = "enable"|"disable"|string;
-  export type DomainType = "vpc"|"standard"|string;
+  export type DnsSupportValue = "enable"|"disable";
+  export type DomainType = "vpc"|"standard";
   export type Double = number;
   export interface EbsBlockDevice {
     /**
@@ -10763,8 +10763,8 @@ declare namespace EC2 {
   }
   export type ElasticGpuSpecificationResponseList = ElasticGpuSpecificationResponse[];
   export type ElasticGpuSpecifications = ElasticGpuSpecification[];
-  export type ElasticGpuState = "ATTACHED"|string;
-  export type ElasticGpuStatus = "OK"|"IMPAIRED"|string;
+  export type ElasticGpuState = "ATTACHED";
+  export type ElasticGpuStatus = "OK"|"IMPAIRED";
   export interface ElasticGpus {
     /**
      * The ID of the Elastic Graphics accelerator.
@@ -10897,9 +10897,9 @@ declare namespace EC2 {
      */
     Return?: Boolean;
   }
-  export type EndDateType = "unlimited"|"limited"|string;
+  export type EndDateType = "unlimited"|"limited";
   export type EndpointSet = ClientVpnEndpoint[];
-  export type EventCode = "instance-reboot"|"system-reboot"|"system-maintenance"|"instance-retirement"|"instance-stop"|string;
+  export type EventCode = "instance-reboot"|"system-reboot"|"system-maintenance"|"instance-retirement"|"instance-stop";
   export interface EventInformation {
     /**
      * The description of the event.
@@ -10914,8 +10914,8 @@ declare namespace EC2 {
      */
     InstanceId?: String;
   }
-  export type EventType = "instanceChange"|"fleetRequestChange"|"error"|"information"|string;
-  export type ExcessCapacityTerminationPolicy = "noTermination"|"default"|string;
+  export type EventType = "instanceChange"|"fleetRequestChange"|"error"|"information";
+  export type ExcessCapacityTerminationPolicy = "noTermination"|"default";
   export type ExecutableByStringList = String[];
   export interface ExportClientVpnClientCertificateRevocationListRequest {
     /**
@@ -10953,7 +10953,7 @@ declare namespace EC2 {
      */
     ClientConfiguration?: String;
   }
-  export type ExportEnvironment = "citrix"|"vmware"|"microsoft"|string;
+  export type ExportEnvironment = "citrix"|"vmware"|"microsoft";
   export interface ExportTask {
     /**
      * A description of the resource being exported.
@@ -10982,7 +10982,7 @@ declare namespace EC2 {
   }
   export type ExportTaskIdStringList = String[];
   export type ExportTaskList = ExportTask[];
-  export type ExportTaskState = "active"|"cancelling"|"cancelled"|"completed"|string;
+  export type ExportTaskState = "active"|"cancelling"|"cancelled"|"completed";
   export interface ExportToS3Task {
     /**
      * The container format used to combine disk images with metadata (such as OVF). If absent, only the disk image is exported.
@@ -11054,7 +11054,7 @@ declare namespace EC2 {
     Values?: ValueStringList;
   }
   export type FilterList = Filter[];
-  export type FleetActivityStatus = "error"|"pending-fulfillment"|"pending-termination"|"fulfilled"|string;
+  export type FleetActivityStatus = "error"|"pending-fulfillment"|"pending-termination"|"fulfilled";
   export interface FleetData {
     /**
      * The progress of the EC2 Fleet. If there is an error, the status is error. After all requests are placed, the status is pending_fulfillment. If the size of the EC2 Fleet is equal to or greater than its target capacity, the status is fulfilled. If the size of the EC2 Fleet is decreased, the status is pending_termination while instances are terminating.
@@ -11137,8 +11137,8 @@ declare namespace EC2 {
      */
     Instances?: DescribeFleetsInstancesSet;
   }
-  export type FleetEventType = "instance-change"|"fleet-change"|"service-error"|string;
-  export type FleetExcessCapacityTerminationPolicy = "no-termination"|"termination"|string;
+  export type FleetEventType = "instance-change"|"fleet-change"|"service-error";
+  export type FleetExcessCapacityTerminationPolicy = "no-termination"|"termination";
   export type FleetIdSet = FleetIdentifier[];
   export type FleetIdentifier = string;
   export interface FleetLaunchTemplateConfig {
@@ -11253,10 +11253,10 @@ declare namespace EC2 {
      */
     Version?: String;
   }
-  export type FleetOnDemandAllocationStrategy = "lowest-price"|"prioritized"|string;
+  export type FleetOnDemandAllocationStrategy = "lowest-price"|"prioritized";
   export type FleetSet = FleetData[];
-  export type FleetStateCode = "submitted"|"active"|"deleted"|"failed"|"deleted-running"|"deleted-terminating"|"modifying"|string;
-  export type FleetType = "request"|"maintain"|"instant"|string;
+  export type FleetStateCode = "submitted"|"active"|"deleted"|"failed"|"deleted-running"|"deleted-terminating"|"modifying";
+  export type FleetType = "request"|"maintain"|"instant";
   export type Float = number;
   export interface FlowLog {
     /**
@@ -11305,7 +11305,7 @@ declare namespace EC2 {
     LogDestination?: String;
   }
   export type FlowLogSet = FlowLog[];
-  export type FlowLogsResourceType = "VPC"|"Subnet"|"NetworkInterface"|string;
+  export type FlowLogsResourceType = "VPC"|"Subnet"|"NetworkInterface";
   export interface FpgaImage {
     /**
      * The FPGA image identifier (AFI ID).
@@ -11390,7 +11390,7 @@ declare namespace EC2 {
      */
     ProductCodes?: ProductCodeList;
   }
-  export type FpgaImageAttributeName = "description"|"name"|"loadPermission"|"productCodes"|string;
+  export type FpgaImageAttributeName = "description"|"name"|"loadPermission"|"productCodes";
   export type FpgaImageIdList = String[];
   export type FpgaImageList = FpgaImage[];
   export interface FpgaImageState {
@@ -11403,8 +11403,8 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type FpgaImageStateCode = "pending"|"failed"|"available"|"unavailable"|string;
-  export type GatewayType = "ipsec.1"|string;
+  export type FpgaImageStateCode = "pending"|"failed"|"available"|"unavailable";
+  export type GatewayType = "ipsec.1";
   export interface GetCapacityReservationUsageRequest {
     /**
      * The ID of the Capacity Reservation.
@@ -11918,7 +11918,7 @@ declare namespace EC2 {
      */
     TotalVCpus?: Integer;
   }
-  export type HostRecovery = "on"|"off"|string;
+  export type HostRecovery = "on"|"off";
   export interface HostReservation {
     /**
      * The number of Dedicated Hosts the reservation is associated with.
@@ -11979,8 +11979,8 @@ declare namespace EC2 {
   }
   export type HostReservationIdSet = String[];
   export type HostReservationSet = HostReservation[];
-  export type HostTenancy = "dedicated"|"host"|string;
-  export type HypervisorType = "ovm"|"xen"|string;
+  export type HostTenancy = "dedicated"|"host";
+  export type HypervisorType = "ovm"|"xen";
   export interface IamInstanceProfile {
     /**
      * The Amazon Resource Name (ARN) of the instance profile.
@@ -12014,7 +12014,7 @@ declare namespace EC2 {
     Timestamp?: DateTime;
   }
   export type IamInstanceProfileAssociationSet = IamInstanceProfileAssociation[];
-  export type IamInstanceProfileAssociationState = "associating"|"associated"|"disassociating"|"disassociated"|string;
+  export type IamInstanceProfileAssociationState = "associating"|"associated"|"disassociating"|"disassociated";
   export interface IamInstanceProfileSpecification {
     /**
      * The Amazon Resource Name (ARN) of the instance profile.
@@ -12182,7 +12182,7 @@ declare namespace EC2 {
      */
     SriovNetSupport?: AttributeValue;
   }
-  export type ImageAttributeName = "description"|"kernel"|"ramdisk"|"launchPermission"|"productCodes"|"blockDeviceMapping"|"sriovNetSupport"|string;
+  export type ImageAttributeName = "description"|"kernel"|"ramdisk"|"launchPermission"|"productCodes"|"blockDeviceMapping"|"sriovNetSupport";
   export interface ImageDiskContainer {
     /**
      * The description of the disk image.
@@ -12212,8 +12212,8 @@ declare namespace EC2 {
   export type ImageDiskContainerList = ImageDiskContainer[];
   export type ImageIdStringList = String[];
   export type ImageList = Image[];
-  export type ImageState = "pending"|"available"|"invalid"|"deregistered"|"transient"|"failed"|"error"|string;
-  export type ImageTypeValues = "machine"|"kernel"|"ramdisk"|string;
+  export type ImageState = "pending"|"available"|"invalid"|"deregistered"|"transient"|"failed"|"error";
+  export type ImageTypeValues = "machine"|"kernel"|"ramdisk";
   export interface ImportClientVpnClientCertificateRevocationListRequest {
     /**
      * The ID of the Client VPN endpoint to which the client certificate revocation list applies.
@@ -12898,7 +12898,7 @@ declare namespace EC2 {
      */
     UserData?: AttributeValue;
   }
-  export type InstanceAttributeName = "instanceType"|"kernel"|"ramdisk"|"userData"|"disableApiTermination"|"instanceInitiatedShutdownBehavior"|"rootDeviceName"|"blockDeviceMapping"|"productCodes"|"sourceDestCheck"|"groupSet"|"ebsOptimized"|"sriovNetSupport"|"enaSupport"|string;
+  export type InstanceAttributeName = "instanceType"|"kernel"|"ramdisk"|"userData"|"disableApiTermination"|"instanceInitiatedShutdownBehavior"|"rootDeviceName"|"blockDeviceMapping"|"productCodes"|"sourceDestCheck"|"groupSet"|"ebsOptimized"|"sriovNetSupport"|"enaSupport";
   export interface InstanceBlockDeviceMapping {
     /**
      * The device name (for example, /dev/sdh or xvdh).
@@ -12987,12 +12987,12 @@ declare namespace EC2 {
      */
     TargetEnvironment?: ExportEnvironment;
   }
-  export type InstanceHealthStatus = "healthy"|"unhealthy"|string;
+  export type InstanceHealthStatus = "healthy"|"unhealthy";
   export type InstanceId = string;
   export type InstanceIdSet = String[];
   export type InstanceIdStringList = String[];
   export type InstanceIdsSet = InstanceId[];
-  export type InstanceInterruptionBehavior = "hibernate"|"stop"|"terminate"|string;
+  export type InstanceInterruptionBehavior = "hibernate"|"stop"|"terminate";
   export interface InstanceIpv6Address {
     /**
      * The IPv6 address.
@@ -13007,8 +13007,8 @@ declare namespace EC2 {
      */
     Ipv6Address?: String;
   }
-  export type InstanceLifecycle = "spot"|"on-demand"|string;
-  export type InstanceLifecycleType = "spot"|"scheduled"|string;
+  export type InstanceLifecycle = "spot"|"on-demand";
+  export type InstanceLifecycleType = "spot"|"scheduled";
   export type InstanceList = Instance[];
   export interface InstanceMarketOptionsRequest {
     /**
@@ -13020,7 +13020,7 @@ declare namespace EC2 {
      */
     SpotOptions?: SpotMarketOptions;
   }
-  export type InstanceMatchCriteria = "open"|"targeted"|string;
+  export type InstanceMatchCriteria = "open"|"targeted";
   export interface InstanceMonitoring {
     /**
      * The ID of the instance.
@@ -13244,7 +13244,7 @@ declare namespace EC2 {
     PreviousState?: InstanceState;
   }
   export type InstanceStateChangeList = InstanceStateChange[];
-  export type InstanceStateName = "pending"|"running"|"shutting-down"|"terminated"|"stopping"|"stopped"|string;
+  export type InstanceStateName = "pending"|"running"|"shutting-down"|"terminated"|"stopping"|"stopped";
   export interface InstanceStatus {
     /**
      * The Availability Zone of the instance.
@@ -13324,7 +13324,7 @@ declare namespace EC2 {
      */
     Status?: SummaryStatus;
   }
-  export type InstanceType = "t1.micro"|"t2.nano"|"t2.micro"|"t2.small"|"t2.medium"|"t2.large"|"t2.xlarge"|"t2.2xlarge"|"t3.nano"|"t3.micro"|"t3.small"|"t3.medium"|"t3.large"|"t3.xlarge"|"t3.2xlarge"|"t3a.nano"|"t3a.micro"|"t3a.small"|"t3a.medium"|"t3a.large"|"t3a.xlarge"|"t3a.2xlarge"|"m1.small"|"m1.medium"|"m1.large"|"m1.xlarge"|"m3.medium"|"m3.large"|"m3.xlarge"|"m3.2xlarge"|"m4.large"|"m4.xlarge"|"m4.2xlarge"|"m4.4xlarge"|"m4.10xlarge"|"m4.16xlarge"|"m2.xlarge"|"m2.2xlarge"|"m2.4xlarge"|"cr1.8xlarge"|"r3.large"|"r3.xlarge"|"r3.2xlarge"|"r3.4xlarge"|"r3.8xlarge"|"r4.large"|"r4.xlarge"|"r4.2xlarge"|"r4.4xlarge"|"r4.8xlarge"|"r4.16xlarge"|"r5.large"|"r5.xlarge"|"r5.2xlarge"|"r5.4xlarge"|"r5.8xlarge"|"r5.12xlarge"|"r5.16xlarge"|"r5.24xlarge"|"r5.metal"|"r5a.large"|"r5a.xlarge"|"r5a.2xlarge"|"r5a.4xlarge"|"r5a.8xlarge"|"r5a.12xlarge"|"r5a.16xlarge"|"r5a.24xlarge"|"r5d.large"|"r5d.xlarge"|"r5d.2xlarge"|"r5d.4xlarge"|"r5d.8xlarge"|"r5d.12xlarge"|"r5d.16xlarge"|"r5d.24xlarge"|"r5d.metal"|"r5ad.large"|"r5ad.xlarge"|"r5ad.2xlarge"|"r5ad.4xlarge"|"r5ad.8xlarge"|"r5ad.12xlarge"|"r5ad.16xlarge"|"r5ad.24xlarge"|"x1.16xlarge"|"x1.32xlarge"|"x1e.xlarge"|"x1e.2xlarge"|"x1e.4xlarge"|"x1e.8xlarge"|"x1e.16xlarge"|"x1e.32xlarge"|"i2.xlarge"|"i2.2xlarge"|"i2.4xlarge"|"i2.8xlarge"|"i3.large"|"i3.xlarge"|"i3.2xlarge"|"i3.4xlarge"|"i3.8xlarge"|"i3.16xlarge"|"i3.metal"|"i3en.large"|"i3en.xlarge"|"i3en.2xlarge"|"i3en.3xlarge"|"i3en.6xlarge"|"i3en.12xlarge"|"i3en.24xlarge"|"i3en.metal"|"hi1.4xlarge"|"hs1.8xlarge"|"c1.medium"|"c1.xlarge"|"c3.large"|"c3.xlarge"|"c3.2xlarge"|"c3.4xlarge"|"c3.8xlarge"|"c4.large"|"c4.xlarge"|"c4.2xlarge"|"c4.4xlarge"|"c4.8xlarge"|"c5.large"|"c5.xlarge"|"c5.2xlarge"|"c5.4xlarge"|"c5.9xlarge"|"c5.12xlarge"|"c5.18xlarge"|"c5.24xlarge"|"c5.metal"|"c5d.large"|"c5d.xlarge"|"c5d.2xlarge"|"c5d.4xlarge"|"c5d.9xlarge"|"c5d.18xlarge"|"c5n.large"|"c5n.xlarge"|"c5n.2xlarge"|"c5n.4xlarge"|"c5n.9xlarge"|"c5n.18xlarge"|"cc1.4xlarge"|"cc2.8xlarge"|"g2.2xlarge"|"g2.8xlarge"|"g3.4xlarge"|"g3.8xlarge"|"g3.16xlarge"|"g3s.xlarge"|"cg1.4xlarge"|"p2.xlarge"|"p2.8xlarge"|"p2.16xlarge"|"p3.2xlarge"|"p3.8xlarge"|"p3.16xlarge"|"p3dn.24xlarge"|"d2.xlarge"|"d2.2xlarge"|"d2.4xlarge"|"d2.8xlarge"|"f1.2xlarge"|"f1.4xlarge"|"f1.16xlarge"|"m5.large"|"m5.xlarge"|"m5.2xlarge"|"m5.4xlarge"|"m5.8xlarge"|"m5.12xlarge"|"m5.16xlarge"|"m5.24xlarge"|"m5.metal"|"m5a.large"|"m5a.xlarge"|"m5a.2xlarge"|"m5a.4xlarge"|"m5a.8xlarge"|"m5a.12xlarge"|"m5a.16xlarge"|"m5a.24xlarge"|"m5d.large"|"m5d.xlarge"|"m5d.2xlarge"|"m5d.4xlarge"|"m5d.8xlarge"|"m5d.12xlarge"|"m5d.16xlarge"|"m5d.24xlarge"|"m5d.metal"|"m5ad.large"|"m5ad.xlarge"|"m5ad.2xlarge"|"m5ad.4xlarge"|"m5ad.8xlarge"|"m5ad.12xlarge"|"m5ad.16xlarge"|"m5ad.24xlarge"|"h1.2xlarge"|"h1.4xlarge"|"h1.8xlarge"|"h1.16xlarge"|"z1d.large"|"z1d.xlarge"|"z1d.2xlarge"|"z1d.3xlarge"|"z1d.6xlarge"|"z1d.12xlarge"|"z1d.metal"|"u-6tb1.metal"|"u-9tb1.metal"|"u-12tb1.metal"|"a1.medium"|"a1.large"|"a1.xlarge"|"a1.2xlarge"|"a1.4xlarge"|string;
+  export type InstanceType = "t1.micro"|"t2.nano"|"t2.micro"|"t2.small"|"t2.medium"|"t2.large"|"t2.xlarge"|"t2.2xlarge"|"t3.nano"|"t3.micro"|"t3.small"|"t3.medium"|"t3.large"|"t3.xlarge"|"t3.2xlarge"|"t3a.nano"|"t3a.micro"|"t3a.small"|"t3a.medium"|"t3a.large"|"t3a.xlarge"|"t3a.2xlarge"|"m1.small"|"m1.medium"|"m1.large"|"m1.xlarge"|"m3.medium"|"m3.large"|"m3.xlarge"|"m3.2xlarge"|"m4.large"|"m4.xlarge"|"m4.2xlarge"|"m4.4xlarge"|"m4.10xlarge"|"m4.16xlarge"|"m2.xlarge"|"m2.2xlarge"|"m2.4xlarge"|"cr1.8xlarge"|"r3.large"|"r3.xlarge"|"r3.2xlarge"|"r3.4xlarge"|"r3.8xlarge"|"r4.large"|"r4.xlarge"|"r4.2xlarge"|"r4.4xlarge"|"r4.8xlarge"|"r4.16xlarge"|"r5.large"|"r5.xlarge"|"r5.2xlarge"|"r5.4xlarge"|"r5.8xlarge"|"r5.12xlarge"|"r5.16xlarge"|"r5.24xlarge"|"r5.metal"|"r5a.large"|"r5a.xlarge"|"r5a.2xlarge"|"r5a.4xlarge"|"r5a.8xlarge"|"r5a.12xlarge"|"r5a.16xlarge"|"r5a.24xlarge"|"r5d.large"|"r5d.xlarge"|"r5d.2xlarge"|"r5d.4xlarge"|"r5d.8xlarge"|"r5d.12xlarge"|"r5d.16xlarge"|"r5d.24xlarge"|"r5d.metal"|"r5ad.large"|"r5ad.xlarge"|"r5ad.2xlarge"|"r5ad.4xlarge"|"r5ad.8xlarge"|"r5ad.12xlarge"|"r5ad.16xlarge"|"r5ad.24xlarge"|"x1.16xlarge"|"x1.32xlarge"|"x1e.xlarge"|"x1e.2xlarge"|"x1e.4xlarge"|"x1e.8xlarge"|"x1e.16xlarge"|"x1e.32xlarge"|"i2.xlarge"|"i2.2xlarge"|"i2.4xlarge"|"i2.8xlarge"|"i3.large"|"i3.xlarge"|"i3.2xlarge"|"i3.4xlarge"|"i3.8xlarge"|"i3.16xlarge"|"i3.metal"|"i3en.large"|"i3en.xlarge"|"i3en.2xlarge"|"i3en.3xlarge"|"i3en.6xlarge"|"i3en.12xlarge"|"i3en.24xlarge"|"i3en.metal"|"hi1.4xlarge"|"hs1.8xlarge"|"c1.medium"|"c1.xlarge"|"c3.large"|"c3.xlarge"|"c3.2xlarge"|"c3.4xlarge"|"c3.8xlarge"|"c4.large"|"c4.xlarge"|"c4.2xlarge"|"c4.4xlarge"|"c4.8xlarge"|"c5.large"|"c5.xlarge"|"c5.2xlarge"|"c5.4xlarge"|"c5.9xlarge"|"c5.12xlarge"|"c5.18xlarge"|"c5.24xlarge"|"c5.metal"|"c5d.large"|"c5d.xlarge"|"c5d.2xlarge"|"c5d.4xlarge"|"c5d.9xlarge"|"c5d.18xlarge"|"c5n.large"|"c5n.xlarge"|"c5n.2xlarge"|"c5n.4xlarge"|"c5n.9xlarge"|"c5n.18xlarge"|"cc1.4xlarge"|"cc2.8xlarge"|"g2.2xlarge"|"g2.8xlarge"|"g3.4xlarge"|"g3.8xlarge"|"g3.16xlarge"|"g3s.xlarge"|"cg1.4xlarge"|"p2.xlarge"|"p2.8xlarge"|"p2.16xlarge"|"p3.2xlarge"|"p3.8xlarge"|"p3.16xlarge"|"p3dn.24xlarge"|"d2.xlarge"|"d2.2xlarge"|"d2.4xlarge"|"d2.8xlarge"|"f1.2xlarge"|"f1.4xlarge"|"f1.16xlarge"|"m5.large"|"m5.xlarge"|"m5.2xlarge"|"m5.4xlarge"|"m5.8xlarge"|"m5.12xlarge"|"m5.16xlarge"|"m5.24xlarge"|"m5.metal"|"m5a.large"|"m5a.xlarge"|"m5a.2xlarge"|"m5a.4xlarge"|"m5a.8xlarge"|"m5a.12xlarge"|"m5a.16xlarge"|"m5a.24xlarge"|"m5d.large"|"m5d.xlarge"|"m5d.2xlarge"|"m5d.4xlarge"|"m5d.8xlarge"|"m5d.12xlarge"|"m5d.16xlarge"|"m5d.24xlarge"|"m5d.metal"|"m5ad.large"|"m5ad.xlarge"|"m5ad.2xlarge"|"m5ad.4xlarge"|"m5ad.8xlarge"|"m5ad.12xlarge"|"m5ad.16xlarge"|"m5ad.24xlarge"|"h1.2xlarge"|"h1.4xlarge"|"h1.8xlarge"|"h1.16xlarge"|"z1d.large"|"z1d.xlarge"|"z1d.2xlarge"|"z1d.3xlarge"|"z1d.6xlarge"|"z1d.12xlarge"|"z1d.metal"|"u-6tb1.metal"|"u-9tb1.metal"|"u-12tb1.metal"|"a1.medium"|"a1.large"|"a1.xlarge"|"a1.2xlarge"|"a1.4xlarge";
   export type InstanceTypeList = InstanceType[];
   export interface InstanceUsage {
     /**
@@ -13338,7 +13338,7 @@ declare namespace EC2 {
   }
   export type InstanceUsageSet = InstanceUsage[];
   export type Integer = number;
-  export type InterfacePermissionType = "INSTANCE-ATTACH"|"EIP-ASSOCIATE"|string;
+  export type InterfacePermissionType = "INSTANCE-ATTACH"|"EIP-ASSOCIATE";
   export interface InternetGateway {
     /**
      * Any VPCs attached to the internet gateway.
@@ -13432,7 +13432,7 @@ declare namespace EC2 {
     Description?: String;
   }
   export type Ipv6RangeList = Ipv6Range[];
-  export type Ipv6SupportValue = "enable"|"disable"|string;
+  export type Ipv6SupportValue = "enable"|"disable";
   export type KeyNameStringList = String[];
   export interface KeyPair {
     /**
@@ -13743,7 +13743,7 @@ declare namespace EC2 {
     Type?: String;
   }
   export type LaunchTemplateElasticInferenceAcceleratorResponseList = LaunchTemplateElasticInferenceAcceleratorResponse[];
-  export type LaunchTemplateErrorCode = "launchTemplateIdDoesNotExist"|"launchTemplateIdMalformed"|"launchTemplateNameDoesNotExist"|"launchTemplateNameMalformed"|"launchTemplateVersionDoesNotExist"|"unexpectedError"|string;
+  export type LaunchTemplateErrorCode = "launchTemplateIdDoesNotExist"|"launchTemplateIdMalformed"|"launchTemplateNameDoesNotExist"|"launchTemplateNameMalformed"|"launchTemplateVersionDoesNotExist"|"unexpectedError";
   export interface LaunchTemplateHibernationOptions {
     /**
      * If this parameter is set to true, the instance is enabled for hibernation; otherwise, it is not enabled for hibernation.
@@ -14143,8 +14143,8 @@ declare namespace EC2 {
   }
   export type LicenseList = LicenseConfiguration[];
   export type LicenseSpecificationListRequest = LicenseConfigurationRequest[];
-  export type ListingState = "available"|"sold"|"cancelled"|"pending"|string;
-  export type ListingStatus = "active"|"pending"|"cancelled"|"closed"|string;
+  export type ListingState = "available"|"sold"|"cancelled"|"pending";
+  export type ListingStatus = "active"|"pending"|"cancelled"|"closed";
   export interface LoadBalancersConfig {
     /**
      * The Classic Load Balancers.
@@ -14187,9 +14187,9 @@ declare namespace EC2 {
      */
     UserId?: String;
   }
-  export type LogDestinationType = "cloud-watch-logs"|"s3"|string;
+  export type LogDestinationType = "cloud-watch-logs"|"s3";
   export type Long = number;
-  export type MarketType = "spot"|string;
+  export type MarketType = "spot";
   export type MillisecondDateTime = Date;
   export interface ModifyCapacityReservationRequest {
     /**
@@ -15196,7 +15196,7 @@ declare namespace EC2 {
      */
     State?: MonitoringState;
   }
-  export type MonitoringState = "disabled"|"disabling"|"enabled"|"pending"|string;
+  export type MonitoringState = "disabled"|"disabling"|"enabled"|"pending";
   export interface MoveAddressToVpcRequest {
     /**
      * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
@@ -15217,7 +15217,7 @@ declare namespace EC2 {
      */
     Status?: Status;
   }
-  export type MoveStatus = "movingToVpc"|"restoringToClassic"|string;
+  export type MoveStatus = "movingToVpc"|"restoringToClassic";
   export interface MovingAddressStatus {
     /**
      * The status of the Elastic IP address that's being moved to the EC2-VPC platform, or restored to the EC2-Classic platform.
@@ -15295,7 +15295,7 @@ declare namespace EC2 {
   }
   export type NatGatewayAddressList = NatGatewayAddress[];
   export type NatGatewayList = NatGateway[];
-  export type NatGatewayState = "pending"|"failed"|"available"|"deleting"|"deleted"|string;
+  export type NatGatewayState = "pending"|"failed"|"available"|"deleting"|"deleted";
   export interface NetworkAcl {
     /**
      * Any associations between the network ACL and one or more subnets
@@ -15521,8 +15521,8 @@ declare namespace EC2 {
      */
     DeleteOnTermination?: Boolean;
   }
-  export type NetworkInterfaceAttribute = "description"|"groupSet"|"sourceDestCheck"|"attachment"|string;
-  export type NetworkInterfaceCreationType = "efa"|string;
+  export type NetworkInterfaceAttribute = "description"|"groupSet"|"sourceDestCheck"|"attachment";
+  export type NetworkInterfaceCreationType = "efa";
   export type NetworkInterfaceIdList = String[];
   export interface NetworkInterfaceIpv6Address {
     /**
@@ -15570,7 +15570,7 @@ declare namespace EC2 {
      */
     StatusMessage?: String;
   }
-  export type NetworkInterfacePermissionStateCode = "pending"|"granted"|"revoking"|"revoked"|string;
+  export type NetworkInterfacePermissionStateCode = "pending"|"granted"|"revoking"|"revoked";
   export interface NetworkInterfacePrivateIpAddress {
     /**
      * The association information for an Elastic IP address (IPv4) associated with the network interface.
@@ -15590,8 +15590,8 @@ declare namespace EC2 {
     PrivateIpAddress?: String;
   }
   export type NetworkInterfacePrivateIpAddressList = NetworkInterfacePrivateIpAddress[];
-  export type NetworkInterfaceStatus = "available"|"associated"|"attaching"|"in-use"|"detaching"|string;
-  export type NetworkInterfaceType = "interface"|"natGateway"|"efa"|string;
+  export type NetworkInterfaceStatus = "available"|"associated"|"attaching"|"in-use"|"detaching";
+  export type NetworkInterfaceType = "interface"|"natGateway"|"efa";
   export interface NewDhcpConfiguration {
     Key?: String;
     Values?: ValueStringList;
@@ -15600,9 +15600,9 @@ declare namespace EC2 {
   export type NextToken = string;
   export type OccurrenceDayRequestSet = Integer[];
   export type OccurrenceDaySet = Integer[];
-  export type OfferingClassType = "standard"|"convertible"|string;
-  export type OfferingTypeValues = "Heavy Utilization"|"Medium Utilization"|"Light Utilization"|"No Upfront"|"Partial Upfront"|"All Upfront"|string;
-  export type OnDemandAllocationStrategy = "lowestPrice"|"prioritized"|string;
+  export type OfferingClassType = "standard"|"convertible";
+  export type OfferingTypeValues = "Heavy Utilization"|"Medium Utilization"|"Light Utilization"|"No Upfront"|"Partial Upfront"|"All Upfront";
+  export type OnDemandAllocationStrategy = "lowestPrice"|"prioritized";
   export interface OnDemandOptions {
     /**
      * The order of the launch template overrides to use in fulfilling On-Demand capacity. If you specify lowest-price, EC2 Fleet uses price to determine the order, launching the lowest price first. If you specify prioritized, EC2 Fleet uses the priority that you assigned to each launch template override, launching the highest priority first. If you do not specify a value, EC2 Fleet defaults to lowest-price.
@@ -15647,9 +15647,9 @@ declare namespace EC2 {
      */
     MaxTotalPrice?: String;
   }
-  export type OperationType = "add"|"remove"|string;
+  export type OperationType = "add"|"remove";
   export type OwnerStringList = String[];
-  export type PaymentOption = "AllUpfront"|"PartialUpfront"|"NoUpfront"|string;
+  export type PaymentOption = "AllUpfront"|"PartialUpfront"|"NoUpfront";
   export interface PciId {
     /**
      * The ID of the device.
@@ -15696,7 +15696,7 @@ declare namespace EC2 {
      */
     AllowEgressFromLocalVpcToRemoteClassicLink?: Boolean;
   }
-  export type PermissionGroup = "all"|string;
+  export type PermissionGroup = "all";
   export interface Placement {
     /**
      * The Availability Zone of the instance. If not specified, an Availability Zone will be automatically chosen for you based on the load balancing criteria for the Region.
@@ -15746,7 +15746,7 @@ declare namespace EC2 {
     PartitionCount?: Integer;
   }
   export type PlacementGroupList = PlacementGroup[];
-  export type PlacementGroupState = "pending"|"available"|"deleting"|"deleted"|string;
+  export type PlacementGroupState = "pending"|"available"|"deleting"|"deleted";
   export type PlacementGroupStringList = String[];
   export interface PlacementResponse {
     /**
@@ -15754,8 +15754,8 @@ declare namespace EC2 {
      */
     GroupName?: String;
   }
-  export type PlacementStrategy = "cluster"|"spread"|"partition"|string;
-  export type PlatformValues = "Windows"|string;
+  export type PlacementStrategy = "cluster"|"spread"|"partition";
+  export type PlatformValues = "Windows";
   export type PoolMaxResults = number;
   export interface PortRange {
     /**
@@ -15850,7 +15850,7 @@ declare namespace EC2 {
     Statuses?: IdFormatList;
   }
   export type PrincipalIdFormatList = PrincipalIdFormat[];
-  export type PrincipalType = "All"|"Service"|"OrganizationUnit"|"Account"|"User"|"Role"|string;
+  export type PrincipalType = "All"|"Service"|"OrganizationUnit"|"Account"|"User"|"Role";
   export type PrivateIpAddressConfigSet = ScheduledInstancesPrivateIpAddressConfig[];
   export interface PrivateIpAddressSpecification {
     /**
@@ -15876,7 +15876,7 @@ declare namespace EC2 {
   }
   export type ProductCodeList = ProductCode[];
   export type ProductCodeStringList = String[];
-  export type ProductCodeValues = "devpay"|"marketplace"|string;
+  export type ProductCodeValues = "devpay"|"marketplace";
   export type ProductDescriptionList = String[];
   export interface PropagatingVgw {
     /**
@@ -16109,7 +16109,7 @@ declare namespace EC2 {
   }
   export type PurchaseSet = Purchase[];
   export type PurchasedScheduledInstanceSet = ScheduledInstance[];
-  export type RIProductDescription = "Linux/UNIX"|"Linux/UNIX (Amazon VPC)"|"Windows"|"Windows (Amazon VPC)"|string;
+  export type RIProductDescription = "Linux/UNIX"|"Linux/UNIX (Amazon VPC)"|"Windows"|"Windows (Amazon VPC)";
   export type ReasonCodesList = ReportInstanceReasonCodes[];
   export interface RebootInstancesRequest {
     /**
@@ -16131,7 +16131,7 @@ declare namespace EC2 {
      */
     Frequency?: RecurringChargeFrequency;
   }
-  export type RecurringChargeFrequency = "Hourly"|string;
+  export type RecurringChargeFrequency = "Hourly";
   export type RecurringChargesList = RecurringCharge[];
   export interface Region {
     /**
@@ -16463,7 +16463,7 @@ declare namespace EC2 {
      */
     Route?: TransitGatewayRoute;
   }
-  export type ReportInstanceReasonCodes = "instance-stuck-in-state"|"unresponsive"|"not-accepting-credentials"|"password-not-available"|"performance-network"|"performance-instance-store"|"performance-ebs-volume"|"performance-other"|"other"|string;
+  export type ReportInstanceReasonCodes = "instance-stuck-in-state"|"unresponsive"|"not-accepting-credentials"|"password-not-available"|"performance-network"|"performance-instance-store"|"performance-ebs-volume"|"performance-other"|"other";
   export interface ReportInstanceStatusRequest {
     /**
      * Descriptive text about the health state of your instance.
@@ -16494,7 +16494,7 @@ declare namespace EC2 {
      */
     Status: ReportStatusType;
   }
-  export type ReportStatusType = "ok"|"impaired"|string;
+  export type ReportStatusType = "ok"|"impaired";
   export type RequestHostIdList = String[];
   export type RequestHostIdSet = String[];
   export interface RequestLaunchTemplateData {
@@ -16760,7 +16760,7 @@ declare namespace EC2 {
     ReservationId?: String;
   }
   export type ReservationList = Reservation[];
-  export type ReservationState = "payment-pending"|"payment-failed"|"active"|"retired"|string;
+  export type ReservationState = "payment-pending"|"payment-failed"|"active"|"retired";
   export interface ReservationValue {
     /**
      * The hourly rate of the reservation.
@@ -16797,7 +16797,7 @@ declare namespace EC2 {
     ReservedInstanceId?: String;
   }
   export type ReservedInstanceReservationValueSet = ReservedInstanceReservationValue[];
-  export type ReservedInstanceState = "payment-pending"|"active"|"payment-failed"|"retired"|string;
+  export type ReservedInstanceState = "payment-pending"|"active"|"payment-failed"|"retired";
   export interface ReservedInstances {
     /**
      * The Availability Zone in which the Reserved Instance can be used.
@@ -17074,7 +17074,7 @@ declare namespace EC2 {
      */
     KmsKeyId?: String;
   }
-  export type ResetFpgaImageAttributeName = "loadPermission"|string;
+  export type ResetFpgaImageAttributeName = "loadPermission";
   export interface ResetFpgaImageAttributeRequest {
     /**
      * Checks whether you have the required permissions for the action, without actually making the request, and provides an error response. If you have the required permissions, the error response is DryRunOperation. Otherwise, it is UnauthorizedOperation.
@@ -17095,7 +17095,7 @@ declare namespace EC2 {
      */
     Return?: Boolean;
   }
-  export type ResetImageAttributeName = "launchPermission"|string;
+  export type ResetImageAttributeName = "launchPermission";
   export interface ResetImageAttributeRequest {
     /**
      * The attribute to reset (currently you can only reset the launch permission attribute).
@@ -17154,7 +17154,7 @@ declare namespace EC2 {
   }
   export type ResourceIdList = String[];
   export type ResourceList = String[];
-  export type ResourceType = "client-vpn-endpoint"|"customer-gateway"|"dedicated-host"|"dhcp-options"|"elastic-ip"|"fleet"|"fpga-image"|"host-reservation"|"image"|"instance"|"internet-gateway"|"launch-template"|"natgateway"|"network-acl"|"network-interface"|"reserved-instances"|"route-table"|"security-group"|"snapshot"|"spot-instances-request"|"subnet"|"traffic-mirror-filter"|"traffic-mirror-session"|"traffic-mirror-target"|"transit-gateway"|"transit-gateway-attachment"|"transit-gateway-route-table"|"volume"|"vpc"|"vpc-peering-connection"|"vpn-connection"|"vpn-gateway"|string;
+  export type ResourceType = "client-vpn-endpoint"|"customer-gateway"|"dedicated-host"|"dhcp-options"|"elastic-ip"|"fleet"|"fpga-image"|"host-reservation"|"image"|"instance"|"internet-gateway"|"launch-template"|"natgateway"|"network-acl"|"network-interface"|"reserved-instances"|"route-table"|"security-group"|"snapshot"|"spot-instances-request"|"subnet"|"traffic-mirror-filter"|"traffic-mirror-session"|"traffic-mirror-target"|"transit-gateway"|"transit-gateway-attachment"|"transit-gateway-route-table"|"volume"|"vpc"|"vpc-peering-connection"|"vpn-connection"|"vpn-gateway";
   export interface ResponseError {
     /**
      * The error code.
@@ -17453,8 +17453,8 @@ declare namespace EC2 {
     VpcPeeringConnectionId?: String;
   }
   export type RouteList = Route[];
-  export type RouteOrigin = "CreateRouteTable"|"CreateRoute"|"EnableVgwRoutePropagation"|string;
-  export type RouteState = "active"|"blackhole"|string;
+  export type RouteOrigin = "CreateRouteTable"|"CreateRoute"|"EnableVgwRoutePropagation";
+  export type RouteState = "active"|"blackhole";
   export interface RouteTable {
     /**
      * The associations between the route table and one or more subnets.
@@ -17505,7 +17505,7 @@ declare namespace EC2 {
   }
   export type RouteTableAssociationList = RouteTableAssociation[];
   export type RouteTableList = RouteTable[];
-  export type RuleAction = "allow"|"deny"|string;
+  export type RuleAction = "allow"|"deny";
   export interface RunInstancesMonitoringEnabled {
     /**
      * Indicates whether detailed monitoring is enabled. Otherwise, basic monitoring is enabled.
@@ -18259,8 +18259,8 @@ declare namespace EC2 {
     Tags?: TagList;
   }
   export type ServiceDetailSet = ServiceDetail[];
-  export type ServiceState = "Pending"|"Available"|"Deleting"|"Deleted"|"Failed"|string;
-  export type ServiceType = "Interface"|"Gateway"|string;
+  export type ServiceState = "Pending"|"Available"|"Deleting"|"Deleted"|"Failed";
+  export type ServiceType = "Interface"|"Gateway";
   export interface ServiceTypeDetail {
     /**
      * The type of service.
@@ -18268,7 +18268,7 @@ declare namespace EC2 {
     ServiceType?: ServiceType;
   }
   export type ServiceTypeDetailSet = ServiceTypeDetail[];
-  export type ShutdownBehavior = "stop"|"terminate"|string;
+  export type ShutdownBehavior = "stop"|"terminate";
   export interface SlotDateTimeRangeRequest {
     /**
      * The earliest date and time, in UTC, for the Scheduled Instance to start.
@@ -18347,7 +18347,7 @@ declare namespace EC2 {
      */
     Tags?: TagList;
   }
-  export type SnapshotAttributeName = "productCodes"|"createVolumePermission"|string;
+  export type SnapshotAttributeName = "productCodes"|"createVolumePermission";
   export interface SnapshotDetail {
     /**
      * A description for the snapshot.
@@ -18454,7 +18454,7 @@ declare namespace EC2 {
   }
   export type SnapshotList = Snapshot[];
   export type SnapshotSet = SnapshotInfo[];
-  export type SnapshotState = "pending"|"completed"|"error"|string;
+  export type SnapshotState = "pending"|"completed"|"error";
   export interface SnapshotTaskDetail {
     /**
      * The description of the snapshot.
@@ -18501,7 +18501,7 @@ declare namespace EC2 {
      */
     UserBucket?: UserBucketDetails;
   }
-  export type SpotAllocationStrategy = "lowest-price"|"diversified"|"capacity-optimized"|string;
+  export type SpotAllocationStrategy = "lowest-price"|"diversified"|"capacity-optimized";
   export interface SpotDatafeedSubscription {
     /**
      * The Amazon S3 bucket where the Spot Instance data feed is located.
@@ -18728,7 +18728,7 @@ declare namespace EC2 {
     Tags?: TagList;
   }
   export type SpotFleetTagSpecificationList = SpotFleetTagSpecification[];
-  export type SpotInstanceInterruptionBehavior = "hibernate"|"stop"|"terminate"|string;
+  export type SpotInstanceInterruptionBehavior = "hibernate"|"stop"|"terminate";
   export interface SpotInstanceRequest {
     /**
      * If you specified a duration and your Spot Instance request was fulfilled, this is the fixed hourly price in effect for the Spot Instance while it runs.
@@ -18809,7 +18809,7 @@ declare namespace EC2 {
   }
   export type SpotInstanceRequestIdList = String[];
   export type SpotInstanceRequestList = SpotInstanceRequest[];
-  export type SpotInstanceState = "open"|"active"|"closed"|"cancelled"|"failed"|string;
+  export type SpotInstanceState = "open"|"active"|"closed"|"cancelled"|"failed";
   export interface SpotInstanceStateFault {
     /**
      * The reason code for the Spot Instance state change.
@@ -18834,7 +18834,7 @@ declare namespace EC2 {
      */
     UpdateTime?: DateTime;
   }
-  export type SpotInstanceType = "one-time"|"persistent"|string;
+  export type SpotInstanceType = "one-time"|"persistent";
   export interface SpotMarketOptions {
     /**
      * The maximum hourly price you're willing to pay for the Spot Instances. The default is the On-Demand price.
@@ -19028,7 +19028,7 @@ declare namespace EC2 {
      */
     StartingInstances?: InstanceStateChangeList;
   }
-  export type State = "PendingAcceptance"|"Pending"|"Available"|"Deleting"|"Deleted"|"Rejected"|"Failed"|"Expired"|string;
+  export type State = "PendingAcceptance"|"Pending"|"Available"|"Deleting"|"Deleted"|"Rejected"|"Failed"|"Expired";
   export interface StateReason {
     /**
      * The reason code for the state change.
@@ -19039,9 +19039,9 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type Status = "MoveInProgress"|"InVpc"|"InClassic"|string;
-  export type StatusName = "reachability"|string;
-  export type StatusType = "passed"|"failed"|"insufficient-data"|"initializing"|string;
+  export type Status = "MoveInProgress"|"InVpc"|"InClassic";
+  export type StatusName = "reachability";
+  export type StatusType = "passed"|"failed"|"insufficient-data"|"initializing";
   export interface StopInstancesRequest {
     /**
      * The IDs of the instances.
@@ -19151,7 +19151,7 @@ declare namespace EC2 {
      */
     StatusMessage?: String;
   }
-  export type SubnetCidrBlockStateCode = "associating"|"associated"|"disassociating"|"disassociated"|"failing"|"failed"|string;
+  export type SubnetCidrBlockStateCode = "associating"|"associated"|"disassociating"|"disassociated"|"failing"|"failed";
   export type SubnetIdStringList = String[];
   export interface SubnetIpv6CidrBlockAssociation {
     /**
@@ -19169,7 +19169,7 @@ declare namespace EC2 {
   }
   export type SubnetIpv6CidrBlockAssociationSet = SubnetIpv6CidrBlockAssociation[];
   export type SubnetList = Subnet[];
-  export type SubnetState = "pending"|"available"|string;
+  export type SubnetState = "pending"|"available";
   export interface SuccessfulInstanceCreditSpecificationItem {
     /**
      * The ID of the instance.
@@ -19177,7 +19177,7 @@ declare namespace EC2 {
     InstanceId?: String;
   }
   export type SuccessfulInstanceCreditSpecificationSet = SuccessfulInstanceCreditSpecificationItem[];
-  export type SummaryStatus = "ok"|"impaired"|"insufficient-data"|"not-applicable"|"initializing"|string;
+  export type SummaryStatus = "ok"|"impaired"|"insufficient-data"|"not-applicable"|"initializing";
   export interface Tag {
     /**
      * The key of the tag. Constraints: Tag keys are case-sensitive and accept a maximum of 127 Unicode characters. May not begin with aws:.
@@ -19327,8 +19327,8 @@ declare namespace EC2 {
     TargetConfiguration?: TargetConfiguration;
   }
   export type TargetReservationValueSet = TargetReservationValue[];
-  export type TelemetryStatus = "UP"|"DOWN"|string;
-  export type Tenancy = "default"|"dedicated"|"host"|string;
+  export type TelemetryStatus = "UP"|"DOWN";
+  export type Tenancy = "default"|"dedicated"|"host";
   export interface TerminateClientVpnConnectionsRequest {
     /**
      * The ID of the Client VPN endpoint to which the client is connected.
@@ -19392,7 +19392,7 @@ declare namespace EC2 {
      */
     TerminatingInstances?: InstanceStateChangeList;
   }
-  export type TrafficDirection = "ingress"|"egress"|string;
+  export type TrafficDirection = "ingress"|"egress";
   export interface TrafficMirrorFilter {
     /**
      * The ID of the Traffic Mirror filter.
@@ -19465,11 +19465,11 @@ declare namespace EC2 {
      */
     Description?: String;
   }
-  export type TrafficMirrorFilterRuleField = "destination-port-range"|"source-port-range"|"protocol"|"description"|string;
+  export type TrafficMirrorFilterRuleField = "destination-port-range"|"source-port-range"|"protocol"|"description";
   export type TrafficMirrorFilterRuleFieldList = TrafficMirrorFilterRuleField[];
   export type TrafficMirrorFilterRuleList = TrafficMirrorFilterRule[];
   export type TrafficMirrorFilterSet = TrafficMirrorFilter[];
-  export type TrafficMirrorNetworkService = "amazon-dns"|string;
+  export type TrafficMirrorNetworkService = "amazon-dns";
   export type TrafficMirrorNetworkServiceList = TrafficMirrorNetworkService[];
   export interface TrafficMirrorPortRange {
     /**
@@ -19491,7 +19491,7 @@ declare namespace EC2 {
      */
     ToPort?: Integer;
   }
-  export type TrafficMirrorRuleAction = "accept"|"reject"|string;
+  export type TrafficMirrorRuleAction = "accept"|"reject";
   export interface TrafficMirrorSession {
     /**
      * The ID for the Traffic Mirror session.
@@ -19534,7 +19534,7 @@ declare namespace EC2 {
      */
     Tags?: TagList;
   }
-  export type TrafficMirrorSessionField = "packet-length"|"description"|"virtual-network-id"|string;
+  export type TrafficMirrorSessionField = "packet-length"|"description"|"virtual-network-id";
   export type TrafficMirrorSessionFieldList = TrafficMirrorSessionField[];
   export type TrafficMirrorSessionSet = TrafficMirrorSession[];
   export interface TrafficMirrorTarget {
@@ -19568,9 +19568,9 @@ declare namespace EC2 {
     Tags?: TagList;
   }
   export type TrafficMirrorTargetSet = TrafficMirrorTarget[];
-  export type TrafficMirrorTargetType = "network-interface"|"network-load-balancer"|string;
+  export type TrafficMirrorTargetType = "network-interface"|"network-load-balancer";
   export type TrafficMirroringMaxResults = number;
-  export type TrafficType = "ACCEPT"|"REJECT"|"ALL"|string;
+  export type TrafficType = "ACCEPT"|"REJECT"|"ALL";
   export interface TransitGateway {
     /**
      * The ID of the transit gateway.
@@ -19627,7 +19627,7 @@ declare namespace EC2 {
      */
     State?: TransitGatewayAssociationState;
   }
-  export type TransitGatewayAssociationState = "associating"|"associated"|"disassociating"|"disassociated"|string;
+  export type TransitGatewayAssociationState = "associating"|"associated"|"disassociating"|"disassociated";
   export interface TransitGatewayAttachment {
     /**
      * The ID of the attachment.
@@ -19693,8 +19693,8 @@ declare namespace EC2 {
     State?: TransitGatewayPropagationState;
   }
   export type TransitGatewayAttachmentPropagationList = TransitGatewayAttachmentPropagation[];
-  export type TransitGatewayAttachmentResourceType = "vpc"|"vpn"|"direct-connect-gateway"|string;
-  export type TransitGatewayAttachmentState = "pendingAcceptance"|"rollingBack"|"pending"|"available"|"modifying"|"deleting"|"deleted"|"failed"|"rejected"|"rejecting"|"failing"|string;
+  export type TransitGatewayAttachmentResourceType = "vpc"|"vpn"|"direct-connect-gateway";
+  export type TransitGatewayAttachmentState = "pendingAcceptance"|"rollingBack"|"pending"|"available"|"modifying"|"deleting"|"deleted"|"failed"|"rejected"|"rejecting"|"failing";
   export type TransitGatewayIdStringList = String[];
   export type TransitGatewayList = TransitGateway[];
   export type TransitGatewayMaxResults = number;
@@ -19754,7 +19754,7 @@ declare namespace EC2 {
      */
     State?: TransitGatewayPropagationState;
   }
-  export type TransitGatewayPropagationState = "enabling"|"enabled"|"disabling"|"disabled"|string;
+  export type TransitGatewayPropagationState = "enabling"|"enabled"|"disabling"|"disabled";
   export interface TransitGatewayRequestOptions {
     /**
      * A private Autonomous System Number (ASN) for the Amazon side of a BGP session. The range is 64512 to 65534 for 16-bit ASNs and 4200000000 to 4294967294 for 32-bit ASNs.
@@ -19815,7 +19815,7 @@ declare namespace EC2 {
   }
   export type TransitGatewayRouteAttachmentList = TransitGatewayRouteAttachment[];
   export type TransitGatewayRouteList = TransitGatewayRoute[];
-  export type TransitGatewayRouteState = "pending"|"active"|"blackhole"|"deleting"|"deleted"|string;
+  export type TransitGatewayRouteState = "pending"|"active"|"blackhole"|"deleting"|"deleted";
   export interface TransitGatewayRouteTable {
     /**
      * The ID of the transit gateway route table.
@@ -19886,9 +19886,9 @@ declare namespace EC2 {
     State?: TransitGatewayPropagationState;
   }
   export type TransitGatewayRouteTablePropagationList = TransitGatewayRouteTablePropagation[];
-  export type TransitGatewayRouteTableState = "pending"|"available"|"deleting"|"deleted"|string;
-  export type TransitGatewayRouteType = "static"|"propagated"|string;
-  export type TransitGatewayState = "pending"|"available"|"modifying"|"deleting"|"deleted"|string;
+  export type TransitGatewayRouteTableState = "pending"|"available"|"deleting"|"deleted";
+  export type TransitGatewayRouteType = "static"|"propagated";
+  export type TransitGatewayState = "pending"|"available"|"modifying"|"deleting"|"deleted";
   export interface TransitGatewayVpcAttachment {
     /**
      * The ID of the attachment.
@@ -19938,7 +19938,7 @@ declare namespace EC2 {
      */
     Ipv6Support?: Ipv6SupportValue;
   }
-  export type TransportProtocol = "tcp"|"udp"|string;
+  export type TransportProtocol = "tcp"|"udp";
   export type TunnelOptionsList = VpnTunnelOptionsSpecification[];
   export interface UnassignIpv6AddressesRequest {
     /**
@@ -19986,7 +19986,7 @@ declare namespace EC2 {
      */
     InstanceMonitorings?: InstanceMonitoringList;
   }
-  export type UnsuccessfulInstanceCreditSpecificationErrorCode = "InvalidInstanceID.Malformed"|"InvalidInstanceID.NotFound"|"IncorrectInstanceState"|"InstanceCreditSpecification.NotSupported"|string;
+  export type UnsuccessfulInstanceCreditSpecificationErrorCode = "InvalidInstanceID.Malformed"|"InvalidInstanceID.NotFound"|"IncorrectInstanceState"|"InstanceCreditSpecification.NotSupported";
   export interface UnsuccessfulInstanceCreditSpecificationItem {
     /**
      * The ID of the instance.
@@ -20168,7 +20168,7 @@ declare namespace EC2 {
     CertificateArn?: String;
   }
   export type VgwTelemetryList = VgwTelemetry[];
-  export type VirtualizationType = "hvm"|"paravirtual"|string;
+  export type VirtualizationType = "hvm"|"paravirtual";
   export interface Volume {
     /**
      * Information about the volume attachments.
@@ -20246,8 +20246,8 @@ declare namespace EC2 {
     DeleteOnTermination?: Boolean;
   }
   export type VolumeAttachmentList = VolumeAttachment[];
-  export type VolumeAttachmentState = "attaching"|"attached"|"detaching"|"detached"|"busy"|string;
-  export type VolumeAttributeName = "autoEnableIO"|"productCodes"|string;
+  export type VolumeAttachmentState = "attaching"|"attached"|"detaching"|"detached"|"busy";
+  export type VolumeAttributeName = "autoEnableIO"|"productCodes";
   export interface VolumeDetail {
     /**
      * The size of the volume, in GiB.
@@ -20307,8 +20307,8 @@ declare namespace EC2 {
     EndTime?: DateTime;
   }
   export type VolumeModificationList = VolumeModification[];
-  export type VolumeModificationState = "modifying"|"optimizing"|"completed"|"failed"|string;
-  export type VolumeState = "creating"|"available"|"in-use"|"deleting"|"deleted"|"error"|string;
+  export type VolumeModificationState = "modifying"|"optimizing"|"completed"|"failed";
+  export type VolumeState = "creating"|"available"|"in-use"|"deleting"|"deleted"|"error";
   export interface VolumeStatusAction {
     /**
      * The code identifying the operation, for example, enable-volume-io.
@@ -20372,7 +20372,7 @@ declare namespace EC2 {
      */
     Status?: VolumeStatusInfoStatus;
   }
-  export type VolumeStatusInfoStatus = "ok"|"impaired"|"insufficient-data"|string;
+  export type VolumeStatusInfoStatus = "ok"|"impaired"|"insufficient-data";
   export interface VolumeStatusItem {
     /**
      * The details of the operation.
@@ -20396,8 +20396,8 @@ declare namespace EC2 {
     VolumeStatus?: VolumeStatusInfo;
   }
   export type VolumeStatusList = VolumeStatusItem[];
-  export type VolumeStatusName = "io-enabled"|"io-performance"|string;
-  export type VolumeType = "standard"|"io1"|"gp2"|"sc1"|"st1"|string;
+  export type VolumeStatusName = "io-enabled"|"io-performance";
+  export type VolumeType = "standard"|"io1"|"gp2"|"sc1"|"st1";
   export interface Vpc {
     /**
      * The primary IPv4 CIDR block for the VPC.
@@ -20451,7 +20451,7 @@ declare namespace EC2 {
     VpcId?: String;
   }
   export type VpcAttachmentList = VpcAttachment[];
-  export type VpcAttributeName = "enableDnsSupport"|"enableDnsHostnames"|string;
+  export type VpcAttributeName = "enableDnsSupport"|"enableDnsHostnames";
   export interface VpcCidrBlockAssociation {
     /**
      * The association ID for the IPv4 CIDR block.
@@ -20477,7 +20477,7 @@ declare namespace EC2 {
      */
     StatusMessage?: String;
   }
-  export type VpcCidrBlockStateCode = "associating"|"associated"|"disassociating"|"disassociated"|"failing"|"failed"|string;
+  export type VpcCidrBlockStateCode = "associating"|"associated"|"disassociating"|"disassociated"|"failing"|"failed";
   export interface VpcClassicLink {
     /**
      * Indicates whether the VPC is enabled for ClassicLink.
@@ -20592,7 +20592,7 @@ declare namespace EC2 {
   }
   export type VpcEndpointConnectionSet = VpcEndpointConnection[];
   export type VpcEndpointSet = VpcEndpoint[];
-  export type VpcEndpointType = "Interface"|"Gateway"|string;
+  export type VpcEndpointType = "Interface"|"Gateway";
   export type VpcIdStringList = String[];
   export interface VpcIpv6CidrBlockAssociation {
     /**
@@ -20661,7 +20661,7 @@ declare namespace EC2 {
      */
     Message?: String;
   }
-  export type VpcPeeringConnectionStateReasonCode = "initiating-request"|"pending-acceptance"|"active"|"deleted"|"rejected"|"failed"|"expired"|"provisioning"|"deleting"|string;
+  export type VpcPeeringConnectionStateReasonCode = "initiating-request"|"pending-acceptance"|"active"|"deleted"|"rejected"|"failed"|"expired"|"provisioning"|"deleting";
   export interface VpcPeeringConnectionVpcInfo {
     /**
      * The IPv4 CIDR block for the VPC.
@@ -20692,8 +20692,8 @@ declare namespace EC2 {
      */
     Region?: String;
   }
-  export type VpcState = "pending"|"available"|string;
-  export type VpcTenancy = "default"|string;
+  export type VpcState = "pending"|"available";
+  export type VpcTenancy = "default";
   export interface VpnConnection {
     /**
      * The configuration information for the VPN connection's customer gateway (in the native XML format). This element is always present in the CreateVpnConnection response; however, it's present in the DescribeVpnConnections response only if the VPN connection is in the pending or available state.
@@ -20762,7 +20762,7 @@ declare namespace EC2 {
      */
     TunnelOptions?: TunnelOptionsList;
   }
-  export type VpnEcmpSupportValue = "enable"|"disable"|string;
+  export type VpnEcmpSupportValue = "enable"|"disable";
   export interface VpnGateway {
     /**
      * The Availability Zone where the virtual private gateway was created, if applicable. This field may be empty or not returned.
@@ -20795,8 +20795,8 @@ declare namespace EC2 {
   }
   export type VpnGatewayIdStringList = String[];
   export type VpnGatewayList = VpnGateway[];
-  export type VpnProtocol = "openvpn"|string;
-  export type VpnState = "pending"|"available"|"deleting"|"deleted"|string;
+  export type VpnProtocol = "openvpn";
+  export type VpnState = "pending"|"available"|"deleting"|"deleted";
   export interface VpnStaticRoute {
     /**
      * The CIDR block associated with the local subnet of the customer data center.
@@ -20812,7 +20812,7 @@ declare namespace EC2 {
     State?: VpnState;
   }
   export type VpnStaticRouteList = VpnStaticRoute[];
-  export type VpnStaticRouteSource = "Static"|string;
+  export type VpnStaticRouteSource = "Static";
   export interface VpnTunnelOptionsSpecification {
     /**
      * The range of inside IP addresses for the tunnel. Any specified CIDR blocks must be unique across all VPN connections that use the same virtual private gateway.  Constraints: A size /30 CIDR block from the 169.254.0.0/16 range. The following CIDR blocks are reserved and cannot be used:    169.254.0.0/30     169.254.1.0/30     169.254.2.0/30     169.254.3.0/30     169.254.4.0/30     169.254.5.0/30     169.254.169.252/30   
@@ -20841,7 +20841,7 @@ declare namespace EC2 {
   }
   export type ZoneIdStringList = String[];
   export type ZoneNameStringList = String[];
-  export type scope = "Availability Zone"|"Region"|string;
+  export type scope = "Availability Zone"|"Region";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

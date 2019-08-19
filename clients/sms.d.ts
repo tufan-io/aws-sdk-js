@@ -241,12 +241,12 @@ declare namespace SMS {
   export type AppDescription = string;
   export type AppId = string;
   export type AppIds = AppId[];
-  export type AppLaunchStatus = "READY_FOR_CONFIGURATION"|"CONFIGURATION_IN_PROGRESS"|"CONFIGURATION_INVALID"|"READY_FOR_LAUNCH"|"VALIDATION_IN_PROGRESS"|"LAUNCH_PENDING"|"LAUNCH_IN_PROGRESS"|"LAUNCHED"|"DELTA_LAUNCH_IN_PROGRESS"|"DELTA_LAUNCH_FAILED"|"LAUNCH_FAILED"|"TERMINATE_IN_PROGRESS"|"TERMINATE_FAILED"|"TERMINATED"|string;
+  export type AppLaunchStatus = "READY_FOR_CONFIGURATION"|"CONFIGURATION_IN_PROGRESS"|"CONFIGURATION_INVALID"|"READY_FOR_LAUNCH"|"VALIDATION_IN_PROGRESS"|"LAUNCH_PENDING"|"LAUNCH_IN_PROGRESS"|"LAUNCHED"|"DELTA_LAUNCH_IN_PROGRESS"|"DELTA_LAUNCH_FAILED"|"LAUNCH_FAILED"|"TERMINATE_IN_PROGRESS"|"TERMINATE_FAILED"|"TERMINATED";
   export type AppLaunchStatusMessage = string;
   export type AppName = string;
-  export type AppReplicationStatus = "READY_FOR_CONFIGURATION"|"CONFIGURATION_IN_PROGRESS"|"CONFIGURATION_INVALID"|"READY_FOR_REPLICATION"|"VALIDATION_IN_PROGRESS"|"REPLICATION_PENDING"|"REPLICATION_IN_PROGRESS"|"REPLICATED"|"DELTA_REPLICATION_IN_PROGRESS"|"DELTA_REPLICATED"|"DELTA_REPLICATION_FAILED"|"REPLICATION_FAILED"|"REPLICATION_STOPPING"|"REPLICATION_STOP_FAILED"|"REPLICATION_STOPPED"|string;
+  export type AppReplicationStatus = "READY_FOR_CONFIGURATION"|"CONFIGURATION_IN_PROGRESS"|"CONFIGURATION_INVALID"|"READY_FOR_REPLICATION"|"VALIDATION_IN_PROGRESS"|"REPLICATION_PENDING"|"REPLICATION_IN_PROGRESS"|"REPLICATED"|"DELTA_REPLICATION_IN_PROGRESS"|"DELTA_REPLICATED"|"DELTA_REPLICATION_FAILED"|"REPLICATION_FAILED"|"REPLICATION_STOPPING"|"REPLICATION_STOP_FAILED"|"REPLICATION_STOPPED";
   export type AppReplicationStatusMessage = string;
-  export type AppStatus = "CREATING"|"ACTIVE"|"UPDATING"|"DELETING"|"DELETED"|"DELETE_FAILED"|string;
+  export type AppStatus = "CREATING"|"ACTIVE"|"UPDATING"|"DELETING"|"DELETED"|"DELETE_FAILED";
   export type AppStatusMessage = string;
   export interface AppSummary {
     /**
@@ -360,11 +360,11 @@ declare namespace SMS {
      */
     associatedOn?: Timestamp;
   }
-  export type ConnectorCapability = "VSPHERE"|"SCVMM"|"HYPERV-MANAGER"|"SNAPSHOT_BATCHING"|string;
+  export type ConnectorCapability = "VSPHERE"|"SCVMM"|"HYPERV-MANAGER"|"SNAPSHOT_BATCHING";
   export type ConnectorCapabilityList = ConnectorCapability[];
   export type ConnectorId = string;
   export type ConnectorList = Connector[];
-  export type ConnectorStatus = "HEALTHY"|"UNHEALTHY"|string;
+  export type ConnectorStatus = "HEALTHY"|"UNHEALTHY";
   export type ConnectorVersion = string;
   export interface CreateAppRequest {
     /**
@@ -731,7 +731,7 @@ declare namespace SMS {
     stackId?: StackId;
   }
   export type LaunchOrder = number;
-  export type LicenseType = "AWS"|"BYOL"|string;
+  export type LicenseType = "AWS"|"BYOL";
   export interface ListAppsRequest {
     /**
      * 
@@ -761,7 +761,7 @@ declare namespace SMS {
   export type MaxResults = number;
   export type NextToken = string;
   export type NumberOfRecentAmisToKeep = number;
-  export type OutputFormat = "JSON"|"YAML"|string;
+  export type OutputFormat = "JSON"|"YAML";
   export interface PutAppLaunchConfigurationRequest {
     /**
      * ID of the application associated with the launch configuration.
@@ -866,7 +866,7 @@ declare namespace SMS {
   }
   export type ReplicationJobId = string;
   export type ReplicationJobList = ReplicationJob[];
-  export type ReplicationJobState = "PENDING"|"ACTIVE"|"FAILED"|"DELETING"|"DELETED"|"COMPLETED"|"PAUSED_ON_FAILURE"|"FAILING"|string;
+  export type ReplicationJobState = "PENDING"|"ACTIVE"|"FAILED"|"DELETING"|"DELETED"|"COMPLETED"|"PAUSED_ON_FAILURE"|"FAILING";
   export type ReplicationJobStatusMessage = string;
   export type ReplicationJobTerminated = boolean;
   export interface ReplicationRun {
@@ -929,9 +929,9 @@ declare namespace SMS {
     stageProgress?: ReplicationRunStageProgress;
   }
   export type ReplicationRunStageProgress = string;
-  export type ReplicationRunState = "PENDING"|"MISSED"|"ACTIVE"|"FAILED"|"COMPLETED"|"DELETING"|"DELETED"|string;
+  export type ReplicationRunState = "PENDING"|"MISSED"|"ACTIVE"|"FAILED"|"COMPLETED"|"DELETING"|"DELETED";
   export type ReplicationRunStatusMessage = string;
-  export type ReplicationRunType = "ON_DEMAND"|"AUTOMATIC"|string;
+  export type ReplicationRunType = "ON_DEMAND"|"AUTOMATIC";
   export type RoleName = string;
   export type RunOnce = boolean;
   export interface S3Location {
@@ -967,7 +967,7 @@ declare namespace SMS {
      */
     replicationJobTerminated?: ReplicationJobTerminated;
   }
-  export type ServerCatalogStatus = "NOT_IMPORTED"|"IMPORTING"|"AVAILABLE"|"DELETED"|"EXPIRED"|string;
+  export type ServerCatalogStatus = "NOT_IMPORTED"|"IMPORTING"|"AVAILABLE"|"DELETED"|"EXPIRED";
   export interface ServerGroup {
     /**
      * Identifier of a server group.
@@ -1093,7 +1093,7 @@ declare namespace SMS {
      */
     kmsKeyId?: KmsKeyId;
   }
-  export type ServerType = "VIRTUAL_MACHINE"|string;
+  export type ServerType = "VIRTUAL_MACHINE";
   export type StackId = string;
   export type StackName = string;
   export interface StartAppReplicationRequest {
@@ -1243,7 +1243,7 @@ declare namespace SMS {
   export type VmId = string;
   export type VmManagerId = string;
   export type VmManagerName = string;
-  export type VmManagerType = "VSPHERE"|"SCVMM"|"HYPERV-MANAGER"|string;
+  export type VmManagerType = "VSPHERE"|"SCVMM"|"HYPERV-MANAGER";
   export type VmName = string;
   export type VmPath = string;
   export interface VmServer {

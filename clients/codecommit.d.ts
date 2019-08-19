@@ -609,7 +609,7 @@ declare namespace CodeCommit {
   export type BranchName = string;
   export type BranchNameList = BranchName[];
   export type CapitalBoolean = boolean;
-  export type ChangeTypeEnum = "A"|"M"|"D"|string;
+  export type ChangeTypeEnum = "A"|"M"|"D";
   export type ClientRequestToken = string;
   export type CloneUrlHttp = string;
   export type CloneUrlSsh = string;
@@ -759,7 +759,7 @@ declare namespace CodeCommit {
      */
     mergeHunks?: MergeHunks;
   }
-  export type ConflictDetailLevelTypeEnum = "FILE_LEVEL"|"LINE_LEVEL"|string;
+  export type ConflictDetailLevelTypeEnum = "FILE_LEVEL"|"LINE_LEVEL";
   export interface ConflictMetadata {
     /**
      * The path of the file that contains conflicts.
@@ -817,7 +817,7 @@ declare namespace CodeCommit {
      */
     setFileModes?: SetFileModeEntries;
   }
-  export type ConflictResolutionStrategyTypeEnum = "NONE"|"ACCEPT_SOURCE"|"ACCEPT_DESTINATION"|"AUTOMERGE"|string;
+  export type ConflictResolutionStrategyTypeEnum = "NONE"|"ACCEPT_SOURCE"|"ACCEPT_DESTINATION"|"AUTOMERGE";
   export type Conflicts = Conflict[];
   export type Content = string;
   export interface CreateBranchInput {
@@ -1250,7 +1250,7 @@ declare namespace CodeCommit {
      */
     fileMode?: FileModeTypeEnum;
   }
-  export type FileModeTypeEnum = "EXECUTABLE"|"NORMAL"|"SYMLINK"|string;
+  export type FileModeTypeEnum = "EXECUTABLE"|"NORMAL"|"SYMLINK";
   export interface FileModes {
     /**
      * The file mode of a file in the source of a merge or pull request.
@@ -2068,7 +2068,7 @@ declare namespace CodeCommit {
      */
     destination?: ChangeTypeEnum;
   }
-  export type MergeOptionTypeEnum = "FAST_FORWARD_MERGE"|"SQUASH_MERGE"|"THREE_WAY_MERGE"|string;
+  export type MergeOptionTypeEnum = "FAST_FORWARD_MERGE"|"SQUASH_MERGE"|"THREE_WAY_MERGE";
   export type MergeOptions = MergeOptionTypeEnum[];
   export interface MergePullRequestByFastForwardInput {
     /**
@@ -2187,7 +2187,7 @@ declare namespace CodeCommit {
   export type NumberOfConflicts = number;
   export type ObjectId = string;
   export type ObjectSize = number;
-  export type ObjectTypeEnum = "FILE"|"DIRECTORY"|"GIT_LINK"|"SYMBOLIC_LINK"|string;
+  export type ObjectTypeEnum = "FILE"|"DIRECTORY"|"GIT_LINK"|"SYMBOLIC_LINK";
   export interface ObjectTypes {
     /**
      * The type of the object in the source branch.
@@ -2202,7 +2202,7 @@ declare namespace CodeCommit {
      */
     base?: ObjectTypeEnum;
   }
-  export type OrderEnum = "ascending"|"descending"|string;
+  export type OrderEnum = "ascending"|"descending";
   export type ParentList = ObjectId[];
   export type Path = string;
   export type Position = number;
@@ -2437,7 +2437,7 @@ declare namespace CodeCommit {
     pullRequestMergedStateChangedEventMetadata?: PullRequestMergedStateChangedEventMetadata;
   }
   export type PullRequestEventList = PullRequestEvent[];
-  export type PullRequestEventType = "PULL_REQUEST_CREATED"|"PULL_REQUEST_STATUS_CHANGED"|"PULL_REQUEST_SOURCE_REFERENCE_UPDATED"|"PULL_REQUEST_MERGE_STATE_CHANGED"|string;
+  export type PullRequestEventType = "PULL_REQUEST_CREATED"|"PULL_REQUEST_STATUS_CHANGED"|"PULL_REQUEST_SOURCE_REFERENCE_UPDATED"|"PULL_REQUEST_MERGE_STATE_CHANGED";
   export type PullRequestId = string;
   export type PullRequestIdList = PullRequestId[];
   export interface PullRequestMergedStateChangedEventMetadata {
@@ -2478,7 +2478,7 @@ declare namespace CodeCommit {
      */
     pullRequestStatus?: PullRequestStatusEnum;
   }
-  export type PullRequestStatusEnum = "OPEN"|"CLOSED"|string;
+  export type PullRequestStatusEnum = "OPEN"|"CLOSED";
   export interface PullRequestTarget {
     /**
      * The name of the repository that contains the pull request source and destination branches.
@@ -2598,7 +2598,7 @@ declare namespace CodeCommit {
     configurationId?: RepositoryTriggersConfigurationId;
   }
   export type ReferenceName = string;
-  export type RelativeFileVersionEnum = "BEFORE"|"AFTER"|string;
+  export type RelativeFileVersionEnum = "BEFORE"|"AFTER";
   export type ReplaceContentEntries = ReplaceContentEntry[];
   export interface ReplaceContentEntry {
     /**
@@ -2618,7 +2618,7 @@ declare namespace CodeCommit {
      */
     fileMode?: FileModeTypeEnum;
   }
-  export type ReplacementTypeEnum = "KEEP_BASE"|"KEEP_SOURCE"|"KEEP_DESTINATION"|"USE_NEW_CONTENT"|string;
+  export type ReplacementTypeEnum = "KEEP_BASE"|"KEEP_SOURCE"|"KEEP_DESTINATION"|"USE_NEW_CONTENT";
   export type RepositoryDescription = string;
   export type RepositoryId = string;
   export interface RepositoryMetadata {
@@ -2701,7 +2701,7 @@ declare namespace CodeCommit {
     events: RepositoryTriggerEventList;
   }
   export type RepositoryTriggerCustomData = string;
-  export type RepositoryTriggerEventEnum = "all"|"updateReference"|"createReference"|"deleteReference"|string;
+  export type RepositoryTriggerEventEnum = "all"|"updateReference"|"createReference"|"deleteReference";
   export type RepositoryTriggerEventList = RepositoryTriggerEventEnum[];
   export interface RepositoryTriggerExecutionFailure {
     /**
@@ -2731,7 +2731,7 @@ declare namespace CodeCommit {
      */
     fileMode: FileModeTypeEnum;
   }
-  export type SortByEnum = "repositoryName"|"lastModifiedDate"|string;
+  export type SortByEnum = "repositoryName"|"lastModifiedDate";
   export interface SourceFileSpecifier {
     /**
      * The full path to the file, including the name of the file.

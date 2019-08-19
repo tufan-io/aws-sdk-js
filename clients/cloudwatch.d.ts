@@ -272,7 +272,7 @@ declare namespace CloudWatch {
   export type AnomalyDetectorExcludedTimeRanges = Range[];
   export type AnomalyDetectorMetricTimezone = string;
   export type AnomalyDetectors = AnomalyDetector[];
-  export type ComparisonOperator = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold"|"LessThanLowerOrGreaterThanUpperThreshold"|"LessThanLowerThreshold"|"GreaterThanUpperThreshold"|string;
+  export type ComparisonOperator = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold"|"LessThanLowerOrGreaterThanUpperThreshold"|"LessThanLowerThreshold"|"GreaterThanUpperThreshold";
   export type Counts = DatapointValue[];
   export type DashboardArn = string;
   export type DashboardBody = string;
@@ -689,7 +689,7 @@ declare namespace CloudWatch {
     MetricWidgetImage?: MetricWidgetImage;
   }
   export type HistoryData = string;
-  export type HistoryItemType = "ConfigurationUpdate"|"StateUpdate"|"Action"|string;
+  export type HistoryItemType = "ConfigurationUpdate"|"StateUpdate"|"Action";
   export type HistorySummary = string;
   export type LastModified = Date;
   export interface ListDashboardsInput {
@@ -1164,7 +1164,7 @@ declare namespace CloudWatch {
   export type ResourceList = ResourceName[];
   export type ResourceName = string;
   export type ReturnData = boolean;
-  export type ScanBy = "TimestampDescending"|"TimestampAscending"|string;
+  export type ScanBy = "TimestampDescending"|"TimestampAscending";
   export interface SetAlarmStateInput {
     /**
      * The name for the alarm. This name must be unique within the AWS account. The maximum length is 255 characters.
@@ -1184,12 +1184,12 @@ declare namespace CloudWatch {
     StateReasonData?: StateReasonData;
   }
   export type Size = number;
-  export type StandardUnit = "Seconds"|"Microseconds"|"Milliseconds"|"Bytes"|"Kilobytes"|"Megabytes"|"Gigabytes"|"Terabytes"|"Bits"|"Kilobits"|"Megabits"|"Gigabits"|"Terabits"|"Percent"|"Count"|"Bytes/Second"|"Kilobytes/Second"|"Megabytes/Second"|"Gigabytes/Second"|"Terabytes/Second"|"Bits/Second"|"Kilobits/Second"|"Megabits/Second"|"Gigabits/Second"|"Terabits/Second"|"Count/Second"|"None"|string;
+  export type StandardUnit = "Seconds"|"Microseconds"|"Milliseconds"|"Bytes"|"Kilobytes"|"Megabytes"|"Gigabytes"|"Terabytes"|"Bits"|"Kilobits"|"Megabits"|"Gigabits"|"Terabits"|"Percent"|"Count"|"Bytes/Second"|"Kilobytes/Second"|"Megabytes/Second"|"Gigabytes/Second"|"Terabytes/Second"|"Bits/Second"|"Kilobits/Second"|"Megabits/Second"|"Gigabits/Second"|"Terabits/Second"|"Count/Second"|"None";
   export type Stat = string;
   export type StateReason = string;
   export type StateReasonData = string;
-  export type StateValue = "OK"|"ALARM"|"INSUFFICIENT_DATA"|string;
-  export type Statistic = "SampleCount"|"Average"|"Sum"|"Minimum"|"Maximum"|string;
+  export type StateValue = "OK"|"ALARM"|"INSUFFICIENT_DATA";
+  export type Statistic = "SampleCount"|"Average"|"Sum"|"Minimum"|"Maximum";
   export interface StatisticSet {
     /**
      * The number of samples used for the statistic set.
@@ -1209,7 +1209,7 @@ declare namespace CloudWatch {
     Maximum: DatapointValue;
   }
   export type Statistics = Statistic[];
-  export type StatusCode = "Complete"|"InternalError"|"PartialData"|string;
+  export type StatusCode = "Complete"|"InternalError"|"PartialData";
   export type StorageResolution = number;
   export interface Tag {
     /**

@@ -425,7 +425,7 @@ declare namespace CloudFormation {
      */
     StatusReason?: AccountGateStatusReason;
   }
-  export type AccountGateStatus = "SUCCEEDED"|"FAILED"|"SKIPPED"|string;
+  export type AccountGateStatus = "SUCCEEDED"|"FAILED"|"SKIPPED";
   export type AccountGateStatusReason = string;
   export interface AccountLimit {
     /**
@@ -456,7 +456,7 @@ declare namespace CloudFormation {
   }
   export type Capabilities = Capability[];
   export type CapabilitiesReason = string;
-  export type Capability = "CAPABILITY_IAM"|"CAPABILITY_NAMED_IAM"|"CAPABILITY_AUTO_EXPAND"|string;
+  export type Capability = "CAPABILITY_IAM"|"CAPABILITY_NAMED_IAM"|"CAPABILITY_AUTO_EXPAND";
   export type CausingEntity = string;
   export interface Change {
     /**
@@ -468,11 +468,11 @@ declare namespace CloudFormation {
      */
     ResourceChange?: ResourceChange;
   }
-  export type ChangeAction = "Add"|"Modify"|"Remove"|string;
+  export type ChangeAction = "Add"|"Modify"|"Remove";
   export type ChangeSetId = string;
   export type ChangeSetName = string;
   export type ChangeSetNameOrId = string;
-  export type ChangeSetStatus = "CREATE_PENDING"|"CREATE_IN_PROGRESS"|"CREATE_COMPLETE"|"DELETE_COMPLETE"|"FAILED"|string;
+  export type ChangeSetStatus = "CREATE_PENDING"|"CREATE_IN_PROGRESS"|"CREATE_COMPLETE"|"DELETE_COMPLETE"|"FAILED";
   export type ChangeSetStatusReason = string;
   export type ChangeSetSummaries = ChangeSetSummary[];
   export interface ChangeSetSummary {
@@ -513,9 +513,9 @@ declare namespace CloudFormation {
      */
     Description?: Description;
   }
-  export type ChangeSetType = "CREATE"|"UPDATE"|string;
-  export type ChangeSource = "ResourceReference"|"ParameterReference"|"ResourceAttribute"|"DirectModification"|"Automatic"|string;
-  export type ChangeType = "Resource"|string;
+  export type ChangeSetType = "CREATE"|"UPDATE";
+  export type ChangeSource = "ResourceReference"|"ParameterReference"|"ResourceAttribute"|"DirectModification"|"Automatic";
+  export type ChangeType = "Resource";
   export type Changes = Change[];
   export type ClientRequestToken = string;
   export type ClientToken = string;
@@ -1156,7 +1156,7 @@ declare namespace CloudFormation {
      */
     StackResourceDrift: StackResourceDrift;
   }
-  export type DifferenceType = "ADD"|"REMOVE"|"NOT_EQUAL"|string;
+  export type DifferenceType = "ADD"|"REMOVE"|"NOT_EQUAL";
   export type DisableRollback = boolean;
   export type EnableTerminationProtection = boolean;
   export interface EstimateTemplateCostInput {
@@ -1179,7 +1179,7 @@ declare namespace CloudFormation {
      */
     Url?: Url;
   }
-  export type EvaluationType = "Static"|"Dynamic"|string;
+  export type EvaluationType = "Static"|"Dynamic";
   export type EventId = string;
   export interface ExecuteChangeSetInput {
     /**
@@ -1198,7 +1198,7 @@ declare namespace CloudFormation {
   export interface ExecuteChangeSetOutput {
   }
   export type ExecutionRoleName = string;
-  export type ExecutionStatus = "UNAVAILABLE"|"AVAILABLE"|"EXECUTE_IN_PROGRESS"|"EXECUTE_COMPLETE"|"EXECUTE_FAILED"|"OBSOLETE"|string;
+  export type ExecutionStatus = "UNAVAILABLE"|"AVAILABLE"|"EXECUTE_IN_PROGRESS"|"EXECUTE_COMPLETE"|"EXECUTE_FAILED"|"OBSOLETE";
   export interface Export {
     /**
      * The stack that contains the exported output name and value.
@@ -1526,7 +1526,7 @@ declare namespace CloudFormation {
   export type NoEcho = boolean;
   export type NotificationARN = string;
   export type NotificationARNs = NotificationARN[];
-  export type OnFailure = "DO_NOTHING"|"ROLLBACK"|"DELETE"|string;
+  export type OnFailure = "DO_NOTHING"|"ROLLBACK"|"DELETE";
   export interface Output {
     /**
      * The key associated with the output.
@@ -1641,9 +1641,9 @@ declare namespace CloudFormation {
   export type Reason = string;
   export type Region = string;
   export type RegionList = Region[];
-  export type Replacement = "True"|"False"|"Conditional"|string;
-  export type RequiresRecreation = "Never"|"Conditionally"|"Always"|string;
-  export type ResourceAttribute = "Properties"|"Metadata"|"CreationPolicy"|"UpdatePolicy"|"DeletionPolicy"|"Tags"|string;
+  export type Replacement = "True"|"False"|"Conditional";
+  export type RequiresRecreation = "Never"|"Conditionally"|"Always";
+  export type ResourceAttribute = "Properties"|"Metadata"|"CreationPolicy"|"UpdatePolicy"|"DeletionPolicy"|"Tags";
   export interface ResourceChange {
     /**
      * The action that AWS CloudFormation takes on the resource, such as Add (adds a new resource), Modify (changes a resource), or Remove (deletes a resource).
@@ -1694,9 +1694,9 @@ declare namespace CloudFormation {
   }
   export type ResourceChangeDetails = ResourceChangeDetail[];
   export type ResourceProperties = string;
-  export type ResourceSignalStatus = "SUCCESS"|"FAILURE"|string;
+  export type ResourceSignalStatus = "SUCCESS"|"FAILURE";
   export type ResourceSignalUniqueId = string;
-  export type ResourceStatus = "CREATE_IN_PROGRESS"|"CREATE_FAILED"|"CREATE_COMPLETE"|"DELETE_IN_PROGRESS"|"DELETE_FAILED"|"DELETE_COMPLETE"|"DELETE_SKIPPED"|"UPDATE_IN_PROGRESS"|"UPDATE_FAILED"|"UPDATE_COMPLETE"|string;
+  export type ResourceStatus = "CREATE_IN_PROGRESS"|"CREATE_FAILED"|"CREATE_COMPLETE"|"DELETE_IN_PROGRESS"|"DELETE_FAILED"|"DELETE_COMPLETE"|"DELETE_SKIPPED"|"UPDATE_IN_PROGRESS"|"UPDATE_FAILED"|"UPDATE_COMPLETE";
   export type ResourceStatusReason = string;
   export interface ResourceTargetDefinition {
     /**
@@ -1865,7 +1865,7 @@ declare namespace CloudFormation {
     DriftInformation?: StackDriftInformation;
   }
   export type StackDriftDetectionId = string;
-  export type StackDriftDetectionStatus = "DETECTION_IN_PROGRESS"|"DETECTION_FAILED"|"DETECTION_COMPLETE"|string;
+  export type StackDriftDetectionStatus = "DETECTION_IN_PROGRESS"|"DETECTION_FAILED"|"DETECTION_COMPLETE";
   export type StackDriftDetectionStatusReason = string;
   export interface StackDriftInformation {
     /**
@@ -1887,7 +1887,7 @@ declare namespace CloudFormation {
      */
     LastCheckTimestamp?: Timestamp;
   }
-  export type StackDriftStatus = "DRIFTED"|"IN_SYNC"|"UNKNOWN"|"NOT_CHECKED"|string;
+  export type StackDriftStatus = "DRIFTED"|"IN_SYNC"|"UNKNOWN"|"NOT_CHECKED";
   export interface StackEvent {
     /**
      * The unique ID name of the instance of the stack.
@@ -1966,7 +1966,7 @@ declare namespace CloudFormation {
      */
     StatusReason?: Reason;
   }
-  export type StackInstanceStatus = "CURRENT"|"OUTDATED"|"INOPERABLE"|string;
+  export type StackInstanceStatus = "CURRENT"|"OUTDATED"|"INOPERABLE";
   export type StackInstanceSummaries = StackInstanceSummary[];
   export interface StackInstanceSummary {
     /**
@@ -2150,7 +2150,7 @@ declare namespace CloudFormation {
      */
     LastCheckTimestamp?: Timestamp;
   }
-  export type StackResourceDriftStatus = "IN_SYNC"|"MODIFIED"|"DELETED"|"NOT_CHECKED"|string;
+  export type StackResourceDriftStatus = "IN_SYNC"|"MODIFIED"|"DELETED"|"NOT_CHECKED";
   export type StackResourceDriftStatusFilters = StackResourceDriftStatus[];
   export type StackResourceDrifts = StackResourceDrift[];
   export type StackResourceSummaries = StackResourceSummary[];
@@ -2277,7 +2277,7 @@ declare namespace CloudFormation {
      */
     EndTimestamp?: Timestamp;
   }
-  export type StackSetOperationAction = "CREATE"|"UPDATE"|"DELETE"|string;
+  export type StackSetOperationAction = "CREATE"|"UPDATE"|"DELETE";
   export interface StackSetOperationPreferences {
     /**
      * The order of the regions in where you want to perform the stack operation.
@@ -2300,7 +2300,7 @@ declare namespace CloudFormation {
      */
     MaxConcurrentPercentage?: MaxConcurrentPercentage;
   }
-  export type StackSetOperationResultStatus = "PENDING"|"RUNNING"|"SUCCEEDED"|"FAILED"|"CANCELLED"|string;
+  export type StackSetOperationResultStatus = "PENDING"|"RUNNING"|"SUCCEEDED"|"FAILED"|"CANCELLED";
   export type StackSetOperationResultSummaries = StackSetOperationResultSummary[];
   export interface StackSetOperationResultSummary {
     /**
@@ -2324,7 +2324,7 @@ declare namespace CloudFormation {
      */
     AccountGateResult?: AccountGateResult;
   }
-  export type StackSetOperationStatus = "RUNNING"|"SUCCEEDED"|"FAILED"|"STOPPING"|"STOPPED"|string;
+  export type StackSetOperationStatus = "RUNNING"|"SUCCEEDED"|"FAILED"|"STOPPING"|"STOPPED";
   export type StackSetOperationSummaries = StackSetOperationSummary[];
   export interface StackSetOperationSummary {
     /**
@@ -2348,7 +2348,7 @@ declare namespace CloudFormation {
      */
     EndTimestamp?: Timestamp;
   }
-  export type StackSetStatus = "ACTIVE"|"DELETED"|string;
+  export type StackSetStatus = "ACTIVE"|"DELETED";
   export type StackSetSummaries = StackSetSummary[];
   export interface StackSetSummary {
     /**
@@ -2368,7 +2368,7 @@ declare namespace CloudFormation {
      */
     Status?: StackSetStatus;
   }
-  export type StackStatus = "CREATE_IN_PROGRESS"|"CREATE_FAILED"|"CREATE_COMPLETE"|"ROLLBACK_IN_PROGRESS"|"ROLLBACK_FAILED"|"ROLLBACK_COMPLETE"|"DELETE_IN_PROGRESS"|"DELETE_FAILED"|"DELETE_COMPLETE"|"UPDATE_IN_PROGRESS"|"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS"|"UPDATE_COMPLETE"|"UPDATE_ROLLBACK_IN_PROGRESS"|"UPDATE_ROLLBACK_FAILED"|"UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS"|"UPDATE_ROLLBACK_COMPLETE"|"REVIEW_IN_PROGRESS"|string;
+  export type StackStatus = "CREATE_IN_PROGRESS"|"CREATE_FAILED"|"CREATE_COMPLETE"|"ROLLBACK_IN_PROGRESS"|"ROLLBACK_FAILED"|"ROLLBACK_COMPLETE"|"DELETE_IN_PROGRESS"|"DELETE_FAILED"|"DELETE_COMPLETE"|"UPDATE_IN_PROGRESS"|"UPDATE_COMPLETE_CLEANUP_IN_PROGRESS"|"UPDATE_COMPLETE"|"UPDATE_ROLLBACK_IN_PROGRESS"|"UPDATE_ROLLBACK_FAILED"|"UPDATE_ROLLBACK_COMPLETE_CLEANUP_IN_PROGRESS"|"UPDATE_ROLLBACK_COMPLETE"|"REVIEW_IN_PROGRESS";
   export type StackStatusFilter = StackStatus[];
   export type StackStatusReason = string;
   export type StackSummaries = StackSummary[];
@@ -2466,7 +2466,7 @@ declare namespace CloudFormation {
     Description?: Description;
   }
   export type TemplateParameters = TemplateParameter[];
-  export type TemplateStage = "Original"|"Processed"|string;
+  export type TemplateStage = "Original"|"Processed";
   export type TemplateURL = string;
   export type TimeoutMinutes = number;
   export type Timestamp = Date;

@@ -253,7 +253,7 @@ declare namespace ACM {
      */
     CertificateTransparencyLoggingPreference?: CertificateTransparencyLoggingPreference;
   }
-  export type CertificateStatus = "PENDING_VALIDATION"|"ISSUED"|"INACTIVE"|"EXPIRED"|"VALIDATION_TIMED_OUT"|"REVOKED"|"FAILED"|string;
+  export type CertificateStatus = "PENDING_VALIDATION"|"ISSUED"|"INACTIVE"|"EXPIRED"|"VALIDATION_TIMED_OUT"|"REVOKED"|"FAILED";
   export type CertificateStatuses = CertificateStatus[];
   export interface CertificateSummary {
     /**
@@ -266,8 +266,8 @@ declare namespace ACM {
     DomainName?: DomainNameString;
   }
   export type CertificateSummaryList = CertificateSummary[];
-  export type CertificateTransparencyLoggingPreference = "ENABLED"|"DISABLED"|string;
-  export type CertificateType = "IMPORTED"|"AMAZON_ISSUED"|"PRIVATE"|string;
+  export type CertificateTransparencyLoggingPreference = "ENABLED"|"DISABLED";
+  export type CertificateType = "IMPORTED"|"AMAZON_ISSUED"|"PRIVATE";
   export interface DeleteCertificateRequest {
     /**
      * String that contains the ARN of the ACM certificate to be deleted. This must be of the form:  arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012  For more information about ARNs, see Amazon Resource Names (ARNs) and AWS Service Namespaces.
@@ -288,7 +288,7 @@ declare namespace ACM {
   }
   export type DomainList = DomainNameString[];
   export type DomainNameString = string;
-  export type DomainStatus = "PENDING_VALIDATION"|"SUCCESS"|"FAILED"|string;
+  export type DomainStatus = "PENDING_VALIDATION"|"SUCCESS"|"FAILED";
   export interface DomainValidation {
     /**
      * A fully qualified domain name (FQDN) in the certificate. For example, www.example.com or example.com. 
@@ -363,8 +363,8 @@ declare namespace ACM {
   }
   export type ExtendedKeyUsageFilterList = ExtendedKeyUsageName[];
   export type ExtendedKeyUsageList = ExtendedKeyUsage[];
-  export type ExtendedKeyUsageName = "TLS_WEB_SERVER_AUTHENTICATION"|"TLS_WEB_CLIENT_AUTHENTICATION"|"CODE_SIGNING"|"EMAIL_PROTECTION"|"TIME_STAMPING"|"OCSP_SIGNING"|"IPSEC_END_SYSTEM"|"IPSEC_TUNNEL"|"IPSEC_USER"|"ANY"|"NONE"|"CUSTOM"|string;
-  export type FailureReason = "NO_AVAILABLE_CONTACTS"|"ADDITIONAL_VERIFICATION_REQUIRED"|"DOMAIN_NOT_ALLOWED"|"INVALID_PUBLIC_DOMAIN"|"DOMAIN_VALIDATION_DENIED"|"CAA_ERROR"|"PCA_LIMIT_EXCEEDED"|"PCA_INVALID_ARN"|"PCA_INVALID_STATE"|"PCA_REQUEST_FAILED"|"PCA_RESOURCE_NOT_FOUND"|"PCA_INVALID_ARGS"|"PCA_INVALID_DURATION"|"PCA_ACCESS_DENIED"|"OTHER"|string;
+  export type ExtendedKeyUsageName = "TLS_WEB_SERVER_AUTHENTICATION"|"TLS_WEB_CLIENT_AUTHENTICATION"|"CODE_SIGNING"|"EMAIL_PROTECTION"|"TIME_STAMPING"|"OCSP_SIGNING"|"IPSEC_END_SYSTEM"|"IPSEC_TUNNEL"|"IPSEC_USER"|"ANY"|"NONE"|"CUSTOM";
+  export type FailureReason = "NO_AVAILABLE_CONTACTS"|"ADDITIONAL_VERIFICATION_REQUIRED"|"DOMAIN_NOT_ALLOWED"|"INVALID_PUBLIC_DOMAIN"|"DOMAIN_VALIDATION_DENIED"|"CAA_ERROR"|"PCA_LIMIT_EXCEEDED"|"PCA_INVALID_ARN"|"PCA_INVALID_STATE"|"PCA_REQUEST_FAILED"|"PCA_RESOURCE_NOT_FOUND"|"PCA_INVALID_ARGS"|"PCA_INVALID_DURATION"|"PCA_ACCESS_DENIED"|"OTHER";
   export interface Filters {
     /**
      * Specify one or more ExtendedKeyUsage extension values.
@@ -421,7 +421,7 @@ declare namespace ACM {
     CertificateArn?: Arn;
   }
   export type InUseList = String[];
-  export type KeyAlgorithm = "RSA_2048"|"RSA_1024"|"RSA_4096"|"EC_prime256v1"|"EC_secp384r1"|"EC_secp521r1"|string;
+  export type KeyAlgorithm = "RSA_2048"|"RSA_1024"|"RSA_4096"|"EC_prime256v1"|"EC_secp384r1"|"EC_secp521r1";
   export type KeyAlgorithmList = KeyAlgorithm[];
   export interface KeyUsage {
     /**
@@ -431,7 +431,7 @@ declare namespace ACM {
   }
   export type KeyUsageFilterList = KeyUsageName[];
   export type KeyUsageList = KeyUsage[];
-  export type KeyUsageName = "DIGITAL_SIGNATURE"|"NON_REPUDIATION"|"KEY_ENCIPHERMENT"|"DATA_ENCIPHERMENT"|"KEY_AGREEMENT"|"CERTIFICATE_SIGNING"|"CRL_SIGNING"|"ENCIPHER_ONLY"|"DECIPHER_ONLY"|"ANY"|"CUSTOM"|string;
+  export type KeyUsageName = "DIGITAL_SIGNATURE"|"NON_REPUDIATION"|"KEY_ENCIPHERMENT"|"DATA_ENCIPHERMENT"|"KEY_AGREEMENT"|"CERTIFICATE_SIGNING"|"CRL_SIGNING"|"ENCIPHER_ONLY"|"DECIPHER_ONLY"|"ANY"|"CUSTOM";
   export interface ListCertificatesRequest {
     /**
      * Filter the certificate list by status value.
@@ -477,7 +477,7 @@ declare namespace ACM {
   export type PassphraseBlob = Buffer|Uint8Array|Blob|string;
   export type PrivateKey = string;
   export type PrivateKeyBlob = Buffer|Uint8Array|Blob|string;
-  export type RecordType = "CNAME"|string;
+  export type RecordType = "CNAME";
   export interface RemoveTagsFromCertificateRequest {
     /**
      * String that contains the ARN of the ACM Certificate with one or more tags that you want to remove. This must be of the form:  arn:aws:acm:region:123456789012:certificate/12345678-1234-1234-1234-123456789012  For more information about ARNs, see Amazon Resource Names (ARNs) and AWS Service Namespaces. 
@@ -494,8 +494,8 @@ declare namespace ACM {
      */
     CertificateArn: Arn;
   }
-  export type RenewalEligibility = "ELIGIBLE"|"INELIGIBLE"|string;
-  export type RenewalStatus = "PENDING_AUTO_RENEWAL"|"PENDING_VALIDATION"|"SUCCESS"|"FAILED"|string;
+  export type RenewalEligibility = "ELIGIBLE"|"INELIGIBLE";
+  export type RenewalStatus = "PENDING_AUTO_RENEWAL"|"PENDING_VALIDATION"|"SUCCESS"|"FAILED";
   export interface RenewalSummary {
     /**
      * The status of ACM's managed renewal of the certificate.
@@ -578,7 +578,7 @@ declare namespace ACM {
      */
     Value: String;
   }
-  export type RevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CA_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERCEDED"|"CESSATION_OF_OPERATION"|"CERTIFICATE_HOLD"|"REMOVE_FROM_CRL"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE"|string;
+  export type RevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CA_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERCEDED"|"CESSATION_OF_OPERATION"|"CERTIFICATE_HOLD"|"REMOVE_FROM_CRL"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE";
   export type String = string;
   export type TStamp = Date;
   export interface Tag {
@@ -605,7 +605,7 @@ declare namespace ACM {
     Options: CertificateOptions;
   }
   export type ValidationEmailList = String[];
-  export type ValidationMethod = "EMAIL"|"DNS"|string;
+  export type ValidationMethod = "EMAIL"|"DNS";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

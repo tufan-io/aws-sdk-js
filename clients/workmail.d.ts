@@ -688,7 +688,7 @@ declare namespace WorkMail {
   export interface DisassociateMemberFromGroupResponse {
   }
   export type EmailAddress = string;
-  export type EntityState = "ENABLED"|"DISABLED"|"DELETED"|string;
+  export type EntityState = "ENABLED"|"DISABLED"|"DELETED";
   export interface GetMailboxDetailsRequest {
     /**
      * The identifier for the organization that contains the user whose mailbox details are being requested.
@@ -970,7 +970,7 @@ declare namespace WorkMail {
      */
     DisabledDate?: Timestamp;
   }
-  export type MemberType = "GROUP"|"USER"|string;
+  export type MemberType = "GROUP"|"USER";
   export type Members = Member[];
   export type NextToken = string;
   export type OrganizationId = string;
@@ -1009,7 +1009,7 @@ declare namespace WorkMail {
      */
     PermissionValues: PermissionValues;
   }
-  export type PermissionType = "FULL_ACCESS"|"SEND_AS"|"SEND_ON_BEHALF"|string;
+  export type PermissionType = "FULL_ACCESS"|"SEND_AS"|"SEND_ON_BEHALF";
   export type PermissionValues = PermissionType[];
   export type Permissions = Permission[];
   export interface PutMailboxPermissionsRequest {
@@ -1097,7 +1097,7 @@ declare namespace WorkMail {
   export type ResourceDelegates = Delegate[];
   export type ResourceId = string;
   export type ResourceName = string;
-  export type ResourceType = "ROOM"|"EQUIPMENT"|string;
+  export type ResourceType = "ROOM"|"EQUIPMENT";
   export type Resources = Resource[];
   export type String = string;
   export type Timestamp = Date;
@@ -1188,7 +1188,7 @@ declare namespace WorkMail {
     DisabledDate?: Timestamp;
   }
   export type UserName = string;
-  export type UserRole = "USER"|"RESOURCE"|"SYSTEM_USER"|string;
+  export type UserRole = "USER"|"RESOURCE"|"SYSTEM_USER";
   export type Users = User[];
   export type WorkMailIdentifier = string;
   /**

@@ -1173,7 +1173,7 @@ declare namespace Pinpoint {
      */
     Version?: __integer;
   }
-  export type Action = "OPEN_APP"|"DEEP_LINK"|"URL"|string;
+  export type Action = "OPEN_APP"|"DEEP_LINK"|"URL";
   export interface ActivitiesResponse {
     /**
      * An array of responses, one for each activity that was performed by the campaign.
@@ -1350,7 +1350,7 @@ declare namespace Pinpoint {
      */
     Values: ListOf__string;
   }
-  export type AttributeType = "INCLUSIVE"|"EXCLUSIVE"|string;
+  export type AttributeType = "INCLUSIVE"|"EXCLUSIVE";
   export interface AttributesResource {
     /**
      * The unique identifier for the application.
@@ -1689,7 +1689,7 @@ declare namespace Pinpoint {
      */
     CampaignStatus?: CampaignStatus;
   }
-  export type CampaignStatus = "SCHEDULED"|"EXECUTING"|"PENDING_NEXT_RUN"|"COMPLETED"|"PAUSED"|"DELETED"|string;
+  export type CampaignStatus = "SCHEDULED"|"EXECUTING"|"PENDING_NEXT_RUN"|"COMPLETED"|"PAUSED"|"DELETED";
   export interface CampaignsResponse {
     /**
      * An array of responses, one for each campaign that's associated with the application.
@@ -1738,7 +1738,7 @@ declare namespace Pinpoint {
      */
     Version?: __integer;
   }
-  export type ChannelType = "GCM"|"APNS"|"APNS_SANDBOX"|"APNS_VOIP"|"APNS_VOIP_SANDBOX"|"ADM"|"SMS"|"VOICE"|"EMAIL"|"BAIDU"|"CUSTOM"|string;
+  export type ChannelType = "GCM"|"APNS"|"APNS_SANDBOX"|"APNS_VOIP"|"APNS_VOIP_SANDBOX"|"ADM"|"SMS"|"VOICE"|"EMAIL"|"BAIDU"|"CUSTOM";
   export interface ChannelsResponse {
     /**
      * A map that contains a multipart response for each channel. For each item in this object, the ChannelType is the key and the Channel is the value.
@@ -2001,8 +2001,8 @@ declare namespace Pinpoint {
   export interface DeleteVoiceChannelResponse {
     VoiceChannelResponse: VoiceChannelResponse;
   }
-  export type DeliveryStatus = "SUCCESSFUL"|"THROTTLED"|"TEMPORARY_FAILURE"|"PERMANENT_FAILURE"|"UNKNOWN_FAILURE"|"OPT_OUT"|"DUPLICATE"|string;
-  export type DimensionType = "INCLUSIVE"|"EXCLUSIVE"|string;
+  export type DeliveryStatus = "SUCCESSFUL"|"THROTTLED"|"TEMPORARY_FAILURE"|"PERMANENT_FAILURE"|"UNKNOWN_FAILURE"|"OPT_OUT"|"DUPLICATE";
+  export type DimensionType = "INCLUSIVE"|"EXCLUSIVE";
   export interface DirectMessageConfiguration {
     /**
      * The default push notification message for the ADM (Amazon Device Messaging) channel. This message overrides the default push notification message (DefaultPushNotificationMessage).
@@ -2041,7 +2041,7 @@ declare namespace Pinpoint {
      */
     VoiceMessage?: VoiceMessage;
   }
-  export type Duration = "HR_24"|"DAY_7"|"DAY_14"|"DAY_30"|string;
+  export type Duration = "HR_24"|"DAY_7"|"DAY_14"|"DAY_30";
   export interface EmailChannelRequest {
     /**
      * The configuration set that you want to apply to email that you send through the channel by using the Amazon Pinpoint Email API.
@@ -2670,9 +2670,9 @@ declare namespace Pinpoint {
      */
     NextToken?: __string;
   }
-  export type FilterType = "SYSTEM"|"ENDPOINT"|string;
-  export type Format = "CSV"|"JSON"|string;
-  export type Frequency = "ONCE"|"HOURLY"|"DAILY"|"WEEKLY"|"MONTHLY"|"EVENT"|string;
+  export type FilterType = "SYSTEM"|"ENDPOINT";
+  export type Format = "CSV"|"JSON";
+  export type Frequency = "ONCE"|"HOURLY"|"DAILY"|"WEEKLY"|"MONTHLY"|"EVENT";
   export interface GCMChannelRequest {
     /**
      * The API key, also referred to as a server key, that you received from Google to communicate with Google services.
@@ -3437,7 +3437,7 @@ declare namespace Pinpoint {
      */
     NextToken?: __string;
   }
-  export type Include = "ALL"|"ANY"|"NONE"|string;
+  export type Include = "ALL"|"ANY"|"NONE";
   export interface ItemResponse {
     /**
      * The response that was received after the endpoint data was accepted.
@@ -3448,7 +3448,7 @@ declare namespace Pinpoint {
      */
     EventsItemResponse?: MapOfEventItemResponse;
   }
-  export type JobStatus = "CREATED"|"INITIALIZING"|"PROCESSING"|"COMPLETING"|"COMPLETED"|"FAILING"|"FAILED"|string;
+  export type JobStatus = "CREATED"|"INITIALIZING"|"PROCESSING"|"COMPLETING"|"COMPLETED"|"FAILING"|"FAILED";
   export interface ListTagsForResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the application, campaign, or segment.
@@ -3610,7 +3610,7 @@ declare namespace Pinpoint {
      */
     UpdatedToken?: __string;
   }
-  export type MessageType = "TRANSACTIONAL"|"PROMOTIONAL"|string;
+  export type MessageType = "TRANSACTIONAL"|"PROMOTIONAL";
   export interface MetricDimension {
     /**
      * The operator to use when comparing metric values. Valid values are: GREATER_THAN, LESS_THAN, GREATER_THAN_OR_EQUAL, LESS_THAN_OR_EQUAL, and EQUAL.
@@ -3621,7 +3621,7 @@ declare namespace Pinpoint {
      */
     Value: __double;
   }
-  export type Mode = "DELIVERY"|"FILTER"|string;
+  export type Mode = "DELIVERY"|"FILTER";
   export interface NumberValidateRequest {
     /**
      * The two-character code, in ISO 3166-1 alpha-2 format, for the country or region where the phone number was originally registered.
@@ -3790,7 +3790,7 @@ declare namespace Pinpoint {
      */
     RecencyType: RecencyType;
   }
-  export type RecencyType = "ACTIVE"|"INACTIVE"|string;
+  export type RecencyType = "ACTIVE"|"INACTIVE";
   export interface RemoveAttributesRequest {
     /**
      * The unique identifier for the application. This identifier is displayed as the Project ID on the Amazon Pinpoint console.
@@ -4142,7 +4142,7 @@ declare namespace Pinpoint {
      */
     Version?: __integer;
   }
-  export type SegmentType = "DIMENSIONAL"|"IMPORT"|string;
+  export type SegmentType = "DIMENSIONAL"|"IMPORT";
   export interface SegmentsResponse {
     /**
      * An array of responses, one for each segment that's associated with the application (Segments resource) or each version of a segment that's associated with the application (Segment Versions resource).
@@ -4257,7 +4257,7 @@ declare namespace Pinpoint {
      */
     Data?: __string;
   }
-  export type SourceType = "ALL"|"ANY"|"NONE"|string;
+  export type SourceType = "ALL"|"ANY"|"NONE";
   export interface TagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the application, campaign, or segment.
@@ -4301,7 +4301,7 @@ declare namespace Pinpoint {
      */
     TreatmentName?: __string;
   }
-  export type Type = "ALL"|"ANY"|"NONE"|string;
+  export type Type = "ALL"|"ANY"|"NONE";
   export interface UntagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the application, campaign, or segment.

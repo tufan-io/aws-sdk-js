@@ -210,7 +210,7 @@ declare namespace MediaTailor {
      */
     Tags?: __mapOf__string;
   }
-  export type OriginManifestType = "SINGLE_PERIOD"|"MULTI_PERIOD"|string;
+  export type OriginManifestType = "SINGLE_PERIOD"|"MULTI_PERIOD";
   export interface PlaybackConfiguration {
     /**
      * The URL for the ad decision server (ADS). This includes the specification of static parameters and placeholders for dynamic parameters. AWS Elemental MediaTailor substitutes player-specific and session-specific parameters as needed when calling the ADS. Alternately, for testing, you can provide a static VAST URL. The maximum length is 25,000 characters.

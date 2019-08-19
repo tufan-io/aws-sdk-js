@@ -126,7 +126,7 @@ declare class FMS extends Service {
 }
 declare namespace FMS {
   export type AWSAccountId = string;
-  export type AccountRoleStatus = "READY"|"CREATING"|"PENDING_DELETION"|"DELETING"|"DELETED"|string;
+  export type AccountRoleStatus = "READY"|"CREATING"|"PENDING_DELETION"|"DELETING"|"DELETED";
   export interface AssociateAdminAccountRequest {
     /**
      * The AWS account ID to associate with AWS Firewall Manager as the AWS Firewall Manager administrator account. This can be an AWS Organizations master account or a member account. For more information about AWS Organizations and master accounts, see Managing the AWS Accounts in Your Organization.
@@ -151,7 +151,7 @@ declare namespace FMS {
   export type ComplianceViolators = ComplianceViolator[];
   export type CustomerPolicyScopeId = string;
   export type CustomerPolicyScopeIdList = CustomerPolicyScopeId[];
-  export type CustomerPolicyScopeIdType = "ACCOUNT"|string;
+  export type CustomerPolicyScopeIdType = "ACCOUNT";
   export type CustomerPolicyScopeMap = {[key: string]: CustomerPolicyScopeIdList};
   export interface DeleteNotificationChannelRequest {
   }
@@ -165,7 +165,7 @@ declare namespace FMS {
      */
     DeleteAllPolicyResources?: Boolean;
   }
-  export type DependentServiceName = "AWSCONFIG"|"AWSWAF"|"AWSSHIELD_ADVANCED"|string;
+  export type DependentServiceName = "AWSCONFIG"|"AWSWAF"|"AWSSHIELD_ADVANCED";
   export type DetailedInfo = string;
   export interface DisassociateAdminAccountRequest {
   }
@@ -460,7 +460,7 @@ declare namespace FMS {
     IssueInfoMap?: IssueInfoMap;
   }
   export type PolicyComplianceStatusList = PolicyComplianceStatus[];
-  export type PolicyComplianceStatusType = "COMPLIANT"|"NON_COMPLIANT"|string;
+  export type PolicyComplianceStatusType = "COMPLIANT"|"NON_COMPLIANT";
   export type PolicyId = string;
   export interface PolicySummary {
     /**
@@ -544,11 +544,11 @@ declare namespace FMS {
      */
     ManagedServiceData?: ManagedServiceData;
   }
-  export type SecurityServiceType = "WAF"|"SHIELD_ADVANCED"|string;
+  export type SecurityServiceType = "WAF"|"SHIELD_ADVANCED";
   export type TagKey = string;
   export type TagValue = string;
   export type TimeStamp = Date;
-  export type ViolationReason = "WEB_ACL_MISSING_RULE_GROUP"|"RESOURCE_MISSING_WEB_ACL"|"RESOURCE_INCORRECT_WEB_ACL"|"RESOURCE_MISSING_SHIELD_PROTECTION"|string;
+  export type ViolationReason = "WEB_ACL_MISSING_RULE_GROUP"|"RESOURCE_MISSING_WEB_ACL"|"RESOURCE_INCORRECT_WEB_ACL"|"RESOURCE_MISSING_SHIELD_PROTECTION";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

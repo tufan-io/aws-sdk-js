@@ -959,8 +959,8 @@ declare namespace RDS {
     Max?: Long;
   }
   export type AccountQuotaList = AccountQuota[];
-  export type ActivityStreamMode = "sync"|"async"|string;
-  export type ActivityStreamStatus = "stopped"|"starting"|"started"|"stopping"|string;
+  export type ActivityStreamMode = "sync"|"async";
+  export type ActivityStreamStatus = "stopped"|"starting"|"started"|"stopping";
   export interface AddRoleToDBClusterMessage {
     /**
      * The name of the DB cluster to associate the IAM role with.
@@ -1012,7 +1012,7 @@ declare namespace RDS {
      */
     Tags: TagList;
   }
-  export type ApplyMethod = "immediate"|"pending-reboot"|string;
+  export type ApplyMethod = "immediate"|"pending-reboot";
   export interface ApplyPendingMaintenanceActionMessage {
     /**
      * The RDS Amazon Resource Name (ARN) of the resource that the pending maintenance action applies to. For information about creating an ARN, see  Constructing an RDS Amazon Resource Name (ARN).
@@ -6553,7 +6553,7 @@ declare namespace RDS {
      */
     SourceRegions?: SourceRegionList;
   }
-  export type SourceType = "db-instance"|"db-parameter-group"|"db-security-group"|"db-snapshot"|"db-cluster"|"db-cluster-snapshot"|string;
+  export type SourceType = "db-instance"|"db-parameter-group"|"db-security-group"|"db-snapshot"|"db-cluster"|"db-cluster-snapshot";
   export interface StartActivityStreamRequest {
     /**
      * The Amazon Resource Name (ARN) of the DB cluster, for example arn:aws:rds:us-east-1:12345667890:cluster:das-cluster.

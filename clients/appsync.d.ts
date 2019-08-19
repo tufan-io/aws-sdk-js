@@ -331,7 +331,7 @@ declare namespace AppSync {
     expires?: Long;
   }
   export type ApiKeys = ApiKey[];
-  export type AuthenticationType = "API_KEY"|"AWS_IAM"|"AMAZON_COGNITO_USER_POOLS"|"OPENID_CONNECT"|string;
+  export type AuthenticationType = "API_KEY"|"AWS_IAM"|"AMAZON_COGNITO_USER_POOLS"|"OPENID_CONNECT";
   export interface AuthorizationConfig {
     /**
      * The authorization type required by the HTTP endpoint.    AWS_IAM: The authorization type is Sigv4.  
@@ -342,7 +342,7 @@ declare namespace AppSync {
      */
     awsIamConfig?: AwsIamConfig;
   }
-  export type AuthorizationType = "AWS_IAM"|string;
+  export type AuthorizationType = "AWS_IAM";
   export interface AwsIamConfig {
     /**
      * The signing region for AWS IAM authorization.
@@ -612,9 +612,9 @@ declare namespace AppSync {
      */
     relationalDatabaseConfig?: RelationalDatabaseDataSourceConfig;
   }
-  export type DataSourceType = "AWS_LAMBDA"|"AMAZON_DYNAMODB"|"AMAZON_ELASTICSEARCH"|"NONE"|"HTTP"|"RELATIONAL_DATABASE"|string;
+  export type DataSourceType = "AWS_LAMBDA"|"AMAZON_DYNAMODB"|"AMAZON_ELASTICSEARCH"|"NONE"|"HTTP"|"RELATIONAL_DATABASE";
   export type DataSources = DataSource[];
-  export type DefaultAction = "ALLOW"|"DENY"|string;
+  export type DefaultAction = "ALLOW"|"DENY";
   export interface DeleteApiKeyRequest {
     /**
      * The API ID.
@@ -711,7 +711,7 @@ declare namespace AppSync {
      */
     awsRegion: String;
   }
-  export type FieldLogLevel = "NONE"|"ERROR"|"ALL"|string;
+  export type FieldLogLevel = "NONE"|"ERROR"|"ALL";
   export interface FunctionConfiguration {
     /**
      * A unique ID representing the Function object.
@@ -1151,7 +1151,7 @@ declare namespace AppSync {
      */
     authTTL?: Long;
   }
-  export type OutputType = "SDL"|"JSON"|string;
+  export type OutputType = "SDL"|"JSON";
   export type PaginationToken = string;
   export interface PipelineConfig {
     /**
@@ -1191,7 +1191,7 @@ declare namespace AppSync {
      */
     rdsHttpEndpointConfig?: RdsHttpEndpointConfig;
   }
-  export type RelationalDatabaseSourceType = "RDS_HTTP_ENDPOINT"|string;
+  export type RelationalDatabaseSourceType = "RDS_HTTP_ENDPOINT";
   export interface Resolver {
     /**
      * The resolver type name.
@@ -1226,11 +1226,11 @@ declare namespace AppSync {
      */
     pipelineConfig?: PipelineConfig;
   }
-  export type ResolverKind = "UNIT"|"PIPELINE"|string;
+  export type ResolverKind = "UNIT"|"PIPELINE";
   export type Resolvers = Resolver[];
   export type ResourceArn = string;
   export type ResourceName = string;
-  export type SchemaStatus = "PROCESSING"|"ACTIVE"|"DELETING"|"FAILED"|"SUCCESS"|"NOT_APPLICABLE"|string;
+  export type SchemaStatus = "PROCESSING"|"ACTIVE"|"DELETING"|"FAILED"|"SUCCESS"|"NOT_APPLICABLE";
   export interface StartSchemaCreationRequest {
     /**
      * The API ID.
@@ -1286,7 +1286,7 @@ declare namespace AppSync {
      */
     format?: TypeDefinitionFormat;
   }
-  export type TypeDefinitionFormat = "SDL"|"JSON"|string;
+  export type TypeDefinitionFormat = "SDL"|"JSON";
   export type TypeList = Type[];
   export interface UntagResourceRequest {
     /**

@@ -295,7 +295,7 @@ declare namespace Rekognition {
      */
     High?: UInteger;
   }
-  export type Attribute = "DEFAULT"|"ALL"|string;
+  export type Attribute = "DEFAULT"|"ALL";
   export type Attributes = Attribute[];
   export interface Beard {
     /**
@@ -385,7 +385,7 @@ declare namespace Rekognition {
      */
     Celebrity?: CelebrityDetail;
   }
-  export type CelebrityRecognitionSortBy = "ID"|"TIMESTAMP"|string;
+  export type CelebrityRecognitionSortBy = "ID"|"TIMESTAMP";
   export type CelebrityRecognitions = CelebrityRecognition[];
   export type ClientRequestToken = string;
   export type CollectionId = string;
@@ -482,7 +482,7 @@ declare namespace Rekognition {
     ModerationLabel?: ModerationLabel;
   }
   export type ContentModerationDetections = ContentModerationDetection[];
-  export type ContentModerationSortBy = "NAME"|"TIMESTAMP"|string;
+  export type ContentModerationSortBy = "NAME"|"TIMESTAMP";
   export interface CreateCollectionRequest {
     /**
      * ID for the collection that you are creating.
@@ -731,7 +731,7 @@ declare namespace Rekognition {
      */
     Confidence?: Percent;
   }
-  export type EmotionName = "HAPPY"|"SAD"|"ANGRY"|"CONFUSED"|"DISGUSTED"|"SURPRISED"|"CALM"|"UNKNOWN"|"FEAR"|string;
+  export type EmotionName = "HAPPY"|"SAD"|"ANGRY"|"CONFUSED"|"DISGUSTED"|"SURPRISED"|"CALM"|"UNKNOWN"|"FEAR";
   export type Emotions = Emotion[];
   export type ExternalImageId = string;
   export interface EyeOpen {
@@ -776,7 +776,7 @@ declare namespace Rekognition {
      */
     Confidence?: Percent;
   }
-  export type FaceAttributes = "DEFAULT"|"ALL"|string;
+  export type FaceAttributes = "DEFAULT"|"ALL";
   export interface FaceDetail {
     /**
      * Bounding box of the face. Default attribute.
@@ -887,7 +887,7 @@ declare namespace Rekognition {
      */
     FaceMatchThreshold?: Percent;
   }
-  export type FaceSearchSortBy = "INDEX"|"TIMESTAMP"|string;
+  export type FaceSearchSortBy = "INDEX"|"TIMESTAMP";
   export type Float = number;
   export interface Gender {
     /**
@@ -899,7 +899,7 @@ declare namespace Rekognition {
      */
     Confidence?: Percent;
   }
-  export type GenderType = "Male"|"Female"|string;
+  export type GenderType = "Male"|"Female";
   export interface Geometry {
     /**
      * An axis-aligned coarse representation of the detected text's location on the image.
@@ -1291,7 +1291,7 @@ declare namespace Rekognition {
      */
     Label?: Label;
   }
-  export type LabelDetectionSortBy = "NAME"|"TIMESTAMP"|string;
+  export type LabelDetectionSortBy = "NAME"|"TIMESTAMP";
   export type LabelDetections = LabelDetection[];
   export type Labels = Label[];
   export interface Landmark {
@@ -1308,7 +1308,7 @@ declare namespace Rekognition {
      */
     Y?: Float;
   }
-  export type LandmarkType = "eyeLeft"|"eyeRight"|"nose"|"mouthLeft"|"mouthRight"|"leftEyeBrowLeft"|"leftEyeBrowRight"|"leftEyeBrowUp"|"rightEyeBrowLeft"|"rightEyeBrowRight"|"rightEyeBrowUp"|"leftEyeLeft"|"leftEyeRight"|"leftEyeUp"|"leftEyeDown"|"rightEyeLeft"|"rightEyeRight"|"rightEyeUp"|"rightEyeDown"|"noseLeft"|"noseRight"|"mouthUp"|"mouthDown"|"leftPupil"|"rightPupil"|"upperJawlineLeft"|"midJawlineLeft"|"chinBottom"|"midJawlineRight"|"upperJawlineRight"|string;
+  export type LandmarkType = "eyeLeft"|"eyeRight"|"nose"|"mouthLeft"|"mouthRight"|"leftEyeBrowLeft"|"leftEyeBrowRight"|"leftEyeBrowUp"|"rightEyeBrowLeft"|"rightEyeBrowRight"|"rightEyeBrowUp"|"leftEyeLeft"|"leftEyeRight"|"leftEyeUp"|"leftEyeDown"|"rightEyeLeft"|"rightEyeRight"|"rightEyeUp"|"rightEyeDown"|"noseLeft"|"noseRight"|"mouthUp"|"mouthDown"|"leftPupil"|"rightPupil"|"upperJawlineLeft"|"midJawlineLeft"|"chinBottom"|"midJawlineRight"|"upperJawlineRight";
   export type Landmarks = Landmark[];
   export interface ListCollectionsRequest {
     /**
@@ -1430,7 +1430,7 @@ declare namespace Rekognition {
      */
     RoleArn: RoleArn;
   }
-  export type OrientationCorrection = "ROTATE_0"|"ROTATE_90"|"ROTATE_180"|"ROTATE_270"|string;
+  export type OrientationCorrection = "ROTATE_0"|"ROTATE_90"|"ROTATE_180"|"ROTATE_270";
   export type PageSize = number;
   export type PaginationToken = string;
   export interface Parent {
@@ -1482,7 +1482,7 @@ declare namespace Rekognition {
     FaceMatches?: FaceMatchList;
   }
   export type PersonMatches = PersonMatch[];
-  export type PersonTrackingSortBy = "INDEX"|"TIMESTAMP"|string;
+  export type PersonTrackingSortBy = "INDEX"|"TIMESTAMP";
   export interface Point {
     /**
      * The value of the X coordinate for a point on a Polygon.
@@ -1508,8 +1508,8 @@ declare namespace Rekognition {
      */
     Pitch?: Degree;
   }
-  export type QualityFilter = "NONE"|"AUTO"|string;
-  export type Reason = "EXCEEDS_MAX_FACES"|"EXTREME_POSE"|"LOW_BRIGHTNESS"|"LOW_SHARPNESS"|"LOW_CONFIDENCE"|"SMALL_BOUNDING_BOX"|string;
+  export type QualityFilter = "NONE"|"AUTO";
+  export type Reason = "EXCEEDS_MAX_FACES"|"EXTREME_POSE"|"LOW_BRIGHTNESS"|"LOW_SHARPNESS"|"LOW_CONFIDENCE"|"SMALL_BOUNDING_BOX";
   export type Reasons = Reason[];
   export interface RecognizeCelebritiesRequest {
     /**
@@ -1841,7 +1841,7 @@ declare namespace Rekognition {
      */
     FaceSearch?: FaceSearchSettings;
   }
-  export type StreamProcessorStatus = "STOPPED"|"STARTING"|"RUNNING"|"FAILED"|"STOPPING"|string;
+  export type StreamProcessorStatus = "STOPPED"|"STARTING"|"RUNNING"|"FAILED"|"STOPPING";
   export type String = string;
   export interface Sunglasses {
     /**
@@ -1880,7 +1880,7 @@ declare namespace Rekognition {
     Geometry?: Geometry;
   }
   export type TextDetectionList = TextDetection[];
-  export type TextTypes = "LINE"|"WORD"|string;
+  export type TextTypes = "LINE"|"WORD";
   export type Timestamp = number;
   export type UInteger = number;
   export type ULong = number;
@@ -1903,7 +1903,7 @@ declare namespace Rekognition {
      */
     S3Object?: S3Object;
   }
-  export type VideoJobStatus = "IN_PROGRESS"|"SUCCEEDED"|"FAILED"|string;
+  export type VideoJobStatus = "IN_PROGRESS"|"SUCCEEDED"|"FAILED";
   export interface VideoMetadata {
     /**
      * Type of compression used in the analyzed video. 

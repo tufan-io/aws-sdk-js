@@ -208,7 +208,7 @@ declare namespace Shield {
     Mitigations?: MitigationList;
   }
   export type AttackId = string;
-  export type AttackLayer = "NETWORK"|"APPLICATION"|string;
+  export type AttackLayer = "NETWORK"|"APPLICATION";
   export type AttackProperties = AttackProperty[];
   export interface AttackProperty {
     /**
@@ -232,7 +232,7 @@ declare namespace Shield {
      */
     Total?: Long;
   }
-  export type AttackPropertyIdentifier = "DESTINATION_URL"|"REFERRER"|"SOURCE_ASN"|"SOURCE_COUNTRY"|"SOURCE_IP_ADDRESS"|"SOURCE_USER_AGENT"|"WORDPRESS_PINGBACK_REFLECTOR"|"WORDPRESS_PINGBACK_SOURCE"|string;
+  export type AttackPropertyIdentifier = "DESTINATION_URL"|"REFERRER"|"SOURCE_ASN"|"SOURCE_COUNTRY"|"SOURCE_IP_ADDRESS"|"SOURCE_USER_AGENT"|"WORDPRESS_PINGBACK_REFLECTOR"|"WORDPRESS_PINGBACK_SOURCE";
   export type AttackSummaries = AttackSummary[];
   export interface AttackSummary {
     /**
@@ -264,7 +264,7 @@ declare namespace Shield {
     VectorType: String;
   }
   export type AttackVectorDescriptionList = AttackVectorDescription[];
-  export type AutoRenew = "ENABLED"|"DISABLED"|string;
+  export type AutoRenew = "ENABLED"|"DISABLED";
   export interface Contributor {
     /**
      * The name of the contributor. This is dependent on the AttackPropertyIdentifier. For example, if the AttackPropertyIdentifier is SOURCE_COUNTRY, the Name could be United States.
@@ -508,7 +508,7 @@ declare namespace Shield {
     Counters?: SummarizedCounterList;
   }
   export type SubResourceSummaryList = SubResourceSummary[];
-  export type SubResourceType = "IP"|"URL"|string;
+  export type SubResourceType = "IP"|"URL";
   export interface Subscription {
     /**
      * The start time of the subscription, in Unix time in seconds. For more information see timestamp.
@@ -531,7 +531,7 @@ declare namespace Shield {
      */
     Limits?: Limits;
   }
-  export type SubscriptionState = "ACTIVE"|"INACTIVE"|string;
+  export type SubscriptionState = "ACTIVE"|"INACTIVE";
   export interface SummarizedAttackVector {
     /**
      * The attack type, for example, SNMP reflection or SYN flood.
@@ -583,7 +583,7 @@ declare namespace Shield {
   export type Timestamp = Date;
   export type Token = string;
   export type TopContributors = Contributor[];
-  export type Unit = "BITS"|"BYTES"|"PACKETS"|"REQUESTS"|string;
+  export type Unit = "BITS"|"BYTES"|"PACKETS"|"REQUESTS";
   export interface UpdateEmergencyContactSettingsRequest {
     /**
      * A list of email addresses that the DRT can use to contact you during a suspected attack.

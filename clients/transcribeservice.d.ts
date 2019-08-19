@@ -184,7 +184,7 @@ declare namespace TranscribeService {
      */
     DownloadUri?: Uri;
   }
-  export type LanguageCode = "en-US"|"es-US"|"en-AU"|"fr-CA"|"en-GB"|"de-DE"|"pt-BR"|"fr-FR"|"it-IT"|"ko-KR"|"es-ES"|"en-IN"|"hi-IN"|"ar-SA"|string;
+  export type LanguageCode = "en-US"|"es-US"|"en-AU"|"fr-CA"|"en-GB"|"de-DE"|"pt-BR"|"fr-FR"|"it-IT"|"ko-KR"|"es-ES"|"en-IN"|"hi-IN"|"ar-SA";
   export interface ListTranscriptionJobsRequest {
     /**
      * When specified, returns only transcription jobs with the specified status. Jobs are ordered by creation date, with the newest jobs returned first. If you don’t specify a status, Amazon Transcribe returns all transcription jobs ordered by creation date. 
@@ -257,11 +257,11 @@ declare namespace TranscribeService {
      */
     MediaFileUri?: Uri;
   }
-  export type MediaFormat = "mp3"|"mp4"|"wav"|"flac"|string;
+  export type MediaFormat = "mp3"|"mp4"|"wav"|"flac";
   export type MediaSampleRateHertz = number;
   export type NextToken = string;
   export type OutputBucketName = string;
-  export type OutputLocationType = "CUSTOMER_BUCKET"|"SERVICE_BUCKET"|string;
+  export type OutputLocationType = "CUSTOMER_BUCKET"|"SERVICE_BUCKET";
   export type Phrase = string;
   export type Phrases = Phrase[];
   export interface Settings {
@@ -371,7 +371,7 @@ declare namespace TranscribeService {
     Settings?: Settings;
   }
   export type TranscriptionJobName = string;
-  export type TranscriptionJobStatus = "IN_PROGRESS"|"FAILED"|"COMPLETED"|string;
+  export type TranscriptionJobStatus = "IN_PROGRESS"|"FAILED"|"COMPLETED";
   export type TranscriptionJobSummaries = TranscriptionJobSummary[];
   export interface TranscriptionJobSummary {
     /**
@@ -460,7 +460,7 @@ declare namespace TranscribeService {
     VocabularyState?: VocabularyState;
   }
   export type VocabularyName = string;
-  export type VocabularyState = "PENDING"|"READY"|"FAILED"|string;
+  export type VocabularyState = "PENDING"|"READY"|"FAILED";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

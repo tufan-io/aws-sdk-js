@@ -258,11 +258,11 @@ declare namespace ACMPCA {
   }
   export type AccountId = string;
   export type ActionList = ActionType[];
-  export type ActionType = "IssueCertificate"|"GetCertificate"|"ListPermissions"|string;
+  export type ActionType = "IssueCertificate"|"GetCertificate"|"ListPermissions";
   export type Arn = string;
   export type AuditReportId = string;
-  export type AuditReportResponseFormat = "JSON"|"CSV"|string;
-  export type AuditReportStatus = "CREATING"|"SUCCESS"|"FAILED"|string;
+  export type AuditReportResponseFormat = "JSON"|"CSV";
+  export type AuditReportStatus = "CREATING"|"SUCCESS"|"FAILED";
   export type Boolean = boolean;
   export type CertificateAuthorities = CertificateAuthority[];
   export interface CertificateAuthority {
@@ -329,8 +329,8 @@ declare namespace ACMPCA {
      */
     Subject: ASN1Subject;
   }
-  export type CertificateAuthorityStatus = "CREATING"|"PENDING_CERTIFICATE"|"ACTIVE"|"DELETED"|"DISABLED"|"EXPIRED"|"FAILED"|string;
-  export type CertificateAuthorityType = "ROOT"|"SUBORDINATE"|string;
+  export type CertificateAuthorityStatus = "CREATING"|"PENDING_CERTIFICATE"|"ACTIVE"|"DELETED"|"DISABLED"|"EXPIRED"|"FAILED";
+  export type CertificateAuthorityType = "ROOT"|"SUBORDINATE";
   export type CertificateBody = string;
   export type CertificateBodyBlob = Buffer|Uint8Array|Blob|string;
   export type CertificateChain = string;
@@ -491,7 +491,7 @@ declare namespace ACMPCA {
     CertificateAuthority?: CertificateAuthority;
   }
   export type DistinguishedNameQualifierString = string;
-  export type FailureReason = "REQUEST_TIMED_OUT"|"UNSUPPORTED_ALGORITHM"|"OTHER"|string;
+  export type FailureReason = "REQUEST_TIMED_OUT"|"UNSUPPORTED_ALGORITHM"|"OTHER";
   export interface GetCertificateAuthorityCertificateRequest {
     /**
      * The Amazon Resource Name (ARN) of your private CA. This is of the form:  arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012 . 
@@ -588,7 +588,7 @@ declare namespace ACMPCA {
      */
     CertificateArn?: Arn;
   }
-  export type KeyAlgorithm = "RSA_2048"|"RSA_4096"|"EC_prime256v1"|"EC_secp384r1"|string;
+  export type KeyAlgorithm = "RSA_2048"|"RSA_4096"|"EC_prime256v1"|"EC_secp384r1";
   export interface ListCertificateAuthoritiesRequest {
     /**
      * Use this parameter when paginating results in a subsequent request after you receive a response with truncated results. Set it to the value of the NextToken parameter from the response you just received.
@@ -701,7 +701,7 @@ declare namespace ACMPCA {
      */
     CrlConfiguration?: CrlConfiguration;
   }
-  export type RevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CERTIFICATE_AUTHORITY_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERSEDED"|"CESSATION_OF_OPERATION"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE"|string;
+  export type RevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CERTIFICATE_AUTHORITY_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERSEDED"|"CESSATION_OF_OPERATION"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE";
   export interface RevokeCertificateRequest {
     /**
      * Amazon Resource Name (ARN) of the private CA that issued the certificate to be revoked. This must be of the form:  arn:aws:acm-pca:region:account:certificate-authority/12345678-1234-1234-1234-123456789012  
@@ -716,7 +716,7 @@ declare namespace ACMPCA {
      */
     RevocationReason: RevocationReason;
   }
-  export type SigningAlgorithm = "SHA256WITHECDSA"|"SHA384WITHECDSA"|"SHA512WITHECDSA"|"SHA256WITHRSA"|"SHA384WITHRSA"|"SHA512WITHRSA"|string;
+  export type SigningAlgorithm = "SHA256WITHECDSA"|"SHA384WITHECDSA"|"SHA512WITHECDSA"|"SHA256WITHRSA"|"SHA384WITHRSA"|"SHA512WITHRSA";
   export type String = string;
   export type String128 = string;
   export type String16 = string;
@@ -784,7 +784,7 @@ declare namespace ACMPCA {
      */
     Type: ValidityPeriodType;
   }
-  export type ValidityPeriodType = "END_DATE"|"ABSOLUTE"|"DAYS"|"MONTHS"|"YEARS"|string;
+  export type ValidityPeriodType = "END_DATE"|"ABSOLUTE"|"DAYS"|"MONTHS"|"YEARS";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

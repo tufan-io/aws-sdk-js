@@ -1779,7 +1779,7 @@ declare namespace StorageGateway {
   }
   export type FileShareInfoList = FileShareInfo[];
   export type FileShareStatus = string;
-  export type FileShareType = "NFS"|"SMB"|string;
+  export type FileShareType = "NFS"|"SMB";
   export type FileShareUser = string;
   export type FileShareUserList = FileShareUser[];
   export type Folder = string;
@@ -2099,7 +2099,7 @@ declare namespace StorageGateway {
     NotificationId?: NotificationId;
   }
   export type NumTapesToCreate = number;
-  export type ObjectACL = "private"|"public-read"|"public-read-write"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control"|"aws-exec-read"|string;
+  export type ObjectACL = "private"|"public-read"|"public-read-write"|"authenticated-read"|"bucket-owner-read"|"bucket-owner-full-control"|"aws-exec-read";
   export type OrganizationalUnit = string;
   export type Path = string;
   export type PermissionId = number;
@@ -2236,7 +2236,7 @@ declare namespace StorageGateway {
   }
   export type SMBFileShareInfoList = SMBFileShareInfo[];
   export type SMBGuestPassword = string;
-  export type SMBSecurityStrategy = "ClientSpecified"|"MandatorySigning"|"MandatoryEncryption"|string;
+  export type SMBSecurityStrategy = "ClientSpecified"|"MandatorySigning"|"MandatoryEncryption";
   export interface SetLocalConsolePasswordInput {
     GatewayARN: GatewayARN;
     /**

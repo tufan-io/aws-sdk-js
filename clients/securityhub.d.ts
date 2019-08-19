@@ -410,7 +410,7 @@ declare namespace SecurityHub {
      */
     CreatedAt?: NonEmptyString;
   }
-  export type AwsIamAccessKeyStatus = "Active"|"Inactive"|string;
+  export type AwsIamAccessKeyStatus = "Active"|"Inactive";
   export interface AwsS3BucketDetails {
     /**
      * The canonical user ID of the owner of the S3 bucket.
@@ -930,7 +930,7 @@ declare namespace SecurityHub {
      */
     Status?: ComplianceStatus;
   }
-  export type ComplianceStatus = "PASSED"|"WARNING"|"FAILED"|"NOT_AVAILABLE"|string;
+  export type ComplianceStatus = "PASSED"|"WARNING"|"FAILED"|"NOT_AVAILABLE";
   export interface ContainerDetails {
     /**
      * The name of the container related to a finding.
@@ -1026,7 +1026,7 @@ declare namespace SecurityHub {
      */
     Unit?: DateRangeUnit;
   }
-  export type DateRangeUnit = "DAYS"|string;
+  export type DateRangeUnit = "DAYS";
   export interface DeclineInvitationsRequest {
     /**
      * A list of account IDs that specify the accounts that invitations to Security Hub are declined from.
@@ -1513,8 +1513,8 @@ declare namespace SecurityHub {
     State?: MalwareState;
   }
   export type MalwareList = Malware[];
-  export type MalwareState = "OBSERVED"|"REMOVAL_FAILED"|"REMOVED"|string;
-  export type MalwareType = "ADWARE"|"BLENDED_THREAT"|"BOTNET_AGENT"|"COIN_MINER"|"EXPLOIT_KIT"|"KEYLOGGER"|"MACRO"|"POTENTIALLY_UNWANTED"|"SPYWARE"|"RANSOMWARE"|"REMOTE_ACCESS"|"ROOTKIT"|"TROJAN"|"VIRUS"|"WORM"|string;
+  export type MalwareState = "OBSERVED"|"REMOVAL_FAILED"|"REMOVED";
+  export type MalwareType = "ADWARE"|"BLENDED_THREAT"|"BOTNET_AGENT"|"COIN_MINER"|"EXPLOIT_KIT"|"KEYLOGGER"|"MACRO"|"POTENTIALLY_UNWANTED"|"SPYWARE"|"RANSOMWARE"|"REMOTE_ACCESS"|"ROOTKIT"|"TROJAN"|"VIRUS"|"WORM";
   export interface MapFilter {
     /**
      * The key of the map filter.
@@ -1529,7 +1529,7 @@ declare namespace SecurityHub {
      */
     Comparison?: MapFilterComparison;
   }
-  export type MapFilterComparison = "EQUALS"|string;
+  export type MapFilterComparison = "EQUALS";
   export type MapFilterList = MapFilter[];
   export type MaxResults = number;
   export interface Member {
@@ -1605,7 +1605,7 @@ declare namespace SecurityHub {
      */
     DestinationDomain?: NonEmptyString;
   }
-  export type NetworkDirection = "IN"|"OUT"|string;
+  export type NetworkDirection = "IN"|"OUT";
   export type NextToken = string;
   export type NonEmptyString = string;
   export interface Note {
@@ -1647,7 +1647,7 @@ declare namespace SecurityHub {
     Eq?: Double;
   }
   export type NumberFilterList = NumberFilter[];
-  export type Partition = "aws"|"aws-cn"|"aws-us-gov"|string;
+  export type Partition = "aws"|"aws-cn"|"aws-us-gov";
   export interface ProcessDetails {
     /**
      * The name of the process.
@@ -1720,7 +1720,7 @@ declare namespace SecurityHub {
      */
     Url?: NonEmptyString;
   }
-  export type RecordState = "ACTIVE"|"ARCHIVED"|string;
+  export type RecordState = "ACTIVE"|"ARCHIVED";
   export interface RelatedFinding {
     /**
      * The ARN of the product that generated a related finding.
@@ -1820,9 +1820,9 @@ declare namespace SecurityHub {
      */
     SortOrder?: SortOrder;
   }
-  export type SortOrder = "asc"|"desc"|string;
+  export type SortOrder = "asc"|"desc";
   export type StandardsInputParameterMap = {[key: string]: NonEmptyString};
-  export type StandardsStatus = "PENDING"|"READY"|"FAILED"|"DELETING"|"INCOMPLETE"|string;
+  export type StandardsStatus = "PENDING"|"READY"|"FAILED"|"DELETING"|"INCOMPLETE";
   export interface StandardsSubscription {
     /**
      * The ARN of a resource that represents your subscription to a supported standard.
@@ -1864,7 +1864,7 @@ declare namespace SecurityHub {
      */
     Comparison?: StringFilterComparison;
   }
-  export type StringFilterComparison = "EQUALS"|"PREFIX"|string;
+  export type StringFilterComparison = "EQUALS"|"PREFIX";
   export type StringFilterList = StringFilter[];
   export type StringList = NonEmptyString[];
   export type TagKey = string;
@@ -1909,9 +1909,9 @@ declare namespace SecurityHub {
      */
     SourceUrl?: NonEmptyString;
   }
-  export type ThreatIntelIndicatorCategory = "BACKDOOR"|"CARD_STEALER"|"COMMAND_AND_CONTROL"|"DROP_SITE"|"EXPLOIT_SITE"|"KEYLOGGER"|string;
+  export type ThreatIntelIndicatorCategory = "BACKDOOR"|"CARD_STEALER"|"COMMAND_AND_CONTROL"|"DROP_SITE"|"EXPLOIT_SITE"|"KEYLOGGER";
   export type ThreatIntelIndicatorList = ThreatIntelIndicator[];
-  export type ThreatIntelIndicatorType = "DOMAIN"|"EMAIL_ADDRESS"|"HASH_MD5"|"HASH_SHA1"|"HASH_SHA256"|"HASH_SHA512"|"IPV4_ADDRESS"|"IPV6_ADDRESS"|"MUTEX"|"PROCESS"|"URL"|string;
+  export type ThreatIntelIndicatorType = "DOMAIN"|"EMAIL_ADDRESS"|"HASH_MD5"|"HASH_SHA1"|"HASH_SHA256"|"HASH_SHA512"|"IPV4_ADDRESS"|"IPV6_ADDRESS"|"MUTEX"|"PROCESS"|"URL";
   export type Timestamp = Date;
   export type TypeList = NonEmptyString[];
   export interface UntagResourceRequest {
@@ -1978,8 +1978,8 @@ declare namespace SecurityHub {
   }
   export interface UpdateInsightResponse {
   }
-  export type VerificationState = "UNKNOWN"|"TRUE_POSITIVE"|"FALSE_POSITIVE"|"BENIGN_POSITIVE"|string;
-  export type WorkflowState = "NEW"|"ASSIGNED"|"IN_PROGRESS"|"DEFERRED"|"RESOLVED"|string;
+  export type VerificationState = "UNKNOWN"|"TRUE_POSITIVE"|"FALSE_POSITIVE"|"BENIGN_POSITIVE";
+  export type WorkflowState = "NEW"|"ASSIGNED"|"IN_PROGRESS"|"DEFERRED"|"RESOLVED";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

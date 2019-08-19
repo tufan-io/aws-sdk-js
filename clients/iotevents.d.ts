@@ -397,7 +397,7 @@ declare namespace IoTEvents {
     creationTime?: Timestamp;
   }
   export type DetectorModelVersion = string;
-  export type DetectorModelVersionStatus = "ACTIVE"|"ACTIVATING"|"INACTIVE"|"DEPRECATED"|"DRAFT"|"PAUSED"|"FAILED"|string;
+  export type DetectorModelVersionStatus = "ACTIVE"|"ACTIVATING"|"INACTIVE"|"DEPRECATED"|"DRAFT"|"PAUSED"|"FAILED";
   export type DetectorModelVersionSummaries = DetectorModelVersionSummary[];
   export interface DetectorModelVersionSummary {
     /**
@@ -501,7 +501,7 @@ declare namespace IoTEvents {
   }
   export type InputDescription = string;
   export type InputName = string;
-  export type InputStatus = "CREATING"|"UPDATING"|"ACTIVE"|"DELETING"|string;
+  export type InputStatus = "CREATING"|"UPDATING"|"ACTIVE"|"DELETING";
   export type InputSummaries = InputSummary[];
   export interface InputSummary {
     /**
@@ -625,7 +625,7 @@ declare namespace IoTEvents {
     tags?: Tags;
   }
   export type LoggingEnabled = boolean;
-  export type LoggingLevel = "ERROR"|"INFO"|"DEBUG"|string;
+  export type LoggingLevel = "ERROR"|"INFO"|"DEBUG";
   export interface LoggingOptions {
     /**
      * The ARN of the role that grants permission to AWS IoT Events to perform logging.

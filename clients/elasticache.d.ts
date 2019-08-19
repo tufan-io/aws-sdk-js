@@ -414,7 +414,7 @@ declare class ElastiCache extends Service {
   waitFor(state: "replicationGroupDeleted", callback?: (err: AWSError, data: ElastiCache.Types.ReplicationGroupMessage) => void): Request<ElastiCache.Types.ReplicationGroupMessage, AWSError>;
 }
 declare namespace ElastiCache {
-  export type AZMode = "single-az"|"cross-az"|string;
+  export type AZMode = "single-az"|"cross-az";
   export interface AddTagsToResourceMessage {
     /**
      * The Amazon Resource Name (ARN) of the resource to which the tags are to be added, for example arn:aws:elasticache:us-west-2:0123456789:cluster:myCluster or arn:aws:elasticache:us-west-2:0123456789:snapshot:mySnapshot. ElastiCache resources are cluster and snapshot. For more information about ARNs, see Amazon Resource Names (ARNs) and AWS Service Namespaces.
@@ -449,7 +449,7 @@ declare namespace ElastiCache {
   export interface AuthorizeCacheSecurityGroupIngressResult {
     CacheSecurityGroup?: CacheSecurityGroup;
   }
-  export type AutomaticFailoverStatus = "enabled"|"disabled"|"enabling"|"disabling"|string;
+  export type AutomaticFailoverStatus = "enabled"|"disabled"|"enabling"|"disabling";
   export interface AvailabilityZone {
     /**
      * The name of the Availability Zone.
@@ -833,7 +833,7 @@ declare namespace ElastiCache {
     CacheSubnetGroups?: CacheSubnetGroups;
   }
   export type CacheSubnetGroups = CacheSubnetGroup[];
-  export type ChangeType = "immediate"|"requires-reboot"|string;
+  export type ChangeType = "immediate"|"requires-reboot";
   export type ClusterIdList = String[];
   export interface ConfigureShard {
     /**
@@ -2027,8 +2027,8 @@ declare namespace ElastiCache {
   }
   export type NodeSnapshotList = NodeSnapshot[];
   export type NodeTypeList = String[];
-  export type NodeUpdateInitiatedBy = "system"|"customer"|string;
-  export type NodeUpdateStatus = "not-applied"|"waiting-to-start"|"in-progress"|"stopping"|"stopped"|"complete"|string;
+  export type NodeUpdateInitiatedBy = "system"|"customer";
+  export type NodeUpdateStatus = "not-applied"|"waiting-to-start"|"in-progress"|"stopping"|"stopped"|"complete";
   export interface NotificationConfiguration {
     /**
      * The Amazon Resource Name (ARN) that identifies the topic.
@@ -2089,7 +2089,7 @@ declare namespace ElastiCache {
   }
   export type ParameterNameValueList = ParameterNameValue[];
   export type ParametersList = Parameter[];
-  export type PendingAutomaticFailoverStatus = "enabled"|"disabled"|string;
+  export type PendingAutomaticFailoverStatus = "enabled"|"disabled";
   export interface PendingModifiedValues {
     /**
      * The new number of cache nodes for the cluster. For clusters running Redis, this value must be 1. For clusters running Memcached, this value must be between 1 and 20.
@@ -2490,10 +2490,10 @@ declare namespace ElastiCache {
     EstimatedUpdateTime?: String;
   }
   export type ServiceUpdateList = ServiceUpdate[];
-  export type ServiceUpdateSeverity = "critical"|"important"|"medium"|"low"|string;
-  export type ServiceUpdateStatus = "available"|"cancelled"|"expired"|string;
+  export type ServiceUpdateSeverity = "critical"|"important"|"medium"|"low";
+  export type ServiceUpdateStatus = "available"|"cancelled"|"expired";
   export type ServiceUpdateStatusList = ServiceUpdateStatus[];
-  export type ServiceUpdateType = "security-update"|string;
+  export type ServiceUpdateType = "security-update";
   export interface ServiceUpdatesMessage {
     /**
      * An optional marker returned from a prior request. Use this marker for pagination of results from this operation. If this parameter is specified, the response includes only records beyond the marker, up to the value specified by MaxRecords.
@@ -2504,7 +2504,7 @@ declare namespace ElastiCache {
      */
     ServiceUpdates?: ServiceUpdateList;
   }
-  export type SlaMet = "yes"|"no"|"n/a"|string;
+  export type SlaMet = "yes"|"no"|"n/a";
   export interface SlotMigration {
     /**
      * The percentage of the slot migration that is complete.
@@ -2611,7 +2611,7 @@ declare namespace ElastiCache {
   }
   export type SnapshotArnsList = String[];
   export type SnapshotList = Snapshot[];
-  export type SourceType = "cache-cluster"|"cache-parameter-group"|"cache-security-group"|"cache-subnet-group"|"replication-group"|string;
+  export type SourceType = "cache-cluster"|"cache-parameter-group"|"cache-security-group"|"cache-subnet-group"|"replication-group";
   export type String = string;
   export interface Subnet {
     /**
@@ -2754,7 +2754,7 @@ declare namespace ElastiCache {
      */
     UnprocessedUpdateActions?: UnprocessedUpdateActionList;
   }
-  export type UpdateActionStatus = "not-applied"|"waiting-to-start"|"in-progress"|"stopping"|"stopped"|"complete"|string;
+  export type UpdateActionStatus = "not-applied"|"waiting-to-start"|"in-progress"|"stopping"|"stopped"|"complete";
   export type UpdateActionStatusList = UpdateActionStatus[];
   export interface UpdateActionsMessage {
     /**

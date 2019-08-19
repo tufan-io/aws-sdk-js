@@ -141,7 +141,7 @@ declare class Batch extends Service {
   updateJobQueue(callback?: (err: AWSError, data: Batch.Types.UpdateJobQueueResponse) => void): Request<Batch.Types.UpdateJobQueueResponse, AWSError>;
 }
 declare namespace Batch {
-  export type ArrayJobDependency = "N_TO_N"|"SEQUENTIAL"|string;
+  export type ArrayJobDependency = "N_TO_N"|"SEQUENTIAL";
   export type ArrayJobStatusSummary = {[key: string]: Integer};
   export interface ArrayProperties {
     /**
@@ -219,10 +219,10 @@ declare namespace Batch {
   }
   export type AttemptDetails = AttemptDetail[];
   export type Boolean = boolean;
-  export type CEState = "ENABLED"|"DISABLED"|string;
-  export type CEStatus = "CREATING"|"UPDATING"|"DELETING"|"DELETED"|"VALID"|"INVALID"|string;
-  export type CEType = "MANAGED"|"UNMANAGED"|string;
-  export type CRType = "EC2"|"SPOT"|string;
+  export type CEState = "ENABLED"|"DISABLED";
+  export type CEStatus = "CREATING"|"UPDATING"|"DELETING"|"DELETED"|"VALID"|"INVALID";
+  export type CEType = "MANAGED"|"UNMANAGED";
+  export type CRType = "EC2"|"SPOT";
   export interface CancelJobRequest {
     /**
      * The AWS Batch job ID of the job to cancel.
@@ -735,7 +735,7 @@ declare namespace Batch {
      */
     permissions?: DeviceCgroupPermissions;
   }
-  export type DeviceCgroupPermission = "READ"|"WRITE"|"MKNOD"|string;
+  export type DeviceCgroupPermission = "READ"|"WRITE"|"MKNOD";
   export type DeviceCgroupPermissions = DeviceCgroupPermission[];
   export type DevicesList = Device[];
   export type EnvironmentVariables = KeyValuePair[];
@@ -746,8 +746,8 @@ declare namespace Batch {
     sourcePath?: String;
   }
   export type Integer = number;
-  export type JQState = "ENABLED"|"DISABLED"|string;
-  export type JQStatus = "CREATING"|"UPDATING"|"DELETING"|"DELETED"|"VALID"|"INVALID"|string;
+  export type JQState = "ENABLED"|"DISABLED";
+  export type JQStatus = "CREATING"|"UPDATING"|"DELETING"|"DELETED"|"VALID"|"INVALID";
   export interface JobDefinition {
     /**
      * The name of the job definition. 
@@ -791,7 +791,7 @@ declare namespace Batch {
     nodeProperties?: NodeProperties;
   }
   export type JobDefinitionList = JobDefinition[];
-  export type JobDefinitionType = "container"|"multinode"|string;
+  export type JobDefinitionType = "container"|"multinode";
   export interface JobDependency {
     /**
      * The job ID of the AWS Batch job associated with this dependency.
@@ -909,7 +909,7 @@ declare namespace Batch {
     computeEnvironmentOrder: ComputeEnvironmentOrders;
   }
   export type JobQueueDetailList = JobQueueDetail[];
-  export type JobStatus = "SUBMITTED"|"PENDING"|"RUNNABLE"|"STARTING"|"RUNNING"|"SUCCEEDED"|"FAILED"|string;
+  export type JobStatus = "SUBMITTED"|"PENDING"|"RUNNABLE"|"STARTING"|"RUNNING"|"SUCCEEDED"|"FAILED";
   export interface JobSummary {
     /**
      * The ID of the job.
@@ -1182,7 +1182,7 @@ declare namespace Batch {
     type: ResourceType;
   }
   export type ResourceRequirements = ResourceRequirement[];
-  export type ResourceType = "GPU"|string;
+  export type ResourceType = "GPU";
   export interface RetryStrategy {
     /**
      * The number of times to move a job to the RUNNABLE status. You may specify between 1 and 10 attempts. If the value of attempts is greater than one, the job is retried on failure the same number of attempts as the value.

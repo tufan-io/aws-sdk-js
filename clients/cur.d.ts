@@ -37,10 +37,10 @@ declare class CUR extends Service {
   putReportDefinition(callback?: (err: AWSError, data: CUR.Types.PutReportDefinitionResponse) => void): Request<CUR.Types.PutReportDefinitionResponse, AWSError>;
 }
 declare namespace CUR {
-  export type AWSRegion = "us-east-1"|"us-west-1"|"us-west-2"|"eu-central-1"|"eu-west-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"eu-north-1"|"ap-northeast-3"|string;
-  export type AdditionalArtifact = "REDSHIFT"|"QUICKSIGHT"|"ATHENA"|string;
+  export type AWSRegion = "us-east-1"|"us-west-1"|"us-west-2"|"eu-central-1"|"eu-west-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"eu-north-1"|"ap-northeast-3";
+  export type AdditionalArtifact = "REDSHIFT"|"QUICKSIGHT"|"ATHENA";
   export type AdditionalArtifactList = AdditionalArtifact[];
-  export type CompressionFormat = "ZIP"|"GZIP"|"Parquet"|string;
+  export type CompressionFormat = "ZIP"|"GZIP"|"Parquet";
   export interface DeleteReportDefinitionRequest {
     ReportName?: ReportName;
   }
@@ -96,14 +96,14 @@ declare namespace CUR {
     ReportVersioning?: ReportVersioning;
   }
   export type ReportDefinitionList = ReportDefinition[];
-  export type ReportFormat = "textORcsv"|"Parquet"|string;
+  export type ReportFormat = "textORcsv"|"Parquet";
   export type ReportName = string;
-  export type ReportVersioning = "CREATE_NEW_REPORT"|"OVERWRITE_REPORT"|string;
+  export type ReportVersioning = "CREATE_NEW_REPORT"|"OVERWRITE_REPORT";
   export type S3Bucket = string;
   export type S3Prefix = string;
-  export type SchemaElement = "RESOURCES"|string;
+  export type SchemaElement = "RESOURCES";
   export type SchemaElementList = SchemaElement[];
-  export type TimeUnit = "HOURLY"|"DAILY"|string;
+  export type TimeUnit = "HOURLY"|"DAILY";
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.
    */

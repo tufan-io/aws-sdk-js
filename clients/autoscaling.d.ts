@@ -1747,7 +1747,7 @@ declare namespace AutoScaling {
   }
   export type LifecycleHookSpecifications = LifecycleHookSpecification[];
   export type LifecycleHooks = LifecycleHook[];
-  export type LifecycleState = "Pending"|"Pending:Wait"|"Pending:Proceed"|"Quarantined"|"InService"|"Terminating"|"Terminating:Wait"|"Terminating:Proceed"|"Terminated"|"Detaching"|"Detached"|"EnteringStandby"|"Standby"|string;
+  export type LifecycleState = "Pending"|"Pending:Wait"|"Pending:Proceed"|"Quarantined"|"InService"|"Terminating"|"Terminating:Wait"|"Terminating:Proceed"|"Terminated"|"Detaching"|"Detached"|"EnteringStandby"|"Standby";
   export type LifecycleTransition = string;
   export type LoadBalancerNames = XmlStringMaxLen255[];
   export interface LoadBalancerState {
@@ -1805,8 +1805,8 @@ declare namespace AutoScaling {
   export type MetricName = string;
   export type MetricNamespace = string;
   export type MetricScale = number;
-  export type MetricStatistic = "Average"|"Minimum"|"Maximum"|"SampleCount"|"Sum"|string;
-  export type MetricType = "ASGAverageCPUUtilization"|"ASGAverageNetworkIn"|"ASGAverageNetworkOut"|"ALBRequestCountPerTarget"|string;
+  export type MetricStatistic = "Average"|"Minimum"|"Maximum"|"SampleCount"|"Sum";
+  export type MetricType = "ASGAverageCPUUtilization"|"ASGAverageNetworkIn"|"ASGAverageNetworkOut"|"ALBRequestCountPerTarget";
   export type MetricUnit = string;
   export type Metrics = XmlStringMaxLen255[];
   export type MinAdjustmentMagnitude = number;
@@ -2054,7 +2054,7 @@ declare namespace AutoScaling {
     InstanceId?: XmlStringMaxLen19;
   }
   export type ResourceName = string;
-  export type ScalingActivityStatusCode = "PendingSpotBidPlacement"|"WaitingForSpotInstanceRequestId"|"WaitingForSpotInstanceId"|"WaitingForInstanceId"|"PreInService"|"InProgress"|"WaitingForELBConnectionDraining"|"MidLifecycleAction"|"WaitingForInstanceWarmup"|"Successful"|"Failed"|"Cancelled"|string;
+  export type ScalingActivityStatusCode = "PendingSpotBidPlacement"|"WaitingForSpotInstanceRequestId"|"WaitingForSpotInstanceId"|"WaitingForInstanceId"|"PreInService"|"InProgress"|"WaitingForELBConnectionDraining"|"MidLifecycleAction"|"WaitingForInstanceWarmup"|"Successful"|"Failed"|"Cancelled";
   export type ScalingPolicies = ScalingPolicy[];
   export interface ScalingPolicy {
     /**

@@ -278,7 +278,7 @@ declare namespace ServiceDiscovery {
      */
     Service?: Service;
   }
-  export type CustomHealthStatus = "HEALTHY"|"UNHEALTHY"|string;
+  export type CustomHealthStatus = "HEALTHY"|"UNHEALTHY";
   export interface DeleteNamespaceRequest {
     /**
      * The ID of the namespace that you want to delete.
@@ -381,7 +381,7 @@ declare namespace ServiceDiscovery {
   }
   export type DnsRecordList = DnsRecord[];
   export type FailureThreshold = number;
-  export type FilterCondition = "EQ"|"IN"|"BETWEEN"|string;
+  export type FilterCondition = "EQ"|"IN"|"BETWEEN";
   export type FilterValue = string;
   export type FilterValues = FilterValue[];
   export interface GetInstanceRequest {
@@ -484,9 +484,9 @@ declare namespace ServiceDiscovery {
      */
     FailureThreshold?: FailureThreshold;
   }
-  export type HealthCheckType = "HTTP"|"HTTPS"|"TCP"|string;
-  export type HealthStatus = "HEALTHY"|"UNHEALTHY"|"UNKNOWN"|string;
-  export type HealthStatusFilter = "HEALTHY"|"UNHEALTHY"|"ALL"|string;
+  export type HealthCheckType = "HTTP"|"HTTPS"|"TCP";
+  export type HealthStatus = "HEALTHY"|"UNHEALTHY"|"UNKNOWN";
+  export type HealthStatusFilter = "HEALTHY"|"UNHEALTHY"|"ALL";
   export interface HttpInstanceSummary {
     /**
      * The ID of an instance that matches the values that you specified in the request.
@@ -693,7 +693,7 @@ declare namespace ServiceDiscovery {
      */
     Condition?: FilterCondition;
   }
-  export type NamespaceFilterName = "TYPE"|string;
+  export type NamespaceFilterName = "TYPE";
   export type NamespaceFilters = NamespaceFilter[];
   export type NamespaceName = string;
   export interface NamespaceProperties {
@@ -738,7 +738,7 @@ declare namespace ServiceDiscovery {
      */
     CreateDate?: Timestamp;
   }
-  export type NamespaceType = "DNS_PUBLIC"|"DNS_PRIVATE"|"HTTP"|string;
+  export type NamespaceType = "DNS_PUBLIC"|"DNS_PRIVATE"|"HTTP";
   export type NextToken = string;
   export interface Operation {
     /**
@@ -788,10 +788,10 @@ declare namespace ServiceDiscovery {
      */
     Condition?: FilterCondition;
   }
-  export type OperationFilterName = "NAMESPACE_ID"|"SERVICE_ID"|"STATUS"|"TYPE"|"UPDATE_DATE"|string;
+  export type OperationFilterName = "NAMESPACE_ID"|"SERVICE_ID"|"STATUS"|"TYPE"|"UPDATE_DATE";
   export type OperationFilters = OperationFilter[];
   export type OperationId = string;
-  export type OperationStatus = "SUBMITTED"|"PENDING"|"SUCCESS"|"FAIL"|string;
+  export type OperationStatus = "SUBMITTED"|"PENDING"|"SUCCESS"|"FAIL";
   export interface OperationSummary {
     /**
      * The ID for an operation.
@@ -803,11 +803,11 @@ declare namespace ServiceDiscovery {
     Status?: OperationStatus;
   }
   export type OperationSummaryList = OperationSummary[];
-  export type OperationTargetType = "NAMESPACE"|"SERVICE"|"INSTANCE"|string;
+  export type OperationTargetType = "NAMESPACE"|"SERVICE"|"INSTANCE";
   export type OperationTargetsMap = {[key: string]: ResourceId};
-  export type OperationType = "CREATE_NAMESPACE"|"DELETE_NAMESPACE"|"UPDATE_SERVICE"|"REGISTER_INSTANCE"|"DEREGISTER_INSTANCE"|string;
+  export type OperationType = "CREATE_NAMESPACE"|"DELETE_NAMESPACE"|"UPDATE_SERVICE"|"REGISTER_INSTANCE"|"DEREGISTER_INSTANCE";
   export type RecordTTL = number;
-  export type RecordType = "SRV"|"A"|"AAAA"|"CNAME"|string;
+  export type RecordType = "SRV"|"A"|"AAAA"|"CNAME";
   export interface RegisterInstanceRequest {
     /**
      * The ID of the service that you want to use for settings for the instance.
@@ -836,7 +836,7 @@ declare namespace ServiceDiscovery {
   export type ResourceDescription = string;
   export type ResourceId = string;
   export type ResourcePath = string;
-  export type RoutingPolicy = "MULTIVALUE"|"WEIGHTED"|string;
+  export type RoutingPolicy = "MULTIVALUE"|"WEIGHTED";
   export interface Service {
     /**
      * The ID that AWS Cloud Map assigned to the service when you created it.
@@ -908,7 +908,7 @@ declare namespace ServiceDiscovery {
      */
     Condition?: FilterCondition;
   }
-  export type ServiceFilterName = "NAMESPACE_ID"|string;
+  export type ServiceFilterName = "NAMESPACE_ID";
   export type ServiceFilters = ServiceFilter[];
   export type ServiceName = string;
   export type ServiceSummariesList = ServiceSummary[];

@@ -480,7 +480,7 @@ declare namespace Route53 {
      */
     Value: LimitValue;
   }
-  export type AccountLimitType = "MAX_HEALTH_CHECKS_BY_OWNER"|"MAX_HOSTED_ZONES_BY_OWNER"|"MAX_TRAFFIC_POLICY_INSTANCES_BY_OWNER"|"MAX_REUSABLE_DELEGATION_SETS_BY_OWNER"|"MAX_TRAFFIC_POLICIES_BY_OWNER"|string;
+  export type AccountLimitType = "MAX_HEALTH_CHECKS_BY_OWNER"|"MAX_HOSTED_ZONES_BY_OWNER"|"MAX_TRAFFIC_POLICY_INSTANCES_BY_OWNER"|"MAX_REUSABLE_DELEGATION_SETS_BY_OWNER"|"MAX_TRAFFIC_POLICIES_BY_OWNER";
   export interface AlarmIdentifier {
     /**
      * For the CloudWatch alarm that you want Route 53 health checkers to use to determine whether this health check is healthy, the region that the alarm was created in. For the current list of CloudWatch regions, see Amazon CloudWatch in the AWS Regions and Endpoints chapter of the Amazon Web Services General Reference.
@@ -538,7 +538,7 @@ declare namespace Route53 {
      */
     ResourceRecordSet: ResourceRecordSet;
   }
-  export type ChangeAction = "CREATE"|"DELETE"|"UPSERT"|string;
+  export type ChangeAction = "CREATE"|"DELETE"|"UPSERT";
   export interface ChangeBatch {
     /**
      *  Optional: Any comments you want to include about a change batch request.
@@ -583,7 +583,7 @@ declare namespace Route53 {
      */
     ChangeInfo: ChangeInfo;
   }
-  export type ChangeStatus = "PENDING"|"INSYNC"|string;
+  export type ChangeStatus = "PENDING"|"INSYNC";
   export interface ChangeTagsForResourceRequest {
     /**
      * The type of the resource.   The resource type for health checks is healthcheck.   The resource type for hosted zones is hostedzone.  
@@ -642,8 +642,8 @@ declare namespace Route53 {
     Dimensions?: DimensionList;
   }
   export type CloudWatchLogsLogGroupArn = string;
-  export type CloudWatchRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"ca-central-1"|"eu-central-1"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"ap-east-1"|"me-south-1"|"ap-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"cn-northwest-1"|"cn-north-1"|string;
-  export type ComparisonOperator = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold"|string;
+  export type CloudWatchRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"ca-central-1"|"eu-central-1"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"ap-east-1"|"me-south-1"|"ap-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"cn-northwest-1"|"cn-north-1";
+  export type ComparisonOperator = "GreaterThanOrEqualToThreshold"|"GreaterThanThreshold"|"LessThanThreshold"|"LessThanOrEqualToThreshold";
   export interface CreateHealthCheckRequest {
     /**
      * A unique string that identifies the request and that allows you to retry a failed CreateHealthCheck request without the risk of creating two identical health checks:   If you send a CreateHealthCheck request with the same CallerReference and settings as a previous request, and if the health check doesn't exist, Amazon Route 53 creates the health check. If the health check does exist, Route 53 returns the settings for the existing health check.   If you send a CreateHealthCheck request with the same CallerReference as a deleted health check, regardless of the settings, Route 53 returns a HealthCheckAlreadyExists error.   If you send a CreateHealthCheck request with the same CallerReference as an existing health check but with different settings, Route 53 returns a HealthCheckAlreadyExists error.   If you send a CreateHealthCheck request with a unique CallerReference but settings identical to an existing health check, Route 53 creates the health check.  
@@ -1361,9 +1361,9 @@ declare namespace Route53 {
     StatusReport?: StatusReport;
   }
   export type HealthCheckObservations = HealthCheckObservation[];
-  export type HealthCheckRegion = "us-east-1"|"us-west-1"|"us-west-2"|"eu-west-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"sa-east-1"|string;
+  export type HealthCheckRegion = "us-east-1"|"us-west-1"|"us-west-2"|"eu-west-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"sa-east-1";
   export type HealthCheckRegionList = HealthCheckRegion[];
-  export type HealthCheckType = "HTTP"|"HTTPS"|"HTTP_STR_MATCH"|"HTTPS_STR_MATCH"|"TCP"|"CALCULATED"|"CLOUDWATCH_METRIC"|string;
+  export type HealthCheckType = "HTTP"|"HTTPS"|"HTTP_STR_MATCH"|"HTTPS_STR_MATCH"|"TCP"|"CALCULATED"|"CLOUDWATCH_METRIC";
   export type HealthCheckVersion = number;
   export type HealthChecks = HealthCheck[];
   export type HealthThreshold = number;
@@ -1414,12 +1414,12 @@ declare namespace Route53 {
      */
     Value: LimitValue;
   }
-  export type HostedZoneLimitType = "MAX_RRSETS_BY_ZONE"|"MAX_VPCS_ASSOCIATED_BY_ZONE"|string;
+  export type HostedZoneLimitType = "MAX_RRSETS_BY_ZONE"|"MAX_VPCS_ASSOCIATED_BY_ZONE";
   export type HostedZoneRRSetCount = number;
   export type HostedZones = HostedZone[];
   export type IPAddress = string;
   export type IPAddressCidr = string;
-  export type InsufficientDataHealthStatus = "Healthy"|"Unhealthy"|"LastKnownStatus"|string;
+  export type InsufficientDataHealthStatus = "Healthy"|"Unhealthy"|"LastKnownStatus";
   export type Inverted = boolean;
   export type IsPrivateZone = boolean;
   export type LimitValue = number;
@@ -1979,11 +1979,11 @@ declare namespace Route53 {
   export type QueryLoggingConfigId = string;
   export type QueryLoggingConfigs = QueryLoggingConfig[];
   export type RData = string;
-  export type RRType = "SOA"|"A"|"TXT"|"NS"|"CNAME"|"MX"|"NAPTR"|"PTR"|"SRV"|"SPF"|"AAAA"|"CAA"|string;
+  export type RRType = "SOA"|"A"|"TXT"|"NS"|"CNAME"|"MX"|"NAPTR"|"PTR"|"SRV"|"SPF"|"AAAA"|"CAA";
   export type RecordData = RecordDataEntry[];
   export type RecordDataEntry = string;
   export type RequestInterval = number;
-  export type ResettableElementName = "FullyQualifiedDomainName"|"Regions"|"ResourcePath"|"ChildHealthChecks"|string;
+  export type ResettableElementName = "FullyQualifiedDomainName"|"Regions"|"ResourcePath"|"ChildHealthChecks";
   export type ResettableElementNameList = ResettableElementName[];
   export type ResourceDescription = string;
   export type ResourceId = string;
@@ -2048,10 +2048,10 @@ declare namespace Route53 {
      */
     TrafficPolicyInstanceId?: TrafficPolicyInstanceId;
   }
-  export type ResourceRecordSetFailover = "PRIMARY"|"SECONDARY"|string;
+  export type ResourceRecordSetFailover = "PRIMARY"|"SECONDARY";
   export type ResourceRecordSetIdentifier = string;
   export type ResourceRecordSetMultiValueAnswer = boolean;
-  export type ResourceRecordSetRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"ca-central-1"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"cn-north-1"|"cn-northwest-1"|"ap-east-1"|"me-south-1"|"ap-south-1"|string;
+  export type ResourceRecordSetRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"ca-central-1"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"cn-north-1"|"cn-northwest-1"|"ap-east-1"|"me-south-1"|"ap-south-1";
   export type ResourceRecordSetWeight = number;
   export type ResourceRecordSets = ResourceRecordSet[];
   export type ResourceRecords = ResourceRecord[];
@@ -2081,10 +2081,10 @@ declare namespace Route53 {
      */
     Value: LimitValue;
   }
-  export type ReusableDelegationSetLimitType = "MAX_ZONES_BY_REUSABLE_DELEGATION_SET"|string;
+  export type ReusableDelegationSetLimitType = "MAX_ZONES_BY_REUSABLE_DELEGATION_SET";
   export type SearchString = string;
   export type ServicePrincipal = string;
-  export type Statistic = "Average"|"Sum"|"SampleCount"|"Maximum"|"Minimum"|string;
+  export type Statistic = "Average"|"Sum"|"SampleCount"|"Maximum"|"Minimum";
   export type Status = string;
   export interface StatusReport {
     /**
@@ -2113,7 +2113,7 @@ declare namespace Route53 {
   export type TagList = Tag[];
   export type TagResourceId = string;
   export type TagResourceIdList = TagResourceId[];
-  export type TagResourceType = "healthcheck"|"hostedzone"|string;
+  export type TagResourceType = "healthcheck"|"hostedzone";
   export type TagValue = string;
   export interface TestDNSAnswerRequest {
     /**
@@ -2413,7 +2413,7 @@ declare namespace Route53 {
     VPCId?: VPCId;
   }
   export type VPCId = string;
-  export type VPCRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ap-east-1"|"me-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-south-1"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"ca-central-1"|"cn-north-1"|string;
+  export type VPCRegion = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ap-east-1"|"me-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-south-1"|"ap-northeast-1"|"ap-northeast-2"|"ap-northeast-3"|"eu-north-1"|"sa-east-1"|"ca-central-1"|"cn-north-1";
   export type VPCs = VPC[];
   /**
    * A string in YYYY-MM-DD format that represents the latest possible API version that can be used in this service. Specify 'latest' to use the latest possible version.

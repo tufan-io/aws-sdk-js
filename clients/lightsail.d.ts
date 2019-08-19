@@ -821,7 +821,7 @@ declare class Lightsail extends Service {
   updateRelationalDatabaseParameters(callback?: (err: AWSError, data: Lightsail.Types.UpdateRelationalDatabaseParametersResult) => void): Request<Lightsail.Types.UpdateRelationalDatabaseParametersResult, AWSError>;
 }
 declare namespace Lightsail {
-  export type AccessDirection = "inbound"|"outbound"|string;
+  export type AccessDirection = "inbound"|"outbound";
   export interface AllocateStaticIpRequest {
     /**
      * The name of the static IP address.
@@ -966,7 +966,7 @@ declare namespace Lightsail {
     platform?: InstancePlatform;
   }
   export type BlueprintList = Blueprint[];
-  export type BlueprintType = "os"|"app"|string;
+  export type BlueprintType = "os"|"app";
   export interface Bundle {
     /**
      * The price in US dollars (e.g., 5.0).
@@ -1080,7 +1080,7 @@ declare namespace Lightsail {
     arn?: NonEmptyString;
   }
   export type CloudFormationStackRecordSourceInfoList = CloudFormationStackRecordSourceInfo[];
-  export type CloudFormationStackRecordSourceType = "ExportSnapshotRecord"|string;
+  export type CloudFormationStackRecordSourceType = "ExportSnapshotRecord";
   export interface CopySnapshotRequest {
     /**
      * The name of the source instance or disk snapshot to be copied.
@@ -1905,8 +1905,8 @@ declare namespace Lightsail {
     sizeInGb?: integer;
   }
   export type DiskSnapshotList = DiskSnapshot[];
-  export type DiskSnapshotState = "pending"|"completed"|"error"|"unknown"|string;
-  export type DiskState = "pending"|"error"|"available"|"in-use"|"unknown"|string;
+  export type DiskSnapshotState = "pending"|"completed"|"error"|"unknown";
+  export type DiskState = "pending"|"error"|"available"|"in-use"|"unknown";
   export interface Domain {
     /**
      * The name of the domain.
@@ -2055,7 +2055,7 @@ declare namespace Lightsail {
      */
     diskSnapshotInfo?: DiskSnapshotInfo;
   }
-  export type ExportSnapshotRecordSourceType = "InstanceSnapshot"|"DiskSnapshot"|string;
+  export type ExportSnapshotRecordSourceType = "InstanceSnapshot"|"DiskSnapshot";
   export interface ExportSnapshotRequest {
     /**
      * The name of the instance or disk snapshot to be exported to Amazon EC2.
@@ -2991,7 +2991,7 @@ declare namespace Lightsail {
      */
     hostKeys?: HostKeysList;
   }
-  export type InstanceAccessProtocol = "ssh"|"rdp"|string;
+  export type InstanceAccessProtocol = "ssh"|"rdp";
   export interface InstanceEntry {
     /**
      * The name of the export snapshot record, which contains the exported Lightsail instance snapshot that will be used as the source of the new Amazon EC2 instance. Use the get export snapshot records operation to get a list of export snapshot records that you can use to create a CloudFormation stack.
@@ -3029,8 +3029,8 @@ declare namespace Lightsail {
      */
     ramSizeInGb?: float;
   }
-  export type InstanceHealthReason = "Lb.RegistrationInProgress"|"Lb.InitialHealthChecking"|"Lb.InternalError"|"Instance.ResponseCodeMismatch"|"Instance.Timeout"|"Instance.FailedHealthChecks"|"Instance.NotRegistered"|"Instance.NotInUse"|"Instance.DeregistrationInProgress"|"Instance.InvalidState"|"Instance.IpUnusable"|string;
-  export type InstanceHealthState = "initial"|"healthy"|"unhealthy"|"unused"|"draining"|"unavailable"|string;
+  export type InstanceHealthReason = "Lb.RegistrationInProgress"|"Lb.InitialHealthChecking"|"Lb.InternalError"|"Instance.ResponseCodeMismatch"|"Instance.Timeout"|"Instance.FailedHealthChecks"|"Instance.NotRegistered"|"Instance.NotInUse"|"Instance.DeregistrationInProgress"|"Instance.InvalidState"|"Instance.IpUnusable";
+  export type InstanceHealthState = "initial"|"healthy"|"unhealthy"|"unused"|"draining"|"unavailable";
   export interface InstanceHealthSummary {
     /**
      * The name of the Lightsail instance for which you are requesting health check data.
@@ -3047,7 +3047,7 @@ declare namespace Lightsail {
   }
   export type InstanceHealthSummaryList = InstanceHealthSummary[];
   export type InstanceList = Instance[];
-  export type InstanceMetricName = "CPUUtilization"|"NetworkIn"|"NetworkOut"|"StatusCheckFailed"|"StatusCheckFailed_Instance"|"StatusCheckFailed_System"|string;
+  export type InstanceMetricName = "CPUUtilization"|"NetworkIn"|"NetworkOut"|"StatusCheckFailed"|"StatusCheckFailed_Instance"|"StatusCheckFailed_System";
   export interface InstanceNetworking {
     /**
      * The amount of data in GB allocated for monthly data transfers.
@@ -3058,7 +3058,7 @@ declare namespace Lightsail {
      */
     ports?: InstancePortInfoList;
   }
-  export type InstancePlatform = "LINUX_UNIX"|"WINDOWS"|string;
+  export type InstancePlatform = "LINUX_UNIX"|"WINDOWS";
   export type InstancePlatformList = InstancePlatform[];
   export interface InstancePortInfo {
     /**
@@ -3187,7 +3187,7 @@ declare namespace Lightsail {
     fromDiskInfo?: DiskInfoList;
   }
   export type InstanceSnapshotList = InstanceSnapshot[];
-  export type InstanceSnapshotState = "pending"|"error"|"available"|string;
+  export type InstanceSnapshotState = "pending"|"error"|"available";
   export interface InstanceState {
     /**
      * The status code for the instance.
@@ -3310,12 +3310,12 @@ declare namespace Lightsail {
      */
     configurationOptions?: LoadBalancerConfigurationOptions;
   }
-  export type LoadBalancerAttributeName = "HealthCheckPath"|"SessionStickinessEnabled"|"SessionStickiness_LB_CookieDurationSeconds"|string;
+  export type LoadBalancerAttributeName = "HealthCheckPath"|"SessionStickinessEnabled"|"SessionStickiness_LB_CookieDurationSeconds";
   export type LoadBalancerConfigurationOptions = {[key: string]: string};
   export type LoadBalancerList = LoadBalancer[];
-  export type LoadBalancerMetricName = "ClientTLSNegotiationErrorCount"|"HealthyHostCount"|"UnhealthyHostCount"|"HTTPCode_LB_4XX_Count"|"HTTPCode_LB_5XX_Count"|"HTTPCode_Instance_2XX_Count"|"HTTPCode_Instance_3XX_Count"|"HTTPCode_Instance_4XX_Count"|"HTTPCode_Instance_5XX_Count"|"InstanceResponseTime"|"RejectedConnectionCount"|"RequestCount"|string;
-  export type LoadBalancerProtocol = "HTTP_HTTPS"|"HTTP"|string;
-  export type LoadBalancerState = "active"|"provisioning"|"active_impaired"|"failed"|"unknown"|string;
+  export type LoadBalancerMetricName = "ClientTLSNegotiationErrorCount"|"HealthyHostCount"|"UnhealthyHostCount"|"HTTPCode_LB_4XX_Count"|"HTTPCode_LB_5XX_Count"|"HTTPCode_Instance_2XX_Count"|"HTTPCode_Instance_3XX_Count"|"HTTPCode_Instance_4XX_Count"|"HTTPCode_Instance_5XX_Count"|"InstanceResponseTime"|"RejectedConnectionCount"|"RequestCount";
+  export type LoadBalancerProtocol = "HTTP_HTTPS"|"HTTP";
+  export type LoadBalancerState = "active"|"provisioning"|"active_impaired"|"failed"|"unknown";
   export interface LoadBalancerTlsCertificate {
     /**
      * The name of the SSL/TLS certificate (e.g., my-certificate).
@@ -3418,7 +3418,7 @@ declare namespace Lightsail {
      */
     subjectAlternativeNames?: StringList;
   }
-  export type LoadBalancerTlsCertificateDomainStatus = "PENDING_VALIDATION"|"FAILED"|"SUCCESS"|string;
+  export type LoadBalancerTlsCertificateDomainStatus = "PENDING_VALIDATION"|"FAILED"|"SUCCESS";
   export interface LoadBalancerTlsCertificateDomainValidationOption {
     /**
      * The fully qualified domain name in the certificate request.
@@ -3453,9 +3453,9 @@ declare namespace Lightsail {
     domainName?: DomainName;
   }
   export type LoadBalancerTlsCertificateDomainValidationRecordList = LoadBalancerTlsCertificateDomainValidationRecord[];
-  export type LoadBalancerTlsCertificateFailureReason = "NO_AVAILABLE_CONTACTS"|"ADDITIONAL_VERIFICATION_REQUIRED"|"DOMAIN_NOT_ALLOWED"|"INVALID_PUBLIC_DOMAIN"|"OTHER"|string;
+  export type LoadBalancerTlsCertificateFailureReason = "NO_AVAILABLE_CONTACTS"|"ADDITIONAL_VERIFICATION_REQUIRED"|"DOMAIN_NOT_ALLOWED"|"INVALID_PUBLIC_DOMAIN"|"OTHER";
   export type LoadBalancerTlsCertificateList = LoadBalancerTlsCertificate[];
-  export type LoadBalancerTlsCertificateRenewalStatus = "PENDING_AUTO_RENEWAL"|"PENDING_VALIDATION"|"SUCCESS"|"FAILED"|string;
+  export type LoadBalancerTlsCertificateRenewalStatus = "PENDING_AUTO_RENEWAL"|"PENDING_VALIDATION"|"SUCCESS"|"FAILED";
   export interface LoadBalancerTlsCertificateRenewalSummary {
     /**
      * The status of Lightsail's managed renewal of the certificate. Valid values are listed below.
@@ -3466,8 +3466,8 @@ declare namespace Lightsail {
      */
     domainValidationOptions?: LoadBalancerTlsCertificateDomainValidationOptionList;
   }
-  export type LoadBalancerTlsCertificateRevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CA_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERCEDED"|"CESSATION_OF_OPERATION"|"CERTIFICATE_HOLD"|"REMOVE_FROM_CRL"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE"|string;
-  export type LoadBalancerTlsCertificateStatus = "PENDING_VALIDATION"|"ISSUED"|"INACTIVE"|"EXPIRED"|"VALIDATION_TIMED_OUT"|"REVOKED"|"FAILED"|"UNKNOWN"|string;
+  export type LoadBalancerTlsCertificateRevocationReason = "UNSPECIFIED"|"KEY_COMPROMISE"|"CA_COMPROMISE"|"AFFILIATION_CHANGED"|"SUPERCEDED"|"CESSATION_OF_OPERATION"|"CERTIFICATE_HOLD"|"REMOVE_FROM_CRL"|"PRIVILEGE_WITHDRAWN"|"A_A_COMPROMISE";
+  export type LoadBalancerTlsCertificateStatus = "PENDING_VALIDATION"|"ISSUED"|"INACTIVE"|"EXPIRED"|"VALIDATION_TIMED_OUT"|"REVOKED"|"FAILED"|"UNKNOWN";
   export interface LoadBalancerTlsCertificateSummary {
     /**
      * The name of the SSL/TLS certificate.
@@ -3522,16 +3522,16 @@ declare namespace Lightsail {
   }
   export type MetricDatapointList = MetricDatapoint[];
   export type MetricPeriod = number;
-  export type MetricStatistic = "Minimum"|"Maximum"|"Sum"|"Average"|"SampleCount"|string;
+  export type MetricStatistic = "Minimum"|"Maximum"|"Sum"|"Average"|"SampleCount";
   export type MetricStatisticList = MetricStatistic[];
-  export type MetricUnit = "Seconds"|"Microseconds"|"Milliseconds"|"Bytes"|"Kilobytes"|"Megabytes"|"Gigabytes"|"Terabytes"|"Bits"|"Kilobits"|"Megabits"|"Gigabits"|"Terabits"|"Percent"|"Count"|"Bytes/Second"|"Kilobytes/Second"|"Megabytes/Second"|"Gigabytes/Second"|"Terabytes/Second"|"Bits/Second"|"Kilobits/Second"|"Megabits/Second"|"Gigabits/Second"|"Terabits/Second"|"Count/Second"|"None"|string;
+  export type MetricUnit = "Seconds"|"Microseconds"|"Milliseconds"|"Bytes"|"Kilobytes"|"Megabytes"|"Gigabytes"|"Terabytes"|"Bits"|"Kilobits"|"Megabits"|"Gigabits"|"Terabits"|"Percent"|"Count"|"Bytes/Second"|"Kilobytes/Second"|"Megabytes/Second"|"Gigabytes/Second"|"Terabytes/Second"|"Bits/Second"|"Kilobits/Second"|"Megabits/Second"|"Gigabits/Second"|"Terabits/Second"|"Count/Second"|"None";
   export interface MonthlyTransfer {
     /**
      * The amount allocated per month (in GB).
      */
     gbPerMonthAllocated?: integer;
   }
-  export type NetworkProtocol = "tcp"|"all"|"udp"|string;
+  export type NetworkProtocol = "tcp"|"all"|"udp";
   export type NonEmptyString = string;
   export interface OpenInstancePublicPortsRequest {
     /**
@@ -3600,8 +3600,8 @@ declare namespace Lightsail {
     errorDetails?: string;
   }
   export type OperationList = Operation[];
-  export type OperationStatus = "NotStarted"|"Started"|"Failed"|"Completed"|"Succeeded"|string;
-  export type OperationType = "DeleteKnownHostKeys"|"DeleteInstance"|"CreateInstance"|"StopInstance"|"StartInstance"|"RebootInstance"|"OpenInstancePublicPorts"|"PutInstancePublicPorts"|"CloseInstancePublicPorts"|"AllocateStaticIp"|"ReleaseStaticIp"|"AttachStaticIp"|"DetachStaticIp"|"UpdateDomainEntry"|"DeleteDomainEntry"|"CreateDomain"|"DeleteDomain"|"CreateInstanceSnapshot"|"DeleteInstanceSnapshot"|"CreateInstancesFromSnapshot"|"CreateLoadBalancer"|"DeleteLoadBalancer"|"AttachInstancesToLoadBalancer"|"DetachInstancesFromLoadBalancer"|"UpdateLoadBalancerAttribute"|"CreateLoadBalancerTlsCertificate"|"DeleteLoadBalancerTlsCertificate"|"AttachLoadBalancerTlsCertificate"|"CreateDisk"|"DeleteDisk"|"AttachDisk"|"DetachDisk"|"CreateDiskSnapshot"|"DeleteDiskSnapshot"|"CreateDiskFromSnapshot"|"CreateRelationalDatabase"|"UpdateRelationalDatabase"|"DeleteRelationalDatabase"|"CreateRelationalDatabaseFromSnapshot"|"CreateRelationalDatabaseSnapshot"|"DeleteRelationalDatabaseSnapshot"|"UpdateRelationalDatabaseParameters"|"StartRelationalDatabase"|"RebootRelationalDatabase"|"StopRelationalDatabase"|string;
+  export type OperationStatus = "NotStarted"|"Started"|"Failed"|"Completed"|"Succeeded";
+  export type OperationType = "DeleteKnownHostKeys"|"DeleteInstance"|"CreateInstance"|"StopInstance"|"StartInstance"|"RebootInstance"|"OpenInstancePublicPorts"|"PutInstancePublicPorts"|"CloseInstancePublicPorts"|"AllocateStaticIp"|"ReleaseStaticIp"|"AttachStaticIp"|"DetachStaticIp"|"UpdateDomainEntry"|"DeleteDomainEntry"|"CreateDomain"|"DeleteDomain"|"CreateInstanceSnapshot"|"DeleteInstanceSnapshot"|"CreateInstancesFromSnapshot"|"CreateLoadBalancer"|"DeleteLoadBalancer"|"AttachInstancesToLoadBalancer"|"DetachInstancesFromLoadBalancer"|"UpdateLoadBalancerAttribute"|"CreateLoadBalancerTlsCertificate"|"DeleteLoadBalancerTlsCertificate"|"AttachLoadBalancerTlsCertificate"|"CreateDisk"|"DeleteDisk"|"AttachDisk"|"DetachDisk"|"CreateDiskSnapshot"|"DeleteDiskSnapshot"|"CreateDiskFromSnapshot"|"CreateRelationalDatabase"|"UpdateRelationalDatabase"|"DeleteRelationalDatabase"|"CreateRelationalDatabaseFromSnapshot"|"CreateRelationalDatabaseSnapshot"|"DeleteRelationalDatabaseSnapshot"|"UpdateRelationalDatabaseParameters"|"StartRelationalDatabase"|"RebootRelationalDatabase"|"StopRelationalDatabase";
   export interface PasswordData {
     /**
      * The encrypted password. Ciphertext will be an empty string if access to your new instance is not ready yet. When you create an instance, it can take up to 15 minutes for the instance to be ready.  If you use the default key pair (LightsailDefaultKeyPair), the decrypted password will be available in the password field. If you are using a custom key pair, you need to use your own means of decryption. If you change the Administrator password on the instance, Lightsail will continue to return the original ciphertext value. When accessing the instance using RDP, you need to manually enter the Administrator password after changing it from the default. 
@@ -3650,7 +3650,7 @@ declare namespace Lightsail {
     backupRetentionEnabled?: boolean;
   }
   export type Port = number;
-  export type PortAccessType = "Public"|"Private"|string;
+  export type PortAccessType = "Public"|"Private";
   export interface PortInfo {
     /**
      * The first port in the range.
@@ -3666,9 +3666,9 @@ declare namespace Lightsail {
     protocol?: NetworkProtocol;
   }
   export type PortInfoList = PortInfo[];
-  export type PortInfoSourceType = "DEFAULT"|"INSTANCE"|"NONE"|"CLOSED"|string;
+  export type PortInfoSourceType = "DEFAULT"|"INSTANCE"|"NONE"|"CLOSED";
   export type PortList = Port[];
-  export type PortState = "open"|"closed"|string;
+  export type PortState = "open"|"closed";
   export interface PutInstancePublicPortsRequest {
     /**
      * Specifies information about the public port(s).
@@ -3709,7 +3709,7 @@ declare namespace Lightsail {
      */
     operations?: OperationList;
   }
-  export type RecordState = "Started"|"Succeeded"|"Failed"|string;
+  export type RecordState = "Started"|"Succeeded"|"Failed";
   export interface Region {
     /**
      * The continent code (e.g., NA, meaning North America).
@@ -3737,7 +3737,7 @@ declare namespace Lightsail {
     relationalDatabaseAvailabilityZones?: AvailabilityZoneList;
   }
   export type RegionList = Region[];
-  export type RegionName = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ca-central-1"|"ap-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2"|string;
+  export type RegionName = "us-east-1"|"us-east-2"|"us-west-1"|"us-west-2"|"eu-west-1"|"eu-west-2"|"eu-west-3"|"eu-central-1"|"ca-central-1"|"ap-south-1"|"ap-southeast-1"|"ap-southeast-2"|"ap-northeast-1"|"ap-northeast-2";
   export interface RelationalDatabase {
     /**
      * The unique name of the database resource in Lightsail.
@@ -3916,7 +3916,7 @@ declare namespace Lightsail {
      */
     address?: NonEmptyString;
   }
-  export type RelationalDatabaseEngine = "mysql"|string;
+  export type RelationalDatabaseEngine = "mysql";
   export interface RelationalDatabaseEvent {
     /**
      * The database that the database event relates to.
@@ -3951,7 +3951,7 @@ declare namespace Lightsail {
     ramSizeInGb?: float;
   }
   export type RelationalDatabaseList = RelationalDatabase[];
-  export type RelationalDatabaseMetricName = "CPUUtilization"|"DatabaseConnections"|"DiskQueueDepth"|"FreeStorageSpace"|"NetworkReceiveThroughput"|"NetworkTransmitThroughput"|string;
+  export type RelationalDatabaseMetricName = "CPUUtilization"|"DatabaseConnections"|"DiskQueueDepth"|"FreeStorageSpace"|"NetworkReceiveThroughput"|"NetworkTransmitThroughput";
   export interface RelationalDatabaseParameter {
     /**
      * Specifies the valid range of values for the parameter.
@@ -3987,7 +3987,7 @@ declare namespace Lightsail {
     parameterValue?: string;
   }
   export type RelationalDatabaseParameterList = RelationalDatabaseParameter[];
-  export type RelationalDatabasePasswordVersion = "CURRENT"|"PREVIOUS"|"PENDING"|string;
+  export type RelationalDatabasePasswordVersion = "CURRENT"|"PREVIOUS"|"PENDING";
   export interface RelationalDatabaseSnapshot {
     /**
      * The name of the database snapshot.
@@ -4075,7 +4075,7 @@ declare namespace Lightsail {
   }
   export type ResourceName = string;
   export type ResourceNameList = ResourceName[];
-  export type ResourceType = "Instance"|"StaticIp"|"KeyPair"|"InstanceSnapshot"|"Domain"|"PeeredVpc"|"LoadBalancer"|"LoadBalancerTlsCertificate"|"Disk"|"DiskSnapshot"|"RelationalDatabase"|"RelationalDatabaseSnapshot"|"ExportSnapshotRecord"|"CloudFormationStackRecord"|string;
+  export type ResourceType = "Instance"|"StaticIp"|"KeyPair"|"InstanceSnapshot"|"Domain"|"PeeredVpc"|"LoadBalancer"|"LoadBalancerTlsCertificate"|"Disk"|"DiskSnapshot"|"RelationalDatabase"|"RelationalDatabaseSnapshot"|"ExportSnapshotRecord"|"CloudFormationStackRecord";
   export type SensitiveString = string;
   export interface StartInstanceRequest {
     /**

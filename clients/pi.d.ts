@@ -244,7 +244,7 @@ declare namespace PI {
      */
     Dimensions?: DimensionMap;
   }
-  export type ServiceType = "RDS"|string;
+  export type ServiceType = "RDS";
   export type String = string;
   export type StringList = String[];
   /**

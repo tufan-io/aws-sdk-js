@@ -691,7 +691,7 @@ declare namespace CloudWatchLogs {
      */
     logGroupName: LogGroupName;
   }
-  export type Distribution = "Random"|"ByLogStream"|string;
+  export type Distribution = "Random"|"ByLogStream";
   export type EventId = string;
   export type EventMessage = string;
   export type EventNumber = number;
@@ -758,7 +758,7 @@ declare namespace CloudWatchLogs {
      */
     message?: ExportTaskStatusMessage;
   }
-  export type ExportTaskStatusCode = "CANCELLED"|"COMPLETED"|"FAILED"|"PENDING"|"PENDING_CANCEL"|"RUNNING"|string;
+  export type ExportTaskStatusCode = "CANCELLED"|"COMPLETED"|"FAILED"|"PENDING"|"PENDING_CANCEL"|"RUNNING";
   export type ExportTaskStatusMessage = string;
   export type ExportTasks = ExportTask[];
   export type ExtractedValues = {[key: string]: Value};
@@ -1098,7 +1098,7 @@ declare namespace CloudWatchLogs {
   export type MetricTransformations = MetricTransformation[];
   export type MetricValue = string;
   export type NextToken = string;
-  export type OrderBy = "LogStreamName"|"LastEventTime"|string;
+  export type OrderBy = "LogStreamName"|"LastEventTime";
   export interface OutputLogEvent {
     /**
      * The time the event occurred, expressed as the number of milliseconds after Jan 1, 1970 00:00:00 UTC.
@@ -1281,7 +1281,7 @@ declare namespace CloudWatchLogs {
      */
     bytesScanned?: StatsValue;
   }
-  export type QueryStatus = "Scheduled"|"Running"|"Complete"|"Failed"|"Cancelled"|string;
+  export type QueryStatus = "Scheduled"|"Running"|"Complete"|"Failed"|"Cancelled";
   export type QueryString = string;
   export interface RejectedLogEventsInfo {
     /**

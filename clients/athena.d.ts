@@ -244,7 +244,7 @@ declare namespace Athena {
     CaseSensitive?: Boolean;
   }
   export type ColumnInfoList = ColumnInfo[];
-  export type ColumnNullable = "NOT_NULL"|"NULLABLE"|"UNKNOWN"|string;
+  export type ColumnNullable = "NOT_NULL"|"NULLABLE"|"UNKNOWN";
   export interface CreateNamedQueryInput {
     /**
      * The query name.
@@ -336,7 +336,7 @@ declare namespace Athena {
      */
     KmsKey?: String;
   }
-  export type EncryptionOption = "SSE_S3"|"SSE_KMS"|"CSE_KMS"|string;
+  export type EncryptionOption = "SSE_S3"|"SSE_KMS"|"CSE_KMS";
   export type ErrorCode = string;
   export type ErrorMessage = string;
   export interface GetNamedQueryInput {
@@ -576,7 +576,7 @@ declare namespace Athena {
   export type QueryExecutionId = string;
   export type QueryExecutionIdList = QueryExecutionId[];
   export type QueryExecutionList = QueryExecution[];
-  export type QueryExecutionState = "QUEUED"|"RUNNING"|"SUCCEEDED"|"FAILED"|"CANCELLED"|string;
+  export type QueryExecutionState = "QUEUED"|"RUNNING"|"SUCCEEDED"|"FAILED"|"CANCELLED";
   export interface QueryExecutionStatistics {
     /**
      * The number of milliseconds that the query took to execute.
@@ -685,7 +685,7 @@ declare namespace Athena {
      */
     QueryExecutionId?: QueryExecutionId;
   }
-  export type StatementType = "DDL"|"DML"|"UTILITY"|string;
+  export type StatementType = "DDL"|"DML"|"UTILITY";
   export interface StopQueryExecutionInput {
     /**
      * The unique ID of the query execution to stop.
@@ -856,7 +856,7 @@ declare namespace Athena {
   }
   export type WorkGroupDescriptionString = string;
   export type WorkGroupName = string;
-  export type WorkGroupState = "ENABLED"|"DISABLED"|string;
+  export type WorkGroupState = "ENABLED"|"DISABLED";
   export interface WorkGroupSummary {
     /**
      * The name of the workgroup.

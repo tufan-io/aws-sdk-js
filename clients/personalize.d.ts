@@ -1569,7 +1569,7 @@ declare namespace Personalize {
      */
     lastUpdatedDateTime?: _Date;
   }
-  export type RecipeProvider = "SERVICE"|string;
+  export type RecipeProvider = "SERVICE";
   export interface RecipeSummary {
     /**
      * The name of the recipe.

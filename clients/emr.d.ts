@@ -270,7 +270,7 @@ declare class EMR extends Service {
   waitFor(state: "clusterTerminated", callback?: (err: AWSError, data: EMR.Types.DescribeClusterOutput) => void): Request<EMR.Types.DescribeClusterOutput, AWSError>;
 }
 declare namespace EMR {
-  export type ActionOnFailure = "TERMINATE_JOB_FLOW"|"TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE"|string;
+  export type ActionOnFailure = "TERMINATE_JOB_FLOW"|"TERMINATE_CLUSTER"|"CANCEL_AND_WAIT"|"CONTINUE";
   export interface AddInstanceFleetInput {
     /**
      * The unique identifier of the cluster.
@@ -339,7 +339,7 @@ declare namespace EMR {
   }
   export interface AddTagsOutput {
   }
-  export type AdjustmentType = "CHANGE_IN_CAPACITY"|"PERCENT_CHANGE_IN_CAPACITY"|"EXACT_CAPACITY"|string;
+  export type AdjustmentType = "CHANGE_IN_CAPACITY"|"PERCENT_CHANGE_IN_CAPACITY"|"EXACT_CAPACITY";
   export interface Application {
     /**
      * The name of the application.
@@ -384,7 +384,7 @@ declare namespace EMR {
      */
     Rules?: ScalingRuleList;
   }
-  export type AutoScalingPolicyState = "PENDING"|"ATTACHING"|"ATTACHED"|"DETACHING"|"DETACHED"|"FAILED"|string;
+  export type AutoScalingPolicyState = "PENDING"|"ATTACHING"|"ATTACHED"|"DETACHING"|"DETACHED"|"FAILED";
   export interface AutoScalingPolicyStateChangeReason {
     /**
      * The code indicating the reason for the change in status.USER_REQUEST indicates that the scaling policy status was changed by a user. PROVISION_FAILURE indicates that the status change was because the policy failed to provision. CLEANUP_FAILURE indicates an error.
@@ -395,7 +395,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type AutoScalingPolicyStateChangeReasonCode = "USER_REQUEST"|"PROVISION_FAILURE"|"CLEANUP_FAILURE"|string;
+  export type AutoScalingPolicyStateChangeReasonCode = "USER_REQUEST"|"PROVISION_FAILURE"|"CLEANUP_FAILURE";
   export interface AutoScalingPolicyStatus {
     /**
      * Indicates the status of the automatic scaling policy.
@@ -477,7 +477,7 @@ declare namespace EMR {
      */
     CancelStepsInfoList?: CancelStepsInfoList;
   }
-  export type CancelStepsRequestStatus = "SUBMITTED"|"FAILED"|string;
+  export type CancelStepsRequestStatus = "SUBMITTED"|"FAILED";
   export interface CloudWatchAlarmDefinition {
     /**
      * Determines how the metric specified by MetricName is compared to the value specified by Threshold.
@@ -619,7 +619,7 @@ declare namespace EMR {
     KerberosAttributes?: KerberosAttributes;
   }
   export type ClusterId = string;
-  export type ClusterState = "STARTING"|"BOOTSTRAPPING"|"RUNNING"|"WAITING"|"TERMINATING"|"TERMINATED"|"TERMINATED_WITH_ERRORS"|string;
+  export type ClusterState = "STARTING"|"BOOTSTRAPPING"|"RUNNING"|"WAITING"|"TERMINATING"|"TERMINATED"|"TERMINATED_WITH_ERRORS";
   export interface ClusterStateChangeReason {
     /**
      * The programmatic code for the state change reason.
@@ -630,7 +630,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type ClusterStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"INSTANCE_FLEET_TIMEOUT"|"BOOTSTRAP_FAILURE"|"USER_REQUEST"|"STEP_FAILURE"|"ALL_STEPS_COMPLETED"|string;
+  export type ClusterStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"INSTANCE_FLEET_TIMEOUT"|"BOOTSTRAP_FAILURE"|"USER_REQUEST"|"STEP_FAILURE"|"ALL_STEPS_COMPLETED";
   export type ClusterStateList = ClusterState[];
   export interface ClusterStatus {
     /**
@@ -694,7 +694,7 @@ declare namespace EMR {
     Args?: StringList;
   }
   export type CommandList = Command[];
-  export type ComparisonOperator = "GREATER_THAN_OR_EQUAL"|"GREATER_THAN"|"LESS_THAN"|"LESS_THAN_OR_EQUAL"|string;
+  export type ComparisonOperator = "GREATER_THAN_OR_EQUAL"|"GREATER_THAN"|"LESS_THAN"|"LESS_THAN_OR_EQUAL";
   export interface Configuration {
     /**
      * The classification within a configuration.
@@ -1014,7 +1014,7 @@ declare namespace EMR {
      */
     EbsVolumes?: EbsVolumeList;
   }
-  export type InstanceCollectionType = "INSTANCE_FLEET"|"INSTANCE_GROUP"|string;
+  export type InstanceCollectionType = "INSTANCE_FLEET"|"INSTANCE_GROUP";
   export interface InstanceFleet {
     /**
      * The unique identifier of the instance fleet.
@@ -1106,7 +1106,7 @@ declare namespace EMR {
      */
     SpotSpecification: SpotProvisioningSpecification;
   }
-  export type InstanceFleetState = "PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"RESIZING"|"SUSPENDED"|"TERMINATING"|"TERMINATED"|string;
+  export type InstanceFleetState = "PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"RESIZING"|"SUSPENDED"|"TERMINATING"|"TERMINATED";
   export interface InstanceFleetStateChangeReason {
     /**
      * A code corresponding to the reason the state change occurred.
@@ -1117,7 +1117,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type InstanceFleetStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"CLUSTER_TERMINATED"|string;
+  export type InstanceFleetStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"CLUSTER_TERMINATED";
   export interface InstanceFleetStatus {
     /**
      * A code representing the instance fleet status.    PROVISIONING—The instance fleet is provisioning EC2 resources and is not yet ready to run jobs.    BOOTSTRAPPING—EC2 instances and other resources have been provisioned and the bootstrap actions specified for the instances are underway.    RUNNING—EC2 instances and other resources are running. They are either executing jobs or waiting to execute jobs.    RESIZING—A resize operation is underway. EC2 instances are either being added or removed.    SUSPENDED—A resize operation could not complete. Existing EC2 instances are running, but instances can't be added or removed.    TERMINATING—The instance fleet is terminating EC2 instances.    TERMINATED—The instance fleet is no longer active, and all EC2 instances have been terminated.  
@@ -1146,7 +1146,7 @@ declare namespace EMR {
      */
     EndDateTime?: _Date;
   }
-  export type InstanceFleetType = "MASTER"|"CORE"|"TASK"|string;
+  export type InstanceFleetType = "MASTER"|"CORE"|"TASK";
   export interface InstanceGroup {
     /**
      * The identifier of the instance group.
@@ -1341,7 +1341,7 @@ declare namespace EMR {
     Configurations?: ConfigurationList;
   }
   export type InstanceGroupModifyConfigList = InstanceGroupModifyConfig[];
-  export type InstanceGroupState = "PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"RECONFIGURING"|"RESIZING"|"SUSPENDED"|"TERMINATING"|"TERMINATED"|"ARRESTED"|"SHUTTING_DOWN"|"ENDED"|string;
+  export type InstanceGroupState = "PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"RECONFIGURING"|"RESIZING"|"SUSPENDED"|"TERMINATING"|"TERMINATED"|"ARRESTED"|"SHUTTING_DOWN"|"ENDED";
   export interface InstanceGroupStateChangeReason {
     /**
      * The programmable code for the state change reason.
@@ -1352,7 +1352,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type InstanceGroupStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"CLUSTER_TERMINATED"|string;
+  export type InstanceGroupStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"CLUSTER_TERMINATED";
   export interface InstanceGroupStatus {
     /**
      * The current state of the instance group.
@@ -1381,7 +1381,7 @@ declare namespace EMR {
      */
     EndDateTime?: _Date;
   }
-  export type InstanceGroupType = "MASTER"|"CORE"|"TASK"|string;
+  export type InstanceGroupType = "MASTER"|"CORE"|"TASK";
   export type InstanceGroupTypeList = InstanceGroupType[];
   export type InstanceId = string;
   export type InstanceList = Instance[];
@@ -1399,8 +1399,8 @@ declare namespace EMR {
      */
     InstanceTerminationTimeout?: Integer;
   }
-  export type InstanceRoleType = "MASTER"|"CORE"|"TASK"|string;
-  export type InstanceState = "AWAITING_FULFILLMENT"|"PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"TERMINATED"|string;
+  export type InstanceRoleType = "MASTER"|"CORE"|"TASK";
+  export type InstanceState = "AWAITING_FULFILLMENT"|"PROVISIONING"|"BOOTSTRAPPING"|"RUNNING"|"TERMINATED";
   export interface InstanceStateChangeReason {
     /**
      * The programmable code for the state change reason.
@@ -1411,7 +1411,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type InstanceStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"BOOTSTRAP_FAILURE"|"CLUSTER_TERMINATED"|string;
+  export type InstanceStateChangeReasonCode = "INTERNAL_ERROR"|"VALIDATION_ERROR"|"INSTANCE_FAILURE"|"BOOTSTRAP_FAILURE"|"CLUSTER_TERMINATED";
   export type InstanceStateList = InstanceState[];
   export interface InstanceStatus {
     /**
@@ -1560,7 +1560,7 @@ declare namespace EMR {
     ScaleDownBehavior?: ScaleDownBehavior;
   }
   export type JobFlowDetailList = JobFlowDetail[];
-  export type JobFlowExecutionState = "STARTING"|"BOOTSTRAPPING"|"RUNNING"|"WAITING"|"SHUTTING_DOWN"|"TERMINATED"|"COMPLETED"|"FAILED"|string;
+  export type JobFlowExecutionState = "STARTING"|"BOOTSTRAPPING"|"RUNNING"|"WAITING"|"SHUTTING_DOWN"|"TERMINATED"|"COMPLETED"|"FAILED";
   export type JobFlowExecutionStateList = JobFlowExecutionState[];
   export interface JobFlowExecutionStatusDetail {
     /**
@@ -1919,7 +1919,7 @@ declare namespace EMR {
   }
   export type Long = number;
   export type Marker = string;
-  export type MarketType = "ON_DEMAND"|"SPOT"|string;
+  export type MarketType = "ON_DEMAND"|"SPOT";
   export interface MetricDimension {
     /**
      * The dimension name.
@@ -2035,7 +2035,7 @@ declare namespace EMR {
   }
   export interface RemoveTagsOutput {
   }
-  export type RepoUpgradeOnBoot = "SECURITY"|"NONE"|string;
+  export type RepoUpgradeOnBoot = "SECURITY"|"NONE";
   export type ResourceId = string;
   export interface RunJobFlowInput {
     /**
@@ -2137,7 +2137,7 @@ declare namespace EMR {
      */
     JobFlowId?: XmlStringMaxLen256;
   }
-  export type ScaleDownBehavior = "TERMINATE_AT_INSTANCE_HOUR"|"TERMINATE_AT_TASK_COMPLETION"|string;
+  export type ScaleDownBehavior = "TERMINATE_AT_INSTANCE_HOUR"|"TERMINATE_AT_TASK_COMPLETION";
   export interface ScalingAction {
     /**
      * Not available for instance groups. Instance groups use the market type specified for the group.
@@ -2263,8 +2263,8 @@ declare namespace EMR {
      */
     BlockDurationMinutes?: WholeNumber;
   }
-  export type SpotProvisioningTimeoutAction = "SWITCH_TO_ON_DEMAND"|"TERMINATE_CLUSTER"|string;
-  export type Statistic = "SAMPLE_COUNT"|"AVERAGE"|"SUM"|"MINIMUM"|"MAXIMUM"|string;
+  export type SpotProvisioningTimeoutAction = "SWITCH_TO_ON_DEMAND"|"TERMINATE_CLUSTER";
+  export type Statistic = "SAMPLE_COUNT"|"AVERAGE"|"SUM"|"MINIMUM"|"MAXIMUM";
   export interface Step {
     /**
      * The identifier of the cluster step.
@@ -2313,7 +2313,7 @@ declare namespace EMR {
     ExecutionStatusDetail: StepExecutionStatusDetail;
   }
   export type StepDetailList = StepDetail[];
-  export type StepExecutionState = "PENDING"|"RUNNING"|"CONTINUE"|"COMPLETED"|"CANCELLED"|"FAILED"|"INTERRUPTED"|string;
+  export type StepExecutionState = "PENDING"|"RUNNING"|"CONTINUE"|"COMPLETED"|"CANCELLED"|"FAILED"|"INTERRUPTED";
   export interface StepExecutionStatusDetail {
     /**
      * The state of the step.
@@ -2338,7 +2338,7 @@ declare namespace EMR {
   }
   export type StepId = string;
   export type StepIdsList = XmlStringMaxLen256[];
-  export type StepState = "PENDING"|"CANCEL_PENDING"|"RUNNING"|"COMPLETED"|"CANCELLED"|"FAILED"|"INTERRUPTED"|string;
+  export type StepState = "PENDING"|"CANCEL_PENDING"|"RUNNING"|"COMPLETED"|"CANCELLED"|"FAILED"|"INTERRUPTED";
   export interface StepStateChangeReason {
     /**
      * The programmable code for the state change reason. Note: Currently, the service provides no code for the state change.
@@ -2349,7 +2349,7 @@ declare namespace EMR {
      */
     Message?: String;
   }
-  export type StepStateChangeReasonCode = "NONE"|string;
+  export type StepStateChangeReasonCode = "NONE";
   export type StepStateList = StepState[];
   export interface StepStatus {
     /**
@@ -2437,7 +2437,7 @@ declare namespace EMR {
      */
     JobFlowIds: XmlStringList;
   }
-  export type Unit = "NONE"|"SECONDS"|"MICRO_SECONDS"|"MILLI_SECONDS"|"BYTES"|"KILO_BYTES"|"MEGA_BYTES"|"GIGA_BYTES"|"TERA_BYTES"|"BITS"|"KILO_BITS"|"MEGA_BITS"|"GIGA_BITS"|"TERA_BITS"|"PERCENT"|"COUNT"|"BYTES_PER_SECOND"|"KILO_BYTES_PER_SECOND"|"MEGA_BYTES_PER_SECOND"|"GIGA_BYTES_PER_SECOND"|"TERA_BYTES_PER_SECOND"|"BITS_PER_SECOND"|"KILO_BITS_PER_SECOND"|"MEGA_BITS_PER_SECOND"|"GIGA_BITS_PER_SECOND"|"TERA_BITS_PER_SECOND"|"COUNT_PER_SECOND"|string;
+  export type Unit = "NONE"|"SECONDS"|"MICRO_SECONDS"|"MILLI_SECONDS"|"BYTES"|"KILO_BYTES"|"MEGA_BYTES"|"GIGA_BYTES"|"TERA_BYTES"|"BITS"|"KILO_BITS"|"MEGA_BITS"|"GIGA_BITS"|"TERA_BITS"|"PERCENT"|"COUNT"|"BYTES_PER_SECOND"|"KILO_BYTES_PER_SECOND"|"MEGA_BYTES_PER_SECOND"|"GIGA_BYTES_PER_SECOND"|"TERA_BYTES_PER_SECOND"|"BITS_PER_SECOND"|"KILO_BITS_PER_SECOND"|"MEGA_BITS_PER_SECOND"|"GIGA_BITS_PER_SECOND"|"TERA_BITS_PER_SECOND"|"COUNT_PER_SECOND";
   export interface VolumeSpecification {
     /**
      * The volume type. Volume types supported are gp2, io1, standard.

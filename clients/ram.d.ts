@@ -578,7 +578,7 @@ declare namespace RAM {
   }
   export type ResourceArnList = String[];
   export type ResourceList = Resource[];
-  export type ResourceOwner = "SELF"|"OTHER-ACCOUNTS"|string;
+  export type ResourceOwner = "SELF"|"OTHER-ACCOUNTS";
   export interface ResourceShare {
     /**
      * The Amazon Resource Name (ARN) of the resource share.
@@ -653,8 +653,8 @@ declare namespace RAM {
     external?: Boolean;
   }
   export type ResourceShareAssociationList = ResourceShareAssociation[];
-  export type ResourceShareAssociationStatus = "ASSOCIATING"|"ASSOCIATED"|"FAILED"|"DISASSOCIATING"|"DISASSOCIATED"|string;
-  export type ResourceShareAssociationType = "PRINCIPAL"|"RESOURCE"|string;
+  export type ResourceShareAssociationStatus = "ASSOCIATING"|"ASSOCIATED"|"FAILED"|"DISASSOCIATING"|"DISASSOCIATED";
+  export type ResourceShareAssociationType = "PRINCIPAL"|"RESOURCE";
   export interface ResourceShareInvitation {
     /**
      * The Amazon Resource Name (ARN) of the invitation.
@@ -691,10 +691,10 @@ declare namespace RAM {
   }
   export type ResourceShareInvitationArnList = String[];
   export type ResourceShareInvitationList = ResourceShareInvitation[];
-  export type ResourceShareInvitationStatus = "PENDING"|"ACCEPTED"|"REJECTED"|"EXPIRED"|string;
+  export type ResourceShareInvitationStatus = "PENDING"|"ACCEPTED"|"REJECTED"|"EXPIRED";
   export type ResourceShareList = ResourceShare[];
-  export type ResourceShareStatus = "PENDING"|"ACTIVE"|"FAILED"|"DELETING"|"DELETED"|string;
-  export type ResourceStatus = "AVAILABLE"|"ZONAL_RESOURCE_INACCESSIBLE"|"LIMIT_EXCEEDED"|"UNAVAILABLE"|string;
+  export type ResourceShareStatus = "PENDING"|"ACTIVE"|"FAILED"|"DELETING"|"DELETED";
+  export type ResourceStatus = "AVAILABLE"|"ZONAL_RESOURCE_INACCESSIBLE"|"LIMIT_EXCEEDED"|"UNAVAILABLE";
   export type String = string;
   export interface Tag {
     /**

@@ -509,7 +509,7 @@ declare namespace StepFunctions {
      */
     roleArn?: Arn;
   }
-  export type ExecutionStatus = "RUNNING"|"SUCCEEDED"|"FAILED"|"TIMED_OUT"|"ABORTED"|string;
+  export type ExecutionStatus = "RUNNING"|"SUCCEEDED"|"FAILED"|"TIMED_OUT"|"ABORTED";
   export interface ExecutionSucceededEventDetails {
     /**
      * The JSON data output by the execution.
@@ -653,7 +653,7 @@ declare namespace StepFunctions {
     stateExitedEventDetails?: StateExitedEventDetails;
   }
   export type HistoryEventList = HistoryEvent[];
-  export type HistoryEventType = "ActivityFailed"|"ActivityScheduleFailed"|"ActivityScheduled"|"ActivityStarted"|"ActivitySucceeded"|"ActivityTimedOut"|"ChoiceStateEntered"|"ChoiceStateExited"|"TaskFailed"|"TaskScheduled"|"TaskStartFailed"|"TaskStarted"|"TaskSubmitFailed"|"TaskSubmitted"|"TaskSucceeded"|"TaskTimedOut"|"ExecutionFailed"|"ExecutionStarted"|"ExecutionSucceeded"|"ExecutionAborted"|"ExecutionTimedOut"|"FailStateEntered"|"LambdaFunctionFailed"|"LambdaFunctionScheduleFailed"|"LambdaFunctionScheduled"|"LambdaFunctionStartFailed"|"LambdaFunctionStarted"|"LambdaFunctionSucceeded"|"LambdaFunctionTimedOut"|"SucceedStateEntered"|"SucceedStateExited"|"TaskStateAborted"|"TaskStateEntered"|"TaskStateExited"|"PassStateEntered"|"PassStateExited"|"ParallelStateAborted"|"ParallelStateEntered"|"ParallelStateExited"|"ParallelStateFailed"|"ParallelStateStarted"|"ParallelStateSucceeded"|"WaitStateAborted"|"WaitStateEntered"|"WaitStateExited"|string;
+  export type HistoryEventType = "ActivityFailed"|"ActivityScheduleFailed"|"ActivityScheduled"|"ActivityStarted"|"ActivitySucceeded"|"ActivityTimedOut"|"ChoiceStateEntered"|"ChoiceStateExited"|"TaskFailed"|"TaskScheduled"|"TaskStartFailed"|"TaskStarted"|"TaskSubmitFailed"|"TaskSubmitted"|"TaskSucceeded"|"TaskTimedOut"|"ExecutionFailed"|"ExecutionStarted"|"ExecutionSucceeded"|"ExecutionAborted"|"ExecutionTimedOut"|"FailStateEntered"|"LambdaFunctionFailed"|"LambdaFunctionScheduleFailed"|"LambdaFunctionScheduled"|"LambdaFunctionStartFailed"|"LambdaFunctionStarted"|"LambdaFunctionSucceeded"|"LambdaFunctionTimedOut"|"SucceedStateEntered"|"SucceedStateExited"|"TaskStateAborted"|"TaskStateEntered"|"TaskStateExited"|"PassStateEntered"|"PassStateExited"|"ParallelStateAborted"|"ParallelStateEntered"|"ParallelStateExited"|"ParallelStateFailed"|"ParallelStateStarted"|"ParallelStateSucceeded"|"WaitStateAborted"|"WaitStateEntered"|"WaitStateExited";
   export type Identity = string;
   export interface LambdaFunctionFailedEventDetails {
     /**
@@ -895,7 +895,7 @@ declare namespace StepFunctions {
      */
     creationDate: Timestamp;
   }
-  export type StateMachineStatus = "ACTIVE"|"DELETING"|string;
+  export type StateMachineStatus = "ACTIVE"|"DELETING";
   export interface StopExecutionInput {
     /**
      * The Amazon Resource Name (ARN) of the execution to stop.

@@ -165,10 +165,10 @@ declare class CodeBuild extends Service {
   updateWebhook(callback?: (err: AWSError, data: CodeBuild.Types.UpdateWebhookOutput) => void): Request<CodeBuild.Types.UpdateWebhookOutput, AWSError>;
 }
 declare namespace CodeBuild {
-  export type ArtifactNamespace = "NONE"|"BUILD_ID"|string;
-  export type ArtifactPackaging = "NONE"|"ZIP"|string;
-  export type ArtifactsType = "CODEPIPELINE"|"S3"|"NO_ARTIFACTS"|string;
-  export type AuthType = "OAUTH"|"BASIC_AUTH"|"PERSONAL_ACCESS_TOKEN"|string;
+  export type ArtifactNamespace = "NONE"|"BUILD_ID";
+  export type ArtifactPackaging = "NONE"|"ZIP";
+  export type ArtifactsType = "CODEPIPELINE"|"S3"|"NO_ARTIFACTS";
+  export type AuthType = "OAUTH"|"BASIC_AUTH"|"PERSONAL_ACCESS_TOKEN";
   export interface BatchDeleteBuildsInput {
     /**
      * The IDs of the builds to delete.
@@ -388,12 +388,12 @@ declare namespace CodeBuild {
      */
     contexts?: PhaseContexts;
   }
-  export type BuildPhaseType = "SUBMITTED"|"QUEUED"|"PROVISIONING"|"DOWNLOAD_SOURCE"|"INSTALL"|"PRE_BUILD"|"BUILD"|"POST_BUILD"|"UPLOAD_ARTIFACTS"|"FINALIZING"|"COMPLETED"|string;
+  export type BuildPhaseType = "SUBMITTED"|"QUEUED"|"PROVISIONING"|"DOWNLOAD_SOURCE"|"INSTALL"|"PRE_BUILD"|"BUILD"|"POST_BUILD"|"UPLOAD_ARTIFACTS"|"FINALIZING"|"COMPLETED";
   export type BuildPhases = BuildPhase[];
   export type Builds = Build[];
   export type BuildsNotDeleted = BuildNotDeleted[];
-  export type CacheMode = "LOCAL_DOCKER_LAYER_CACHE"|"LOCAL_SOURCE_CACHE"|"LOCAL_CUSTOM_CACHE"|string;
-  export type CacheType = "NO_CACHE"|"S3"|"LOCAL"|string;
+  export type CacheMode = "LOCAL_DOCKER_LAYER_CACHE"|"LOCAL_SOURCE_CACHE"|"LOCAL_CUSTOM_CACHE";
+  export type CacheType = "NO_CACHE"|"S3"|"LOCAL";
   export interface CloudWatchLogsConfig {
     /**
      * The current status of the logs in Amazon CloudWatch Logs for a build project. Valid values are:    ENABLED: Amazon CloudWatch Logs are enabled for this build project.    DISABLED: Amazon CloudWatch Logs are not enabled for this build project.  
@@ -408,7 +408,7 @@ declare namespace CodeBuild {
      */
     streamName?: String;
   }
-  export type ComputeType = "BUILD_GENERAL1_SMALL"|"BUILD_GENERAL1_MEDIUM"|"BUILD_GENERAL1_LARGE"|string;
+  export type ComputeType = "BUILD_GENERAL1_SMALL"|"BUILD_GENERAL1_MEDIUM"|"BUILD_GENERAL1_LARGE";
   export interface CreateProjectInput {
     /**
      * The name of the build project.
@@ -509,7 +509,7 @@ declare namespace CodeBuild {
      */
     webhook?: Webhook;
   }
-  export type CredentialProviderType = "SECRETS_MANAGER"|string;
+  export type CredentialProviderType = "SECRETS_MANAGER";
   export interface DeleteProjectInput {
     /**
      * The name of the build project.
@@ -575,7 +575,7 @@ declare namespace CodeBuild {
     languages?: EnvironmentLanguages;
   }
   export type EnvironmentPlatforms = EnvironmentPlatform[];
-  export type EnvironmentType = "WINDOWS_CONTAINER"|"LINUX_CONTAINER"|string;
+  export type EnvironmentType = "WINDOWS_CONTAINER"|"LINUX_CONTAINER";
   export interface EnvironmentVariable {
     /**
      * The name or key of the environment variable.
@@ -590,7 +590,7 @@ declare namespace CodeBuild {
      */
     type?: EnvironmentVariableType;
   }
-  export type EnvironmentVariableType = "PLAINTEXT"|"PARAMETER_STORE"|string;
+  export type EnvironmentVariableType = "PLAINTEXT"|"PARAMETER_STORE";
   export type EnvironmentVariables = EnvironmentVariable[];
   export type FilterGroup = WebhookFilter[];
   export type FilterGroups = FilterGroup[];
@@ -601,7 +601,7 @@ declare namespace CodeBuild {
      */
     fetchSubmodules: WrapperBoolean;
   }
-  export type ImagePullCredentialsType = "CODEBUILD"|"SERVICE_ROLE"|string;
+  export type ImagePullCredentialsType = "CODEBUILD"|"SERVICE_ROLE";
   export type ImageVersions = String[];
   export interface ImportSourceCredentialsInput {
     /**
@@ -640,7 +640,7 @@ declare namespace CodeBuild {
   export interface InvalidateProjectCacheOutput {
   }
   export type KeyInput = string;
-  export type LanguageType = "JAVA"|"PYTHON"|"NODE_JS"|"RUBY"|"GOLANG"|"DOCKER"|"ANDROID"|"DOTNET"|"BASE"|"PHP"|string;
+  export type LanguageType = "JAVA"|"PYTHON"|"NODE_JS"|"RUBY"|"GOLANG"|"DOCKER"|"ANDROID"|"DOTNET"|"BASE"|"PHP";
   export interface ListBuildsForProjectInput {
     /**
      * The name of the AWS CodeBuild project.
@@ -735,7 +735,7 @@ declare namespace CodeBuild {
      */
     s3Logs?: S3LogsConfig;
   }
-  export type LogsConfigStatusType = "ENABLED"|"DISABLED"|string;
+  export type LogsConfigStatusType = "ENABLED"|"DISABLED";
   export interface LogsLocation {
     /**
      * The name of the Amazon CloudWatch Logs group for the build logs.
@@ -784,7 +784,7 @@ declare namespace CodeBuild {
     message?: String;
   }
   export type PhaseContexts = PhaseContext[];
-  export type PlatformType = "DEBIAN"|"AMAZON_LINUX"|"UBUNTU"|"WINDOWS_SERVER"|string;
+  export type PlatformType = "DEBIAN"|"AMAZON_LINUX"|"UBUNTU"|"WINDOWS_SERVER";
   export interface Project {
     /**
      * The name of the build project.
@@ -977,7 +977,7 @@ declare namespace CodeBuild {
   export type ProjectName = string;
   export type ProjectNames = NonEmptyString[];
   export type ProjectSecondarySourceVersions = ProjectSourceVersion[];
-  export type ProjectSortByType = "NAME"|"CREATED_TIME"|"LAST_MODIFIED_TIME"|string;
+  export type ProjectSortByType = "NAME"|"CREATED_TIME"|"LAST_MODIFIED_TIME";
   export interface ProjectSource {
     /**
      * The type of repository that contains the source code to be built. Valid values include:    BITBUCKET: The source code is in a Bitbucket repository.    CODECOMMIT: The source code is in an AWS CodeCommit repository.    CODEPIPELINE: The source code settings are specified in the source action of a pipeline in AWS CodePipeline.    GITHUB: The source code is in a GitHub repository.    NO_SOURCE: The project does not have input source code.    S3: The source code is in an Amazon Simple Storage Service (Amazon S3) input bucket.  
@@ -1054,8 +1054,8 @@ declare namespace CodeBuild {
   }
   export type SecurityGroupIds = NonEmptyString[];
   export type SensitiveNonEmptyString = string;
-  export type ServerType = "GITHUB"|"BITBUCKET"|"GITHUB_ENTERPRISE"|string;
-  export type SortOrderType = "ASCENDING"|"DESCENDING"|string;
+  export type ServerType = "GITHUB"|"BITBUCKET"|"GITHUB_ENTERPRISE";
+  export type SortOrderType = "ASCENDING"|"DESCENDING";
   export interface SourceAuth {
     /**
      *   This data type is deprecated and is no longer accurate or used.   The authorization type to use. The only valid value is OAUTH, which represents the OAuth authorization type.
@@ -1066,7 +1066,7 @@ declare namespace CodeBuild {
      */
     resource?: String;
   }
-  export type SourceAuthType = "OAUTH"|string;
+  export type SourceAuthType = "OAUTH";
   export interface SourceCredentialsInfo {
     /**
      *  The Amazon Resource Name (ARN) of the token. 
@@ -1082,7 +1082,7 @@ declare namespace CodeBuild {
     authType?: AuthType;
   }
   export type SourceCredentialsInfos = SourceCredentialsInfo[];
-  export type SourceType = "CODECOMMIT"|"CODEPIPELINE"|"GITHUB"|"S3"|"BITBUCKET"|"GITHUB_ENTERPRISE"|"NO_SOURCE"|string;
+  export type SourceType = "CODECOMMIT"|"CODEPIPELINE"|"GITHUB"|"S3"|"BITBUCKET"|"GITHUB_ENTERPRISE"|"NO_SOURCE";
   export interface StartBuildInput {
     /**
      * The name of the AWS CodeBuild build project to start running a build.
@@ -1203,7 +1203,7 @@ declare namespace CodeBuild {
      */
     build?: Build;
   }
-  export type StatusType = "SUCCEEDED"|"FAILED"|"FAULT"|"TIMED_OUT"|"IN_PROGRESS"|"STOPPED"|string;
+  export type StatusType = "SUCCEEDED"|"FAILED"|"FAULT"|"TIMED_OUT"|"IN_PROGRESS"|"STOPPED";
   export interface StopBuildInput {
     /**
      * The ID of the build.
@@ -1390,7 +1390,7 @@ declare namespace CodeBuild {
      */
     excludeMatchedPattern?: WrapperBoolean;
   }
-  export type WebhookFilterType = "EVENT"|"BASE_REF"|"HEAD_REF"|"ACTOR_ACCOUNT_ID"|"FILE_PATH"|string;
+  export type WebhookFilterType = "EVENT"|"BASE_REF"|"HEAD_REF"|"ACTOR_ACCOUNT_ID"|"FILE_PATH";
   export type WrapperBoolean = boolean;
   export type WrapperInt = number;
   export type WrapperLong = number;

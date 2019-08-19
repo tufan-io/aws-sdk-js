@@ -379,7 +379,7 @@ declare namespace Transfer {
      */
     VpcEndpointId?: VpcEndpointId;
   }
-  export type EndpointType = "PUBLIC"|"VPC_ENDPOINT"|string;
+  export type EndpointType = "PUBLIC"|"VPC_ENDPOINT";
   export type HomeDirectory = string;
   export type HostKey = string;
   export type HostKeyFingerprint = string;
@@ -393,7 +393,7 @@ declare namespace Transfer {
      */
     InvocationRole?: Role;
   }
-  export type IdentityProviderType = "SERVICE_MANAGED"|"API_GATEWAY"|string;
+  export type IdentityProviderType = "SERVICE_MANAGED"|"API_GATEWAY";
   export interface ImportSshPublicKeyRequest {
     /**
      * A system-assigned unique identifier for an SFTP server.
@@ -583,7 +583,7 @@ declare namespace Transfer {
      */
     ServerId: ServerId;
   }
-  export type State = "OFFLINE"|"ONLINE"|"STARTING"|"STOPPING"|"START_FAILED"|"STOP_FAILED"|string;
+  export type State = "OFFLINE"|"ONLINE"|"STARTING"|"STOPPING"|"START_FAILED"|"STOP_FAILED";
   export type StatusCode = number;
   export interface StopServerRequest {
     /**

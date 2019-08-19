@@ -213,11 +213,11 @@ declare class MediaConvert extends Service {
   updateQueue(callback?: (err: AWSError, data: MediaConvert.Types.UpdateQueueResponse) => void): Request<MediaConvert.Types.UpdateQueueResponse, AWSError>;
 }
 declare namespace MediaConvert {
-  export type AacAudioDescriptionBroadcasterMix = "BROADCASTER_MIXED_AD"|"NORMAL"|string;
-  export type AacCodecProfile = "LC"|"HEV1"|"HEV2"|string;
-  export type AacCodingMode = "AD_RECEIVER_MIX"|"CODING_MODE_1_0"|"CODING_MODE_1_1"|"CODING_MODE_2_0"|"CODING_MODE_5_1"|string;
-  export type AacRateControlMode = "CBR"|"VBR"|string;
-  export type AacRawFormat = "LATM_LOAS"|"NONE"|string;
+  export type AacAudioDescriptionBroadcasterMix = "BROADCASTER_MIXED_AD"|"NORMAL";
+  export type AacCodecProfile = "LC"|"HEV1"|"HEV2";
+  export type AacCodingMode = "AD_RECEIVER_MIX"|"CODING_MODE_1_0"|"CODING_MODE_1_1"|"CODING_MODE_2_0"|"CODING_MODE_5_1";
+  export type AacRateControlMode = "CBR"|"VBR";
+  export type AacRawFormat = "LATM_LOAS"|"NONE";
   export interface AacSettings {
     /**
      * Choose BROADCASTER_MIXED_AD when the input contains pre-mixed main audio + audio description (AD) as a stereo pair. The value for AudioType will be set to 3, which signals to downstream systems that this stream contains "broadcaster mixed AD". Note that the input received by the encoder must contain pre-mixed audio; the encoder does not perform the mixing. When you choose BROADCASTER_MIXED_AD, the encoder ignores any values you provide in AudioType and  FollowInputAudioType. Choose NORMAL when the input does not contain pre-mixed audio + audio description (AD). In this case, the encoder will use any values you provide for AudioType and FollowInputAudioType.
@@ -256,13 +256,13 @@ declare namespace MediaConvert {
      */
     VbrQuality?: AacVbrQuality;
   }
-  export type AacSpecification = "MPEG2"|"MPEG4"|string;
-  export type AacVbrQuality = "LOW"|"MEDIUM_LOW"|"MEDIUM_HIGH"|"HIGH"|string;
-  export type Ac3BitstreamMode = "COMPLETE_MAIN"|"COMMENTARY"|"DIALOGUE"|"EMERGENCY"|"HEARING_IMPAIRED"|"MUSIC_AND_EFFECTS"|"VISUALLY_IMPAIRED"|"VOICE_OVER"|string;
-  export type Ac3CodingMode = "CODING_MODE_1_0"|"CODING_MODE_1_1"|"CODING_MODE_2_0"|"CODING_MODE_3_2_LFE"|string;
-  export type Ac3DynamicRangeCompressionProfile = "FILM_STANDARD"|"NONE"|string;
-  export type Ac3LfeFilter = "ENABLED"|"DISABLED"|string;
-  export type Ac3MetadataControl = "FOLLOW_INPUT"|"USE_CONFIGURED"|string;
+  export type AacSpecification = "MPEG2"|"MPEG4";
+  export type AacVbrQuality = "LOW"|"MEDIUM_LOW"|"MEDIUM_HIGH"|"HIGH";
+  export type Ac3BitstreamMode = "COMPLETE_MAIN"|"COMMENTARY"|"DIALOGUE"|"EMERGENCY"|"HEARING_IMPAIRED"|"MUSIC_AND_EFFECTS"|"VISUALLY_IMPAIRED"|"VOICE_OVER";
+  export type Ac3CodingMode = "CODING_MODE_1_0"|"CODING_MODE_1_1"|"CODING_MODE_2_0"|"CODING_MODE_3_2_LFE";
+  export type Ac3DynamicRangeCompressionProfile = "FILM_STANDARD"|"NONE";
+  export type Ac3LfeFilter = "ENABLED"|"DISABLED";
+  export type Ac3MetadataControl = "FOLLOW_INPUT"|"USE_CONFIGURED";
   export interface Ac3Settings {
     /**
      * Specify the average bitrate in bits per second. Valid bitrates depend on the coding mode.
@@ -297,14 +297,14 @@ declare namespace MediaConvert {
      */
     SampleRate?: __integerMin48000Max48000;
   }
-  export type AccelerationMode = "DISABLED"|"ENABLED"|string;
+  export type AccelerationMode = "DISABLED"|"ENABLED";
   export interface AccelerationSettings {
     /**
      * Acceleration configuration for the job.
      */
     Mode: AccelerationMode;
   }
-  export type AfdSignaling = "NONE"|"AUTO"|"FIXED"|string;
+  export type AfdSignaling = "NONE"|"AUTO"|"FIXED";
   export interface AiffSettings {
     /**
      * Specify Bit depth (BitDepth), in bits per sample, to choose the encoding quality for this audio track.
@@ -325,7 +325,7 @@ declare namespace MediaConvert {
      */
     SourceAncillaryChannelNumber?: __integerMin1Max4;
   }
-  export type AntiAlias = "DISABLED"|"ENABLED"|string;
+  export type AntiAlias = "DISABLED"|"ENABLED";
   export interface AssociateCertificateRequest {
     /**
      * The ARN of the ACM certificate that you want to associate with your MediaConvert resource.
@@ -334,7 +334,7 @@ declare namespace MediaConvert {
   }
   export interface AssociateCertificateResponse {
   }
-  export type AudioCodec = "AAC"|"MP2"|"WAV"|"AIFF"|"AC3"|"EAC3"|"EAC3_ATMOS"|"PASSTHROUGH"|string;
+  export type AudioCodec = "AAC"|"MP2"|"WAV"|"AIFF"|"AC3"|"EAC3"|"EAC3_ATMOS"|"PASSTHROUGH";
   export interface AudioCodecSettings {
     /**
      * Required when you set (Codec) under (AudioDescriptions)>(CodecSettings) to the value AAC. The service accepts one of two mutually exclusive groups of AAC settings--VBR and CBR. To select one of these modes, set the value of Bitrate control mode (rateControlMode) to "VBR" or "CBR".  In VBR mode, you control the audio quality with the setting VBR quality (vbrQuality). In CBR mode, you use the setting Bitrate (bitrate). Defaults and valid values depend on the rate control mode.
@@ -369,7 +369,7 @@ declare namespace MediaConvert {
      */
     WavSettings?: WavSettings;
   }
-  export type AudioDefaultSelection = "DEFAULT"|"NOT_DEFAULT"|string;
+  export type AudioDefaultSelection = "DEFAULT"|"NOT_DEFAULT";
   export interface AudioDescription {
     /**
      * Advanced audio normalization settings. Ignore these settings unless you need to comply with a loudness standard.
@@ -412,11 +412,11 @@ declare namespace MediaConvert {
      */
     StreamName?: __stringPatternWS;
   }
-  export type AudioLanguageCodeControl = "FOLLOW_INPUT"|"USE_CONFIGURED"|string;
-  export type AudioNormalizationAlgorithm = "ITU_BS_1770_1"|"ITU_BS_1770_2"|"ITU_BS_1770_3"|"ITU_BS_1770_4"|string;
-  export type AudioNormalizationAlgorithmControl = "CORRECT_AUDIO"|"MEASURE_ONLY"|string;
-  export type AudioNormalizationLoudnessLogging = "LOG"|"DONT_LOG"|string;
-  export type AudioNormalizationPeakCalculation = "TRUE_PEAK"|"NONE"|string;
+  export type AudioLanguageCodeControl = "FOLLOW_INPUT"|"USE_CONFIGURED";
+  export type AudioNormalizationAlgorithm = "ITU_BS_1770_1"|"ITU_BS_1770_2"|"ITU_BS_1770_3"|"ITU_BS_1770_4";
+  export type AudioNormalizationAlgorithmControl = "CORRECT_AUDIO"|"MEASURE_ONLY";
+  export type AudioNormalizationLoudnessLogging = "LOG"|"DONT_LOG";
+  export type AudioNormalizationPeakCalculation = "TRUE_PEAK"|"NONE";
   export interface AudioNormalizationSettings {
     /**
      * Choose one of the following audio normalization algorithms: ITU-R BS.1770-1: Ungated loudness. A measurement of ungated average loudness for an entire piece of content, suitable for measurement of short-form content under ATSC recommendation A/85. Supports up to 5.1 audio channels. ITU-R BS.1770-2: Gated loudness. A measurement of gated average loudness compliant with the requirements of EBU-R128. Supports up to 5.1 audio channels. ITU-R BS.1770-3: Modified peak. The same loudness measurement algorithm as 1770-2, with an updated true peak measurement. ITU-R BS.1770-4: Higher channel count. Allows for more audio channels than the other algorithms, including configurations such as 7.1.
@@ -491,15 +491,15 @@ declare namespace MediaConvert {
      */
     AudioSelectorNames?: __listOf__stringMin1;
   }
-  export type AudioSelectorType = "PID"|"TRACK"|"LANGUAGE_CODE"|string;
-  export type AudioTypeControl = "FOLLOW_INPUT"|"USE_CONFIGURED"|string;
+  export type AudioSelectorType = "PID"|"TRACK"|"LANGUAGE_CODE";
+  export type AudioTypeControl = "FOLLOW_INPUT"|"USE_CONFIGURED";
   export interface AvailBlanking {
     /**
      * Blanking image to be used. Leave empty for solid black. Only bmp and png images are supported.
      */
     AvailBlankingImage?: __stringMin14PatternS3BmpBMPPngPNG;
   }
-  export type BillingTagsSource = "QUEUE"|"PRESET"|"JOB_TEMPLATE"|string;
+  export type BillingTagsSource = "QUEUE"|"PRESET"|"JOB_TEMPLATE";
   export interface BurninDestinationSettings {
     /**
      * If no explicit x_position or y_position is provided, setting alignment to centered will place the captions at the bottom center of the output. Similarly, setting a left alignment will align captions to the bottom left of the output. If x and y positions are given in conjunction with the alignment parameter, the font will be justified (either left or centered) relative to those coordinates. This option is not valid for source captions that are STL, 608/embedded or teletext. These source settings are already pre-defined by the caption stream. All burn-in and DVB-Sub font settings must match.
@@ -574,12 +574,12 @@ All burn-in and DVB-Sub font settings must match.
      */
     YPosition?: __integerMin0Max2147483647;
   }
-  export type BurninSubtitleAlignment = "CENTERED"|"LEFT"|string;
-  export type BurninSubtitleBackgroundColor = "NONE"|"BLACK"|"WHITE"|string;
-  export type BurninSubtitleFontColor = "WHITE"|"BLACK"|"YELLOW"|"RED"|"GREEN"|"BLUE"|string;
-  export type BurninSubtitleOutlineColor = "BLACK"|"WHITE"|"YELLOW"|"RED"|"GREEN"|"BLUE"|string;
-  export type BurninSubtitleShadowColor = "NONE"|"BLACK"|"WHITE"|string;
-  export type BurninSubtitleTeletextSpacing = "FIXED_GRID"|"PROPORTIONAL"|string;
+  export type BurninSubtitleAlignment = "CENTERED"|"LEFT";
+  export type BurninSubtitleBackgroundColor = "NONE"|"BLACK"|"WHITE";
+  export type BurninSubtitleFontColor = "WHITE"|"BLACK"|"YELLOW"|"RED"|"GREEN"|"BLUE";
+  export type BurninSubtitleOutlineColor = "BLACK"|"WHITE"|"YELLOW"|"RED"|"GREEN"|"BLUE";
+  export type BurninSubtitleShadowColor = "NONE"|"BLACK"|"WHITE";
+  export type BurninSubtitleTeletextSpacing = "FIXED_GRID"|"PROPORTIONAL";
   export interface CancelJobRequest {
     /**
      * The Job ID of the job to be cancelled.
@@ -658,7 +658,7 @@ All burn-in and DVB-Sub font settings must match.
      */
     TtmlDestinationSettings?: TtmlDestinationSettings;
   }
-  export type CaptionDestinationType = "BURN_IN"|"DVB_SUB"|"EMBEDDED"|"EMBEDDED_PLUS_SCTE20"|"SCTE20_PLUS_EMBEDDED"|"SCC"|"SRT"|"SMI"|"TELETEXT"|"TTML"|"WEBVTT"|string;
+  export type CaptionDestinationType = "BURN_IN"|"DVB_SUB"|"EMBEDDED"|"EMBEDDED_PLUS_SCTE20"|"SCTE20_PLUS_EMBEDDED"|"SCC"|"SRT"|"SMI"|"TELETEXT"|"TTML"|"WEBVTT";
   export interface CaptionSelector {
     /**
      * The specific language to extract from source, using the ISO 639-2 or ISO 639-3 three-letter language code. If input is SCTE-27, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub and output is Burn-in or SMPTE-TT, complete this field and/or PID to select the caption language to extract. If input is DVB-Sub that is being passed through, omit this field (and PID field); there is no way to extract a specific language with pass-through captions.
@@ -703,15 +703,15 @@ All burn-in and DVB-Sub font settings must match.
      */
     TrackSourceSettings?: TrackSourceSettings;
   }
-  export type CaptionSourceType = "ANCILLARY"|"DVB_SUB"|"EMBEDDED"|"SCTE20"|"SCC"|"TTML"|"STL"|"SRT"|"SMI"|"TELETEXT"|"NULL_SOURCE"|"IMSC"|string;
+  export type CaptionSourceType = "ANCILLARY"|"DVB_SUB"|"EMBEDDED"|"SCTE20"|"SCC"|"TTML"|"STL"|"SRT"|"SMI"|"TELETEXT"|"NULL_SOURCE"|"IMSC";
   export interface ChannelMapping {
     /**
      * List of output channels
      */
     OutputChannels?: __listOfOutputChannelMapping;
   }
-  export type CmafClientCache = "DISABLED"|"ENABLED"|string;
-  export type CmafCodecSpecification = "RFC_6381"|"RFC_4281"|string;
+  export type CmafClientCache = "DISABLED"|"ENABLED";
+  export type CmafCodecSpecification = "RFC_6381"|"RFC_4281";
   export interface CmafEncryptionSettings {
     /**
      * This is a 128-bit, 16-byte hex value represented by a 32-character text string. If this parameter is not set then the Initialization Vector will follow the segment number by default.
@@ -738,7 +738,7 @@ All burn-in and DVB-Sub font settings must match.
      */
     Type?: CmafKeyProviderType;
   }
-  export type CmafEncryptionType = "SAMPLE_AES"|string;
+  export type CmafEncryptionType = "SAMPLE_AES";
   export interface CmafGroupSettings {
     /**
      * A partial URI prefix that will be put in the manifest file at the top level BaseURL element. Can be used if streams are delivered from a different URL than the manifest file.
@@ -805,14 +805,14 @@ All burn-in and DVB-Sub font settings must match.
      */
     WriteHlsManifest?: CmafWriteHLSManifest;
   }
-  export type CmafInitializationVectorInManifest = "INCLUDE"|"EXCLUDE"|string;
-  export type CmafKeyProviderType = "SPEKE"|"STATIC_KEY"|string;
-  export type CmafManifestCompression = "GZIP"|"NONE"|string;
-  export type CmafManifestDurationFormat = "FLOATING_POINT"|"INTEGER"|string;
-  export type CmafSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES"|string;
-  export type CmafStreamInfResolution = "INCLUDE"|"EXCLUDE"|string;
-  export type CmafWriteDASHManifest = "DISABLED"|"ENABLED"|string;
-  export type CmafWriteHLSManifest = "DISABLED"|"ENABLED"|string;
+  export type CmafInitializationVectorInManifest = "INCLUDE"|"EXCLUDE";
+  export type CmafKeyProviderType = "SPEKE"|"STATIC_KEY";
+  export type CmafManifestCompression = "GZIP"|"NONE";
+  export type CmafManifestDurationFormat = "FLOATING_POINT"|"INTEGER";
+  export type CmafSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES";
+  export type CmafStreamInfResolution = "INCLUDE"|"EXCLUDE";
+  export type CmafWriteDASHManifest = "DISABLED"|"ENABLED";
+  export type CmafWriteHLSManifest = "DISABLED"|"ENABLED";
   export interface ColorCorrector {
     /**
      * Brightness level.
@@ -839,11 +839,11 @@ All burn-in and DVB-Sub font settings must match.
      */
     Saturation?: __integerMin1Max100;
   }
-  export type ColorMetadata = "IGNORE"|"INSERT"|string;
-  export type ColorSpace = "FOLLOW"|"REC_601"|"REC_709"|"HDR10"|"HLG_2020"|string;
-  export type ColorSpaceConversion = "NONE"|"FORCE_601"|"FORCE_709"|"FORCE_HDR10"|"FORCE_HLG_2020"|string;
-  export type ColorSpaceUsage = "FORCE"|"FALLBACK"|string;
-  export type Commitment = "ONE_YEAR"|string;
+  export type ColorMetadata = "IGNORE"|"INSERT";
+  export type ColorSpace = "FOLLOW"|"REC_601"|"REC_709"|"HDR10"|"HLG_2020";
+  export type ColorSpaceConversion = "NONE"|"FORCE_601"|"FORCE_709"|"FORCE_HDR10"|"FORCE_HLG_2020";
+  export type ColorSpaceUsage = "FORCE"|"FALLBACK";
+  export type Commitment = "ONE_YEAR";
   export interface ContainerSettings {
     /**
      * Container for this output. Some containers require a container settings object. If not specified, the default object will be created.
@@ -870,7 +870,7 @@ All burn-in and DVB-Sub font settings must match.
      */
     Mp4Settings?: Mp4Settings;
   }
-  export type ContainerType = "F4V"|"ISMV"|"M2TS"|"M3U8"|"CMFC"|"MOV"|"MP4"|"MPD"|"MXF"|"RAW"|string;
+  export type ContainerType = "F4V"|"ISMV"|"M2TS"|"M3U8"|"CMFC"|"MOV"|"MP4"|"MPD"|"MXF"|"RAW";
   export interface CreateJobRequest {
     /**
      * Accelerated transcoding can significantly speed up jobs with long, visually complex content. Outputs that use this feature incur pro-tier pricing. For information about feature limitations, see the AWS Elemental MediaConvert User Guide.
@@ -1075,12 +1075,12 @@ All burn-in and DVB-Sub font settings must match.
      */
     WriteSegmentTimelineInRepresentation?: DashIsoWriteSegmentTimelineInRepresentation;
   }
-  export type DashIsoHbbtvCompliance = "HBBTV_1_5"|"NONE"|string;
-  export type DashIsoPlaybackDeviceCompatibility = "CENC_V1"|"UNENCRYPTED_SEI"|string;
-  export type DashIsoSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES"|string;
-  export type DashIsoWriteSegmentTimelineInRepresentation = "ENABLED"|"DISABLED"|string;
-  export type DecryptionMode = "AES_CTR"|"AES_CBC"|"AES_GCM"|string;
-  export type DeinterlaceAlgorithm = "INTERPOLATE"|"INTERPOLATE_TICKER"|"BLEND"|"BLEND_TICKER"|string;
+  export type DashIsoHbbtvCompliance = "HBBTV_1_5"|"NONE";
+  export type DashIsoPlaybackDeviceCompatibility = "CENC_V1"|"UNENCRYPTED_SEI";
+  export type DashIsoSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES";
+  export type DashIsoWriteSegmentTimelineInRepresentation = "ENABLED"|"DISABLED";
+  export type DecryptionMode = "AES_CTR"|"AES_CBC"|"AES_GCM";
+  export type DeinterlaceAlgorithm = "INTERPOLATE"|"INTERPOLATE_TICKER"|"BLEND"|"BLEND_TICKER";
   export interface Deinterlacer {
     /**
      * Only applies when you set Deinterlacer (DeinterlaceMode) to Deinterlace (DEINTERLACE) or Adaptive (ADAPTIVE). Motion adaptive interpolate (INTERPOLATE) produces sharper pictures, while blend (BLEND) produces smoother motion. Use (INTERPOLATE_TICKER) OR (BLEND_TICKER) if your source file includes a ticker, such as a scrolling headline at the bottom of the frame.
@@ -1095,8 +1095,8 @@ All burn-in and DVB-Sub font settings must match.
      */
     Mode?: DeinterlacerMode;
   }
-  export type DeinterlacerControl = "FORCE_ALL_FRAMES"|"NORMAL"|string;
-  export type DeinterlacerMode = "DEINTERLACE"|"INVERSE_TELECINE"|"ADAPTIVE"|string;
+  export type DeinterlacerControl = "FORCE_ALL_FRAMES"|"NORMAL";
+  export type DeinterlacerMode = "DEINTERLACE"|"INVERSE_TELECINE"|"ADAPTIVE";
   export interface DeleteJobTemplateRequest {
     /**
      * The name of the job template to be deleted.
@@ -1121,7 +1121,7 @@ All burn-in and DVB-Sub font settings must match.
   }
   export interface DeleteQueueResponse {
   }
-  export type DescribeEndpointsMode = "DEFAULT"|"GET_ONLY"|string;
+  export type DescribeEndpointsMode = "DEFAULT"|"GET_ONLY";
   export interface DescribeEndpointsRequest {
     /**
      * Optional. Max number of endpoints, up to twenty, that will be returned at one time.
@@ -1160,7 +1160,7 @@ All burn-in and DVB-Sub font settings must match.
   }
   export interface DisassociateCertificateResponse {
   }
-  export type DropFrameTimecode = "DISABLED"|"ENABLED"|string;
+  export type DropFrameTimecode = "DISABLED"|"ENABLED";
   export interface DvbNitSettings {
     /**
      * The numeric value placed in the Network Information Table (NIT).
@@ -1273,24 +1273,24 @@ All burn-in and DVB-Sub font settings must match.
      */
     Pid?: __integerMin1Max2147483647;
   }
-  export type DvbSubtitleAlignment = "CENTERED"|"LEFT"|string;
-  export type DvbSubtitleBackgroundColor = "NONE"|"BLACK"|"WHITE"|string;
-  export type DvbSubtitleFontColor = "WHITE"|"BLACK"|"YELLOW"|"RED"|"GREEN"|"BLUE"|string;
-  export type DvbSubtitleOutlineColor = "BLACK"|"WHITE"|"YELLOW"|"RED"|"GREEN"|"BLUE"|string;
-  export type DvbSubtitleShadowColor = "NONE"|"BLACK"|"WHITE"|string;
-  export type DvbSubtitleTeletextSpacing = "FIXED_GRID"|"PROPORTIONAL"|string;
+  export type DvbSubtitleAlignment = "CENTERED"|"LEFT";
+  export type DvbSubtitleBackgroundColor = "NONE"|"BLACK"|"WHITE";
+  export type DvbSubtitleFontColor = "WHITE"|"BLACK"|"YELLOW"|"RED"|"GREEN"|"BLUE";
+  export type DvbSubtitleOutlineColor = "BLACK"|"WHITE"|"YELLOW"|"RED"|"GREEN"|"BLUE";
+  export type DvbSubtitleShadowColor = "NONE"|"BLACK"|"WHITE";
+  export type DvbSubtitleTeletextSpacing = "FIXED_GRID"|"PROPORTIONAL";
   export interface DvbTdtSettings {
     /**
      * The number of milliseconds between instances of this table in the output transport stream.
      */
     TdtInterval?: __integerMin1000Max30000;
   }
-  export type Eac3AtmosBitstreamMode = "COMPLETE_MAIN"|string;
-  export type Eac3AtmosCodingMode = "CODING_MODE_9_1_6"|string;
-  export type Eac3AtmosDialogueIntelligence = "ENABLED"|"DISABLED"|string;
-  export type Eac3AtmosDynamicRangeCompressionLine = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH"|string;
-  export type Eac3AtmosDynamicRangeCompressionRf = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH"|string;
-  export type Eac3AtmosMeteringMode = "LEQ_A"|"ITU_BS_1770_1"|"ITU_BS_1770_2"|"ITU_BS_1770_3"|"ITU_BS_1770_4"|string;
+  export type Eac3AtmosBitstreamMode = "COMPLETE_MAIN";
+  export type Eac3AtmosCodingMode = "CODING_MODE_9_1_6";
+  export type Eac3AtmosDialogueIntelligence = "ENABLED"|"DISABLED";
+  export type Eac3AtmosDynamicRangeCompressionLine = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH";
+  export type Eac3AtmosDynamicRangeCompressionRf = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH";
+  export type Eac3AtmosMeteringMode = "LEQ_A"|"ITU_BS_1770_1"|"ITU_BS_1770_2"|"ITU_BS_1770_3"|"ITU_BS_1770_4";
   export interface Eac3AtmosSettings {
     /**
      * Specify the average bitrate in bits per second.
@@ -1357,19 +1357,19 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     SurroundExMode?: Eac3AtmosSurroundExMode;
   }
-  export type Eac3AtmosStereoDownmix = "NOT_INDICATED"|"STEREO"|"SURROUND"|"DPL2"|string;
-  export type Eac3AtmosSurroundExMode = "NOT_INDICATED"|"ENABLED"|"DISABLED"|string;
-  export type Eac3AttenuationControl = "ATTENUATE_3_DB"|"NONE"|string;
-  export type Eac3BitstreamMode = "COMPLETE_MAIN"|"COMMENTARY"|"EMERGENCY"|"HEARING_IMPAIRED"|"VISUALLY_IMPAIRED"|string;
-  export type Eac3CodingMode = "CODING_MODE_1_0"|"CODING_MODE_2_0"|"CODING_MODE_3_2"|string;
-  export type Eac3DcFilter = "ENABLED"|"DISABLED"|string;
-  export type Eac3DynamicRangeCompressionLine = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH"|string;
-  export type Eac3DynamicRangeCompressionRf = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH"|string;
-  export type Eac3LfeControl = "LFE"|"NO_LFE"|string;
-  export type Eac3LfeFilter = "ENABLED"|"DISABLED"|string;
-  export type Eac3MetadataControl = "FOLLOW_INPUT"|"USE_CONFIGURED"|string;
-  export type Eac3PassthroughControl = "WHEN_POSSIBLE"|"NO_PASSTHROUGH"|string;
-  export type Eac3PhaseControl = "SHIFT_90_DEGREES"|"NO_SHIFT"|string;
+  export type Eac3AtmosStereoDownmix = "NOT_INDICATED"|"STEREO"|"SURROUND"|"DPL2";
+  export type Eac3AtmosSurroundExMode = "NOT_INDICATED"|"ENABLED"|"DISABLED";
+  export type Eac3AttenuationControl = "ATTENUATE_3_DB"|"NONE";
+  export type Eac3BitstreamMode = "COMPLETE_MAIN"|"COMMENTARY"|"EMERGENCY"|"HEARING_IMPAIRED"|"VISUALLY_IMPAIRED";
+  export type Eac3CodingMode = "CODING_MODE_1_0"|"CODING_MODE_2_0"|"CODING_MODE_3_2";
+  export type Eac3DcFilter = "ENABLED"|"DISABLED";
+  export type Eac3DynamicRangeCompressionLine = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH";
+  export type Eac3DynamicRangeCompressionRf = "NONE"|"FILM_STANDARD"|"FILM_LIGHT"|"MUSIC_STANDARD"|"MUSIC_LIGHT"|"SPEECH";
+  export type Eac3LfeControl = "LFE"|"NO_LFE";
+  export type Eac3LfeFilter = "ENABLED"|"DISABLED";
+  export type Eac3MetadataControl = "FOLLOW_INPUT"|"USE_CONFIGURED";
+  export type Eac3PassthroughControl = "WHEN_POSSIBLE"|"NO_PASSTHROUGH";
+  export type Eac3PhaseControl = "SHIFT_90_DEGREES"|"NO_SHIFT";
   export interface Eac3Settings {
     /**
      * If set to ATTENUATE_3_DB, applies a 3 dB attenuation to the surround channels. Only used for 3/2 coding mode.
@@ -1456,10 +1456,10 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     SurroundMode?: Eac3SurroundMode;
   }
-  export type Eac3StereoDownmix = "NOT_INDICATED"|"LO_RO"|"LT_RT"|"DPL2"|string;
-  export type Eac3SurroundExMode = "NOT_INDICATED"|"ENABLED"|"DISABLED"|string;
-  export type Eac3SurroundMode = "NOT_INDICATED"|"ENABLED"|"DISABLED"|string;
-  export type EmbeddedConvert608To708 = "UPCONVERT"|"DISABLED"|string;
+  export type Eac3StereoDownmix = "NOT_INDICATED"|"LO_RO"|"LT_RT"|"DPL2";
+  export type Eac3SurroundExMode = "NOT_INDICATED"|"ENABLED"|"DISABLED";
+  export type Eac3SurroundMode = "NOT_INDICATED"|"ENABLED"|"DISABLED";
+  export type EmbeddedConvert608To708 = "UPCONVERT"|"DISABLED";
   export interface EmbeddedDestinationSettings {
     /**
      * Ignore this setting unless your input captions are SCC format and your output captions are embedded in the video stream. Specify a CC number for each captions channel in this output. If you have two channels, pick CC numbers that aren't in the same field. For example, choose 1 and 3. For more information, see https://docs.aws.amazon.com/console/mediaconvert/dual-scc-to-embedded.
@@ -1516,7 +1516,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     SccXml?: __stringPatternSNSignalProcessingNotificationNS;
   }
-  export type F4vMoovPlacement = "PROGRESSIVE_DOWNLOAD"|"NORMAL"|string;
+  export type F4vMoovPlacement = "PROGRESSIVE_DOWNLOAD"|"NORMAL";
   export interface F4vSettings {
     /**
      * If set to PROGRESSIVE_DOWNLOAD, the MOOV atom is relocated to the beginning of the archive as required for progressive downloading. Otherwise it is placed normally at the end.
@@ -1533,7 +1533,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     DestinationSettings?: DestinationSettings;
   }
-  export type FileSourceConvert608To708 = "UPCONVERT"|"DISABLED"|string;
+  export type FileSourceConvert608To708 = "UPCONVERT"|"DISABLED";
   export interface FileSourceSettings {
     /**
      * If set to UPCONVERT, 608 caption data is both passed through via the "608 compatibility bytes" fields of the 708 wrapper as well as translated into 708. 708 data present in the source content will be discarded.
@@ -1548,7 +1548,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TimeDelta?: __integerMinNegative2147483648Max2147483647;
   }
-  export type FontScript = "AUTOMATIC"|"HANS"|"HANT"|string;
+  export type FontScript = "AUTOMATIC"|"HANS"|"HANT";
   export interface FrameCaptureSettings {
     /**
      * Frame capture will encode the first frame of the output stream, then one frame every framerateDenominator/framerateNumerator seconds. For example, settings of framerateNumerator = 1 and framerateDenominator = 3 (a rate of 1/3 frame per second) will capture the first frame, then 1 frame every 3s. Files will be named as filename.n.jpg where n is the 0-based sequence number of each Capture.
@@ -1615,20 +1615,20 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Queue?: Queue;
   }
-  export type H264AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH"|"HIGHER"|"MAX"|string;
-  export type H264CodecLevel = "AUTO"|"LEVEL_1"|"LEVEL_1_1"|"LEVEL_1_2"|"LEVEL_1_3"|"LEVEL_2"|"LEVEL_2_1"|"LEVEL_2_2"|"LEVEL_3"|"LEVEL_3_1"|"LEVEL_3_2"|"LEVEL_4"|"LEVEL_4_1"|"LEVEL_4_2"|"LEVEL_5"|"LEVEL_5_1"|"LEVEL_5_2"|string;
-  export type H264CodecProfile = "BASELINE"|"HIGH"|"HIGH_10BIT"|"HIGH_422"|"HIGH_422_10BIT"|"MAIN"|string;
-  export type H264DynamicSubGop = "ADAPTIVE"|"STATIC"|string;
-  export type H264EntropyEncoding = "CABAC"|"CAVLC"|string;
-  export type H264FieldEncoding = "PAFF"|"FORCE_FIELD"|string;
-  export type H264FlickerAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H264FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type H264FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE"|string;
-  export type H264GopBReference = "DISABLED"|"ENABLED"|string;
-  export type H264GopSizeUnits = "FRAMES"|"SECONDS"|string;
-  export type H264InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD"|string;
-  export type H264ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type H264QualityTuningLevel = "SINGLE_PASS"|"SINGLE_PASS_HQ"|"MULTI_PASS_HQ"|string;
+  export type H264AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH"|"HIGHER"|"MAX";
+  export type H264CodecLevel = "AUTO"|"LEVEL_1"|"LEVEL_1_1"|"LEVEL_1_2"|"LEVEL_1_3"|"LEVEL_2"|"LEVEL_2_1"|"LEVEL_2_2"|"LEVEL_3"|"LEVEL_3_1"|"LEVEL_3_2"|"LEVEL_4"|"LEVEL_4_1"|"LEVEL_4_2"|"LEVEL_5"|"LEVEL_5_1"|"LEVEL_5_2";
+  export type H264CodecProfile = "BASELINE"|"HIGH"|"HIGH_10BIT"|"HIGH_422"|"HIGH_422_10BIT"|"MAIN";
+  export type H264DynamicSubGop = "ADAPTIVE"|"STATIC";
+  export type H264EntropyEncoding = "CABAC"|"CAVLC";
+  export type H264FieldEncoding = "PAFF"|"FORCE_FIELD";
+  export type H264FlickerAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H264FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type H264FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE";
+  export type H264GopBReference = "DISABLED"|"ENABLED";
+  export type H264GopSizeUnits = "FRAMES"|"SECONDS";
+  export type H264InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD";
+  export type H264ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type H264QualityTuningLevel = "SINGLE_PASS"|"SINGLE_PASS_HQ"|"MULTI_PASS_HQ";
   export interface H264QvbrSettings {
     /**
      * Use this setting only when Rate control mode is QVBR and Quality tuning level is Multi-pass HQ. For Max average bitrate values suited to the complexity of your input video, the service limits the average bitrate of the video part of this output to the value that you choose. That is, the total size of the video element is less than or equal to the value you set multiplied by the number of seconds of encoded output.
@@ -1639,9 +1639,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     QvbrQualityLevel?: __integerMin1Max10;
   }
-  export type H264RateControlMode = "VBR"|"CBR"|"QVBR"|string;
-  export type H264RepeatPps = "DISABLED"|"ENABLED"|string;
-  export type H264SceneChangeDetect = "DISABLED"|"ENABLED"|"TRANSITION_DETECTION"|string;
+  export type H264RateControlMode = "VBR"|"CBR"|"QVBR";
+  export type H264RepeatPps = "DISABLED"|"ENABLED";
+  export type H264SceneChangeDetect = "DISABLED"|"ENABLED"|"TRANSITION_DETECTION";
   export interface H264Settings {
     /**
      * Adaptive quantization. Allows intra-frame quantizers to vary to improve visual quality.
@@ -1802,25 +1802,25 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     UnregisteredSeiTimecode?: H264UnregisteredSeiTimecode;
   }
-  export type H264SlowPal = "DISABLED"|"ENABLED"|string;
-  export type H264SpatialAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H264Syntax = "DEFAULT"|"RP2027"|string;
-  export type H264Telecine = "NONE"|"SOFT"|"HARD"|string;
-  export type H264TemporalAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H264UnregisteredSeiTimecode = "DISABLED"|"ENABLED"|string;
-  export type H265AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH"|"HIGHER"|"MAX"|string;
-  export type H265AlternateTransferFunctionSei = "DISABLED"|"ENABLED"|string;
-  export type H265CodecLevel = "AUTO"|"LEVEL_1"|"LEVEL_2"|"LEVEL_2_1"|"LEVEL_3"|"LEVEL_3_1"|"LEVEL_4"|"LEVEL_4_1"|"LEVEL_5"|"LEVEL_5_1"|"LEVEL_5_2"|"LEVEL_6"|"LEVEL_6_1"|"LEVEL_6_2"|string;
-  export type H265CodecProfile = "MAIN_MAIN"|"MAIN_HIGH"|"MAIN10_MAIN"|"MAIN10_HIGH"|"MAIN_422_8BIT_MAIN"|"MAIN_422_8BIT_HIGH"|"MAIN_422_10BIT_MAIN"|"MAIN_422_10BIT_HIGH"|string;
-  export type H265DynamicSubGop = "ADAPTIVE"|"STATIC"|string;
-  export type H265FlickerAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H265FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type H265FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE"|string;
-  export type H265GopBReference = "DISABLED"|"ENABLED"|string;
-  export type H265GopSizeUnits = "FRAMES"|"SECONDS"|string;
-  export type H265InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD"|string;
-  export type H265ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type H265QualityTuningLevel = "SINGLE_PASS"|"SINGLE_PASS_HQ"|"MULTI_PASS_HQ"|string;
+  export type H264SlowPal = "DISABLED"|"ENABLED";
+  export type H264SpatialAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H264Syntax = "DEFAULT"|"RP2027";
+  export type H264Telecine = "NONE"|"SOFT"|"HARD";
+  export type H264TemporalAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H264UnregisteredSeiTimecode = "DISABLED"|"ENABLED";
+  export type H265AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH"|"HIGHER"|"MAX";
+  export type H265AlternateTransferFunctionSei = "DISABLED"|"ENABLED";
+  export type H265CodecLevel = "AUTO"|"LEVEL_1"|"LEVEL_2"|"LEVEL_2_1"|"LEVEL_3"|"LEVEL_3_1"|"LEVEL_4"|"LEVEL_4_1"|"LEVEL_5"|"LEVEL_5_1"|"LEVEL_5_2"|"LEVEL_6"|"LEVEL_6_1"|"LEVEL_6_2";
+  export type H265CodecProfile = "MAIN_MAIN"|"MAIN_HIGH"|"MAIN10_MAIN"|"MAIN10_HIGH"|"MAIN_422_8BIT_MAIN"|"MAIN_422_8BIT_HIGH"|"MAIN_422_10BIT_MAIN"|"MAIN_422_10BIT_HIGH";
+  export type H265DynamicSubGop = "ADAPTIVE"|"STATIC";
+  export type H265FlickerAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H265FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type H265FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE";
+  export type H265GopBReference = "DISABLED"|"ENABLED";
+  export type H265GopSizeUnits = "FRAMES"|"SECONDS";
+  export type H265InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD";
+  export type H265ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type H265QualityTuningLevel = "SINGLE_PASS"|"SINGLE_PASS_HQ"|"MULTI_PASS_HQ";
   export interface H265QvbrSettings {
     /**
      * Use this setting only when Rate control mode is QVBR and Quality tuning level is Multi-pass HQ. For Max average bitrate values suited to the complexity of your input video, the service limits the average bitrate of the video part of this output to the value that you choose. That is, the total size of the video element is less than or equal to the value you set multiplied by the number of seconds of encoded output.
@@ -1831,9 +1831,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     QvbrQualityLevel?: __integerMin1Max10;
   }
-  export type H265RateControlMode = "VBR"|"CBR"|"QVBR"|string;
-  export type H265SampleAdaptiveOffsetFilterMode = "DEFAULT"|"ADAPTIVE"|"OFF"|string;
-  export type H265SceneChangeDetect = "DISABLED"|"ENABLED"|"TRANSITION_DETECTION"|string;
+  export type H265RateControlMode = "VBR"|"CBR"|"QVBR";
+  export type H265SampleAdaptiveOffsetFilterMode = "DEFAULT"|"ADAPTIVE"|"OFF";
+  export type H265SceneChangeDetect = "DISABLED"|"ENABLED"|"TRANSITION_DETECTION";
   export interface H265Settings {
     /**
      * Adaptive quantization. Allows intra-frame quantizers to vary to improve visual quality.
@@ -1992,14 +1992,14 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     WriteMp4PackagingType?: H265WriteMp4PackagingType;
   }
-  export type H265SlowPal = "DISABLED"|"ENABLED"|string;
-  export type H265SpatialAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H265Telecine = "NONE"|"SOFT"|"HARD"|string;
-  export type H265TemporalAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type H265TemporalIds = "DISABLED"|"ENABLED"|string;
-  export type H265Tiles = "DISABLED"|"ENABLED"|string;
-  export type H265UnregisteredSeiTimecode = "DISABLED"|"ENABLED"|string;
-  export type H265WriteMp4PackagingType = "HVC1"|"HEV1"|string;
+  export type H265SlowPal = "DISABLED"|"ENABLED";
+  export type H265SpatialAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H265Telecine = "NONE"|"SOFT"|"HARD";
+  export type H265TemporalAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type H265TemporalIds = "DISABLED"|"ENABLED";
+  export type H265Tiles = "DISABLED"|"ENABLED";
+  export type H265UnregisteredSeiTimecode = "DISABLED"|"ENABLED";
+  export type H265WriteMp4PackagingType = "HVC1"|"HEV1";
   export interface Hdr10Metadata {
     /**
      * HDR Master Display Information must be provided by a color grader, using color grading tools. Range is 0 to 50,000, each increment represents 0.00002 in CIE1931 color coordinate. Note that this setting is not for color correction.
@@ -2050,9 +2050,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     WhitePointY?: __integerMin0Max50000;
   }
-  export type HlsAdMarkers = "ELEMENTAL"|"ELEMENTAL_SCTE35"|string;
-  export type HlsAudioOnlyContainer = "AUTOMATIC"|"M2TS"|string;
-  export type HlsAudioTrackType = "ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT"|"ALTERNATE_AUDIO_AUTO_SELECT"|"ALTERNATE_AUDIO_NOT_AUTO_SELECT"|"AUDIO_ONLY_VARIANT_STREAM"|string;
+  export type HlsAdMarkers = "ELEMENTAL"|"ELEMENTAL_SCTE35";
+  export type HlsAudioOnlyContainer = "AUTOMATIC"|"M2TS";
+  export type HlsAudioTrackType = "ALTERNATE_AUDIO_AUTO_SELECT_DEFAULT"|"ALTERNATE_AUDIO_AUTO_SELECT"|"ALTERNATE_AUDIO_NOT_AUTO_SELECT"|"AUDIO_ONLY_VARIANT_STREAM";
   export interface HlsCaptionLanguageMapping {
     /**
      * Caption channel.
@@ -2071,10 +2071,10 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     LanguageDescription?: __string;
   }
-  export type HlsCaptionLanguageSetting = "INSERT"|"OMIT"|"NONE"|string;
-  export type HlsClientCache = "DISABLED"|"ENABLED"|string;
-  export type HlsCodecSpecification = "RFC_6381"|"RFC_4281"|string;
-  export type HlsDirectoryStructure = "SINGLE_DIRECTORY"|"SUBDIRECTORY_PER_STREAM"|string;
+  export type HlsCaptionLanguageSetting = "INSERT"|"OMIT"|"NONE";
+  export type HlsClientCache = "DISABLED"|"ENABLED";
+  export type HlsCodecSpecification = "RFC_6381"|"RFC_4281";
+  export type HlsDirectoryStructure = "SINGLE_DIRECTORY"|"SUBDIRECTORY_PER_STREAM";
   export interface HlsEncryptionSettings {
     /**
      * This is a 128-bit, 16-byte hex value represented by a 32-character text string. If this parameter is not set then the Initialization Vector will follow the segment number by default.
@@ -2105,7 +2105,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Type?: HlsKeyProviderType;
   }
-  export type HlsEncryptionType = "AES128"|"SAMPLE_AES"|string;
+  export type HlsEncryptionType = "AES128"|"SAMPLE_AES";
   export interface HlsGroupSettings {
     /**
      * Choose one or more ad marker types to decorate your Apple HLS manifest. This setting does not determine whether SCTE-35 markers appear in the outputs themselves.
@@ -2204,15 +2204,15 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TimestampDeltaMilliseconds?: __integerMinNegative2147483648Max2147483647;
   }
-  export type HlsIFrameOnlyManifest = "INCLUDE"|"EXCLUDE"|string;
-  export type HlsInitializationVectorInManifest = "INCLUDE"|"EXCLUDE"|string;
-  export type HlsKeyProviderType = "SPEKE"|"STATIC_KEY"|string;
-  export type HlsManifestCompression = "GZIP"|"NONE"|string;
-  export type HlsManifestDurationFormat = "FLOATING_POINT"|"INTEGER"|string;
-  export type HlsOfflineEncrypted = "ENABLED"|"DISABLED"|string;
-  export type HlsOutputSelection = "MANIFESTS_AND_SEGMENTS"|"SEGMENTS_ONLY"|string;
-  export type HlsProgramDateTime = "INCLUDE"|"EXCLUDE"|string;
-  export type HlsSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES"|string;
+  export type HlsIFrameOnlyManifest = "INCLUDE"|"EXCLUDE";
+  export type HlsInitializationVectorInManifest = "INCLUDE"|"EXCLUDE";
+  export type HlsKeyProviderType = "SPEKE"|"STATIC_KEY";
+  export type HlsManifestCompression = "GZIP"|"NONE";
+  export type HlsManifestDurationFormat = "FLOATING_POINT"|"INTEGER";
+  export type HlsOfflineEncrypted = "ENABLED"|"DISABLED";
+  export type HlsOutputSelection = "MANIFESTS_AND_SEGMENTS"|"SEGMENTS_ONLY";
+  export type HlsProgramDateTime = "INCLUDE"|"EXCLUDE";
+  export type HlsSegmentControl = "SINGLE_FILE"|"SEGMENTED_FILES";
   export interface HlsSettings {
     /**
      * Specifies the group to which the audio Rendition belongs.
@@ -2239,8 +2239,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     SegmentModifier?: __string;
   }
-  export type HlsStreamInfResolution = "INCLUDE"|"EXCLUDE"|string;
-  export type HlsTimedMetadataId3Frame = "NONE"|"PRIV"|"TDRL"|string;
+  export type HlsStreamInfResolution = "INCLUDE"|"EXCLUDE";
+  export type HlsTimedMetadataId3Frame = "NONE"|"PRIV"|"TDRL";
   export interface Id3Insertion {
     /**
      * Use ID3 tag (Id3) to provide a tag value in base64-encode format.
@@ -2341,7 +2341,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     StartTimecode?: __stringPattern010920405090509092;
   }
-  export type InputDeblockFilter = "ENABLED"|"DISABLED"|string;
+  export type InputDeblockFilter = "ENABLED"|"DISABLED";
   export interface InputDecryptionSettings {
     /**
      * Specify the encryption mode that you used to encrypt your input files.
@@ -2360,10 +2360,10 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     KmsKeyRegion?: __stringMin9Max19PatternAZ26EastWestCentralNorthSouthEastWest1912;
   }
-  export type InputDenoiseFilter = "ENABLED"|"DISABLED"|string;
-  export type InputFilterEnable = "AUTO"|"DISABLE"|"FORCE"|string;
-  export type InputPsiControl = "IGNORE_PSI"|"USE_PSI"|string;
-  export type InputRotate = "DEGREE_0"|"DEGREES_90"|"DEGREES_180"|"DEGREES_270"|"AUTO"|string;
+  export type InputDenoiseFilter = "ENABLED"|"DISABLED";
+  export type InputFilterEnable = "AUTO"|"DISABLE"|"FORCE";
+  export type InputPsiControl = "IGNORE_PSI"|"USE_PSI";
+  export type InputRotate = "DEGREE_0"|"DEGREES_90"|"DEGREES_180"|"DEGREES_270"|"AUTO";
   export interface InputTemplate {
     /**
      * Specifies set of audio selectors within an input to combine. An input may have multiple audio selector groups. See "Audio Selector Group":#inputs-audio_selector_group for more information.
@@ -2426,7 +2426,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     VideoSelector?: VideoSelector;
   }
-  export type InputTimecodeSource = "EMBEDDED"|"ZEROBASED"|"SPECIFIEDSTART"|string;
+  export type InputTimecodeSource = "EMBEDDED"|"ZEROBASED"|"SPECIFIEDSTART";
   export interface InsertableImage {
     /**
      * Specify the time, in milliseconds, for the image to remain on the output video. This duration includes fade-in time but not fade-out time.
@@ -2555,7 +2555,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     UserMetadata?: __mapOf__string;
   }
-  export type JobPhase = "PROBING"|"TRANSCODING"|"UPLOADING"|string;
+  export type JobPhase = "PROBING"|"TRANSCODING"|"UPLOADING";
   export interface JobSettings {
     /**
      * When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
@@ -2594,7 +2594,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TimedMetadataInsertion?: TimedMetadataInsertion;
   }
-  export type JobStatus = "SUBMITTED"|"PROGRESSING"|"COMPLETE"|"CANCELED"|"ERROR"|string;
+  export type JobStatus = "SUBMITTED"|"PROGRESSING"|"COMPLETE"|"CANCELED"|"ERROR";
   export interface JobTemplate {
     /**
      * Accelerated transcoding can significantly speed up jobs with long, visually complex content.
@@ -2645,7 +2645,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Type?: Type;
   }
-  export type JobTemplateListBy = "NAME"|"CREATION_DATE"|"SYSTEM"|string;
+  export type JobTemplateListBy = "NAME"|"CREATION_DATE"|"SYSTEM";
   export interface JobTemplateSettings {
     /**
      * When specified, this offset (in milliseconds) is added to the input Ad Avail PTS time.
@@ -2684,7 +2684,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TimedMetadataInsertion?: TimedMetadataInsertion;
   }
-  export type LanguageCode = "ENG"|"SPA"|"FRA"|"DEU"|"GER"|"ZHO"|"ARA"|"HIN"|"JPN"|"RUS"|"POR"|"ITA"|"URD"|"VIE"|"KOR"|"PAN"|"ABK"|"AAR"|"AFR"|"AKA"|"SQI"|"AMH"|"ARG"|"HYE"|"ASM"|"AVA"|"AVE"|"AYM"|"AZE"|"BAM"|"BAK"|"EUS"|"BEL"|"BEN"|"BIH"|"BIS"|"BOS"|"BRE"|"BUL"|"MYA"|"CAT"|"KHM"|"CHA"|"CHE"|"NYA"|"CHU"|"CHV"|"COR"|"COS"|"CRE"|"HRV"|"CES"|"DAN"|"DIV"|"NLD"|"DZO"|"ENM"|"EPO"|"EST"|"EWE"|"FAO"|"FIJ"|"FIN"|"FRM"|"FUL"|"GLA"|"GLG"|"LUG"|"KAT"|"ELL"|"GRN"|"GUJ"|"HAT"|"HAU"|"HEB"|"HER"|"HMO"|"HUN"|"ISL"|"IDO"|"IBO"|"IND"|"INA"|"ILE"|"IKU"|"IPK"|"GLE"|"JAV"|"KAL"|"KAN"|"KAU"|"KAS"|"KAZ"|"KIK"|"KIN"|"KIR"|"KOM"|"KON"|"KUA"|"KUR"|"LAO"|"LAT"|"LAV"|"LIM"|"LIN"|"LIT"|"LUB"|"LTZ"|"MKD"|"MLG"|"MSA"|"MAL"|"MLT"|"GLV"|"MRI"|"MAR"|"MAH"|"MON"|"NAU"|"NAV"|"NDE"|"NBL"|"NDO"|"NEP"|"SME"|"NOR"|"NOB"|"NNO"|"OCI"|"OJI"|"ORI"|"ORM"|"OSS"|"PLI"|"FAS"|"POL"|"PUS"|"QUE"|"QAA"|"RON"|"ROH"|"RUN"|"SMO"|"SAG"|"SAN"|"SRD"|"SRB"|"SNA"|"III"|"SND"|"SIN"|"SLK"|"SLV"|"SOM"|"SOT"|"SUN"|"SWA"|"SSW"|"SWE"|"TGL"|"TAH"|"TGK"|"TAM"|"TAT"|"TEL"|"THA"|"BOD"|"TIR"|"TON"|"TSO"|"TSN"|"TUR"|"TUK"|"TWI"|"UIG"|"UKR"|"UZB"|"VEN"|"VOL"|"WLN"|"CYM"|"FRY"|"WOL"|"XHO"|"YID"|"YOR"|"ZHA"|"ZUL"|"ORJ"|"QPC"|"TNG"|string;
+  export type LanguageCode = "ENG"|"SPA"|"FRA"|"DEU"|"GER"|"ZHO"|"ARA"|"HIN"|"JPN"|"RUS"|"POR"|"ITA"|"URD"|"VIE"|"KOR"|"PAN"|"ABK"|"AAR"|"AFR"|"AKA"|"SQI"|"AMH"|"ARG"|"HYE"|"ASM"|"AVA"|"AVE"|"AYM"|"AZE"|"BAM"|"BAK"|"EUS"|"BEL"|"BEN"|"BIH"|"BIS"|"BOS"|"BRE"|"BUL"|"MYA"|"CAT"|"KHM"|"CHA"|"CHE"|"NYA"|"CHU"|"CHV"|"COR"|"COS"|"CRE"|"HRV"|"CES"|"DAN"|"DIV"|"NLD"|"DZO"|"ENM"|"EPO"|"EST"|"EWE"|"FAO"|"FIJ"|"FIN"|"FRM"|"FUL"|"GLA"|"GLG"|"LUG"|"KAT"|"ELL"|"GRN"|"GUJ"|"HAT"|"HAU"|"HEB"|"HER"|"HMO"|"HUN"|"ISL"|"IDO"|"IBO"|"IND"|"INA"|"ILE"|"IKU"|"IPK"|"GLE"|"JAV"|"KAL"|"KAN"|"KAU"|"KAS"|"KAZ"|"KIK"|"KIN"|"KIR"|"KOM"|"KON"|"KUA"|"KUR"|"LAO"|"LAT"|"LAV"|"LIM"|"LIN"|"LIT"|"LUB"|"LTZ"|"MKD"|"MLG"|"MSA"|"MAL"|"MLT"|"GLV"|"MRI"|"MAR"|"MAH"|"MON"|"NAU"|"NAV"|"NDE"|"NBL"|"NDO"|"NEP"|"SME"|"NOR"|"NOB"|"NNO"|"OCI"|"OJI"|"ORI"|"ORM"|"OSS"|"PLI"|"FAS"|"POL"|"PUS"|"QUE"|"QAA"|"RON"|"ROH"|"RUN"|"SMO"|"SAG"|"SAN"|"SRD"|"SRB"|"SNA"|"III"|"SND"|"SIN"|"SLK"|"SLV"|"SOM"|"SOT"|"SUN"|"SWA"|"SSW"|"SWE"|"TGL"|"TAH"|"TGK"|"TAM"|"TAT"|"TEL"|"THA"|"BOD"|"TIR"|"TON"|"TSO"|"TSN"|"TUR"|"TUK"|"TWI"|"UIG"|"UKR"|"UZB"|"VEN"|"VOL"|"WLN"|"CYM"|"FRY"|"WOL"|"XHO"|"YID"|"YOR"|"ZHA"|"ZUL"|"ORJ"|"QPC"|"TNG";
   export interface ListJobTemplatesRequest {
     /**
      * Optionally, specify a job template category to limit responses to only job templates from that category.
@@ -2821,24 +2821,24 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     ResourceTags?: ResourceTags;
   }
-  export type M2tsAudioBufferModel = "DVB"|"ATSC"|string;
-  export type M2tsBufferModel = "MULTIPLEX"|"NONE"|string;
-  export type M2tsEbpAudioInterval = "VIDEO_AND_FIXED_INTERVALS"|"VIDEO_INTERVAL"|string;
-  export type M2tsEbpPlacement = "VIDEO_AND_AUDIO_PIDS"|"VIDEO_PID"|string;
-  export type M2tsEsRateInPes = "INCLUDE"|"EXCLUDE"|string;
-  export type M2tsForceTsVideoEbpOrder = "FORCE"|"DEFAULT"|string;
-  export type M2tsNielsenId3 = "INSERT"|"NONE"|string;
-  export type M2tsPcrControl = "PCR_EVERY_PES_PACKET"|"CONFIGURED_PCR_PERIOD"|string;
-  export type M2tsRateMode = "VBR"|"CBR"|string;
+  export type M2tsAudioBufferModel = "DVB"|"ATSC";
+  export type M2tsBufferModel = "MULTIPLEX"|"NONE";
+  export type M2tsEbpAudioInterval = "VIDEO_AND_FIXED_INTERVALS"|"VIDEO_INTERVAL";
+  export type M2tsEbpPlacement = "VIDEO_AND_AUDIO_PIDS"|"VIDEO_PID";
+  export type M2tsEsRateInPes = "INCLUDE"|"EXCLUDE";
+  export type M2tsForceTsVideoEbpOrder = "FORCE"|"DEFAULT";
+  export type M2tsNielsenId3 = "INSERT"|"NONE";
+  export type M2tsPcrControl = "PCR_EVERY_PES_PACKET"|"CONFIGURED_PCR_PERIOD";
+  export type M2tsRateMode = "VBR"|"CBR";
   export interface M2tsScte35Esam {
     /**
      * Packet Identifier (PID) of the SCTE-35 stream in the transport stream generated by ESAM.
      */
     Scte35EsamPid?: __integerMin32Max8182;
   }
-  export type M2tsScte35Source = "PASSTHROUGH"|"NONE"|string;
-  export type M2tsSegmentationMarkers = "NONE"|"RAI_SEGSTART"|"RAI_ADAPT"|"PSI_SEGSTART"|"EBP"|"EBP_LEGACY"|string;
-  export type M2tsSegmentationStyle = "MAINTAIN_CADENCE"|"RESET_CADENCE"|string;
+  export type M2tsScte35Source = "PASSTHROUGH"|"NONE";
+  export type M2tsSegmentationMarkers = "NONE"|"RAI_SEGSTART"|"RAI_ADAPT"|"PSI_SEGSTART"|"EBP"|"EBP_LEGACY";
+  export type M2tsSegmentationStyle = "MAINTAIN_CADENCE"|"RESET_CADENCE";
   export interface M2tsSettings {
     /**
      * Selects between the DVB and ATSC buffer models for Dolby Digital audio.
@@ -2985,9 +2985,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     VideoPid?: __integerMin32Max8182;
   }
-  export type M3u8NielsenId3 = "INSERT"|"NONE"|string;
-  export type M3u8PcrControl = "PCR_EVERY_PES_PACKET"|"CONFIGURED_PCR_PERIOD"|string;
-  export type M3u8Scte35Source = "PASSTHROUGH"|"NONE"|string;
+  export type M3u8NielsenId3 = "INSERT"|"NONE";
+  export type M3u8PcrControl = "PCR_EVERY_PES_PACKET"|"CONFIGURED_PCR_PERIOD";
+  export type M3u8Scte35Source = "PASSTHROUGH"|"NONE";
   export interface M3u8Settings {
     /**
      * The number of audio frames to insert for each PES packet.
@@ -3090,7 +3090,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     FramerateNumerator?: __integerMin1Max2147483640;
   }
-  export type MotionImageInsertionMode = "MOV"|"PNG"|string;
+  export type MotionImageInsertionMode = "MOV"|"PNG";
   export interface MotionImageInsertionOffset {
     /**
      * Set the distance, in pixels, between the overlay and the left edge of the video frame.
@@ -3101,12 +3101,12 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     ImageY?: __integerMin0Max2147483647;
   }
-  export type MotionImagePlayback = "ONCE"|"REPEAT"|string;
-  export type MovClapAtom = "INCLUDE"|"EXCLUDE"|string;
-  export type MovCslgAtom = "INCLUDE"|"EXCLUDE"|string;
-  export type MovMpeg2FourCCControl = "XDCAM"|"MPEG"|string;
-  export type MovPaddingControl = "OMNEON"|"NONE"|string;
-  export type MovReference = "SELF_CONTAINED"|"EXTERNAL"|string;
+  export type MotionImagePlayback = "ONCE"|"REPEAT";
+  export type MovClapAtom = "INCLUDE"|"EXCLUDE";
+  export type MovCslgAtom = "INCLUDE"|"EXCLUDE";
+  export type MovMpeg2FourCCControl = "XDCAM"|"MPEG";
+  export type MovPaddingControl = "OMNEON"|"NONE";
+  export type MovReference = "SELF_CONTAINED"|"EXTERNAL";
   export interface MovSettings {
     /**
      * When enabled, include 'clap' atom if appropriate for the video output settings.
@@ -3143,9 +3143,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     SampleRate?: __integerMin32000Max48000;
   }
-  export type Mp4CslgAtom = "INCLUDE"|"EXCLUDE"|string;
-  export type Mp4FreeSpaceBox = "INCLUDE"|"EXCLUDE"|string;
-  export type Mp4MoovPlacement = "PROGRESSIVE_DOWNLOAD"|"NORMAL"|string;
+  export type Mp4CslgAtom = "INCLUDE"|"EXCLUDE";
+  export type Mp4FreeSpaceBox = "INCLUDE"|"EXCLUDE";
+  export type Mp4MoovPlacement = "PROGRESSIVE_DOWNLOAD"|"NORMAL";
   export interface Mp4Settings {
     /**
      * When enabled, file composition times will start at zero, composition times in the 'ctts' (composition time to sample) box for B-frames will be negative, and a 'cslg' (composition shift least greatest) box will be included per 14496-1 amendment 1. This improves compatibility with Apple players and tools.
@@ -3164,19 +3164,19 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Mp4MajorBrand?: __string;
   }
-  export type Mpeg2AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH"|string;
-  export type Mpeg2CodecLevel = "AUTO"|"LOW"|"MAIN"|"HIGH1440"|"HIGH"|string;
-  export type Mpeg2CodecProfile = "MAIN"|"PROFILE_422"|string;
-  export type Mpeg2DynamicSubGop = "ADAPTIVE"|"STATIC"|string;
-  export type Mpeg2FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type Mpeg2FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE"|string;
-  export type Mpeg2GopSizeUnits = "FRAMES"|"SECONDS"|string;
-  export type Mpeg2InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD"|string;
-  export type Mpeg2IntraDcPrecision = "AUTO"|"INTRA_DC_PRECISION_8"|"INTRA_DC_PRECISION_9"|"INTRA_DC_PRECISION_10"|"INTRA_DC_PRECISION_11"|string;
-  export type Mpeg2ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type Mpeg2QualityTuningLevel = "SINGLE_PASS"|"MULTI_PASS"|string;
-  export type Mpeg2RateControlMode = "VBR"|"CBR"|string;
-  export type Mpeg2SceneChangeDetect = "DISABLED"|"ENABLED"|string;
+  export type Mpeg2AdaptiveQuantization = "OFF"|"LOW"|"MEDIUM"|"HIGH";
+  export type Mpeg2CodecLevel = "AUTO"|"LOW"|"MAIN"|"HIGH1440"|"HIGH";
+  export type Mpeg2CodecProfile = "MAIN"|"PROFILE_422";
+  export type Mpeg2DynamicSubGop = "ADAPTIVE"|"STATIC";
+  export type Mpeg2FramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type Mpeg2FramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE";
+  export type Mpeg2GopSizeUnits = "FRAMES"|"SECONDS";
+  export type Mpeg2InterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD";
+  export type Mpeg2IntraDcPrecision = "AUTO"|"INTRA_DC_PRECISION_8"|"INTRA_DC_PRECISION_9"|"INTRA_DC_PRECISION_10"|"INTRA_DC_PRECISION_11";
+  export type Mpeg2ParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type Mpeg2QualityTuningLevel = "SINGLE_PASS"|"MULTI_PASS";
+  export type Mpeg2RateControlMode = "VBR"|"CBR";
+  export type Mpeg2SceneChangeDetect = "DISABLED"|"ENABLED";
   export interface Mpeg2Settings {
     /**
      * Adaptive quantization. Allows intra-frame quantizers to vary to improve visual quality.
@@ -3305,12 +3305,12 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TemporalAdaptiveQuantization?: Mpeg2TemporalAdaptiveQuantization;
   }
-  export type Mpeg2SlowPal = "DISABLED"|"ENABLED"|string;
-  export type Mpeg2SpatialAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type Mpeg2Syntax = "DEFAULT"|"D_10"|string;
-  export type Mpeg2Telecine = "NONE"|"SOFT"|"HARD"|string;
-  export type Mpeg2TemporalAdaptiveQuantization = "DISABLED"|"ENABLED"|string;
-  export type MsSmoothAudioDeduplication = "COMBINE_DUPLICATE_STREAMS"|"NONE"|string;
+  export type Mpeg2SlowPal = "DISABLED"|"ENABLED";
+  export type Mpeg2SpatialAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type Mpeg2Syntax = "DEFAULT"|"D_10";
+  export type Mpeg2Telecine = "NONE"|"SOFT"|"HARD";
+  export type Mpeg2TemporalAdaptiveQuantization = "DISABLED"|"ENABLED";
+  export type MsSmoothAudioDeduplication = "COMBINE_DUPLICATE_STREAMS"|"NONE";
   export interface MsSmoothEncryptionSettings {
     /**
      * Use these settings when doing DRM encryption with a SPEKE-compliant key provider, if your output group type is HLS, MS Smooth, or DASH. If your output group type is CMAF, use the SpekeKeyProviderCmaf settings instead.
@@ -3343,7 +3343,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     ManifestEncoding?: MsSmoothManifestEncoding;
   }
-  export type MsSmoothManifestEncoding = "UTF8"|"UTF16"|string;
+  export type MsSmoothManifestEncoding = "UTF8"|"UTF16";
   export interface NielsenConfiguration {
     /**
      * Nielsen has discontinued the use of breakout code functionality. If you must include this property, set the value to zero.
@@ -3372,7 +3372,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TemporalFilterSettings?: NoiseReducerTemporalFilterSettings;
   }
-  export type NoiseReducerFilter = "BILATERAL"|"MEAN"|"GAUSSIAN"|"LANCZOS"|"SHARPEN"|"CONSERVE"|"SPATIAL"|"TEMPORAL"|string;
+  export type NoiseReducerFilter = "BILATERAL"|"MEAN"|"GAUSSIAN"|"LANCZOS"|"SHARPEN"|"CONSERVE"|"SPATIAL"|"TEMPORAL";
   export interface NoiseReducerFilterSettings {
     /**
      * Relative strength of noise reducing filter. Higher values produce stronger filtering.
@@ -3407,7 +3407,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Strength?: __integerMin0Max16;
   }
-  export type Order = "ASCENDING"|"DESCENDING"|string;
+  export type Order = "ASCENDING"|"DESCENDING";
   export interface Output {
     /**
      * (AudioDescriptions) contains groups of audio encoding settings organized by audio codec. Include one instance of (AudioDescriptions) per output. (AudioDescriptions) can contain multiple groups of encoding settings.
@@ -3508,8 +3508,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Type?: OutputGroupType;
   }
-  export type OutputGroupType = "HLS_GROUP_SETTINGS"|"DASH_ISO_GROUP_SETTINGS"|"FILE_GROUP_SETTINGS"|"MS_SMOOTH_GROUP_SETTINGS"|"CMAF_GROUP_SETTINGS"|string;
-  export type OutputSdt = "SDT_FOLLOW"|"SDT_FOLLOW_IF_PRESENT"|"SDT_MANUAL"|"SDT_NONE"|string;
+  export type OutputGroupType = "HLS_GROUP_SETTINGS"|"DASH_ISO_GROUP_SETTINGS"|"FILE_GROUP_SETTINGS"|"MS_SMOOTH_GROUP_SETTINGS"|"CMAF_GROUP_SETTINGS";
+  export type OutputSdt = "SDT_FOLLOW"|"SDT_FOLLOW_IF_PRESENT"|"SDT_MANUAL"|"SDT_NONE";
   export interface OutputSettings {
     /**
      * Settings for HLS output groups
@@ -3550,7 +3550,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Type?: Type;
   }
-  export type PresetListBy = "NAME"|"CREATION_DATE"|"SYSTEM"|string;
+  export type PresetListBy = "NAME"|"CREATION_DATE"|"SYSTEM";
   export interface PresetSettings {
     /**
      * (AudioDescriptions) contains groups of audio encoding settings organized by audio codec. Include one instance of (AudioDescriptions) per output. (AudioDescriptions) can contain multiple groups of encoding settings.
@@ -3569,12 +3569,12 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     VideoDescription?: VideoDescription;
   }
-  export type PricingPlan = "ON_DEMAND"|"RESERVED"|string;
-  export type ProresCodecProfile = "APPLE_PRORES_422"|"APPLE_PRORES_422_HQ"|"APPLE_PRORES_422_LT"|"APPLE_PRORES_422_PROXY"|string;
-  export type ProresFramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
-  export type ProresFramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE"|string;
-  export type ProresInterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD"|string;
-  export type ProresParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED"|string;
+  export type PricingPlan = "ON_DEMAND"|"RESERVED";
+  export type ProresCodecProfile = "APPLE_PRORES_422"|"APPLE_PRORES_422_HQ"|"APPLE_PRORES_422_LT"|"APPLE_PRORES_422_PROXY";
+  export type ProresFramerateControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
+  export type ProresFramerateConversionAlgorithm = "DUPLICATE_DROP"|"INTERPOLATE";
+  export type ProresInterlaceMode = "PROGRESSIVE"|"TOP_FIELD"|"BOTTOM_FIELD"|"FOLLOW_TOP_FIELD"|"FOLLOW_BOTTOM_FIELD";
+  export type ProresParControl = "INITIALIZE_FROM_SOURCE"|"SPECIFIED";
   export interface ProresSettings {
     /**
      * Use Profile (ProResCodecProfile) to specifiy the type of Apple ProRes codec to use for this output.
@@ -3623,8 +3623,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Telecine?: ProresTelecine;
   }
-  export type ProresSlowPal = "DISABLED"|"ENABLED"|string;
-  export type ProresTelecine = "NONE"|"HARD"|string;
+  export type ProresSlowPal = "DISABLED"|"ENABLED";
+  export type ProresTelecine = "NONE"|"HARD";
   export interface Queue {
     /**
      * An identifier for this resource that is unique within all of AWS.
@@ -3671,8 +3671,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Type?: Type;
   }
-  export type QueueListBy = "NAME"|"CREATION_DATE"|string;
-  export type QueueStatus = "ACTIVE"|"PAUSED"|string;
+  export type QueueListBy = "NAME"|"CREATION_DATE";
+  export type QueueStatus = "ACTIVE"|"PAUSED";
   export interface Rectangle {
     /**
      * Height of rectangle in pixels. Specify only even numbers.
@@ -3705,7 +3705,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     ChannelsOut?: __integerMin1Max8;
   }
-  export type RenewalType = "AUTO_RENEW"|"EXPIRE"|string;
+  export type RenewalType = "AUTO_RENEW"|"EXPIRE";
   export interface ReservationPlan {
     /**
      * The length of the term of your reserved queue pricing plan commitment.
@@ -3746,7 +3746,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     ReservedSlots: __integer;
   }
-  export type ReservationPlanStatus = "ACTIVE"|"EXPIRED"|string;
+  export type ReservationPlanStatus = "ACTIVE"|"EXPIRED";
   export interface ResourceTags {
     /**
      * The Amazon Resource Name (ARN) of the resource.
@@ -3757,7 +3757,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Tags?: __mapOf__string;
   }
-  export type RespondToAfd = "NONE"|"RESPOND"|"PASSTHROUGH"|string;
+  export type RespondToAfd = "NONE"|"RESPOND"|"PASSTHROUGH";
   export interface S3DestinationSettings {
     /**
      * Settings for how your job outputs are encrypted as they are uploaded to Amazon S3.
@@ -3774,9 +3774,9 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     KmsKeyArn?: __stringPatternArnAwsUsGovCnKmsAZ26EastWestCentralNorthSouthEastWest1912D12KeyAFAF098AFAF094AFAF094AFAF094AFAF0912;
   }
-  export type S3ServerSideEncryptionType = "SERVER_SIDE_ENCRYPTION_S3"|"SERVER_SIDE_ENCRYPTION_KMS"|string;
-  export type ScalingBehavior = "DEFAULT"|"STRETCH_TO_OUTPUT"|string;
-  export type SccDestinationFramerate = "FRAMERATE_23_97"|"FRAMERATE_24"|"FRAMERATE_29_97_DROPFRAME"|"FRAMERATE_29_97_NON_DROPFRAME"|string;
+  export type S3ServerSideEncryptionType = "SERVER_SIDE_ENCRYPTION_S3"|"SERVER_SIDE_ENCRYPTION_KMS";
+  export type ScalingBehavior = "DEFAULT"|"STRETCH_TO_OUTPUT";
+  export type SccDestinationFramerate = "FRAMERATE_23_97"|"FRAMERATE_24"|"FRAMERATE_29_97_DROPFRAME"|"FRAMERATE_29_97_NON_DROPFRAME";
   export interface SccDestinationSettings {
     /**
      * Set Framerate (SccDestinationFramerate) to make sure that the captions and the video are synchronized in the output. Specify a frame rate that matches the frame rate of the associated video. If the video frame rate is 29.97, choose 29.97 dropframe (FRAMERATE_29_97_DROPFRAME) only if the video has video_insertion=true and drop_frame_timecode=true; otherwise, choose 29.97 non-dropframe (FRAMERATE_29_97_NON_DROPFRAME).
@@ -3842,7 +3842,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Url?: __string;
   }
-  export type StatusUpdateInterval = "SECONDS_10"|"SECONDS_12"|"SECONDS_15"|"SECONDS_20"|"SECONDS_30"|"SECONDS_60"|"SECONDS_120"|"SECONDS_180"|"SECONDS_240"|"SECONDS_300"|"SECONDS_360"|"SECONDS_420"|"SECONDS_480"|"SECONDS_540"|"SECONDS_600"|string;
+  export type StatusUpdateInterval = "SECONDS_10"|"SECONDS_12"|"SECONDS_15"|"SECONDS_20"|"SECONDS_30"|"SECONDS_60"|"SECONDS_120"|"SECONDS_180"|"SECONDS_240"|"SECONDS_300"|"SECONDS_360"|"SECONDS_420"|"SECONDS_480"|"SECONDS_540"|"SECONDS_600";
   export interface TagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the resource that you want to tag. To get the ARN, send a GET request with the resource name.
@@ -3865,7 +3865,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     PageTypes?: __listOfTeletextPageType;
   }
-  export type TeletextPageType = "PAGE_TYPE_INITIAL"|"PAGE_TYPE_SUBTITLE"|"PAGE_TYPE_ADDL_INFO"|"PAGE_TYPE_PROGRAM_SCHEDULE"|"PAGE_TYPE_HEARING_IMPAIRED_SUBTITLE"|string;
+  export type TeletextPageType = "PAGE_TYPE_INITIAL"|"PAGE_TYPE_SUBTITLE"|"PAGE_TYPE_ADDL_INFO"|"PAGE_TYPE_PROGRAM_SCHEDULE"|"PAGE_TYPE_HEARING_IMPAIRED_SUBTITLE";
   export interface TeletextSourceSettings {
     /**
      * Use Page Number (PageNumber) to specify the three-digit hexadecimal page number that will be used for Teletext captions. Do not use this setting if you are passing through teletext from the input source to output.
@@ -3886,7 +3886,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Prefix?: __stringPattern;
   }
-  export type TimecodeBurninPosition = "TOP_CENTER"|"TOP_LEFT"|"TOP_RIGHT"|"MIDDLE_LEFT"|"MIDDLE_CENTER"|"MIDDLE_RIGHT"|"BOTTOM_LEFT"|"BOTTOM_CENTER"|"BOTTOM_RIGHT"|string;
+  export type TimecodeBurninPosition = "TOP_CENTER"|"TOP_LEFT"|"TOP_RIGHT"|"MIDDLE_LEFT"|"MIDDLE_CENTER"|"MIDDLE_RIGHT"|"BOTTOM_LEFT"|"BOTTOM_CENTER"|"BOTTOM_RIGHT";
   export interface TimecodeConfig {
     /**
      * If you use an editing platform that relies on an anchor timecode, use Anchor Timecode (Anchor) to specify a timecode that will match the input video frame to the output video frame. Use 24-hour format with frame number, (HH:MM:SS:FF) or (HH:MM:SS;FF). This setting ignores frame rate conversion. System behavior for Anchor Timecode varies depending on your setting for Source (TimecodeSource). * If Source (TimecodeSource) is set to Specified Start (SPECIFIEDSTART), the first input frame is the specified value in Start Timecode (Start). Anchor Timecode (Anchor) and Start Timecode (Start) are used calculate output timecode. * If Source (TimecodeSource) is set to Start at 0 (ZEROBASED)  the  first frame is 00:00:00:00. * If Source (TimecodeSource) is set to Embedded (EMBEDDED), the  first frame is the timecode value on the first input frame of the input.
@@ -3905,8 +3905,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     TimestampOffset?: __stringPattern0940191020191209301;
   }
-  export type TimecodeSource = "EMBEDDED"|"ZEROBASED"|"SPECIFIEDSTART"|string;
-  export type TimedMetadata = "PASSTHROUGH"|"NONE"|string;
+  export type TimecodeSource = "EMBEDDED"|"ZEROBASED"|"SPECIFIEDSTART";
+  export type TimedMetadata = "PASSTHROUGH"|"NONE";
   export interface TimedMetadataInsertion {
     /**
      * Id3Insertions contains the array of Id3Insertion instances.
@@ -3939,8 +3939,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     StylePassthrough?: TtmlStylePassthrough;
   }
-  export type TtmlStylePassthrough = "ENABLED"|"DISABLED"|string;
-  export type Type = "SYSTEM"|"CUSTOM"|string;
+  export type TtmlStylePassthrough = "ENABLED"|"DISABLED";
+  export type Type = "SYSTEM"|"CUSTOM";
   export interface UntagResourceRequest {
     /**
      * The Amazon Resource Name (ARN) of the resource that you want to remove tags from. To get the ARN, send a GET request with the resource name.
@@ -4041,7 +4041,7 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Queue?: Queue;
   }
-  export type VideoCodec = "FRAME_CAPTURE"|"H_264"|"H_265"|"MPEG2"|"PRORES"|string;
+  export type VideoCodec = "FRAME_CAPTURE"|"H_264"|"H_265"|"MPEG2"|"PRORES";
   export interface VideoCodecSettings {
     /**
      * Specifies the video codec. This must be equal to one of the enum values defined by the object  VideoCodec.
@@ -4188,8 +4188,8 @@ Valid values: 3.0, 1.5, 0.0, -1.5, -3.0, -4.5, and -6.0.
      */
     Rotate?: InputRotate;
   }
-  export type VideoTimecodeInsertion = "DISABLED"|"PIC_TIMING_SEI"|string;
-  export type WavFormat = "RIFF"|"RF64"|string;
+  export type VideoTimecodeInsertion = "DISABLED"|"PIC_TIMING_SEI";
+  export type WavFormat = "RIFF"|"RF64";
   export interface WavSettings {
     /**
      * Specify Bit depth (BitDepth), in bits per sample, to choose the encoding quality for this audio track.

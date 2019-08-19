@@ -812,7 +812,7 @@ declare namespace Amplify {
   export type DomainAssociations = DomainAssociation[];
   export type DomainName = string;
   export type DomainPrefix = string;
-  export type DomainStatus = "PENDING_VERIFICATION"|"IN_PROGRESS"|"AVAILABLE"|"PENDING_DEPLOYMENT"|"FAILED"|"CREATING"|"REQUESTING_CERTIFICATE"|"UPDATING"|string;
+  export type DomainStatus = "PENDING_VERIFICATION"|"IN_PROGRESS"|"AVAILABLE"|"PENDING_DEPLOYMENT"|"FAILED"|"CREATING"|"REQUESTING_CERTIFICATE"|"UPDATING";
   export type EnableAutoBranchCreation = boolean;
   export type EnableAutoBuild = boolean;
   export type EnableAutoSubDomain = boolean;
@@ -907,7 +907,7 @@ declare namespace Amplify {
   export type JobArn = string;
   export type JobId = string;
   export type JobReason = string;
-  export type JobStatus = "PENDING"|"PROVISIONING"|"RUNNING"|"FAILED"|"SUCCEED"|"CANCELLING"|"CANCELLED"|string;
+  export type JobStatus = "PENDING"|"PROVISIONING"|"RUNNING"|"FAILED"|"SUCCEED"|"CANCELLING"|"CANCELLED";
   export type JobSummaries = JobSummary[];
   export interface JobSummary {
     /**
@@ -947,7 +947,7 @@ declare namespace Amplify {
      */
     jobType: JobType;
   }
-  export type JobType = "RELEASE"|"RETRY"|"MANUAL"|"WEB_HOOK"|string;
+  export type JobType = "RELEASE"|"RETRY"|"MANUAL"|"WEB_HOOK";
   export type LastDeployTime = Date;
   export interface ListAppsRequest {
     /**
@@ -1087,7 +1087,7 @@ declare namespace Amplify {
   export type Name = string;
   export type NextToken = string;
   export type OauthToken = string;
-  export type Platform = "WEB"|string;
+  export type Platform = "WEB";
   export interface ProductionBranch {
     /**
      *  Last Deploy Time of Production Branch. 
@@ -1112,7 +1112,7 @@ declare namespace Amplify {
   export type ServiceRoleArn = string;
   export type Source = string;
   export type SourceUrl = string;
-  export type Stage = "PRODUCTION"|"BETA"|"DEVELOPMENT"|"EXPERIMENTAL"|string;
+  export type Stage = "PRODUCTION"|"BETA"|"DEVELOPMENT"|"EXPERIMENTAL";
   export interface StartDeploymentRequest {
     /**
      *  Unique Id for an Amplify App. 

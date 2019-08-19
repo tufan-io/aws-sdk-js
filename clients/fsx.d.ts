@@ -166,8 +166,8 @@ declare namespace FSx {
   }
   export type BackupId = string;
   export type BackupIds = BackupId[];
-  export type BackupLifecycle = "AVAILABLE"|"CREATING"|"DELETED"|"FAILED"|string;
-  export type BackupType = "AUTOMATIC"|"USER_INITIATED"|string;
+  export type BackupLifecycle = "AVAILABLE"|"CREATING"|"DELETED"|"FAILED";
+  export type BackupType = "AUTOMATIC"|"USER_INITIATED";
   export type Backups = Backup[];
   export type ClientRequestToken = string;
   export interface CreateBackupRequest {
@@ -507,10 +507,10 @@ declare namespace FSx {
   }
   export type FileSystemId = string;
   export type FileSystemIds = FileSystemId[];
-  export type FileSystemLifecycle = "AVAILABLE"|"CREATING"|"FAILED"|"DELETING"|"MISCONFIGURED"|"UPDATING"|string;
-  export type FileSystemMaintenanceOperation = "PATCHING"|"BACKING_UP"|string;
+  export type FileSystemLifecycle = "AVAILABLE"|"CREATING"|"FAILED"|"DELETING"|"MISCONFIGURED"|"UPDATING";
+  export type FileSystemMaintenanceOperation = "PATCHING"|"BACKING_UP";
   export type FileSystemMaintenanceOperations = FileSystemMaintenanceOperation[];
-  export type FileSystemType = "WINDOWS"|"LUSTRE"|string;
+  export type FileSystemType = "WINDOWS"|"LUSTRE";
   export type FileSystems = FileSystem[];
   export interface Filter {
     /**
@@ -522,7 +522,7 @@ declare namespace FSx {
      */
     Values?: FilterValues;
   }
-  export type FilterName = "file-system-id"|"backup-type"|string;
+  export type FilterName = "file-system-id"|"backup-type";
   export type FilterValue = string;
   export type FilterValues = FilterValue[];
   export type Filters = Filter[];

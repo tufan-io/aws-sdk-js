@@ -193,7 +193,7 @@ declare namespace LakeFormation {
      */
     ExcludedColumnNames?: ColumnNames;
   }
-  export type ComparisonOperator = "EQ"|"NE"|"LE"|"LT"|"GE"|"GT"|"CONTAINS"|"NOT_CONTAINS"|"BEGINS_WITH"|"IN"|"BETWEEN"|string;
+  export type ComparisonOperator = "EQ"|"NE"|"LE"|"LT"|"GE"|"GT"|"CONTAINS"|"NOT_CONTAINS"|"BEGINS_WITH"|"IN"|"BETWEEN";
   export interface DataLakePrincipal {
     /**
      * An identifier for the AWS Lake Formation principal.
@@ -202,7 +202,7 @@ declare namespace LakeFormation {
   }
   export type DataLakePrincipalList = DataLakePrincipal[];
   export type DataLakePrincipalString = string;
-  export type DataLakeResourceType = "CATALOG"|"DATABASE"|"TABLE"|"DATA_LOCATION"|string;
+  export type DataLakeResourceType = "CATALOG"|"DATABASE"|"TABLE"|"DATA_LOCATION";
   export interface DataLakeSettings {
     /**
      * A list of AWS Lake Formation principals.
@@ -260,7 +260,7 @@ declare namespace LakeFormation {
      */
     ErrorMessage?: DescriptionString;
   }
-  export type FieldNameString = "RESOURCE_ARN"|"ROLE_ARN"|"LAST_MODIFIED"|string;
+  export type FieldNameString = "RESOURCE_ARN"|"ROLE_ARN"|"LAST_MODIFIED";
   export interface FilterCondition {
     /**
      * The field to filter in the filter condition.
@@ -406,7 +406,7 @@ declare namespace LakeFormation {
   export type NameString = string;
   export type NullableBoolean = boolean;
   export type PageSize = number;
-  export type Permission = "ALL"|"SELECT"|"ALTER"|"DROP"|"DELETE"|"INSERT"|"CREATE_DATABASE"|"CREATE_TABLE"|"DATA_LOCATION_ACCESS"|string;
+  export type Permission = "ALL"|"SELECT"|"ALTER"|"DROP"|"DELETE"|"INSERT"|"CREATE_DATABASE"|"CREATE_TABLE"|"DATA_LOCATION_ACCESS";
   export type PermissionList = Permission[];
   export interface PrincipalPermissions {
     /**

@@ -123,7 +123,7 @@ export namespace DocumentClient {
 export namespace DocumentClient {
   //<!--auto-generated start-->
   interface Blob {}
-  export type AttributeAction = "ADD"|"PUT"|"DELETE"|string;
+  export type AttributeAction = "ADD"|"PUT"|"DELETE";
   export interface AttributeDefinition {
     /**
      * A name for the attribute.
@@ -306,7 +306,7 @@ export namespace DocumentClient {
   }
   export type BackupName = string;
   export type BackupSizeBytes = number;
-  export type BackupStatus = "CREATING"|"DELETED"|"AVAILABLE"|string;
+  export type BackupStatus = "CREATING"|"DELETED"|"AVAILABLE";
   export type BackupSummaries = BackupSummary[];
   export interface BackupSummary {
     /**
@@ -350,8 +350,8 @@ export namespace DocumentClient {
      */
     BackupSizeBytes?: BackupSizeBytes;
   }
-  export type BackupType = "USER"|"SYSTEM"|"AWS_BACKUP"|string;
-  export type BackupTypeFilter = "USER"|"SYSTEM"|"AWS_BACKUP"|"ALL"|string;
+  export type BackupType = "USER"|"SYSTEM"|"AWS_BACKUP";
+  export type BackupTypeFilter = "USER"|"SYSTEM"|"AWS_BACKUP"|"ALL";
   export type BackupsInputLimit = number;
   export interface BatchGetItemInput {
     /**
@@ -402,7 +402,7 @@ export namespace DocumentClient {
     ConsumedCapacity?: ConsumedCapacityMultiple;
   }
   export type BatchWriteItemRequestMap = {[key: string]: WriteRequests};
-  export type BillingMode = "PROVISIONED"|"PAY_PER_REQUEST"|string;
+  export type BillingMode = "PROVISIONED"|"PAY_PER_REQUEST";
   export interface BillingModeSummary {
     /**
      * Controls how you are charged for read and write throughput and how you manage capacity. This setting can be changed later.    PROVISIONED - Sets the read/write capacity mode to PROVISIONED. We recommend using PROVISIONED for predictable workloads.    PAY_PER_REQUEST - Sets the read/write capacity mode to PAY_PER_REQUEST. We recommend using PAY_PER_REQUEST for unpredictable workloads.   
@@ -432,7 +432,7 @@ export namespace DocumentClient {
     CapacityUnits?: ConsumedCapacityUnits;
   }
   export type ClientRequestToken = string;
-  export type ComparisonOperator = "EQ"|"NE"|"IN"|"LE"|"LT"|"GE"|"GT"|"BETWEEN"|"NOT_NULL"|"NULL"|"CONTAINS"|"NOT_CONTAINS"|"BEGINS_WITH"|string;
+  export type ComparisonOperator = "EQ"|"NE"|"IN"|"LE"|"LT"|"GE"|"GT"|"BETWEEN"|"NOT_NULL"|"NULL"|"CONTAINS"|"NOT_CONTAINS"|"BEGINS_WITH";
   export interface Condition {
     /**
      * One or more values to evaluate against the supplied attribute. The number of values in the list depends on the ComparisonOperator being used. For type Number, value comparisons are numeric. String value comparisons for greater than, equals, or less than are based on ASCII character code values. For example, a is greater than A, and a is greater than B. For a list of code values, see http://en.wikipedia.org/wiki/ASCII#ASCII_printable_characters. For Binary, DynamoDB treats each byte of the binary data as unsigned when it compares binary values.
@@ -470,7 +470,7 @@ export namespace DocumentClient {
     ReturnValuesOnConditionCheckFailure?: ReturnValuesOnConditionCheckFailure;
   }
   export type ConditionExpression = string;
-  export type ConditionalOperator = "AND"|"OR"|string;
+  export type ConditionalOperator = "AND"|"OR";
   export type ConsistentRead = boolean;
   export interface ConsumedCapacity {
     /**
@@ -514,7 +514,7 @@ export namespace DocumentClient {
      */
     PointInTimeRecoveryDescription?: PointInTimeRecoveryDescription;
   }
-  export type ContinuousBackupsStatus = "ENABLED"|"DISABLED"|string;
+  export type ContinuousBackupsStatus = "ENABLED"|"DISABLED";
   export interface CreateBackupInput {
     /**
      * The name of the table.
@@ -1077,9 +1077,9 @@ export namespace DocumentClient {
   }
   export type GlobalTableGlobalSecondaryIndexSettingsUpdateList = GlobalTableGlobalSecondaryIndexSettingsUpdate[];
   export type GlobalTableList = GlobalTable[];
-  export type GlobalTableStatus = "CREATING"|"ACTIVE"|"DELETING"|"UPDATING"|string;
+  export type GlobalTableStatus = "CREATING"|"ACTIVE"|"DELETING"|"UPDATING";
   export type IndexName = string;
-  export type IndexStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE"|string;
+  export type IndexStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE";
   export type Integer = number;
   export type IntegerObject = number;
   export type ItemCollectionKeyAttributeMap = {[key: string]: AttributeValue};
@@ -1124,7 +1124,7 @@ export namespace DocumentClient {
      */
     KeyType: KeyType;
   }
-  export type KeyType = "HASH"|"RANGE"|string;
+  export type KeyType = "HASH"|"RANGE";
   export interface KeysAndAttributes {
     /**
      * The primary key attribute values that define the items and the attributes associated with the items.
@@ -1335,7 +1335,7 @@ export namespace DocumentClient {
      */
     PointInTimeRecoveryEnabled: BooleanObject;
   }
-  export type PointInTimeRecoveryStatus = "ENABLED"|"DISABLED"|string;
+  export type PointInTimeRecoveryStatus = "ENABLED"|"DISABLED";
   export type PositiveIntegerObject = number;
   export type PositiveLongObject = number;
   export interface Projection {
@@ -1349,7 +1349,7 @@ export namespace DocumentClient {
     NonKeyAttributes?: NonKeyAttributeNameList;
   }
   export type ProjectionExpression = string;
-  export type ProjectionType = "ALL"|"KEYS_ONLY"|"INCLUDE"|string;
+  export type ProjectionType = "ALL"|"KEYS_ONLY"|"INCLUDE";
   export interface ProvisionedThroughput {
     /**
      * The maximum number of strongly consistent reads consumed per second before DynamoDB returns a ThrottlingException. For more information, see Specifying Read and Write Requirements in the Amazon DynamoDB Developer Guide. If read/write capacity mode is PAY_PER_REQUEST the value is set to 0.
@@ -1668,7 +1668,7 @@ export namespace DocumentClient {
     ReplicaGlobalSecondaryIndexSettingsUpdate?: ReplicaGlobalSecondaryIndexSettingsUpdateList;
   }
   export type ReplicaSettingsUpdateList = ReplicaSettingsUpdate[];
-  export type ReplicaStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE"|string;
+  export type ReplicaStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE";
   export interface ReplicaUpdate {
     /**
      * The parameters required for creating a replica on an existing global table.
@@ -1740,10 +1740,10 @@ export namespace DocumentClient {
      */
     TableDescription?: TableDescription;
   }
-  export type ReturnConsumedCapacity = "INDEXES"|"TOTAL"|"NONE"|string;
-  export type ReturnItemCollectionMetrics = "SIZE"|"NONE"|string;
-  export type ReturnValue = "NONE"|"ALL_OLD"|"UPDATED_OLD"|"ALL_NEW"|"UPDATED_NEW"|string;
-  export type ReturnValuesOnConditionCheckFailure = "ALL_OLD"|"NONE"|string;
+  export type ReturnConsumedCapacity = "INDEXES"|"TOTAL"|"NONE";
+  export type ReturnItemCollectionMetrics = "SIZE"|"NONE";
+  export type ReturnValue = "NONE"|"ALL_OLD"|"UPDATED_OLD"|"ALL_NEW"|"UPDATED_NEW";
+  export type ReturnValuesOnConditionCheckFailure = "ALL_OLD"|"NONE";
   export interface SSEDescription {
     /**
      * Represents the current state of server-side encryption. The only supported values are:    ENABLED - Server-side encryption is enabled.    UPDATING - Server-side encryption is being updated.  
@@ -1773,9 +1773,9 @@ export namespace DocumentClient {
      */
     KMSMasterKeyId?: KMSMasterKeyId;
   }
-  export type SSEStatus = "ENABLING"|"ENABLED"|"DISABLING"|"DISABLED"|"UPDATING"|string;
-  export type SSEType = "AES256"|"KMS"|string;
-  export type ScalarAttributeType = "S"|"N"|"B"|string;
+  export type SSEStatus = "ENABLING"|"ENABLED"|"DISABLING"|"DISABLED"|"UPDATING";
+  export type SSEType = "AES256"|"KMS";
+  export type ScalarAttributeType = "S"|"N"|"B";
   export interface ScanInput {
     /**
      * The name of the table containing the requested items; or, if you provide IndexName, the name of the table to which that index belongs.
@@ -1864,7 +1864,7 @@ export namespace DocumentClient {
   export type ScanSegment = number;
   export type ScanTotalSegments = number;
   export type SecondaryIndexesCapacityMap = {[key: string]: Capacity};
-  export type Select = "ALL_ATTRIBUTES"|"ALL_PROJECTED_ATTRIBUTES"|"SPECIFIC_ATTRIBUTES"|"COUNT"|string;
+  export type Select = "ALL_ATTRIBUTES"|"ALL_PROJECTED_ATTRIBUTES"|"SPECIFIC_ATTRIBUTES"|"COUNT";
   export interface SourceTableDetails {
     /**
      * The name of the table for which the backup was created. 
@@ -1937,7 +1937,7 @@ export namespace DocumentClient {
      */
     StreamViewType?: StreamViewType;
   }
-  export type StreamViewType = "NEW_IMAGE"|"OLD_IMAGE"|"NEW_AND_OLD_IMAGES"|"KEYS_ONLY"|string;
+  export type StreamViewType = "NEW_IMAGE"|"OLD_IMAGE"|"NEW_AND_OLD_IMAGES"|"KEYS_ONLY";
   export type String = string;
   export type StringAttributeValue = string;
   export type StringSetAttributeValue = StringAttributeValue[];
@@ -2020,7 +2020,7 @@ export namespace DocumentClient {
   export type TableId = string;
   export type TableName = string;
   export type TableNameList = TableName[];
-  export type TableStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE"|string;
+  export type TableStatus = "CREATING"|"UPDATING"|"DELETING"|"ACTIVE";
   export interface Tag {
     /**
      * The key of the tag. Tag keys are case sensitive. Each DynamoDB table can only have up to one tag with the same key. If you try to add an existing tag (same key), the existing tag value will be updated to the new value. 
@@ -2069,7 +2069,7 @@ export namespace DocumentClient {
      */
     AttributeName: TimeToLiveAttributeName;
   }
-  export type TimeToLiveStatus = "ENABLING"|"DISABLING"|"ENABLED"|"DISABLED"|string;
+  export type TimeToLiveStatus = "ENABLING"|"DISABLING"|"ENABLED"|"DISABLED";
   export interface TransactGetItem {
     /**
      * Contains the primary key that identifies the item to get, together with the name of the table that contains the item, and optionally the specific attributes of the item to retrieve.

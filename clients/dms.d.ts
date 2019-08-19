@@ -493,8 +493,8 @@ declare namespace DMS {
      */
     ResourcePendingMaintenanceActions?: ResourcePendingMaintenanceActions;
   }
-  export type AuthMechanismValue = "default"|"mongodb_cr"|"scram_sha_1"|string;
-  export type AuthTypeValue = "no"|"password"|string;
+  export type AuthMechanismValue = "default"|"mongodb_cr"|"scram_sha_1";
+  export type AuthTypeValue = "no"|"password";
   export interface AvailabilityZone {
     /**
      * The name of the availability zone.
@@ -548,7 +548,7 @@ declare namespace DMS {
   }
   export type CertificateList = Certificate[];
   export type CertificateWallet = Buffer|Uint8Array|Blob|string;
-  export type CompressionTypeValue = "none"|"gzip"|string;
+  export type CompressionTypeValue = "none"|"gzip";
   export interface Connection {
     /**
      * The Amazon Resource Name (ARN) of the replication instance.
@@ -845,7 +845,7 @@ declare namespace DMS {
      */
     ReplicationTask?: ReplicationTask;
   }
-  export type DataFormatValue = "csv"|"parquet"|string;
+  export type DataFormatValue = "csv"|"parquet";
   export interface DeleteCertificateMessage {
     /**
      * The Amazon Resource Name (ARN) of the deleted certificate.
@@ -1362,7 +1362,7 @@ declare namespace DMS {
      */
     Marker?: String;
   }
-  export type DmsSslModeValue = "none"|"require"|"verify-ca"|"verify-full"|string;
+  export type DmsSslModeValue = "none"|"require"|"verify-ca"|"verify-full";
   export interface DmsTransferSettings {
     /**
      *  The IAM role that has permission to access the Amazon S3 bucket. 
@@ -1397,8 +1397,8 @@ declare namespace DMS {
      */
     ErrorRetryDuration?: IntegerOptional;
   }
-  export type EncodingTypeValue = "plain"|"plain-dictionary"|"rle-dictionary"|string;
-  export type EncryptionModeValue = "sse-s3"|"sse-kms"|string;
+  export type EncodingTypeValue = "plain"|"plain-dictionary"|"rle-dictionary";
+  export type EncryptionModeValue = "sse-s3"|"sse-kms";
   export interface Endpoint {
     /**
      * The database endpoint identifier. Identifiers must begin with a letter; must contain only ASCII letters, digits, and hyphens; and must not end with a hyphen or contain two consecutive hyphens.
@@ -1638,8 +1638,8 @@ declare namespace DMS {
     TagList?: TagList;
   }
   export type Long = number;
-  export type MessageFormatValue = "json"|string;
-  export type MigrationTypeValue = "full-load"|"cdc"|"full-load-and-cdc"|string;
+  export type MessageFormatValue = "json";
+  export type MigrationTypeValue = "full-load"|"cdc"|"full-load-and-cdc";
   export interface ModifyEndpointMessage {
     /**
      * The Amazon Resource Name (ARN) string that uniquely identifies the endpoint.
@@ -1919,7 +1919,7 @@ declare namespace DMS {
      */
     KmsKeyId?: String;
   }
-  export type NestingLevelValue = "none"|"one"|string;
+  export type NestingLevelValue = "none"|"one";
   export interface OrderableReplicationInstance {
     /**
      * The version of the replication engine.
@@ -1959,7 +1959,7 @@ declare namespace DMS {
     ReleaseStatus?: ReleaseStatusValues;
   }
   export type OrderableReplicationInstanceList = OrderableReplicationInstance[];
-  export type ParquetVersionValue = "parquet-1-0"|"parquet-2-0"|string;
+  export type ParquetVersionValue = "parquet-1-0"|"parquet-2-0";
   export interface PendingMaintenanceAction {
     /**
      * The type of pending maintenance action that is available for the resource.
@@ -2144,9 +2144,9 @@ declare namespace DMS {
      */
     LastFailureMessage?: String;
   }
-  export type RefreshSchemasStatusTypeValue = "successful"|"failed"|"refreshing"|string;
-  export type ReleaseStatusValues = "beta"|string;
-  export type ReloadOptionValue = "data-reload"|"validate-only"|string;
+  export type RefreshSchemasStatusTypeValue = "successful"|"failed"|"refreshing";
+  export type ReleaseStatusValues = "beta";
+  export type ReloadOptionValue = "data-reload"|"validate-only";
   export interface ReloadTablesMessage {
     /**
      * The Amazon Resource Name (ARN) of the replication task. 
@@ -2179,7 +2179,7 @@ declare namespace DMS {
   }
   export interface RemoveTagsFromResourceResponse {
   }
-  export type ReplicationEndpointTypeValue = "source"|"target"|string;
+  export type ReplicationEndpointTypeValue = "source"|"target";
   export interface ReplicationInstance {
     /**
      * The replication instance identifier. This parameter is stored as a lowercase string. Constraints:   Must contain from 1 to 63 alphanumeric characters or hyphens.   First character must be a letter.   Cannot end with a hyphen or contain two consecutive hyphens.   Example: myrepinstance 
@@ -2552,7 +2552,7 @@ declare namespace DMS {
   export type SchemaList = String[];
   export type SecretString = string;
   export type SourceIdsList = String[];
-  export type SourceType = "replication-instance"|string;
+  export type SourceType = "replication-instance";
   export interface StartReplicationTaskAssessmentMessage {
     /**
      *  The Amazon Resource Name (ARN) of the replication task. 
@@ -2593,7 +2593,7 @@ declare namespace DMS {
      */
     ReplicationTask?: ReplicationTask;
   }
-  export type StartReplicationTaskTypeValue = "start-replication"|"resume-processing"|"reload-target"|string;
+  export type StartReplicationTaskTypeValue = "start-replication"|"resume-processing"|"reload-target";
   export interface StopReplicationTaskMessage {
     /**
      * The Amazon Resource Name(ARN) of the replication task to be stopped.

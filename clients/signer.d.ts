@@ -102,7 +102,7 @@ declare namespace Signer {
      */
     profileName: ProfileName;
   }
-  export type Category = "AWSIoT"|string;
+  export type Category = "AWSIoT";
   export type CertificateArn = string;
   export type ClientRequestToken = string;
   export type CompletedAt = Date;
@@ -174,7 +174,7 @@ declare namespace Signer {
     s3?: S3Destination;
   }
   export type DisplayName = string;
-  export type EncryptionAlgorithm = "RSA"|"ECDSA"|string;
+  export type EncryptionAlgorithm = "RSA"|"ECDSA";
   export interface EncryptionAlgorithmOptions {
     /**
      * The set of accepted encryption algorithms that are allowed in an AWS Signer job.
@@ -258,7 +258,7 @@ declare namespace Signer {
      */
     status?: SigningProfileStatus;
   }
-  export type HashAlgorithm = "SHA1"|"SHA256"|string;
+  export type HashAlgorithm = "SHA1"|"SHA256";
   export interface HashAlgorithmOptions {
     /**
      * The set of accepted hash algorithms allowed in an AWS Signer job.
@@ -270,7 +270,7 @@ declare namespace Signer {
     defaultValue: HashAlgorithm;
   }
   export type HashAlgorithms = HashAlgorithm[];
-  export type ImageFormat = "JSON"|string;
+  export type ImageFormat = "JSON";
   export type ImageFormats = ImageFormat[];
   export type JobId = string;
   export type Key = string;
@@ -563,9 +563,9 @@ declare namespace Signer {
      */
     status?: SigningProfileStatus;
   }
-  export type SigningProfileStatus = "Active"|"Canceled"|string;
+  export type SigningProfileStatus = "Active"|"Canceled";
   export type SigningProfiles = SigningProfile[];
-  export type SigningStatus = "InProgress"|"Failed"|"Succeeded"|string;
+  export type SigningStatus = "InProgress"|"Failed"|"Succeeded";
   export interface Source {
     /**
      * The S3Source object.

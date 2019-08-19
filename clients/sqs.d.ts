@@ -468,7 +468,7 @@ declare namespace SQS {
   export type MessageBodyAttributeMap = {[key: string]: MessageAttributeValue};
   export type MessageList = Message[];
   export type MessageSystemAttributeMap = {[key: string]: String};
-  export type MessageSystemAttributeName = "SenderId"|"SentTimestamp"|"ApproximateReceiveCount"|"ApproximateFirstReceiveTimestamp"|"SequenceNumber"|"MessageDeduplicationId"|"MessageGroupId"|string;
+  export type MessageSystemAttributeName = "SenderId"|"SentTimestamp"|"ApproximateReceiveCount"|"ApproximateFirstReceiveTimestamp"|"SequenceNumber"|"MessageDeduplicationId"|"MessageGroupId";
   export interface PurgeQueueRequest {
     /**
      * The URL of the queue from which the PurgeQueue action deletes messages. Queue URLs and names are case-sensitive.
@@ -476,7 +476,7 @@ declare namespace SQS {
     QueueUrl: String;
   }
   export type QueueAttributeMap = {[key: string]: String};
-  export type QueueAttributeName = "All"|"Policy"|"VisibilityTimeout"|"MaximumMessageSize"|"MessageRetentionPeriod"|"ApproximateNumberOfMessages"|"ApproximateNumberOfMessagesNotVisible"|"CreatedTimestamp"|"LastModifiedTimestamp"|"QueueArn"|"ApproximateNumberOfMessagesDelayed"|"DelaySeconds"|"ReceiveMessageWaitTimeSeconds"|"RedrivePolicy"|"FifoQueue"|"ContentBasedDeduplication"|"KmsMasterKeyId"|"KmsDataKeyReusePeriodSeconds"|string;
+  export type QueueAttributeName = "All"|"Policy"|"VisibilityTimeout"|"MaximumMessageSize"|"MessageRetentionPeriod"|"ApproximateNumberOfMessages"|"ApproximateNumberOfMessagesNotVisible"|"CreatedTimestamp"|"LastModifiedTimestamp"|"QueueArn"|"ApproximateNumberOfMessagesDelayed"|"DelaySeconds"|"ReceiveMessageWaitTimeSeconds"|"RedrivePolicy"|"FifoQueue"|"ContentBasedDeduplication"|"KmsMasterKeyId"|"KmsDataKeyReusePeriodSeconds";
   export type QueueUrlList = String[];
   export interface ReceiveMessageRequest {
     /**

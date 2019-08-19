@@ -279,7 +279,7 @@ declare namespace Cloud9 {
      */
     failureResource?: String;
   }
-  export type EnvironmentLifecycleStatus = "CREATED"|"DELETING"|"DELETE_FAILED"|string;
+  export type EnvironmentLifecycleStatus = "CREATED"|"DELETING"|"DELETE_FAILED";
   export type EnvironmentList = Environment[];
   export interface EnvironmentMember {
     /**
@@ -305,8 +305,8 @@ declare namespace Cloud9 {
   }
   export type EnvironmentMembersList = EnvironmentMember[];
   export type EnvironmentName = string;
-  export type EnvironmentStatus = "error"|"creating"|"connecting"|"ready"|"stopping"|"stopped"|"deleting"|string;
-  export type EnvironmentType = "ssh"|"ec2"|string;
+  export type EnvironmentStatus = "error"|"creating"|"connecting"|"ready"|"stopping"|"stopped"|"deleting";
+  export type EnvironmentType = "ssh"|"ec2";
   export type InstanceType = string;
   export interface ListEnvironmentsRequest {
     /**
@@ -329,8 +329,8 @@ declare namespace Cloud9 {
     environmentIds?: EnvironmentIdList;
   }
   export type MaxResults = number;
-  export type MemberPermissions = "read-write"|"read-only"|string;
-  export type Permissions = "owner"|"read-write"|"read-only"|string;
+  export type MemberPermissions = "read-write"|"read-only";
+  export type Permissions = "owner"|"read-write"|"read-only";
   export type PermissionsList = Permissions[];
   export type String = string;
   export type SubnetId = string;

@@ -229,7 +229,7 @@ declare class Kafka extends Service {
   updateClusterConfiguration(callback?: (err: AWSError, data: Kafka.Types.UpdateClusterConfigurationResponse) => void): Request<Kafka.Types.UpdateClusterConfigurationResponse, AWSError>;
 }
 declare namespace Kafka {
-  export type BrokerAZDistribution = "DEFAULT"|string;
+  export type BrokerAZDistribution = "DEFAULT";
   export interface BrokerEBSVolumeInfo {
     /**
      * 
@@ -343,7 +343,7 @@ kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      */
     Tls?: Tls;
   }
-  export type ClientBroker = "TLS"|"TLS_PLAINTEXT"|"PLAINTEXT"|string;
+  export type ClientBroker = "TLS"|"TLS_PLAINTEXT"|"PLAINTEXT";
   export interface ClusterInfo {
     /**
      * 
@@ -492,7 +492,7 @@ kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      */
     TargetClusterInfo?: MutableClusterInfo;
   }
-  export type ClusterState = "ACTIVE"|"CREATING"|"UPDATING"|"DELETING"|"FAILED"|string;
+  export type ClusterState = "ACTIVE"|"CREATING"|"UPDATING"|"DELETING"|"FAILED";
   export interface Configuration {
     /**
      * 
@@ -899,7 +899,7 @@ kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      */
     EncryptionInTransit?: EncryptionInTransit;
   }
-  export type EnhancedMonitoring = "DEFAULT"|"PER_BROKER"|"PER_TOPIC_PER_BROKER"|string;
+  export type EnhancedMonitoring = "DEFAULT"|"PER_BROKER"|"PER_TOPIC_PER_BROKER";
   export interface ErrorInfo {
     /**
      * 
@@ -1183,7 +1183,7 @@ kafka.m5.4xlarge, kafka.m5.12xlarge, and kafka.m5.24xlarge.
      */
     ZookeeperNodeInfo?: ZookeeperNodeInfo;
   }
-  export type NodeType = "BROKER"|string;
+  export type NodeType = "BROKER";
   export interface StorageInfo {
     /**
      * 

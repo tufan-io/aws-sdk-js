@@ -144,8 +144,8 @@ declare namespace CloudHSMV2 {
     DeleteTimestamp?: Timestamp;
   }
   export type BackupId = string;
-  export type BackupPolicy = "DEFAULT"|string;
-  export type BackupState = "CREATE_IN_PROGRESS"|"READY"|"DELETED"|"PENDING_DELETION"|string;
+  export type BackupPolicy = "DEFAULT";
+  export type BackupState = "CREATE_IN_PROGRESS"|"READY"|"DELETED"|"PENDING_DELETION";
   export type Backups = Backup[];
   export type Boolean = boolean;
   export type Cert = string;
@@ -226,7 +226,7 @@ declare namespace CloudHSMV2 {
     Certificates?: Certificates;
   }
   export type ClusterId = string;
-  export type ClusterState = "CREATE_IN_PROGRESS"|"UNINITIALIZED"|"INITIALIZE_IN_PROGRESS"|"INITIALIZED"|"ACTIVE"|"UPDATE_IN_PROGRESS"|"DELETE_IN_PROGRESS"|"DELETED"|"DEGRADED"|string;
+  export type ClusterState = "CREATE_IN_PROGRESS"|"UNINITIALIZED"|"INITIALIZE_IN_PROGRESS"|"INITIALIZED"|"ACTIVE"|"UPDATE_IN_PROGRESS"|"DELETE_IN_PROGRESS"|"DELETED"|"DEGRADED";
   export type Clusters = Cluster[];
   export interface CopyBackupToRegionRequest {
     /**
@@ -427,7 +427,7 @@ declare namespace CloudHSMV2 {
     StateMessage?: String;
   }
   export type HsmId = string;
-  export type HsmState = "CREATE_IN_PROGRESS"|"ACTIVE"|"DEGRADED"|"DELETE_IN_PROGRESS"|"DELETED"|string;
+  export type HsmState = "CREATE_IN_PROGRESS"|"ACTIVE"|"DEGRADED"|"DELETE_IN_PROGRESS"|"DELETED";
   export type HsmType = string;
   export type Hsms = Hsm[];
   export interface InitializeClusterRequest {

@@ -387,7 +387,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     virtualServiceName: ServiceName;
   }
-  export type VirtualRouterStatusCode = "ACTIVE"|"DELETED"|"INACTIVE"|string;
+  export type VirtualRouterStatusCode = "ACTIVE"|"DELETED"|"INACTIVE";
   export interface UpdateVirtualRouterInput {
     /**
      * Unique, case-sensitive identifier that you provide to ensure the idempotency of the
@@ -525,7 +525,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
   }
   export type Listeners = Listener[];
   export type Backends = Backend[];
-  export type PortProtocol = "http"|"tcp"|string;
+  export type PortProtocol = "http"|"tcp";
   export interface UpdateVirtualNodeOutput {
     /**
      * A full description of the virtual node that was updated.
@@ -551,7 +551,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     virtualServiceName: ServiceName;
   }
-  export type VirtualNodeStatusCode = "ACTIVE"|"DELETED"|"INACTIVE"|string;
+  export type VirtualNodeStatusCode = "ACTIVE"|"DELETED"|"INACTIVE";
   export type ServiceName = string;
   export interface UpdateVirtualServiceInput {
     /**
@@ -1131,7 +1131,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
     nextToken?: String;
   }
   export type VirtualRouterListeners = VirtualRouterListener[];
-  export type HttpMethod = "connect"|"delete"|"get"|"head"|"options"|"patch"|"post"|"put"|"trace"|string;
+  export type HttpMethod = "connect"|"delete"|"get"|"head"|"options"|"patch"|"post"|"put"|"trace";
   export interface DescribeRouteOutput {
     /**
      * The full description of your route.
@@ -1184,7 +1184,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     meshName: ResourceName;
   }
-  export type MeshStatusCode = "ACTIVE"|"DELETED"|"INACTIVE"|string;
+  export type MeshStatusCode = "ACTIVE"|"DELETED"|"INACTIVE";
   export interface PortMapping {
     /**
      * The port used for the port mapping.
@@ -1330,7 +1330,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     virtualRouterName: ResourceName;
   }
-  export type RouteStatusCode = "ACTIVE"|"DELETED"|"INACTIVE"|string;
+  export type RouteStatusCode = "ACTIVE"|"DELETED"|"INACTIVE";
   export type ListRoutesLimit = number;
   export interface DeleteVirtualServiceOutput {
     /**
@@ -1388,7 +1388,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     mesh: MeshData;
   }
-  export type EgressFilterType = "ALLOW_ALL"|"DROP_ALL"|string;
+  export type EgressFilterType = "ALLOW_ALL"|"DROP_ALL";
   export type Hostname = string;
   export type PortNumber = number;
   export interface TagResourceInput {
@@ -1462,7 +1462,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
      */
     serviceName: AwsCloudMapName;
   }
-  export type HttpScheme = "http"|"https"|string;
+  export type HttpScheme = "http"|"https";
   export interface UpdateVirtualServiceOutput {
     /**
      * A full description of the virtual service that was updated.
@@ -1651,7 +1651,7 @@ request. Up to 36 letters, numbers, hyphens, and underscores are allowed.
   }
   export type TagsLimit = number;
   export type TagKey = string;
-  export type VirtualServiceStatusCode = "ACTIVE"|"DELETED"|"INACTIVE"|string;
+  export type VirtualServiceStatusCode = "ACTIVE"|"DELETED"|"INACTIVE";
   export interface DeleteVirtualNodeOutput {
     /**
      * The virtual node that was deleted.

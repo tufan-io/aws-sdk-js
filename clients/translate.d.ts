@@ -83,7 +83,7 @@ declare namespace Translate {
     Id: EncryptionKeyID;
   }
   export type EncryptionKeyID = string;
-  export type EncryptionKeyType = "KMS"|string;
+  export type EncryptionKeyType = "KMS";
   export interface GetTerminologyRequest {
     /**
      * The name of the custom terminology being retrieved.
@@ -156,7 +156,7 @@ declare namespace Translate {
     NextToken?: NextToken;
   }
   export type MaxResultsInteger = number;
-  export type MergeStrategy = "OVERWRITE"|string;
+  export type MergeStrategy = "OVERWRITE";
   export type NextToken = string;
   export type ResourceName = string;
   export type ResourceNameList = ResourceName[];
@@ -183,7 +183,7 @@ declare namespace Translate {
      */
     Format: TerminologyDataFormat;
   }
-  export type TerminologyDataFormat = "CSV"|"TMX"|string;
+  export type TerminologyDataFormat = "CSV"|"TMX";
   export interface TerminologyDataLocation {
     /**
      * The repository type for the custom terminology data.
